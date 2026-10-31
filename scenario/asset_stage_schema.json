@@ -1,0 +1,43 @@
+{
+  "coordinate_system": {
+    "reference": "1080x1920 portrait",
+    "ground_anchor": "bottom-center",
+    "safe_margin_px": 48
+  },
+  "asset_metadata_required": [
+    "id",
+    "category",
+    "room",
+    "state",
+    "anchor",
+    "collision_box",
+    "hotspot_rect",
+    "z_index",
+    "shadow_type",
+    "usable_with",
+    "animation_group"
+  ],
+  "room_layout_rules": [
+    "ドア前800mm相当の動線を家具で塞がない",
+    "床置き家具はground_anchorを床面へ必ず接地",
+    "壁掛け以外のオブジェクトを浮かせない",
+    "家具・キャラは接地影を持つ",
+    "各部屋1パース基準で統一",
+    "ギミック家具はclosed/open/used等の状態差分を用意"
+  ],
+  "stage_data_fields": [
+    "stage",
+    "title",
+    "room",
+    "difficulty",
+    "concept",
+    "hidden_location",
+    "characters",
+    "items",
+    "solution",
+    "fail",
+    "gimmicks",
+    "new_assets",
+    "animations"
+  ]
+}

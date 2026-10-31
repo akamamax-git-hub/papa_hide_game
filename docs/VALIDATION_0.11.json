@@ -1,0 +1,325 @@
+{
+  "version": "0.11.0",
+  "baselineRoutes": 11,
+  "regression": {
+    "results": [
+      {
+        "stage": 1,
+        "clear": "PASS",
+        "fail": "PASS",
+        "retry": "PASS"
+      },
+      {
+        "stage": 2,
+        "clear": "PASS",
+        "fail": "PASS",
+        "retry": "PASS"
+      },
+      {
+        "stage": 3,
+        "clear": "PASS",
+        "fail": "PASS",
+        "retry": "PASS"
+      },
+      {
+        "stage": 4,
+        "clear": "PASS",
+        "fail": "PASS",
+        "retry": "PASS"
+      },
+      {
+        "stage": 5,
+        "clear": "PASS",
+        "fail": "PASS",
+        "retry": "PASS"
+      },
+      {
+        "stage": 6,
+        "clear": "PASS",
+        "fail": "PASS",
+        "retry": "PASS"
+      },
+      {
+        "stage": 7,
+        "clear": "PASS",
+        "fail": "PASS",
+        "retry": "PASS"
+      },
+      {
+        "stage": 8,
+        "clear": "PASS",
+        "fail": "PASS",
+        "retry": "PASS"
+      },
+      {
+        "stage": 9,
+        "clear": "PASS",
+        "fail": "PASS",
+        "retry": "PASS"
+      },
+      {
+        "stage": 10,
+        "clear": "PASS",
+        "fail": "PASS",
+        "retry": "PASS"
+      },
+      {
+        "stage": 11,
+        "clear": "PASS",
+        "fail": "PASS",
+        "retry": "PASS"
+      },
+      {
+        "stage": 12,
+        "clear": "PASS",
+        "fail": "PASS",
+        "retry": "PASS"
+      },
+      {
+        "stage": 13,
+        "clear": "PASS",
+        "fail": "PASS",
+        "retry": "PASS"
+      },
+      {
+        "stage": 14,
+        "clear": "PASS",
+        "fail": "PASS",
+        "retry": "PASS"
+      },
+      {
+        "stage": 15,
+        "clear": "PASS",
+        "fail": "PASS",
+        "retry": "PASS"
+      },
+      {
+        "stage": 16,
+        "clear": "PASS",
+        "fail": "PASS",
+        "retry": "PASS"
+      },
+      {
+        "stage": 17,
+        "clear": "PASS",
+        "fail": "PASS",
+        "retry": "PASS"
+      },
+      {
+        "stage": 18,
+        "clear": "PASS",
+        "fail": "PASS",
+        "retry": "PASS"
+      },
+      {
+        "stage": 19,
+        "clear": "PASS",
+        "fail": "PASS",
+        "retry": "PASS"
+      },
+      {
+        "stage": 20,
+        "clear": "PASS",
+        "fail": "PASS",
+        "retry": "PASS"
+      },
+      {
+        "stage": 21,
+        "clear": "PASS",
+        "fail": "PASS",
+        "retry": "PASS"
+      },
+      {
+        "stage": 22,
+        "clear": "PASS",
+        "fail": "PASS",
+        "retry": "PASS"
+      },
+      {
+        "stage": 23,
+        "clear": "PASS",
+        "fail": "PASS",
+        "retry": "PASS"
+      },
+      {
+        "stage": 24,
+        "clear": "PASS",
+        "fail": "PASS",
+        "retry": "PASS"
+      },
+      {
+        "stage": 25,
+        "clear": "PASS",
+        "fail": "PASS",
+        "retry": "PASS"
+      },
+      {
+        "stage": 26,
+        "clear": "PASS",
+        "fail": "PASS",
+        "retry": "PASS"
+      },
+      {
+        "stage": 27,
+        "clear": "PASS",
+        "fail": "PASS",
+        "retry": "PASS"
+      },
+      {
+        "stage": 28,
+        "clear": "PASS",
+        "fail": "PASS",
+        "retry": "PASS"
+      },
+      {
+        "stage": 29,
+        "clear": "PASS",
+        "fail": "PASS",
+        "retry": "PASS"
+      },
+      {
+        "stage": 30,
+        "clear": "PASS",
+        "fail": "PASS",
+        "retry": "PASS"
+      },
+      {
+        "stage": 31,
+        "clear": "PASS",
+        "fail": "PASS",
+        "retry": "PASS"
+      },
+      {
+        "stage": 32,
+        "clear": "PASS",
+        "fail": "PASS",
+        "retry": "PASS"
+      },
+      {
+        "stage": 33,
+        "clear": "PASS",
+        "fail": "PASS",
+        "retry": "PASS"
+      },
+      {
+        "stage": 34,
+        "clear": "PASS",
+        "fail": "PASS",
+        "retry": "PASS"
+      },
+      {
+        "stage": 35,
+        "clear": "PASS",
+        "fail": "PASS",
+        "retry": "PASS"
+      },
+      {
+        "stage": 36,
+        "clear": "PASS",
+        "fail": "PASS",
+        "retry": "PASS"
+      },
+      {
+        "stage": 37,
+        "clear": "PASS",
+        "fail": "PASS",
+        "retry": "PASS"
+      },
+      {
+        "stage": 38,
+        "clear": "PASS",
+        "fail": "PASS",
+        "retry": "PASS"
+      },
+      {
+        "stage": 39,
+        "clear": "PASS",
+        "fail": "PASS",
+        "retry": "PASS"
+      },
+      {
+        "stage": 40,
+        "clear": "PASS",
+        "fail": "PASS",
+        "retry": "PASS"
+      },
+      {
+        "stage": 41,
+        "clear": "PASS",
+        "fail": "PASS",
+        "retry": "PASS"
+      },
+      {
+        "stage": 42,
+        "clear": "PASS",
+        "fail": "PASS",
+        "retry": "PASS"
+      },
+      {
+        "stage": 43,
+        "clear": "PASS",
+        "fail": "PASS",
+        "retry": "PASS"
+      },
+      {
+        "stage": 44,
+        "clear": "PASS",
+        "fail": "PASS",
+        "retry": "PASS"
+      },
+      {
+        "stage": 45,
+        "clear": "PASS",
+        "fail": "PASS",
+        "retry": "PASS"
+      },
+      {
+        "stage": 46,
+        "clear": "PASS",
+        "fail": "PASS",
+        "retry": "PASS"
+      },
+      {
+        "stage": 47,
+        "clear": "PASS",
+        "fail": "PASS",
+        "retry": "PASS"
+      },
+      {
+        "stage": 48,
+        "clear": "PASS",
+        "fail": "PASS",
+        "retry": "PASS"
+      },
+      {
+        "stage": 49,
+        "clear": "PASS",
+        "fail": "PASS",
+        "retry": "PASS"
+      },
+      {
+        "stage": 50,
+        "clear": "PASS",
+        "fail": "PASS",
+        "retry": "PASS"
+      }
+    ],
+    "errors": []
+  },
+  "chapter3": {
+    "sceneRoutes": 10,
+    "bagClickAndDrag": "PASS",
+    "itemRequirements": "PASS",
+    "doubleClick": "PASS",
+    "staleTimers": "PASS",
+    "offlineAfterLoad": "PASS",
+    "audioDecodeAndToggle": "PASS",
+    "errors": []
+  },
+  "artifactSha256": "7fdf43e7319777d86cd8402fff1082f7e05a8bed00b2a9ca117f4657ec724e50",
+  "limits": [
+    "file:// navigation blocked by managed Chromium policy; HTTP and offline-after-load tested",
+    "Audio decode/playback state tested; human listening not performed",
+    "Furniture changes shown in inspection view; full-room variations and direct code/book-order controls pending"
+  ]
+}

@@ -1,0 +1,16 @@
+﻿character,role,first_stage,stages,pose_count,required_poses
+息子,主人公,1,"1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50",32,idle / blink / look_left / look_right / walk_4 / tiptoe_4 / run_2 / crouch / search / pickup / hold_item / hand_item / push / pull / climb / reach_up / use_remote / use_flashlight / dig / pour_water / wipe / carry_box / carry_bag / throw / use_net / read_note / think / surprise / happy / caught / sad / final_yari
+パパ,主要警戒キャラ,1,"1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,29,31,32,33,35,36,37,38,39,40,41,42,43,44,46,47,48,49,50",22,idle / blink / look_left / look_right / look_up / look_down / walk_4 / turn_fast / sit_sofa / stand / read_newspaper / put_down_newspaper / watch_tv / drink_coffee / answer_door / brush_teeth / clean_bath / suspicious / angry / startle / patrol / final_reaction
+猫,ヒント・妨害・誘導,1,"1,2,3,4,5,6,8,13,16,18,20,24,26,27,28,30,32,34,35,36,39,41,45,46,49,50",19,sit_idle / blink / look_left / look_right / tilt / tail_left / tail_right / stand / walk_4 / run_4 / jump / play_ball / chase_ball / play_toy / eat / sleep / surprise / key_mouth / drop_key
+宅配員,玄関イベントNPC,7,"7,44",6,idle / ring_bell / hold_box / hand_box / wait / leave
+おばあちゃん,家庭系NPC,9,"9,23,39,50",11,idle / ring_bell / wave / sit / stand / walk_2 / cook / request / receive_item / sneeze / smile
+宅配ロボット,機械NPC,10,"10,48",5,idle / arrive / scan / open_compartment / depart
+カラス,屋外交換NPC,19,19,6,perch / look / fly_3 / hold_key / drop_key / take_coin
+妹,交換・妨害・ヒントNPC,21,"21,27,38,49,50",12,idle / walk_3 / hide / surprise / ask / hold_pudding / eat / receive_item / hand_key / point / happy / annoyed
+ロボット掃除機,機械ギミック,25,25,6,idle / move / turn / bump / push_item / stop
+郵便屋さん,時間イベントNPC,31,31,5,idle / walk_2 / ring / hand_mail / leave
+となりの子,庭イベントNPC,34,"34,47",6,idle / kick_ball / wait / receive_ball / point / wave
+おじいちゃん,庭イベントNPC,37,"37,50",6,sit_sleep / wake / sit / stand / walk_2 / smile
+修理屋さん,協力NPC,40,40,8,idle / kneel / request_tool / receive_tool / use_wrench / open_panel / point / leave
+犬,夜庭の警戒NPC,42,42,6,idle / look / bark / walk_2 / eat / sleep
+ママ,後半サプライズNPC,46,"46,50",9,idle / walk_3 / enter / hold_grocery_bag / hand_bag / smile / surprise / point / final_reaction

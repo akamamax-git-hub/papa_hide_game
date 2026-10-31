@@ -1,0 +1,13 @@
+{
+  "name": "papa-hide-game",
+  "version": "0.11.0",
+  "private": true,
+  "description": "Offline standalone Japanese home exploration game",
+  "scripts": {
+    "build": "python3 scripts/build.py",
+    "start": "python3 -m http.server 8000 --bind 127.0.0.1",
+    "test": "node tests/browser.cjs && node tests/chapter3.cjs"
+  },
+  "devDependencies": { "playwright": "1.62.1" },
+  "engines": { "node": ">=22" }
+}
