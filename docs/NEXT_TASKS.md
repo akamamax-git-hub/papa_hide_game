@@ -1,66 +1,10 @@
-# NEXT TASKS
+# 次回作業の前提
 
-## P0 — Stage21〜30を完成させる
-### Stage21〜25 キッチン・ダイニング
-必要な固有要素:
-- 妹の実スプライト
-- スプーン / プリン
-- 冷蔵庫 open/closed
-- 電子レンジ off/clock
-- ブレーカー off/on
-- ダイニングチェア
-- お茶 / コーヒー / マグカップ
-- パントリー / カウンター引き出し
-- ロボット掃除機 + リモコン + 鍵押し出し演出
+現行版はVer0.13。`CURRENT_STATUS.md`、`QA_0.13.md`、`VALIDATION_0.13.json` を先に参照。
 
-### Stage26〜30 子ども部屋
-必要な固有要素:
-- 教科書4冊 / 本棚パズル
-- クローゼット open/closed / 妹かくれ
-- 懐中電灯 off/on / ベッド下暗所
-- カレンダー星シール / 机ダイヤル
-- 毛布 / 洗濯ばさみ / 椅子 / 秘密基地完成状態
+1. 不自然さの報告はStageと操作手順から再現し、実物の位置、手・道具、収納元、親子・所持状態、描画順を確認する。
+2. 「CLEARになった」だけを修正完了の根拠にしない。接触フレームと取得元を確認する。
+3. 共通処理・素材・配置を変更したら `npm test` で全50Stageを回帰する。
+4. 公開版は `build-info.json` のcommitとGitHub PagesのActions結果を確認する。
 
-## P1 — NPCスプライト化
-優先:
-1. 妹
-2. おばあちゃん
-3. 宅配員
-4. おじいちゃん
-5. 修理屋さん
-6. ママ
-7. となりの子
-8. 犬
-9. カラス
-10. 宅配ロボット
-11. ロボット掃除機
-12. 郵便屋さん
-
-NPCは少なくとも idle / react / receive_or_use / walk_or_exit を用意。
-
-## P2 — アニメーション品質
-息子は最終的に約30動作、パパ約20、猫約20を目標。
-アニメーションは key pose ベースで以下を持つ:
-- idle
-- anticipation
-- action
-- recovery
-- return to idle
-
-## P3 — Stage31〜40
-複数部屋、時間、巡回、追加NPC。
-
-## P4 — Stage41〜50
-高難度、夜、複数ヒント、ママ帰宅、猫大暴走、最終総合Stage。
-
-## P5 — 最終回帰テスト
-Stage 1〜50について:
-- Correct route CLEAR
-- Fail route FAILED
-- Retry
-- BGM/SE
-- Inventory
-- No JS errors
-- No clipped characters
-- No floating furniture
-- Door paths clear
+BGM・SE・ヤァリー、PC基準、BAGのクリック／ドラッグ、Standalone HTMLは維持する。

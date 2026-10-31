@@ -14,7 +14,15 @@
     "atlas_pets": "assets/world/atlas_pets.png",
     "atlas_seated": "assets/world/atlas_seated.png",
     "atlas_interactions": "assets/world/atlas_interactions.png",
-    "atlas_cleanitems": "assets/world/atlas_cleanitems.png"
+    "atlas_cleanitems": "assets/world/atlas_cleanitems.png",
+    "atlas_controls": "assets/world/atlas_controls.png",
+    "atlas_reach": "assets/world/atlas_reach.png",
+    "atlas_uppercab": "assets/world/atlas_uppercab.png",
+    "atlas_robot": "assets/world/atlas_robot.png",
+    "atlas_orderedprops": "assets/world/atlas_orderedprops.png",
+    "atlas_fixtures": "assets/world/atlas_fixtures.png",
+    "atlas_clock": "assets/world/atlas_clock.png",
+    "atlas_vanity": "assets/world/atlas_vanity.png"
   },
   "sprites": {
     "cabinet": {
@@ -74,44 +82,44 @@
       "worldHeight": 125
     },
     "tv": {
-      "sheet": "atlas_furniture",
+      "sheet": "atlas_fixtures",
       "size": [
-        1402,
-        1122
+        1448,
+        1086
       ],
       "rect": [
-        35,
-        298,
-        292,
-        245
+        28,
+        13,
+        319,
+        287
       ],
       "worldHeight": 245
     },
     "shelf": {
-      "sheet": "atlas_furniture",
+      "sheet": "atlas_fixtures",
       "size": [
-        1402,
-        1122
+        1448,
+        1086
       ],
       "rect": [
-        443,
-        282,
-        168,
-        264
+        784,
+        307,
+        236,
+        311
       ],
       "worldHeight": 345
     },
     "desk": {
-      "sheet": "atlas_furniture",
+      "sheet": "atlas_fixtures",
       "size": [
-        1402,
-        1122
+        1448,
+        1086
       ],
       "rect": [
-        727,
-        306,
-        292,
-        236
+        741,
+        30,
+        313,
+        250
       ],
       "worldHeight": 190
     },
@@ -144,16 +152,16 @@
       "worldHeight": 145
     },
     "vanity": {
-      "sheet": "atlas_furniture",
+      "sheet": "atlas_vanity",
       "size": [
-        1402,
-        1122
+        1774,
+        887
       ],
       "rect": [
-        424,
-        564,
-        199,
-        276
+        92,
+        34,
+        684,
+        823
       ],
       "worldHeight": 300
     },
@@ -172,16 +180,16 @@
       "worldHeight": 190
     },
     "basket": {
-      "sheet": "atlas_furniture",
+      "sheet": "atlas_fixtures",
       "size": [
-        1402,
-        1122
+        1448,
+        1086
       ],
       "rect": [
-        1126,
-        586,
-        210,
-        254
+        47,
+        648,
+        293,
+        202
       ],
       "worldHeight": 110
     },
@@ -393,7 +401,15 @@
         248,
         247
       ],
-      "worldHeight": 65
+      "worldHeight": 65,
+      "grip": [
+        0.78,
+        0.82
+      ],
+      "tip": [
+        0.2,
+        0.1
+      ]
     },
     "note": {
       "sheet": "atlas_items1",
@@ -449,7 +465,15 @@
         228,
         221
       ],
-      "worldHeight": 50
+      "worldHeight": 50,
+      "grip": [
+        0.5,
+        0.8
+      ],
+      "tip": [
+        0.5,
+        0.1
+      ]
     },
     "chime": {
       "sheet": "atlas_items1",
@@ -522,16 +546,16 @@
       "worldHeight": 42
     },
     "ice": {
-      "sheet": "atlas_items2",
+      "sheet": "atlas_fixtures",
       "size": [
-        1402,
-        1122
+        1448,
+        1086
       ],
       "rect": [
-        39,
-        49,
-        223,
-        229
+        796,
+        855,
+        212,
+        214
       ],
       "worldHeight": 65
     },
@@ -575,7 +599,15 @@
         268,
         260
       ],
-      "worldHeight": 170
+      "worldHeight": 170,
+      "grip": [
+        0.8,
+        0.92
+      ],
+      "tip": [
+        0.28,
+        0.18
+      ]
     },
     "dogTreat": {
       "sheet": "atlas_items2",
@@ -704,18 +736,18 @@
       "worldHeight": 125
     },
     "switch": {
-      "sheet": "atlas_items2",
+      "sheet": "atlas_controls",
       "size": [
-        1402,
-        1122
+        1536,
+        1024
       ],
       "rect": [
-        843,
-        563,
-        252,
-        269
+        101,
+        113,
+        224,
+        365
       ],
-      "worldHeight": 40
+      "worldHeight": 38
     },
     "drain": {
       "sheet": "atlas_items2",
@@ -788,16 +820,16 @@
       "worldHeight": 45
     },
     "breadbox": {
-      "sheet": "atlas_items2",
+      "sheet": "atlas_fixtures",
       "size": [
-        1402,
-        1122
+        1448,
+        1086
       ],
       "rect": [
-        1124,
-        868,
-        264,
-        213
+        751,
+        657,
+        297,
+        190
       ],
       "worldHeight": 90
     },
@@ -827,7 +859,11 @@
         254,
         258
       ],
-      "worldHeight": 325
+      "worldHeight": 325,
+      "anchor": [
+        0.32,
+        1
+      ]
     },
     "wardrobe": {
       "sheet": "atlas_states",
@@ -869,7 +905,11 @@
         262,
         239
       ],
-      "worldHeight": 325
+      "worldHeight": 325,
+      "anchor": [
+        0.65,
+        1
+      ]
     },
     "shed_open": {
       "sheet": "atlas_states",
@@ -970,16 +1010,16 @@
       "worldHeight": 100
     },
     "clock": {
-      "sheet": "atlas_utility",
+      "sheet": "atlas_clock",
       "size": [
-        1448,
-        1086
+        1774,
+        887
       ],
       "rect": [
-        50,
-        69,
-        300,
-        304
+        49,
+        29,
+        789,
+        794
       ],
       "worldHeight": 80
     },
@@ -1149,7 +1189,15 @@
         196,
         200
       ],
-      "worldHeight": 30
+      "worldHeight": 30,
+      "grip": [
+        0.2,
+        0.8
+      ],
+      "tip": [
+        0.8,
+        0.2
+      ]
     },
     "pudding": {
       "sheet": "props_atlas",
@@ -1289,7 +1337,15 @@
         197,
         188
       ],
-      "worldHeight": 36
+      "worldHeight": 36,
+      "grip": [
+        0.85,
+        0.5
+      ],
+      "tip": [
+        0.2,
+        0.1
+      ]
     },
     "coffee": {
       "sheet": "props_atlas",
@@ -1303,7 +1359,15 @@
         196,
         189
       ],
-      "worldHeight": 36
+      "worldHeight": 36,
+      "grip": [
+        0.85,
+        0.5
+      ],
+      "tip": [
+        0.2,
+        0.1
+      ]
     },
     "pot": {
       "sheet": "props_atlas",
@@ -1317,7 +1381,15 @@
         226,
         208
       ],
-      "worldHeight": 65
+      "worldHeight": 65,
+      "grip": [
+        0.86,
+        0.52
+      ],
+      "tip": [
+        0.08,
+        0.18
+      ]
     },
     "drawer": {
       "sheet": "props_atlas",
@@ -1359,7 +1431,12 @@
         241,
         175
       ],
-      "worldHeight": 38
+      "worldHeight": 38,
+      "hand": [
+        0.95,
+        0.65
+      ],
+      "bodyScale": 1
     },
     "robotRemote": {
       "sheet": "props_atlas",
@@ -1443,7 +1520,15 @@
         245,
         160
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "grip": [
+        0.72,
+        0.62
+      ],
+      "tip": [
+        0.12,
+        0.4
+      ]
     },
     "torch_on": {
       "sheet": "props_atlas",
@@ -1653,7 +1738,12 @@
         98,
         282
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.87,
+        0.6
+      ],
+      "bodyScale": 1
     },
     "boy_walk1": {
       "sheet": "atlas_boy",
@@ -1667,7 +1757,12 @@
         144,
         280
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.88,
+        0.57
+      ],
+      "bodyScale": 1
     },
     "boy_walk2": {
       "sheet": "atlas_boy",
@@ -1681,7 +1776,12 @@
         158,
         277
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.89,
+        0.56
+      ],
+      "bodyScale": 1
     },
     "boy_pickup": {
       "sheet": "atlas_boy",
@@ -1695,7 +1795,12 @@
         190,
         187
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.94,
+        0.91
+      ],
+      "bodyScale": 0.65
     },
     "boy_reach": {
       "sheet": "atlas_boy",
@@ -1709,7 +1814,12 @@
         175,
         279
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.96,
+        0.43
+      ],
+      "bodyScale": 1
     },
     "boy_high": {
       "sheet": "atlas_boy",
@@ -1723,7 +1833,12 @@
         128,
         284
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.63,
+        0.08
+      ],
+      "bodyScale": 1.14
     },
     "boy_carry": {
       "sheet": "atlas_boy",
@@ -1737,7 +1852,12 @@
         152,
         284
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.93,
+        0.48
+      ],
+      "bodyScale": 1
     },
     "boy_push": {
       "sheet": "atlas_boy",
@@ -1751,7 +1871,12 @@
         226,
         242
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.96,
+        0.35
+      ],
+      "bodyScale": 0.85
     },
     "boy_climb": {
       "sheet": "atlas_boy",
@@ -1765,7 +1890,12 @@
         147,
         281
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.61,
+        0.48
+      ],
+      "bodyScale": 1.03
     },
     "boy_light": {
       "sheet": "atlas_boy",
@@ -1779,7 +1909,12 @@
         156,
         278
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.96,
+        0.34
+      ],
+      "bodyScale": 1
     },
     "boy_pour": {
       "sheet": "atlas_boy",
@@ -1793,7 +1928,12 @@
         164,
         283
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.79,
+        0.46
+      ],
+      "bodyScale": 1
     },
     "boy_dig": {
       "sheet": "atlas_boy",
@@ -1807,7 +1947,12 @@
         182,
         198
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.93,
+        0.78
+      ],
+      "bodyScale": 0.68
     },
     "boy_offer": {
       "sheet": "atlas_boy",
@@ -1821,7 +1966,12 @@
         141,
         286
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.95,
+        0.39
+      ],
+      "bodyScale": 1
     },
     "boy_read": {
       "sheet": "atlas_boy",
@@ -1835,7 +1985,12 @@
         103,
         283
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.88,
+        0.46
+      ],
+      "bodyScale": 1
     },
     "boy_open": {
       "sheet": "atlas_boy",
@@ -1849,7 +2004,12 @@
         175,
         227
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.96,
+        0.6
+      ],
+      "bodyScale": 0.72
     },
     "boy_happy": {
       "sheet": "atlas_boy",
@@ -1863,7 +2023,12 @@
         163,
         243
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.93,
+        0.13
+      ],
+      "bodyScale": 1
     },
     "papa_idle": {
       "sheet": "atlas_papa",
@@ -1873,11 +2038,16 @@
       ],
       "rect": [
         144,
-        9,
-        147,
-        471
+        8,
+        148,
+        473
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.87,
+        0.6
+      ],
+      "bodyScale": 1
     },
     "papa_walk1": {
       "sheet": "atlas_papa",
@@ -1887,11 +2057,16 @@
       ],
       "rect": [
         475,
-        9,
-        200,
-        468
+        8,
+        201,
+        469
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.88,
+        0.57
+      ],
+      "bodyScale": 1
     },
     "papa_walk2": {
       "sheet": "atlas_papa",
@@ -1901,11 +2076,16 @@
       ],
       "rect": [
         854,
-        10,
-        208,
-        467
+        9,
+        209,
+        468
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.89,
+        0.56
+      ],
+      "bodyScale": 1
     },
     "papa_read": {
       "sheet": "atlas_papa",
@@ -1914,12 +2094,17 @@
         1024
       ],
       "rect": [
-        1225,
-        54,
-        224,
-        422
+        1234,
+        53,
+        207,
+        423
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.82,
+        0.42
+      ],
+      "bodyScale": 0.7
     },
     "papa_drink": {
       "sheet": "atlas_papa",
@@ -1930,10 +2115,15 @@
       "rect": [
         115,
         545,
-        196,
+        197,
         433
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.27,
+        0.2
+      ],
+      "bodyScale": 0.7
     },
     "papa_surprise": {
       "sheet": "atlas_papa",
@@ -1942,12 +2132,17 @@
         1024
       ],
       "rect": [
-        471,
-        511,
-        246,
-        468
+        470,
+        510,
+        248,
+        469
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.8,
+        0.5
+      ],
+      "bodyScale": 1
     },
     "papa_angry": {
       "sheet": "atlas_papa",
@@ -1959,9 +2154,14 @@
         806,
         513,
         266,
-        471
+        472
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.8,
+        0.5
+      ],
+      "bodyScale": 1
     },
     "papa_think": {
       "sheet": "atlas_papa",
@@ -1972,10 +2172,15 @@
       "rect": [
         1259,
         506,
-        145,
-        482
+        147,
+        483
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.8,
+        0.5
+      ],
+      "bodyScale": 1
     },
     "mama_idle": {
       "sheet": "atlas_npc1",
@@ -1989,7 +2194,12 @@
         117,
         297
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.87,
+        0.6
+      ],
+      "bodyScale": 1
     },
     "mama_receive": {
       "sheet": "atlas_npc1",
@@ -2003,7 +2213,12 @@
         171,
         295
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1
     },
     "mama_walk1": {
       "sheet": "atlas_npc1",
@@ -2017,7 +2232,12 @@
         166,
         298
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.88,
+        0.57
+      ],
+      "bodyScale": 1
     },
     "mama_walk2": {
       "sheet": "atlas_npc1",
@@ -2031,7 +2251,12 @@
         167,
         294
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.89,
+        0.56
+      ],
+      "bodyScale": 1
     },
     "sister_idle": {
       "sheet": "atlas_npc1",
@@ -2045,7 +2270,12 @@
         174,
         261
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.87,
+        0.6
+      ],
+      "bodyScale": 1
     },
     "sister_receive": {
       "sheet": "atlas_npc1",
@@ -2059,7 +2289,12 @@
         178,
         259
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1
     },
     "sister_walk1": {
       "sheet": "atlas_npc1",
@@ -2073,7 +2308,12 @@
         172,
         260
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.88,
+        0.57
+      ],
+      "bodyScale": 1
     },
     "sister_walk2": {
       "sheet": "atlas_npc1",
@@ -2087,7 +2327,12 @@
         169,
         260
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.89,
+        0.56
+      ],
+      "bodyScale": 1
     },
     "grandma_idle": {
       "sheet": "atlas_npc1",
@@ -2101,7 +2346,12 @@
         105,
         283
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.87,
+        0.6
+      ],
+      "bodyScale": 1
     },
     "grandma_receive": {
       "sheet": "atlas_npc1",
@@ -2115,7 +2365,12 @@
         163,
         283
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1
     },
     "grandma_walk1": {
       "sheet": "atlas_npc1",
@@ -2129,7 +2384,12 @@
         146,
         283
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.88,
+        0.57
+      ],
+      "bodyScale": 1
     },
     "grandma_walk2": {
       "sheet": "atlas_npc1",
@@ -2143,7 +2403,12 @@
         152,
         282
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.89,
+        0.56
+      ],
+      "bodyScale": 1
     },
     "grandpa_idle": {
       "sheet": "atlas_npc1",
@@ -2157,7 +2422,12 @@
         120,
         301
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.87,
+        0.6
+      ],
+      "bodyScale": 1
     },
     "grandpa_receive": {
       "sheet": "atlas_npc1",
@@ -2171,7 +2441,12 @@
         179,
         301
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1
     },
     "grandpa_walk1": {
       "sheet": "atlas_npc1",
@@ -2185,7 +2460,12 @@
         164,
         303
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.88,
+        0.57
+      ],
+      "bodyScale": 1
     },
     "grandpa_walk2": {
       "sheet": "atlas_npc1",
@@ -2199,7 +2479,12 @@
         166,
         302
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.89,
+        0.56
+      ],
+      "bodyScale": 1
     },
     "courier_idle": {
       "sheet": "atlas_npc2",
@@ -2213,7 +2498,12 @@
         131,
         302
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.87,
+        0.6
+      ],
+      "bodyScale": 1
     },
     "courier_receive": {
       "sheet": "atlas_npc2",
@@ -2227,7 +2517,12 @@
         122,
         302
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.12,
+        0.5
+      ],
+      "bodyScale": 1
     },
     "courier_walk1": {
       "sheet": "atlas_npc2",
@@ -2241,7 +2536,12 @@
         151,
         300
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.88,
+        0.57
+      ],
+      "bodyScale": 1
     },
     "courier_walk2": {
       "sheet": "atlas_npc2",
@@ -2255,7 +2555,12 @@
         164,
         301
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.89,
+        0.56
+      ],
+      "bodyScale": 1
     },
     "postman_idle": {
       "sheet": "atlas_npc2",
@@ -2269,7 +2574,12 @@
         163,
         315
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.87,
+        0.6
+      ],
+      "bodyScale": 1
     },
     "postman_receive": {
       "sheet": "atlas_npc2",
@@ -2283,7 +2593,12 @@
         141,
         314
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.12,
+        0.5
+      ],
+      "bodyScale": 1
     },
     "postman_walk1": {
       "sheet": "atlas_npc2",
@@ -2297,7 +2612,12 @@
         177,
         313
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.88,
+        0.57
+      ],
+      "bodyScale": 1
     },
     "postman_walk2": {
       "sheet": "atlas_npc2",
@@ -2311,7 +2631,12 @@
         191,
         311
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.89,
+        0.56
+      ],
+      "bodyScale": 1
     },
     "repair_idle": {
       "sheet": "atlas_npc2",
@@ -2325,7 +2650,12 @@
         155,
         318
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.87,
+        0.6
+      ],
+      "bodyScale": 1
     },
     "repair_receive": {
       "sheet": "atlas_npc2",
@@ -2339,7 +2669,12 @@
         140,
         316
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.12,
+        0.5
+      ],
+      "bodyScale": 1
     },
     "repair_walk1": {
       "sheet": "atlas_npc2",
@@ -2353,7 +2688,12 @@
         170,
         317
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.88,
+        0.57
+      ],
+      "bodyScale": 1
     },
     "repair_walk2": {
       "sheet": "atlas_npc2",
@@ -2367,7 +2707,12 @@
         182,
         317
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.89,
+        0.56
+      ],
+      "bodyScale": 1
     },
     "neighbor_idle": {
       "sheet": "atlas_npc2",
@@ -2381,7 +2726,12 @@
         125,
         280
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.87,
+        0.6
+      ],
+      "bodyScale": 1
     },
     "neighbor_receive": {
       "sheet": "atlas_npc2",
@@ -2395,7 +2745,12 @@
         125,
         284
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.12,
+        0.5
+      ],
+      "bodyScale": 1
     },
     "neighbor_walk1": {
       "sheet": "atlas_npc2",
@@ -2409,7 +2764,12 @@
         165,
         275
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.88,
+        0.57
+      ],
+      "bodyScale": 1
     },
     "neighbor_walk2": {
       "sheet": "atlas_npc2",
@@ -2423,7 +2783,12 @@
         172,
         272
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.89,
+        0.56
+      ],
+      "bodyScale": 1
     },
     "cat_idle": {
       "sheet": "atlas_pets",
@@ -2437,7 +2802,12 @@
         196,
         242
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.5,
+        0.47
+      ],
+      "bodyScale": 1
     },
     "cat_receive": {
       "sheet": "atlas_pets",
@@ -2451,7 +2821,12 @@
         308,
         245
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.06,
+        0.5
+      ],
+      "bodyScale": 1
     },
     "cat_walk1": {
       "sheet": "atlas_pets",
@@ -2465,7 +2840,12 @@
         315,
         230
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.94,
+        0.46
+      ],
+      "bodyScale": 1
     },
     "cat_walk2": {
       "sheet": "atlas_pets",
@@ -2479,7 +2859,12 @@
         243,
         245
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.15,
+        0.8
+      ],
+      "bodyScale": 1
     },
     "dog_idle": {
       "sheet": "atlas_pets",
@@ -2493,7 +2878,12 @@
         208,
         252
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.5,
+        0.43
+      ],
+      "bodyScale": 1
     },
     "dog_receive": {
       "sheet": "atlas_pets",
@@ -2507,7 +2897,12 @@
         304,
         252
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.51
+      ],
+      "bodyScale": 1
     },
     "dog_walk1": {
       "sheet": "atlas_pets",
@@ -2521,7 +2916,12 @@
         327,
         252
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.5,
+        0.3
+      ],
+      "bodyScale": 1
     },
     "dog_walk2": {
       "sheet": "atlas_pets",
@@ -2535,7 +2935,12 @@
         248,
         252
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.5,
+        0.3
+      ],
+      "bodyScale": 1
     },
     "crow_idle": {
       "sheet": "atlas_pets",
@@ -2549,7 +2954,12 @@
         268,
         252
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.04,
+        0.28
+      ],
+      "bodyScale": 1
     },
     "crow_receive": {
       "sheet": "atlas_pets",
@@ -2563,7 +2973,12 @@
         324,
         252
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.25,
+        0.42
+      ],
+      "bodyScale": 1
     },
     "crow_walk1": {
       "sheet": "atlas_pets",
@@ -2577,7 +2992,12 @@
         370,
         247
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.25,
+        0.42
+      ],
+      "bodyScale": 1
     },
     "crow_walk2": {
       "sheet": "atlas_pets",
@@ -2591,21 +3011,31 @@
         363,
         216
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.25,
+        0.42
+      ],
+      "bodyScale": 1
     },
     "robot_idle": {
-      "sheet": "atlas_pets",
+      "sheet": "atlas_robot",
       "size": [
-        1536,
-        1024
+        1774,
+        887
       ],
       "rect": [
-        78,
-        770,
-        265,
-        243
+        58,
+        88,
+        821,
+        725
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.67,
+        0.42
+      ],
+      "bodyScale": 1
     },
     "robot_receive": {
       "sheet": "atlas_pets",
@@ -2619,7 +3049,12 @@
         267,
         241
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.5,
+        0.65
+      ],
+      "bodyScale": 1
     },
     "robot_walk1": {
       "sheet": "atlas_pets",
@@ -2628,12 +3063,17 @@
         1024
       ],
       "rect": [
-        809,
-        779,
-        272,
-        233
+        1234,
+        781,
+        266,
+        230
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.5,
+        0.65
+      ],
+      "bodyScale": 1
     },
     "robot_walk2": {
       "sheet": "atlas_pets",
@@ -2647,7 +3087,12 @@
         266,
         230
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.5,
+        0.65
+      ],
+      "bodyScale": 1
     },
     "grandma_sit": {
       "sheet": "atlas_seated",
@@ -2657,11 +3102,16 @@
       ],
       "rect": [
         144,
-        16,
-        223,
-        459
+        15,
+        226,
+        463
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.55,
+        0.36
+      ],
+      "bodyScale": 0.7
     },
     "grandpa_sleep": {
       "sheet": "atlas_seated",
@@ -2670,12 +3120,17 @@
         979
       ],
       "rect": [
-        493,
+        492,
         10,
-        219,
-        467
+        222,
+        469
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.66,
+        0.53
+      ],
+      "bodyScale": 0.7
     },
     "sister_eat": {
       "sheet": "atlas_seated",
@@ -2684,12 +3139,17 @@
         979
       ],
       "rect": [
-        838,
-        76,
-        293,
-        402
+        832,
+        74,
+        301,
+        406
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.46,
+        0.35
+      ],
+      "bodyScale": 0.7
     },
     "grandma_cook": {
       "sheet": "atlas_seated",
@@ -2698,12 +3158,17 @@
         979
       ],
       "rect": [
-        1267,
-        6,
-        225,
-        475
+        1266,
+        7,
+        230,
+        478
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.8,
+        0.5
+      ],
+      "bodyScale": 1
     },
     "mama_sit": {
       "sheet": "atlas_seated",
@@ -2712,12 +3177,17 @@
         979
       ],
       "rect": [
-        107,
-        495,
-        240,
-        458
+        102,
+        493,
+        247,
+        463
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.64,
+        0.47
+      ],
+      "bodyScale": 0.7
     },
     "grandpa_wake": {
       "sheet": "atlas_seated",
@@ -2726,12 +3196,17 @@
         979
       ],
       "rect": [
-        468,
-        487,
-        256,
-        465
+        466,
+        485,
+        261,
+        468
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.8,
+        0.5
+      ],
+      "bodyScale": 1
     },
     "sister_cry": {
       "sheet": "atlas_seated",
@@ -2740,12 +3215,17 @@
         979
       ],
       "rect": [
-        825,
-        529,
-        312,
-        409
+        822,
+        527,
+        318,
+        415
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.8,
+        0.5
+      ],
+      "bodyScale": 1
     },
     "grandma_sneeze": {
       "sheet": "atlas_seated",
@@ -2755,67 +3235,80 @@
       ],
       "rect": [
         1274,
-        487,
-        232,
-        458
+        485,
+        199,
+        462
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.8,
+        0.5
+      ],
+      "bodyScale": 1
     },
     "tv_open": {
-      "sheet": "atlas_interactions",
+      "sheet": "atlas_fixtures",
       "size": [
         1448,
         1086
       ],
       "rect": [
-        15,
-        21,
-        335,
-        331
+        390,
+        13,
+        320,
+        300
       ],
-      "worldHeight": 45
+      "worldHeight": 256.0975609756098
     },
     "desk_open": {
-      "sheet": "atlas_interactions",
+      "sheet": "atlas_fixtures",
       "size": [
         1448,
         1086
       ],
       "rect": [
-        375,
-        41,
-        333,
-        311
+        1102,
+        30,
+        314,
+        269
       ],
-      "worldHeight": 45
+      "worldHeight": 204.44
     },
     "vanity_open": {
-      "sheet": "atlas_interactions",
+      "sheet": "atlas_vanity",
       "size": [
-        1448,
-        1086
+        1774,
+        887
       ],
       "rect": [
-        757,
-        11,
-        303,
-        341
+        967,
+        34,
+        747,
+        829
       ],
-      "worldHeight": 45
+      "worldHeight": 302.18712029161605,
+      "anchor": [
+        0.45,
+        1
+      ]
     },
     "shelf_open": {
-      "sheet": "atlas_interactions",
+      "sheet": "atlas_fixtures",
       "size": [
         1448,
         1086
       ],
       "rect": [
-        1140,
-        11,
-        280,
-        341
+        1141,
+        307,
+        276,
+        310
       ],
-      "worldHeight": 45
+      "worldHeight": 343.89067524115757,
+      "anchor": [
+        0.43,
+        1
+      ]
     },
     "boxes_open": {
       "sheet": "atlas_interactions",
@@ -2832,32 +3325,32 @@
       "worldHeight": 45
     },
     "breadbox_open": {
-      "sheet": "atlas_interactions",
+      "sheet": "atlas_fixtures",
       "size": [
         1448,
         1086
       ],
       "rect": [
-        372,
-        374,
-        342,
-        328
+        1116,
+        637,
+        300,
+        223
       ],
-      "worldHeight": 45
+      "worldHeight": 105.63157894736842
     },
     "basket_open": {
-      "sheet": "atlas_interactions",
+      "sheet": "atlas_fixtures",
       "size": [
         1448,
         1086
       ],
       "rect": [
-        734,
-        374,
-        342,
-        338
+        409,
+        615,
+        292,
+        235
       ],
-      "worldHeight": 45
+      "worldHeight": 127.97029702970298
     },
     "cushion_open": {
       "sheet": "atlas_interactions",
@@ -2874,32 +3367,32 @@
       "worldHeight": 45
     },
     "flowerbed": {
-      "sheet": "atlas_interactions",
+      "sheet": "atlas_fixtures",
       "size": [
         1448,
         1086
       ],
       "rect": [
-        10,
-        734,
-        342,
-        314
+        20,
+        852,
+        336,
+        228
       ],
       "worldHeight": 100
     },
     "flowerbed_open": {
-      "sheet": "atlas_interactions",
+      "sheet": "atlas_fixtures",
       "size": [
         1448,
         1086
       ],
       "rect": [
-        372,
-        734,
-        342,
-        314
+        382,
+        852,
+        336,
+        228
       ],
-      "worldHeight": 100
+      "worldHeight": 100.0
     },
     "wateringCan_full": {
       "sheet": "atlas_interactions",
@@ -2916,18 +3409,18 @@
       "worldHeight": 45
     },
     "ice_melted": {
-      "sheet": "atlas_interactions",
+      "sheet": "atlas_fixtures",
       "size": [
         1448,
         1086
       ],
       "rect": [
-        1096,
-        753,
-        342,
-        278
+        1105,
+        874,
+        327,
+        189
       ],
-      "worldHeight": 45
+      "worldHeight": 65
     },
     "mama_offer": {
       "sheet": "atlas_npc1",
@@ -2941,7 +3434,12 @@
         171,
         295
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1
     },
     "mama_reach": {
       "sheet": "atlas_npc1",
@@ -2955,7 +3453,12 @@
         171,
         295
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1
     },
     "mama_read": {
       "sheet": "atlas_npc1",
@@ -2969,7 +3472,12 @@
         117,
         297
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.88,
+        0.46
+      ],
+      "bodyScale": 1
     },
     "mama_open": {
       "sheet": "atlas_npc1",
@@ -2983,7 +3491,12 @@
         171,
         295
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1
     },
     "mama_push": {
       "sheet": "atlas_npc1",
@@ -2997,7 +3510,12 @@
         171,
         295
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1
     },
     "mama_happy": {
       "sheet": "atlas_npc1",
@@ -3011,7 +3529,12 @@
         171,
         295
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1
     },
     "mama_surprise": {
       "sheet": "atlas_npc1",
@@ -3025,7 +3548,12 @@
         171,
         295
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1
     },
     "sister_offer": {
       "sheet": "atlas_npc1",
@@ -3039,7 +3567,12 @@
         178,
         259
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1
     },
     "sister_reach": {
       "sheet": "atlas_npc1",
@@ -3053,7 +3586,12 @@
         178,
         259
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1
     },
     "sister_read": {
       "sheet": "atlas_npc1",
@@ -3067,7 +3605,12 @@
         174,
         261
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.88,
+        0.46
+      ],
+      "bodyScale": 1
     },
     "sister_open": {
       "sheet": "atlas_npc1",
@@ -3081,7 +3624,12 @@
         178,
         259
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1
     },
     "sister_push": {
       "sheet": "atlas_npc1",
@@ -3095,7 +3643,12 @@
         178,
         259
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1
     },
     "sister_happy": {
       "sheet": "atlas_npc1",
@@ -3109,7 +3662,12 @@
         178,
         259
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1
     },
     "sister_surprise": {
       "sheet": "atlas_npc1",
@@ -3123,7 +3681,12 @@
         178,
         259
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1
     },
     "grandma_offer": {
       "sheet": "atlas_npc1",
@@ -3137,7 +3700,12 @@
         163,
         283
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1
     },
     "grandma_reach": {
       "sheet": "atlas_npc1",
@@ -3151,7 +3719,12 @@
         163,
         283
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1
     },
     "grandma_read": {
       "sheet": "atlas_npc1",
@@ -3165,7 +3738,12 @@
         105,
         283
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.88,
+        0.46
+      ],
+      "bodyScale": 1
     },
     "grandma_open": {
       "sheet": "atlas_npc1",
@@ -3179,7 +3757,12 @@
         163,
         283
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1
     },
     "grandma_push": {
       "sheet": "atlas_npc1",
@@ -3193,7 +3776,12 @@
         163,
         283
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1
     },
     "grandma_happy": {
       "sheet": "atlas_npc1",
@@ -3207,7 +3795,12 @@
         163,
         283
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1
     },
     "grandma_surprise": {
       "sheet": "atlas_npc1",
@@ -3221,7 +3814,12 @@
         163,
         283
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1
     },
     "grandpa_offer": {
       "sheet": "atlas_npc1",
@@ -3235,7 +3833,12 @@
         179,
         301
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1
     },
     "grandpa_reach": {
       "sheet": "atlas_npc1",
@@ -3249,7 +3852,12 @@
         179,
         301
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1
     },
     "grandpa_read": {
       "sheet": "atlas_npc1",
@@ -3263,7 +3871,12 @@
         120,
         301
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.88,
+        0.46
+      ],
+      "bodyScale": 1
     },
     "grandpa_open": {
       "sheet": "atlas_npc1",
@@ -3277,7 +3890,12 @@
         179,
         301
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1
     },
     "grandpa_push": {
       "sheet": "atlas_npc1",
@@ -3291,7 +3909,12 @@
         179,
         301
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1
     },
     "grandpa_happy": {
       "sheet": "atlas_npc1",
@@ -3305,7 +3928,12 @@
         179,
         301
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1
     },
     "grandpa_surprise": {
       "sheet": "atlas_npc1",
@@ -3319,7 +3947,12 @@
         179,
         301
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1
     },
     "courier_offer": {
       "sheet": "atlas_npc2",
@@ -3333,7 +3966,12 @@
         122,
         302
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.12,
+        0.5
+      ],
+      "bodyScale": 1
     },
     "courier_reach": {
       "sheet": "atlas_npc2",
@@ -3347,7 +3985,12 @@
         122,
         302
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.12,
+        0.5
+      ],
+      "bodyScale": 1
     },
     "courier_read": {
       "sheet": "atlas_npc2",
@@ -3361,7 +4004,12 @@
         131,
         302
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.88,
+        0.46
+      ],
+      "bodyScale": 1
     },
     "courier_open": {
       "sheet": "atlas_npc2",
@@ -3375,7 +4023,12 @@
         122,
         302
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.12,
+        0.5
+      ],
+      "bodyScale": 1
     },
     "courier_push": {
       "sheet": "atlas_npc2",
@@ -3389,7 +4042,12 @@
         122,
         302
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.12,
+        0.5
+      ],
+      "bodyScale": 1
     },
     "courier_happy": {
       "sheet": "atlas_npc2",
@@ -3403,7 +4061,12 @@
         122,
         302
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.93,
+        0.13
+      ],
+      "bodyScale": 1
     },
     "courier_surprise": {
       "sheet": "atlas_npc2",
@@ -3417,7 +4080,12 @@
         122,
         302
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.8,
+        0.5
+      ],
+      "bodyScale": 1
     },
     "postman_offer": {
       "sheet": "atlas_npc2",
@@ -3431,7 +4099,12 @@
         141,
         314
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.12,
+        0.5
+      ],
+      "bodyScale": 1
     },
     "postman_reach": {
       "sheet": "atlas_npc2",
@@ -3445,7 +4118,12 @@
         141,
         314
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.12,
+        0.5
+      ],
+      "bodyScale": 1
     },
     "postman_read": {
       "sheet": "atlas_npc2",
@@ -3459,7 +4137,12 @@
         163,
         315
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.88,
+        0.46
+      ],
+      "bodyScale": 1
     },
     "postman_open": {
       "sheet": "atlas_npc2",
@@ -3473,7 +4156,12 @@
         141,
         314
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.12,
+        0.5
+      ],
+      "bodyScale": 1
     },
     "postman_push": {
       "sheet": "atlas_npc2",
@@ -3487,7 +4175,12 @@
         141,
         314
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.12,
+        0.5
+      ],
+      "bodyScale": 1
     },
     "postman_happy": {
       "sheet": "atlas_npc2",
@@ -3501,7 +4194,12 @@
         141,
         314
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.93,
+        0.13
+      ],
+      "bodyScale": 1
     },
     "postman_surprise": {
       "sheet": "atlas_npc2",
@@ -3515,7 +4213,12 @@
         141,
         314
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.8,
+        0.5
+      ],
+      "bodyScale": 1
     },
     "repair_offer": {
       "sheet": "atlas_npc2",
@@ -3529,7 +4232,12 @@
         140,
         316
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.12,
+        0.5
+      ],
+      "bodyScale": 1
     },
     "repair_reach": {
       "sheet": "atlas_npc2",
@@ -3543,7 +4251,12 @@
         140,
         316
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.12,
+        0.5
+      ],
+      "bodyScale": 1
     },
     "repair_read": {
       "sheet": "atlas_npc2",
@@ -3557,7 +4270,12 @@
         155,
         318
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.88,
+        0.46
+      ],
+      "bodyScale": 1
     },
     "repair_open": {
       "sheet": "atlas_npc2",
@@ -3571,7 +4289,12 @@
         140,
         316
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.12,
+        0.5
+      ],
+      "bodyScale": 1
     },
     "repair_push": {
       "sheet": "atlas_npc2",
@@ -3585,7 +4308,12 @@
         140,
         316
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.12,
+        0.5
+      ],
+      "bodyScale": 1
     },
     "repair_happy": {
       "sheet": "atlas_npc2",
@@ -3599,7 +4327,12 @@
         140,
         316
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.93,
+        0.13
+      ],
+      "bodyScale": 1
     },
     "repair_surprise": {
       "sheet": "atlas_npc2",
@@ -3613,7 +4346,12 @@
         140,
         316
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.8,
+        0.5
+      ],
+      "bodyScale": 1
     },
     "neighbor_offer": {
       "sheet": "atlas_npc2",
@@ -3627,7 +4365,12 @@
         125,
         284
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.12,
+        0.5
+      ],
+      "bodyScale": 1
     },
     "neighbor_reach": {
       "sheet": "atlas_npc2",
@@ -3641,7 +4384,12 @@
         125,
         284
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.12,
+        0.5
+      ],
+      "bodyScale": 1
     },
     "neighbor_read": {
       "sheet": "atlas_npc2",
@@ -3655,7 +4403,12 @@
         125,
         280
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.88,
+        0.46
+      ],
+      "bodyScale": 1
     },
     "neighbor_open": {
       "sheet": "atlas_npc2",
@@ -3669,7 +4422,12 @@
         125,
         284
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.12,
+        0.5
+      ],
+      "bodyScale": 1
     },
     "neighbor_push": {
       "sheet": "atlas_npc2",
@@ -3683,7 +4441,12 @@
         125,
         284
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.12,
+        0.5
+      ],
+      "bodyScale": 1
     },
     "neighbor_happy": {
       "sheet": "atlas_npc2",
@@ -3697,7 +4460,12 @@
         125,
         284
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.93,
+        0.13
+      ],
+      "bodyScale": 1
     },
     "neighbor_surprise": {
       "sheet": "atlas_npc2",
@@ -3711,7 +4479,12 @@
         125,
         284
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.8,
+        0.5
+      ],
+      "bodyScale": 1
     },
     "cat_offer": {
       "sheet": "atlas_pets",
@@ -3725,7 +4498,12 @@
         308,
         245
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.5,
+        0.3
+      ],
+      "bodyScale": 1
     },
     "cat_reach": {
       "sheet": "atlas_pets",
@@ -3739,7 +4517,12 @@
         308,
         245
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.5,
+        0.3
+      ],
+      "bodyScale": 1
     },
     "cat_read": {
       "sheet": "atlas_pets",
@@ -3753,7 +4536,12 @@
         196,
         242
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.5,
+        0.3
+      ],
+      "bodyScale": 1
     },
     "cat_open": {
       "sheet": "atlas_pets",
@@ -3767,7 +4555,12 @@
         308,
         245
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.5,
+        0.3
+      ],
+      "bodyScale": 1
     },
     "cat_push": {
       "sheet": "atlas_pets",
@@ -3781,7 +4574,12 @@
         308,
         245
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.5,
+        0.3
+      ],
+      "bodyScale": 1
     },
     "cat_happy": {
       "sheet": "atlas_pets",
@@ -3795,7 +4593,12 @@
         308,
         245
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.5,
+        0.3
+      ],
+      "bodyScale": 1
     },
     "cat_surprise": {
       "sheet": "atlas_pets",
@@ -3809,7 +4612,12 @@
         308,
         245
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.5,
+        0.3
+      ],
+      "bodyScale": 1
     },
     "dog_offer": {
       "sheet": "atlas_pets",
@@ -3823,7 +4631,12 @@
         304,
         252
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.5,
+        0.3
+      ],
+      "bodyScale": 1
     },
     "dog_reach": {
       "sheet": "atlas_pets",
@@ -3837,7 +4650,12 @@
         304,
         252
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.5,
+        0.3
+      ],
+      "bodyScale": 1
     },
     "dog_read": {
       "sheet": "atlas_pets",
@@ -3851,7 +4669,12 @@
         208,
         252
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.5,
+        0.3
+      ],
+      "bodyScale": 1
     },
     "dog_open": {
       "sheet": "atlas_pets",
@@ -3865,7 +4688,12 @@
         304,
         252
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.5,
+        0.3
+      ],
+      "bodyScale": 1
     },
     "dog_push": {
       "sheet": "atlas_pets",
@@ -3879,7 +4707,12 @@
         304,
         252
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.5,
+        0.3
+      ],
+      "bodyScale": 1
     },
     "dog_happy": {
       "sheet": "atlas_pets",
@@ -3893,7 +4726,12 @@
         304,
         252
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.5,
+        0.3
+      ],
+      "bodyScale": 1
     },
     "dog_surprise": {
       "sheet": "atlas_pets",
@@ -3907,7 +4745,12 @@
         304,
         252
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.5,
+        0.3
+      ],
+      "bodyScale": 1
     },
     "crow_offer": {
       "sheet": "atlas_pets",
@@ -3921,7 +4764,12 @@
         324,
         252
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.25,
+        0.42
+      ],
+      "bodyScale": 1
     },
     "crow_reach": {
       "sheet": "atlas_pets",
@@ -3935,7 +4783,12 @@
         324,
         252
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.25,
+        0.42
+      ],
+      "bodyScale": 1
     },
     "crow_read": {
       "sheet": "atlas_pets",
@@ -3949,7 +4802,12 @@
         268,
         252
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.25,
+        0.42
+      ],
+      "bodyScale": 1
     },
     "crow_open": {
       "sheet": "atlas_pets",
@@ -3963,7 +4821,12 @@
         324,
         252
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.25,
+        0.42
+      ],
+      "bodyScale": 1
     },
     "crow_push": {
       "sheet": "atlas_pets",
@@ -3977,7 +4840,12 @@
         324,
         252
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.25,
+        0.42
+      ],
+      "bodyScale": 1
     },
     "crow_happy": {
       "sheet": "atlas_pets",
@@ -3991,7 +4859,12 @@
         324,
         252
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.25,
+        0.42
+      ],
+      "bodyScale": 1
     },
     "crow_surprise": {
       "sheet": "atlas_pets",
@@ -4005,7 +4878,12 @@
         324,
         252
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.25,
+        0.42
+      ],
+      "bodyScale": 1
     },
     "robot_offer": {
       "sheet": "atlas_pets",
@@ -4019,7 +4897,12 @@
         267,
         241
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.5,
+        0.65
+      ],
+      "bodyScale": 1
     },
     "robot_reach": {
       "sheet": "atlas_pets",
@@ -4033,7 +4916,12 @@
         267,
         241
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.5,
+        0.65
+      ],
+      "bodyScale": 1
     },
     "robot_read": {
       "sheet": "atlas_pets",
@@ -4047,21 +4935,31 @@
         265,
         243
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.5,
+        0.65
+      ],
+      "bodyScale": 1
     },
     "robot_open": {
-      "sheet": "atlas_pets",
+      "sheet": "atlas_robot",
       "size": [
-        1536,
-        1024
+        1774,
+        887
       ],
       "rect": [
-        430,
-        770,
-        267,
-        241
+        928,
+        88,
+        822,
+        725
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.5,
+        0.65
+      ],
+      "bodyScale": 1
     },
     "robot_push": {
       "sheet": "atlas_pets",
@@ -4075,7 +4973,12 @@
         267,
         241
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.5,
+        0.65
+      ],
+      "bodyScale": 1
     },
     "robot_happy": {
       "sheet": "atlas_pets",
@@ -4089,7 +4992,12 @@
         267,
         241
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.5,
+        0.65
+      ],
+      "bodyScale": 1
     },
     "robot_surprise": {
       "sheet": "atlas_pets",
@@ -4103,7 +5011,12 @@
         267,
         241
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.5,
+        0.65
+      ],
+      "bodyScale": 1
     },
     "vacuum_walk1": {
       "sheet": "props_atlas",
@@ -4117,7 +5030,12 @@
         241,
         175
       ],
-      "worldHeight": 38
+      "worldHeight": 38,
+      "hand": [
+        0.95,
+        0.65
+      ],
+      "bodyScale": 1
     },
     "vacuum_walk2": {
       "sheet": "props_atlas",
@@ -4131,7 +5049,12 @@
         241,
         175
       ],
-      "worldHeight": 38
+      "worldHeight": 38,
+      "hand": [
+        0.95,
+        0.65
+      ],
+      "bodyScale": 1
     },
     "vacuum_push": {
       "sheet": "props_atlas",
@@ -4145,7 +5068,12 @@
         241,
         175
       ],
-      "worldHeight": 38
+      "worldHeight": 38,
+      "hand": [
+        0.95,
+        0.65
+      ],
+      "bodyScale": 1
     },
     "vacuum_open": {
       "sheet": "props_atlas",
@@ -4159,7 +5087,12 @@
         241,
         175
       ],
-      "worldHeight": 38
+      "worldHeight": 38,
+      "hand": [
+        0.95,
+        0.65
+      ],
+      "bodyScale": 1
     },
     "vacuum_reach": {
       "sheet": "props_atlas",
@@ -4173,7 +5106,12 @@
         241,
         175
       ],
-      "worldHeight": 38
+      "worldHeight": 38,
+      "hand": [
+        0.95,
+        0.65
+      ],
+      "bodyScale": 1
     },
     "vacuum_read": {
       "sheet": "props_atlas",
@@ -4187,7 +5125,12 @@
         241,
         175
       ],
-      "worldHeight": 38
+      "worldHeight": 38,
+      "hand": [
+        0.95,
+        0.65
+      ],
+      "bodyScale": 1
     },
     "boy_surprise": {
       "sheet": "atlas_boy",
@@ -4201,7 +5144,12 @@
         128,
         284
       ],
-      "worldHeight": 45
+      "worldHeight": 45,
+      "hand": [
+        0.8,
+        0.5
+      ],
+      "bodyScale": 1
     },
     "card": {
       "sheet": "atlas_items2",
@@ -4271,7 +5219,15 @@
         274,
         253
       ],
-      "worldHeight": 55
+      "worldHeight": 55,
+      "grip": [
+        0.75,
+        0.8
+      ],
+      "tip": [
+        0.12,
+        0.25
+      ]
     },
     "shovel": {
       "sheet": "atlas_cleanitems",
@@ -4285,7 +5241,15 @@
         273,
         231
       ],
-      "worldHeight": 100
+      "worldHeight": 100,
+      "grip": [
+        0.85,
+        0.2
+      ],
+      "tip": [
+        0.15,
+        0.9
+      ]
     },
     "wateringCan": {
       "sheet": "atlas_cleanitems",
@@ -4299,7 +5263,15 @@
         343,
         244
       ],
-      "worldHeight": 70
+      "worldHeight": 70,
+      "grip": [
+        0.6,
+        0.18
+      ],
+      "tip": [
+        0.1,
+        0.35
+      ]
     },
     "cushion": {
       "sheet": "atlas_cleanitems",
@@ -4398,6 +5370,604 @@
         248
       ],
       "worldHeight": 38
+    },
+    "switch13": {
+      "sheet": "atlas_controls",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        101,
+        113,
+        224,
+        365
+      ],
+      "worldHeight": 38
+    },
+    "switch13_on": {
+      "sheet": "atlas_controls",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        469,
+        111,
+        227,
+        367
+      ],
+      "worldHeight": 38
+    },
+    "starButton": {
+      "sheet": "atlas_controls",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        814,
+        159,
+        290,
+        289
+      ],
+      "worldHeight": 25
+    },
+    "starButton_on": {
+      "sheet": "atlas_controls",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        1170,
+        159,
+        289,
+        289
+      ],
+      "worldHeight": 25
+    },
+    "combinationLock": {
+      "sheet": "atlas_controls",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        39,
+        644,
+        343,
+        186
+      ],
+      "worldHeight": 38
+    },
+    "combinationLock_on": {
+      "sheet": "atlas_controls",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        430,
+        644,
+        336,
+        187
+      ],
+      "worldHeight": 38
+    },
+    "keyhole13": {
+      "sheet": "atlas_controls",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        770,
+        594,
+        357,
+        292
+      ],
+      "worldHeight": 23
+    },
+    "intercom13": {
+      "sheet": "atlas_controls",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        1230,
+        550,
+        231,
+        358
+      ],
+      "worldHeight": 60
+    },
+    "boy_reachLow": {
+      "sheet": "atlas_reach",
+      "size": [
+        1774,
+        887
+      ],
+      "rect": [
+        66,
+        149,
+        289,
+        284
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.965,
+        0.965
+      ],
+      "bodyScale": 0.7
+    },
+    "boy_kneel": {
+      "sheet": "atlas_reach",
+      "size": [
+        1774,
+        887
+      ],
+      "rect": [
+        530,
+        132,
+        345,
+        302
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.96,
+        0.8
+      ],
+      "bodyScale": 0.7
+    },
+    "boy_reachWaist": {
+      "sheet": "atlas_reach",
+      "size": [
+        1774,
+        887
+      ],
+      "rect": [
+        999,
+        27,
+        296,
+        406
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.96,
+        0.5
+      ],
+      "bodyScale": 1
+    },
+    "boy_reachChest": {
+      "sheet": "atlas_reach",
+      "size": [
+        1774,
+        887
+      ],
+      "rect": [
+        1446,
+        19,
+        287,
+        416
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.96,
+        0.185
+      ],
+      "bodyScale": 1
+    },
+    "boy_reachUp": {
+      "sheet": "atlas_reach",
+      "size": [
+        1774,
+        887
+      ],
+      "rect": [
+        116,
+        468,
+        283,
+        403
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.97,
+        0.03
+      ],
+      "bodyScale": 1.03
+    },
+    "boy_reachOver": {
+      "sheet": "atlas_reach",
+      "size": [
+        1774,
+        887
+      ],
+      "rect": [
+        595,
+        462,
+        176,
+        408
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.9,
+        0.03
+      ],
+      "bodyScale": 1.12
+    },
+    "boy_hold": {
+      "sheet": "atlas_reach",
+      "size": [
+        1774,
+        887
+      ],
+      "rect": [
+        1037,
+        470,
+        247,
+        401
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.94,
+        0.5
+      ],
+      "bodyScale": 1
+    },
+    "boy_climbReach": {
+      "sheet": "atlas_reach",
+      "size": [
+        1774,
+        887
+      ],
+      "rect": [
+        1442,
+        468,
+        291,
+        403
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.96,
+        0.035
+      ],
+      "bodyScale": 1.02
+    },
+    "upperCab": {
+      "sheet": "atlas_uppercab",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        129,
+        3,
+        523,
+        1006
+      ],
+      "worldHeight": 345
+    },
+    "upperCab_open": {
+      "sheet": "atlas_uppercab",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        782,
+        2,
+        654,
+        1007
+      ],
+      "worldHeight": 345,
+      "anchor": [
+        0.55,
+        1
+      ]
+    },
+    "umbrella_blue": {
+      "sheet": "atlas_orderedprops",
+      "size": [
+        1774,
+        887
+      ],
+      "rect": [
+        254,
+        9,
+        97,
+        433
+      ],
+      "worldHeight": 160,
+      "grip": [
+        0.5,
+        0.1
+      ]
+    },
+    "umbrella_yellow": {
+      "sheet": "atlas_orderedprops",
+      "size": [
+        1774,
+        887
+      ],
+      "rect": [
+        651,
+        9,
+        98,
+        433
+      ],
+      "worldHeight": 160,
+      "grip": [
+        0.5,
+        0.1
+      ]
+    },
+    "umbrella_folded": {
+      "sheet": "atlas_orderedprops",
+      "size": [
+        1774,
+        887
+      ],
+      "rect": [
+        1043,
+        206,
+        138,
+        236
+      ],
+      "worldHeight": 90,
+      "grip": [
+        0.5,
+        0.1
+      ]
+    },
+    "book1": {
+      "sheet": "atlas_orderedprops",
+      "size": [
+        1774,
+        887
+      ],
+      "rect": [
+        1409,
+        131,
+        103,
+        311
+      ],
+      "worldHeight": 60
+    },
+    "book2": {
+      "sheet": "atlas_orderedprops",
+      "size": [
+        1774,
+        887
+      ],
+      "rect": [
+        244,
+        446,
+        107,
+        426
+      ],
+      "worldHeight": 60
+    },
+    "book3": {
+      "sheet": "atlas_orderedprops",
+      "size": [
+        1774,
+        887
+      ],
+      "rect": [
+        642,
+        446,
+        107,
+        427
+      ],
+      "worldHeight": 60
+    },
+    "book4": {
+      "sheet": "atlas_orderedprops",
+      "size": [
+        1774,
+        887
+      ],
+      "rect": [
+        1031,
+        446,
+        107,
+        427
+      ],
+      "worldHeight": 60
+    },
+    "book_plain": {
+      "sheet": "atlas_orderedprops",
+      "size": [
+        1774,
+        887
+      ],
+      "rect": [
+        1411,
+        446,
+        109,
+        427
+      ],
+      "worldHeight": 45
+    },
+    "clock_open": {
+      "sheet": "atlas_clock",
+      "size": [
+        1774,
+        887
+      ],
+      "rect": [
+        935,
+        27,
+        788,
+        795
+      ],
+      "worldHeight": 80
+    },
+    "magnet_red": {
+      "sheet": "atlas_items2",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        44,
+        330,
+        104,
+        109
+      ],
+      "worldHeight": 24
+    },
+    "magnet_yellow": {
+      "sheet": "atlas_items2",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        148,
+        330,
+        104,
+        109
+      ],
+      "worldHeight": 24
+    },
+    "magnet_blue": {
+      "sheet": "atlas_items2",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        44,
+        439,
+        104,
+        109
+      ],
+      "worldHeight": 24
+    },
+    "magnet_green": {
+      "sheet": "atlas_items2",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        148,
+        439,
+        104,
+        109
+      ],
+      "worldHeight": 24
+    },
+    "robot_scan": {
+      "sheet": "atlas_pets",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        430,
+        770,
+        267,
+        241
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.5,
+        0.65
+      ],
+      "bodyScale": 1
+    },
+    "umbrellaStand": {
+      "sheet": "atlas_fixtures",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        47,
+        648,
+        293,
+        202
+      ],
+      "worldHeight": 110
+    },
+    "intercom": {
+      "sheet": "atlas_controls",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        1230,
+        550,
+        231,
+        358
+      ],
+      "worldHeight": 60
+    },
+    "box_red_open": {
+      "sheet": "atlas_states",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        411,
+        825,
+        297,
+        224
+      ],
+      "worldHeight": 90
+    },
+    "box_blue_open": {
+      "sheet": "atlas_states",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        411,
+        825,
+        297,
+        224
+      ],
+      "worldHeight": 90
+    },
+    "box_green_open": {
+      "sheet": "atlas_states",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        411,
+        825,
+        297,
+        224
+      ],
+      "worldHeight": 90
+    },
+    "papa_watch": {
+      "sheet": "atlas_papa",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        1234,
+        53,
+        207,
+        423
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.82,
+        0.42
+      ],
+      "bodyScale": 0.7
     }
   }
 }

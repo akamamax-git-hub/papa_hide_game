@@ -1,0 +1,282 @@
+{
+  "version": "0.13.0",
+  "validated_at_utc": "2026-10-31T23:09:05.721203+00:00",
+  "html_sha256": "5eca6c14d8e16aca78748c0af5a048622df461f26c089749b38d7b74ed70d6aa",
+  "stages": 50,
+  "actions": 269,
+  "failure_routes": 53,
+  "retry_routes": 53,
+  "measured_contacts": 421,
+  "max_contact_error_world_units": 1.6077746776921858e-13,
+  "console_identity_verified_stages": 50,
+  "console_source_region_verified_stages": 50,
+  "painted_target_clicks": 269,
+  "browser_failures": [],
+  "failure_route_failures": [],
+  "guards": {
+    "wrongItemSelection": "PASS",
+    "bagDragUse": "PASS",
+    "reusableToolRetained": "PASS",
+    "doubleClick": "PASS",
+    "retryDuringAnimation": "PASS",
+    "menuDuringAnimation": "PASS",
+    "puzzleCancel": "PASS",
+    "wrongCodeFailure": "PASS",
+    "offlineRoomChange": "PASS",
+    "pcViewportChecks": 100,
+    "audioDecodeAndToggle": "PASS",
+    "errors": []
+  },
+  "stage_actions": [
+    {
+      "stage": 1,
+      "actions": 4,
+      "contacts": 5
+    },
+    {
+      "stage": 2,
+      "actions": 5,
+      "contacts": 7
+    },
+    {
+      "stage": 3,
+      "actions": 4,
+      "contacts": 6
+    },
+    {
+      "stage": 4,
+      "actions": 5,
+      "contacts": 6
+    },
+    {
+      "stage": 5,
+      "actions": 4,
+      "contacts": 5
+    },
+    {
+      "stage": 6,
+      "actions": 4,
+      "contacts": 17
+    },
+    {
+      "stage": 7,
+      "actions": 6,
+      "contacts": 8
+    },
+    {
+      "stage": 8,
+      "actions": 5,
+      "contacts": 8
+    },
+    {
+      "stage": 9,
+      "actions": 4,
+      "contacts": 4
+    },
+    {
+      "stage": 10,
+      "actions": 5,
+      "contacts": 5
+    },
+    {
+      "stage": 11,
+      "actions": 5,
+      "contacts": 5
+    },
+    {
+      "stage": 12,
+      "actions": 6,
+      "contacts": 6
+    },
+    {
+      "stage": 13,
+      "actions": 5,
+      "contacts": 10
+    },
+    {
+      "stage": 14,
+      "actions": 6,
+      "contacts": 5
+    },
+    {
+      "stage": 15,
+      "actions": 5,
+      "contacts": 5
+    },
+    {
+      "stage": 16,
+      "actions": 5,
+      "contacts": 6
+    },
+    {
+      "stage": 17,
+      "actions": 5,
+      "contacts": 7
+    },
+    {
+      "stage": 18,
+      "actions": 5,
+      "contacts": 5
+    },
+    {
+      "stage": 19,
+      "actions": 4,
+      "contacts": 5
+    },
+    {
+      "stage": 20,
+      "actions": 6,
+      "contacts": 10
+    },
+    {
+      "stage": 21,
+      "actions": 5,
+      "contacts": 7
+    },
+    {
+      "stage": 22,
+      "actions": 7,
+      "contacts": 7
+    },
+    {
+      "stage": 23,
+      "actions": 5,
+      "contacts": 7
+    },
+    {
+      "stage": 24,
+      "actions": 5,
+      "contacts": 11
+    },
+    {
+      "stage": 25,
+      "actions": 5,
+      "contacts": 6
+    },
+    {
+      "stage": 26,
+      "actions": 4,
+      "contacts": 26
+    },
+    {
+      "stage": 27,
+      "actions": 5,
+      "contacts": 8
+    },
+    {
+      "stage": 28,
+      "actions": 5,
+      "contacts": 10
+    },
+    {
+      "stage": 29,
+      "actions": 4,
+      "contacts": 4
+    },
+    {
+      "stage": 30,
+      "actions": 6,
+      "contacts": 9
+    },
+    {
+      "stage": 31,
+      "actions": 6,
+      "contacts": 7
+    },
+    {
+      "stage": 32,
+      "actions": 5,
+      "contacts": 7
+    },
+    {
+      "stage": 33,
+      "actions": 5,
+      "contacts": 6
+    },
+    {
+      "stage": 34,
+      "actions": 6,
+      "contacts": 8
+    },
+    {
+      "stage": 35,
+      "actions": 6,
+      "contacts": 8
+    },
+    {
+      "stage": 36,
+      "actions": 5,
+      "contacts": 5
+    },
+    {
+      "stage": 37,
+      "actions": 5,
+      "contacts": 5
+    },
+    {
+      "stage": 38,
+      "actions": 5,
+      "contacts": 7
+    },
+    {
+      "stage": 39,
+      "actions": 5,
+      "contacts": 8
+    },
+    {
+      "stage": 40,
+      "actions": 5,
+      "contacts": 7
+    },
+    {
+      "stage": 41,
+      "actions": 4,
+      "contacts": 5
+    },
+    {
+      "stage": 42,
+      "actions": 6,
+      "contacts": 9
+    },
+    {
+      "stage": 43,
+      "actions": 4,
+      "contacts": 23
+    },
+    {
+      "stage": 44,
+      "actions": 5,
+      "contacts": 19
+    },
+    {
+      "stage": 45,
+      "actions": 6,
+      "contacts": 6
+    },
+    {
+      "stage": 46,
+      "actions": 6,
+      "contacts": 7
+    },
+    {
+      "stage": 47,
+      "actions": 6,
+      "contacts": 8
+    },
+    {
+      "stage": 48,
+      "actions": 5,
+      "contacts": 9
+    },
+    {
+      "stage": 49,
+      "actions": 10,
+      "contacts": 11
+    },
+    {
+      "stage": 50,
+      "actions": 15,
+      "contacts": 26
+    }
+  ]
+}

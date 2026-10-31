@@ -7,7 +7,7 @@ function play(k){if(!audioEnabled)return;const a=audio[k];if(a){a.currentTime=0;
 function startBGM(){if(audioEnabled)audio.bgm.play().catch(()=>{});}
 function stageTimeout(fn,ms){const token=runToken;return setTimeout(()=>{if(runToken===token)fn()},ms);}
 function setCaption(t){if(state)state.last=t;const e=document.getElementById('caption');if(e)e.textContent=t;}
-function header(label=''){return `<header class="header"><h1>パパにゲーム隠された</h1><span class="sub">Ver.0.12 ${esc(label)}</span><span class="spacer"></span><button class="smallbtn" id="audioBtn">BGM ${audioEnabled?'ON':'OFF'}</button></header>`;}
+function header(label=''){return `<header class="header"><h1>パパにゲーム隠された</h1><span class="sub">Ver.0.13 ${esc(label)}</span><span class="spacer"></span><button class="smallbtn" id="audioBtn">BGM ${audioEnabled?'ON':'OFF'}</button></header>`;}
 function bindAudio(){document.getElementById('audioBtn').onclick=()=>{audioEnabled=!audioEnabled;if(audioEnabled)startBGM();else{audio.bgm.pause();window.speechSynthesis?.cancel();}document.getElementById('audioBtn').textContent=`BGM ${audioEnabled?'ON':'OFF'}`;};}
 function title(){++runToken;state=null;World.install();screen.innerHTML=header()+`<section class="title-body"><div class="title-card"><p class="eyebrow">家族のいる家で、50のさがしもの。</p><h2>パパに<br>ゲーム隠された！</h2><p>部屋を見て、物を集めて、家族とやりとり。<br>気になる場所を調べて、隠されたゲームを探そう。</p><button class="mainbtn" id="startBtn">ゲームスタート</button><p class="keyboard-help">H：ヒント　M：音声　D：デバッグ</p></div><div class="title-illustration">${World.sprite('boy_idle')}${World.sprite('papa_idle')}</div></section>`;bindAudio();document.getElementById('startBtn').onclick=()=>{startBGM();stageSelect();};}
 function clearedSet(){try{return new Set(JSON.parse(localStorage.getItem('papa_clear_v010')||'[]'));}catch{return new Set();}}
@@ -42,7 +42,7 @@ async function handleAction(role,text){
 function updateProgressDOM(){document.querySelectorAll('.pip').forEach((e,i)=>e.className='pip '+(i<state.step?'done':i===state.step?'current':''));}
 function hint(){if(state?.status==='PLAYING'){play('ui');const s=state.board.steps[state.step];document.getElementById('hintLine').textContent='💡 '+s.text+(state.board.puzzle?.clue?' / '+state.board.puzzle.clue:'');}}
 function speakYari(){if(!audioEnabled)return;try{const u=new SpeechSynthesisUtterance('ヤァリー！');u.lang='ja-JP';u.pitch=1.45;u.rate=1.05;speechSynthesis.cancel();speechSynthesis.speak(u);}catch{}}
-function clearStage(){if(!state?.found||state.status!=='PLAYING')return;state.status='CLEAR';World.pose('boy','happy');play('found');const done=clearedSet();done.add(state.stage);localStorage.setItem('papa_clear_v010',JSON.stringify([...done]));stageTimeout(()=>{play('clear');speakYari();showResult(true);},650);}
+function clearStage(){if(!state?.found||state.status!=='PLAYING')return;state.status='CLEAR';World.pose('boy','happy');World.refresh();play('found');const done=clearedSet();done.add(state.stage);localStorage.setItem('papa_clear_v010',JSON.stringify([...done]));stageTimeout(()=>{play('clear');speakYari();showResult(true);},650);}
 async function triggerFail(reason){
  if(!state||state.status!=='PLAYING'||state.busy)return;
  const index=state.board.failures.findIndex(f=>f.text===reason),f=state.board.failures[Math.max(0,index)];if(!failureAvailable(Math.max(0,index)))return;

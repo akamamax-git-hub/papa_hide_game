@@ -27,6 +27,8 @@ def register(sheet,cols,rows,names,heights):
    ranges=[(0,390),(0,380),(0,430),(0,430),(410,755),(380,755),(440,755),(440,755),(760,1086),(760,1086),(760,1086),(760,1086)];y0,y1=ranges[idx]
   if sheet=='extras_atlas':
    cuts=[0,485,815,1086];y0=cuts[idx//cols]+pad;y1=cuts[idx//cols+1]-pad
+  if sheet=='atlas_fixtures':
+   edges=[[0,302,625,852,1086],[0,313,615,852,1086],[0,302,625,855,1086],[0,302,625,860,1086]][idx%4];y0=edges[idx//4];y1=edges[idx//4+1]
   alpha=im.getchannel('A').crop((x0,y0,x1,y1)).point(lambda x:255 if x>190 else 0)
   bbox=alpha.getbbox()
   if not bbox:raise ValueError((sheet,name))
@@ -60,6 +62,49 @@ for name,key,height in [('key','item_鍵',26),('ball','item_ボール',45),('duc
  sheet='legacy_'+name;sheets[sheet]='embedded:'+key
  catalog[name]={'sheet':sheet,'size':list(im.size),'rect':[l,t,r-l,bottom-t],'worldHeight':height}
 register('atlas_cleanitems',4,4,['key','ball','duck','dryer','shovel','wateringCan','cushion','console','box_red','box_blue','box_green','curryPot','scale','note_dry','calendar','lamp'],dict(key=26,ball=45,duck=40,dryer=55,shovel=100,wateringCan=70,cushion=60,console=65,box_red=100,box_blue=100,box_green=100,curryPot=65,scale=45,note_dry=38,calendar=110,lamp=105))
+register('atlas_controls',4,2,['switch13','switch13_on','starButton','starButton_on','combinationLock','combinationLock_on','keyhole13','intercom13'],dict(switch13=38,switch13_on=38,starButton=25,starButton_on=25,combinationLock=38,combinationLock_on=38,keyhole13=23,intercom13=60))
+register('atlas_reach',4,2,['boy_'+n for n in ['reachLow','kneel','reachWaist','reachChest','reachUp','reachOver','hold','climbReach']],{})
+register('atlas_uppercab',2,1,['upperCab','upperCab_open'],dict(upperCab=345,upperCab_open=345))
+register('atlas_robot',2,1,['robot_idle','robot_open'],{})
+register('atlas_orderedprops',4,2,['umbrella_blue','umbrella_yellow','umbrella_folded','book1','book2','book3','book4','book_plain'],dict(umbrella_blue=160,umbrella_yellow=160,umbrella_folded=90,book1=60,book2=60,book3=60,book4=60))
+register('atlas_fixtures',4,4,['tv','tv_open','desk','desk_open','vanity','vanity_open','shelf','shelf_open','basket','basket_open','breadbox','breadbox_open','flowerbed','flowerbed_open','ice','ice_melted'],dict(tv=245,tv_open=245,desk=190,desk_open=190,vanity=300,vanity_open=300,shelf=345,shelf_open=345,basket=110,basket_open=110,breadbox=90,breadbox_open=90,flowerbed=100,flowerbed_open=100,ice=65,ice_melted=65))
+for name in ['tv','desk','vanity','shelf','basket','breadbox','flowerbed']:
+ catalog[name+'_open']['worldHeight']=catalog[name]['worldHeight']*catalog[name+'_open']['rect'][3]/catalog[name]['rect'][3]
+register('atlas_clock',2,1,['clock','clock_open'],dict(clock=80,clock_open=80))
+register('atlas_vanity',2,1,['vanity','vanity_open'],dict(vanity=300,vanity_open=300))
+catalog['vanity_open']['anchor']=[.45,1]
+catalog['vanity_open']['worldHeight']=300*catalog['vanity_open']['rect'][3]/catalog['vanity']['rect'][3]
+for name in ['umbrella_blue','umbrella_yellow','umbrella_folded']:catalog[name]['grip']=[.5,.1]
+# Four real magnets use four non-overlapping atlas regions; source pixels stay intact.
+mag=catalog['magnets'];x,y,w,h=mag['rect']
+for color,u,v in [('red',0,0),('yellow',1,0),('blue',0,1),('green',1,1)]:
+ catalog['magnet_'+color]={**mag,'rect':[x+round(u*w/2),y+round(v*h/2),round(w/2),round(h/2)],'worldHeight':24}
+catalog['upperCab_open']['anchor']=[.55,1]
+from contact_profiles import HANDS
+scales={'pickup':.65,'push':.85,'high':1.14,'dig':.68,'open':.72,'climb':1.03,'reachLow':.7,'kneel':.7,'reachUp':1.03,'reachOver':1.12,'climbReach':1.02}
+newHands={'reachLow':[.965,.965],'kneel':[.96,.80],'reachWaist':[.96,.50],'reachChest':[.96,.185],'reachUp':[.97,.03],'reachOver':[.90,.03],'hold':[.94,.50],'climbReach':[.96,.035]}
+for name,m in catalog.items():
+ if name.startswith(('boy_','papa_','mama_','sister_','grandma_','grandpa_','courier_','postman_','repair_','neighbor_','cat_','dog_','crow_','robot_','vacuum_')):
+  m=dict(m);catalog[name]=m
+  actor,pose=name.split('_',1);m['hand']=newHands.get(pose,HANDS.get(pose,[.8,.5]));m['bodyScale']=scales.get(pose,1) if actor=='boy' else .7 if pose in ['sit','sleep','eat'] or actor=='papa' and pose in ['read','drink'] else 1
+  if actor in ['mama','sister','grandma','grandpa'] and pose in ['receive','offer','reach','open','push','happy','surprise']:m['hand']=[.08,.43]
+  if actor in ['courier','postman','repair','neighbor'] and pose in ['receive','offer','reach','open','push']:m['hand']=[.12,.50]
+  if actor in ['cat','dog']:m['hand']=[.5,.30]
+  if actor=='crow':m['hand']=[.25,.42]
+  if actor in ['vacuum','robot']:m['hand']=[.95,.65] if actor=='vacuum' else [.5,.65]
+# Explicit actual machine states: opening is not a walking frame.
+catalog['robot_scan']=dict(catalog['robot_receive']);catalog['robot_walk1']=dict(catalog['robot_walk2'])
+catalog['switch']=dict(catalog['switch13']);catalog['umbrellaStand']=dict(catalog['basket']);catalog['intercom']=dict(catalog['intercom13'])
+for color in ['red','blue','green']:catalog['box_'+color+'_open']=dict(catalog['parcel_open'])
+for name,grip,tip in [('net',[.80,.92],[.28,.18]),('tongs',[.78,.82],[.20,.10]),('torch',[.72,.62],[.12,.40]),('dryer',[.75,.80],[.12,.25]),('rope',[.5,.8],[.5,.1])]:catalog[name]['grip']=grip;catalog[name]['tip']=tip
+
+catalog['papa_drink']['hand']=[.27,.20];catalog['papa_read']['hand']=[.82,.42];catalog['grandma_sit']['hand']=[.55,.36];catalog['sister_eat']['hand']=[.46,.35]
+catalog['papa_watch']=dict(catalog['papa_read'])
+catalog['robot_idle']['hand']=[.67,.42]
+for name,uv in {'cat_idle':[.50,.47],'cat_receive':[.06,.50],'cat_walk1':[.94,.46],'cat_walk2':[.15,.80],'crow_idle':[.04,.28],'dog_idle':[.5,.43],'dog_receive':[.08,.51]}.items():catalog[name]['hand']=uv
+for name,grip,tip in [('shovel',[.85,.20],[.15,.90]),('wateringCan',[.60,.18],[.10,.35]),('mug',[.85,.5],[.2,.1]),('coffee',[.85,.5],[.2,.1]),('spoon',[.2,.8],[.8,.2])]:catalog[name]['grip']=grip;catalog[name]['tip']=tip
+catalog['pot']['grip']=[.86,.52];catalog['pot']['tip']=[.08,.18]
+for name,x in [('fridge_open',.32),('locker_open',.65),('shelf_open',.43)]:catalog[name]['anchor']=[x,1]
 used={v['sheet'] for v in catalog.values()};sheets={k:v for k,v in sheets.items() if k in used}
 (ROOT/'scenario/sprite-catalog.json').write_text(json.dumps({'sheets':sheets,'sprites':catalog},ensure_ascii=False,indent=2))
 print('Catalog:',len(catalog),'sprites in',len(sheets),'sheets')
