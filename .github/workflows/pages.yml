@@ -5,9 +5,9 @@ on:
     branches: [main]
     paths:
       - 'src/**'
-      - 'assets/chapter3/**'
+      - 'assets/**'
       - 'scenario/*.json'
-      - 'scripts/build.py'
+      - 'scripts/**'
       - 'index.html'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
@@ -32,7 +32,10 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Build standalone game
-        run: python3 scripts/build.py
+        run: |
+          python3 scripts/storyboard.py
+          python3 scripts/audit_storyboards.py
+          python3 scripts/build.py
       - name: Prepare public files
         env:
           SITE_DIRECTORY: ${{ runner.temp }}/papa-hide-game-site

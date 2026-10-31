@@ -1,0 +1,4403 @@
+{
+  "sheets": {
+    "atlas_furniture": "assets/world/atlas_furniture.png",
+    "atlas_items1": "assets/world/atlas_items1.png",
+    "atlas_items2": "assets/world/atlas_items2.png",
+    "atlas_states": "assets/world/atlas_states.png",
+    "atlas_utility": "assets/world/atlas_utility.png",
+    "props_atlas": "assets/chapter3/props_atlas.png",
+    "extras_atlas": "assets/chapter3/extras_atlas.png",
+    "atlas_boy": "assets/world/atlas_boy.png",
+    "atlas_papa": "assets/world/atlas_papa.png",
+    "atlas_npc1": "assets/world/atlas_npc1.png",
+    "atlas_npc2": "assets/world/atlas_npc2.png",
+    "atlas_pets": "assets/world/atlas_pets.png",
+    "atlas_seated": "assets/world/atlas_seated.png",
+    "atlas_interactions": "assets/world/atlas_interactions.png",
+    "atlas_cleanitems": "assets/world/atlas_cleanitems.png"
+  },
+  "sprites": {
+    "cabinet": {
+      "sheet": "atlas_furniture",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        50,
+        44,
+        264,
+        201
+      ],
+      "worldHeight": 190
+    },
+    "cabinet_open": {
+      "sheet": "atlas_furniture",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        371,
+        41,
+        307,
+        237
+      ],
+      "worldHeight": 190
+    },
+    "sofa": {
+      "sheet": "atlas_furniture",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        708,
+        62,
+        338,
+        195
+      ],
+      "worldHeight": 170
+    },
+    "table": {
+      "sheet": "atlas_furniture",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        1079,
+        100,
+        294,
+        147
+      ],
+      "worldHeight": 125
+    },
+    "tv": {
+      "sheet": "atlas_furniture",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        35,
+        298,
+        292,
+        245
+      ],
+      "worldHeight": 245
+    },
+    "shelf": {
+      "sheet": "atlas_furniture",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        443,
+        282,
+        168,
+        264
+      ],
+      "worldHeight": 345
+    },
+    "desk": {
+      "sheet": "atlas_furniture",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        727,
+        306,
+        292,
+        236
+      ],
+      "worldHeight": 190
+    },
+    "bed": {
+      "sheet": "atlas_furniture",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        1081,
+        310,
+        291,
+        239
+      ],
+      "worldHeight": 300
+    },
+    "tub": {
+      "sheet": "atlas_furniture",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        34,
+        624,
+        306,
+        179
+      ],
+      "worldHeight": 145
+    },
+    "vanity": {
+      "sheet": "atlas_furniture",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        424,
+        564,
+        199,
+        276
+      ],
+      "worldHeight": 300
+    },
+    "washer": {
+      "sheet": "atlas_states",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        114,
+        550,
+        204,
+        253
+      ],
+      "worldHeight": 190
+    },
+    "basket": {
+      "sheet": "atlas_furniture",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        1126,
+        586,
+        210,
+        254
+      ],
+      "worldHeight": 110
+    },
+    "bench": {
+      "sheet": "atlas_states",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        765,
+        594,
+        293,
+        183
+      ],
+      "worldHeight": 160
+    },
+    "shed": {
+      "sheet": "atlas_states",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        796,
+        277,
+        225,
+        264
+      ],
+      "worldHeight": 355
+    },
+    "locker": {
+      "sheet": "atlas_states",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        102,
+        293,
+        220,
+        239
+      ],
+      "worldHeight": 325
+    },
+    "ladder": {
+      "sheet": "atlas_furniture",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        1107,
+        844,
+        233,
+        249
+      ],
+      "worldHeight": 265
+    },
+    "newspaper": {
+      "sheet": "atlas_items1",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        23,
+        50,
+        255,
+        227
+      ],
+      "worldHeight": 35
+    },
+    "remote": {
+      "sheet": "atlas_items1",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        282,
+        28,
+        257,
+        248
+      ],
+      "worldHeight": 35
+    },
+    "battery": {
+      "sheet": "atlas_items1",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        595,
+        78,
+        196,
+        176
+      ],
+      "worldHeight": 25
+    },
+    "catToy": {
+      "sheet": "atlas_items1",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        852,
+        27,
+        248,
+        248
+      ],
+      "worldHeight": 95
+    },
+    "stool": {
+      "sheet": "atlas_items1",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        1131,
+        43,
+        247,
+        230
+      ],
+      "worldHeight": 100
+    },
+    "gloves": {
+      "sheet": "atlas_items1",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        39,
+        316,
+        238,
+        240
+      ],
+      "worldHeight": 55
+    },
+    "umbrellas": {
+      "sheet": "atlas_items1",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        316,
+        302,
+        233,
+        257
+      ],
+      "worldHeight": 160
+    },
+    "stamp": {
+      "sheet": "atlas_items1",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        604,
+        315,
+        197,
+        241
+      ],
+      "worldHeight": 30
+    },
+    "cutter": {
+      "sheet": "atlas_items1",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        867,
+        330,
+        239,
+        229
+      ],
+      "worldHeight": 36
+    },
+    "slippers": {
+      "sheet": "atlas_items1",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        1124,
+        336,
+        262,
+        219
+      ],
+      "worldHeight": 50
+    },
+    "tongs": {
+      "sheet": "atlas_items1",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        30,
+        593,
+        248,
+        247
+      ],
+      "worldHeight": 65
+    },
+    "note": {
+      "sheet": "atlas_items1",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        282,
+        563,
+        265,
+        246
+      ],
+      "worldHeight": 38
+    },
+    "sponge": {
+      "sheet": "atlas_items1",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        587,
+        605,
+        234,
+        235
+      ],
+      "worldHeight": 35
+    },
+    "coin": {
+      "sheet": "atlas_items1",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        886,
+        625,
+        188,
+        170
+      ],
+      "worldHeight": 20
+    },
+    "rope": {
+      "sheet": "atlas_items1",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        1149,
+        599,
+        228,
+        221
+      ],
+      "worldHeight": 50
+    },
+    "chime": {
+      "sheet": "atlas_items1",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        89,
+        844,
+        133,
+        262
+      ],
+      "worldHeight": 95
+    },
+    "cloth": {
+      "sheet": "atlas_items1",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        296,
+        864,
+        263,
+        213
+      ],
+      "worldHeight": 45
+    },
+    "spice": {
+      "sheet": "atlas_items1",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        644,
+        844,
+        125,
+        244
+      ],
+      "worldHeight": 42
+    },
+    "wrench": {
+      "sheet": "atlas_items1",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        859,
+        851,
+        261,
+        227
+      ],
+      "worldHeight": 62
+    },
+    "envelope": {
+      "sheet": "atlas_items1",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        1124,
+        865,
+        262,
+        224
+      ],
+      "worldHeight": 42
+    },
+    "ice": {
+      "sheet": "atlas_items2",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        39,
+        49,
+        223,
+        229
+      ],
+      "worldHeight": 65
+    },
+    "laundry": {
+      "sheet": "atlas_items2",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        293,
+        45,
+        262,
+        233
+      ],
+      "worldHeight": 70
+    },
+    "plane": {
+      "sheet": "atlas_items2",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        572,
+        69,
+        251,
+        196
+      ],
+      "worldHeight": 38
+    },
+    "net": {
+      "sheet": "atlas_items2",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        852,
+        18,
+        268,
+        260
+      ],
+      "worldHeight": 170
+    },
+    "dogTreat": {
+      "sheet": "atlas_items2",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        1124,
+        36,
+        248,
+        242
+      ],
+      "worldHeight": 45
+    },
+    "magnets": {
+      "sheet": "atlas_items2",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        44,
+        330,
+        209,
+        218
+      ],
+      "worldHeight": 42
+    },
+    "papers": {
+      "sheet": "atlas_items2",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        309,
+        325,
+        221,
+        228
+      ],
+      "worldHeight": 42
+    },
+    "lamp": {
+      "sheet": "atlas_cleanitems",
+      "size": [
+        1408,
+        1117
+      ],
+      "rect": [
+        1130,
+        840,
+        249,
+        252
+      ],
+      "worldHeight": 105
+    },
+    "grocery": {
+      "sheet": "atlas_items2",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        852,
+        282,
+        256,
+        277
+      ],
+      "worldHeight": 75
+    },
+    "receipt": {
+      "sheet": "atlas_items2",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        1161,
+        322,
+        197,
+        237
+      ],
+      "worldHeight": 42
+    },
+    "qr": {
+      "sheet": "atlas_items2",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        50,
+        598,
+        194,
+        225
+      ],
+      "worldHeight": 30
+    },
+    "catTreat": {
+      "sheet": "atlas_items2",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        312,
+        582,
+        199,
+        251
+      ],
+      "worldHeight": 45
+    },
+    "boxes": {
+      "sheet": "atlas_items2",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        563,
+        563,
+        276,
+        265
+      ],
+      "worldHeight": 125
+    },
+    "switch": {
+      "sheet": "atlas_items2",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        843,
+        563,
+        252,
+        269
+      ],
+      "worldHeight": 40
+    },
+    "drain": {
+      "sheet": "atlas_items2",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        1125,
+        563,
+        261,
+        255
+      ],
+      "worldHeight": 30
+    },
+    "tap": {
+      "sheet": "atlas_items2",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        31,
+        863,
+        247,
+        216
+      ],
+      "worldHeight": 75
+    },
+    "pail": {
+      "sheet": "atlas_items2",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        311,
+        861,
+        230,
+        230
+      ],
+      "worldHeight": 95
+    },
+    "planter": {
+      "sheet": "atlas_items2",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        573,
+        844,
+        266,
+        247
+      ],
+      "worldHeight": 110
+    },
+    "scale": {
+      "sheet": "atlas_cleanitems",
+      "size": [
+        1408,
+        1117
+      ],
+      "rect": [
+        20,
+        862,
+        330,
+        212
+      ],
+      "worldHeight": 45
+    },
+    "breadbox": {
+      "sheet": "atlas_items2",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        1124,
+        868,
+        264,
+        213
+      ],
+      "worldHeight": 90
+    },
+    "fridge": {
+      "sheet": "atlas_states",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        128,
+        9,
+        179,
+        260
+      ],
+      "worldHeight": 325
+    },
+    "fridge_open": {
+      "sheet": "atlas_states",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        423,
+        9,
+        254,
+        258
+      ],
+      "worldHeight": 325
+    },
+    "wardrobe": {
+      "sheet": "atlas_states",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        792,
+        7,
+        223,
+        261
+      ],
+      "worldHeight": 340
+    },
+    "wardrobe_open": {
+      "sheet": "atlas_states",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        1111,
+        6,
+        278,
+        262
+      ],
+      "worldHeight": 340
+    },
+    "locker_open": {
+      "sheet": "atlas_states",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        432,
+        292,
+        262,
+        239
+      ],
+      "worldHeight": 325
+    },
+    "shed_open": {
+      "sheet": "atlas_states",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        1128,
+        277,
+        259,
+        264
+      ],
+      "worldHeight": 355
+    },
+    "washer_open": {
+      "sheet": "atlas_states",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        430,
+        550,
+        234,
+        253
+      ],
+      "worldHeight": 190
+    },
+    "bench_open": {
+      "sheet": "atlas_states",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        1119,
+        551,
+        281,
+        242
+      ],
+      "worldHeight": 160
+    },
+    "parcel": {
+      "sheet": "atlas_states",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        88,
+        830,
+        246,
+        212
+      ],
+      "worldHeight": 90
+    },
+    "parcel_open": {
+      "sheet": "atlas_states",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        411,
+        825,
+        297,
+        224
+      ],
+      "worldHeight": 90
+    },
+    "panel": {
+      "sheet": "atlas_states",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        825,
+        817,
+        181,
+        223
+      ],
+      "worldHeight": 100
+    },
+    "panel_open": {
+      "sheet": "atlas_states",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        1150,
+        816,
+        243,
+        227
+      ],
+      "worldHeight": 100
+    },
+    "clock": {
+      "sheet": "atlas_utility",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        50,
+        69,
+        300,
+        304
+      ],
+      "worldHeight": 80
+    },
+    "window": {
+      "sheet": "atlas_utility",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        376,
+        46,
+        336,
+        328
+      ],
+      "worldHeight": 150
+    },
+    "tree": {
+      "sheet": "atlas_utility",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        749,
+        42,
+        335,
+        367
+      ],
+      "worldHeight": 350
+    },
+    "mat": {
+      "sheet": "atlas_utility",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        1088,
+        175,
+        338,
+        214
+      ],
+      "worldHeight": 40
+    },
+    "plate": {
+      "sheet": "atlas_utility",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        38,
+        430,
+        320,
+        298
+      ],
+      "worldHeight": 25
+    },
+    "chair": {
+      "sheet": "atlas_utility",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        415,
+        384,
+        232,
+        358
+      ],
+      "worldHeight": 165
+    },
+    "breaker": {
+      "sheet": "atlas_utility",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        759,
+        459,
+        288,
+        251
+      ],
+      "worldHeight": 85
+    },
+    "breaker_on": {
+      "sheet": "atlas_utility",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        1116,
+        457,
+        286,
+        256
+      ],
+      "worldHeight": 85
+    },
+    "microwave": {
+      "sheet": "atlas_utility",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        31,
+        780,
+        329,
+        226
+      ],
+      "worldHeight": 95
+    },
+    "microwave_on": {
+      "sheet": "atlas_utility",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        390,
+        780,
+        328,
+        226
+      ],
+      "worldHeight": 95
+    },
+    "towel": {
+      "sheet": "atlas_utility",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        741,
+        793,
+        343,
+        230
+      ],
+      "worldHeight": 45
+    },
+    "sensor": {
+      "sheet": "atlas_utility",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        1126,
+        774,
+        271,
+        235
+      ],
+      "worldHeight": 65
+    },
+    "spoon": {
+      "sheet": "props_atlas",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        30,
+        45,
+        196,
+        200
+      ],
+      "worldHeight": 30
+    },
+    "pudding": {
+      "sheet": "props_atlas",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        263,
+        77,
+        244,
+        147
+      ],
+      "worldHeight": 35
+    },
+    "unusedFridge": {
+      "sheet": "props_atlas",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        559,
+        11,
+        145,
+        242
+      ],
+      "worldHeight": 45
+    },
+    "unusedFridgeOpen": {
+      "sheet": "props_atlas",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        780,
+        8,
+        233,
+        246
+      ],
+      "worldHeight": 45
+    },
+    "unusedMicro": {
+      "sheet": "props_atlas",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        1037,
+        73,
+        234,
+        147
+      ],
+      "worldHeight": 45
+    },
+    "unusedClock": {
+      "sheet": "props_atlas",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        1294,
+        73,
+        234,
+        147
+      ],
+      "worldHeight": 45
+    },
+    "unusedBreaker": {
+      "sheet": "props_atlas",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        17,
+        294,
+        229,
+        184
+      ],
+      "worldHeight": 45
+    },
+    "unusedBreakerOn": {
+      "sheet": "props_atlas",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        272,
+        293,
+        230,
+        185
+      ],
+      "worldHeight": 45
+    },
+    "unusedChair": {
+      "sheet": "props_atlas",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        550,
+        266,
+        184,
+        241
+      ],
+      "worldHeight": 45
+    },
+    "tea": {
+      "sheet": "props_atlas",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        809,
+        298,
+        173,
+        189
+      ],
+      "worldHeight": 35
+    },
+    "mug": {
+      "sheet": "props_atlas",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        1065,
+        293,
+        197,
+        188
+      ],
+      "worldHeight": 36
+    },
+    "coffee": {
+      "sheet": "props_atlas",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        1325,
+        292,
+        196,
+        189
+      ],
+      "worldHeight": 36
+    },
+    "pot": {
+      "sheet": "props_atlas",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        28,
+        532,
+        226,
+        208
+      ],
+      "worldHeight": 65
+    },
+    "drawer": {
+      "sheet": "props_atlas",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        284,
+        514,
+        205,
+        252
+      ],
+      "worldHeight": 190
+    },
+    "drawer_open": {
+      "sheet": "props_atlas",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        514,
+        514,
+        238,
+        252
+      ],
+      "worldHeight": 190
+    },
+    "vacuum_idle": {
+      "sheet": "props_atlas",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        776,
+        561,
+        241,
+        175
+      ],
+      "worldHeight": 38
+    },
+    "robotRemote": {
+      "sheet": "props_atlas",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        1091,
+        523,
+        135,
+        223
+      ],
+      "worldHeight": 35
+    },
+    "unusedPantry": {
+      "sheet": "props_atlas",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        1331,
+        514,
+        156,
+        241
+      ],
+      "worldHeight": 45
+    },
+    "books": {
+      "sheet": "props_atlas",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        4,
+        799,
+        250,
+        173
+      ],
+      "worldHeight": 60
+    },
+    "unusedCloset": {
+      "sheet": "props_atlas",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        258,
+        770,
+        225,
+        233
+      ],
+      "worldHeight": 45
+    },
+    "unusedClosetOpen": {
+      "sheet": "props_atlas",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        526,
+        770,
+        229,
+        239
+      ],
+      "worldHeight": 45
+    },
+    "torch": {
+      "sheet": "props_atlas",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        775,
+        799,
+        245,
+        160
+      ],
+      "worldHeight": 45
+    },
+    "torch_on": {
+      "sheet": "props_atlas",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        1044,
+        796,
+        234,
+        148
+      ],
+      "worldHeight": 45
+    },
+    "fort": {
+      "sheet": "props_atlas",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        1282,
+        771,
+        252,
+        236
+      ],
+      "worldHeight": 210
+    },
+    "unusedGrandma": {
+      "sheet": "extras_atlas",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        135,
+        9,
+        154,
+        464
+      ],
+      "worldHeight": 45
+    },
+    "unusedGrandmaReceive": {
+      "sheet": "extras_atlas",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        467,
+        9,
+        216,
+        464
+      ],
+      "worldHeight": 45
+    },
+    "unusedGrandmaWalk": {
+      "sheet": "extras_atlas",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        799,
+        24,
+        228,
+        446
+      ],
+      "worldHeight": 45
+    },
+    "unusedGrandmaSit": {
+      "sheet": "extras_atlas",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        1156,
+        103,
+        247,
+        380
+      ],
+      "worldHeight": 45
+    },
+    "blanket": {
+      "sheet": "extras_atlas",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        10,
+        545,
+        350,
+        268
+      ],
+      "worldHeight": 60
+    },
+    "pins": {
+      "sheet": "extras_atlas",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        364,
+        531,
+        350,
+        282
+      ],
+      "worldHeight": 25
+    },
+    "stickers": {
+      "sheet": "extras_atlas",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        771,
+        508,
+        292,
+        298
+      ],
+      "worldHeight": 40
+    },
+    "calendar": {
+      "sheet": "atlas_cleanitems",
+      "size": [
+        1408,
+        1117
+      ],
+      "rect": [
+        740,
+        840,
+        286,
+        240
+      ],
+      "worldHeight": 110
+    },
+    "dial": {
+      "sheet": "extras_atlas",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        16,
+        817,
+        344,
+        235
+      ],
+      "worldHeight": 160
+    },
+    "dial_open": {
+      "sheet": "extras_atlas",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        407,
+        817,
+        315,
+        240
+      ],
+      "worldHeight": 160
+    },
+    "unusedPanel": {
+      "sheet": "extras_atlas",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        726,
+        820,
+        310,
+        237
+      ],
+      "worldHeight": 45
+    },
+    "unusedPanelOpen": {
+      "sheet": "extras_atlas",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        1107,
+        817,
+        315,
+        230
+      ],
+      "worldHeight": 45
+    },
+    "boy_idle": {
+      "sheet": "atlas_boy",
+      "size": [
+        1310,
+        1201
+      ],
+      "rect": [
+        125,
+        11,
+        98,
+        282
+      ],
+      "worldHeight": 45
+    },
+    "boy_walk1": {
+      "sheet": "atlas_boy",
+      "size": [
+        1310,
+        1201
+      ],
+      "rect": [
+        435,
+        12,
+        144,
+        280
+      ],
+      "worldHeight": 45
+    },
+    "boy_walk2": {
+      "sheet": "atlas_boy",
+      "size": [
+        1310,
+        1201
+      ],
+      "rect": [
+        727,
+        13,
+        158,
+        277
+      ],
+      "worldHeight": 45
+    },
+    "boy_pickup": {
+      "sheet": "atlas_boy",
+      "size": [
+        1310,
+        1201
+      ],
+      "rect": [
+        1035,
+        104,
+        190,
+        187
+      ],
+      "worldHeight": 45
+    },
+    "boy_reach": {
+      "sheet": "atlas_boy",
+      "size": [
+        1310,
+        1201
+      ],
+      "rect": [
+        110,
+        310,
+        175,
+        279
+      ],
+      "worldHeight": 45
+    },
+    "boy_high": {
+      "sheet": "atlas_boy",
+      "size": [
+        1310,
+        1201
+      ],
+      "rect": [
+        438,
+        304,
+        128,
+        284
+      ],
+      "worldHeight": 45
+    },
+    "boy_carry": {
+      "sheet": "atlas_boy",
+      "size": [
+        1310,
+        1201
+      ],
+      "rect": [
+        737,
+        307,
+        152,
+        284
+      ],
+      "worldHeight": 45
+    },
+    "boy_push": {
+      "sheet": "atlas_boy",
+      "size": [
+        1310,
+        1201
+      ],
+      "rect": [
+        984,
+        345,
+        226,
+        242
+      ],
+      "worldHeight": 45
+    },
+    "boy_climb": {
+      "sheet": "atlas_boy",
+      "size": [
+        1310,
+        1201
+      ],
+      "rect": [
+        75,
+        600,
+        147,
+        281
+      ],
+      "worldHeight": 45
+    },
+    "boy_light": {
+      "sheet": "atlas_boy",
+      "size": [
+        1310,
+        1201
+      ],
+      "rect": [
+        435,
+        605,
+        156,
+        278
+      ],
+      "worldHeight": 45
+    },
+    "boy_pour": {
+      "sheet": "atlas_boy",
+      "size": [
+        1310,
+        1201
+      ],
+      "rect": [
+        724,
+        605,
+        164,
+        283
+      ],
+      "worldHeight": 45
+    },
+    "boy_dig": {
+      "sheet": "atlas_boy",
+      "size": [
+        1310,
+        1201
+      ],
+      "rect": [
+        1034,
+        672,
+        182,
+        198
+      ],
+      "worldHeight": 45
+    },
+    "boy_offer": {
+      "sheet": "atlas_boy",
+      "size": [
+        1310,
+        1201
+      ],
+      "rect": [
+        106,
+        898,
+        141,
+        286
+      ],
+      "worldHeight": 45
+    },
+    "boy_read": {
+      "sheet": "atlas_boy",
+      "size": [
+        1310,
+        1201
+      ],
+      "rect": [
+        440,
+        902,
+        103,
+        283
+      ],
+      "worldHeight": 45
+    },
+    "boy_open": {
+      "sheet": "atlas_boy",
+      "size": [
+        1310,
+        1201
+      ],
+      "rect": [
+        698,
+        947,
+        175,
+        227
+      ],
+      "worldHeight": 45
+    },
+    "boy_happy": {
+      "sheet": "atlas_boy",
+      "size": [
+        1310,
+        1201
+      ],
+      "rect": [
+        1073,
+        898,
+        163,
+        243
+      ],
+      "worldHeight": 45
+    },
+    "papa_idle": {
+      "sheet": "atlas_papa",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        144,
+        9,
+        147,
+        471
+      ],
+      "worldHeight": 45
+    },
+    "papa_walk1": {
+      "sheet": "atlas_papa",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        475,
+        9,
+        200,
+        468
+      ],
+      "worldHeight": 45
+    },
+    "papa_walk2": {
+      "sheet": "atlas_papa",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        854,
+        10,
+        208,
+        467
+      ],
+      "worldHeight": 45
+    },
+    "papa_read": {
+      "sheet": "atlas_papa",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        1225,
+        54,
+        224,
+        422
+      ],
+      "worldHeight": 45
+    },
+    "papa_drink": {
+      "sheet": "atlas_papa",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        115,
+        545,
+        196,
+        433
+      ],
+      "worldHeight": 45
+    },
+    "papa_surprise": {
+      "sheet": "atlas_papa",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        471,
+        511,
+        246,
+        468
+      ],
+      "worldHeight": 45
+    },
+    "papa_angry": {
+      "sheet": "atlas_papa",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        806,
+        513,
+        266,
+        471
+      ],
+      "worldHeight": 45
+    },
+    "papa_think": {
+      "sheet": "atlas_papa",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        1259,
+        506,
+        145,
+        482
+      ],
+      "worldHeight": 45
+    },
+    "mama_idle": {
+      "sheet": "atlas_npc1",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        160,
+        6,
+        117,
+        297
+      ],
+      "worldHeight": 45
+    },
+    "mama_receive": {
+      "sheet": "atlas_npc1",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        408,
+        9,
+        171,
+        295
+      ],
+      "worldHeight": 45
+    },
+    "mama_walk1": {
+      "sheet": "atlas_npc1",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        736,
+        8,
+        166,
+        298
+      ],
+      "worldHeight": 45
+    },
+    "mama_walk2": {
+      "sheet": "atlas_npc1",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        1030,
+        12,
+        167,
+        294
+      ],
+      "worldHeight": 45
+    },
+    "sister_idle": {
+      "sheet": "atlas_npc1",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        122,
+        319,
+        174,
+        261
+      ],
+      "worldHeight": 45
+    },
+    "sister_receive": {
+      "sheet": "atlas_npc1",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        415,
+        320,
+        178,
+        259
+      ],
+      "worldHeight": 45
+    },
+    "sister_walk1": {
+      "sheet": "atlas_npc1",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        732,
+        319,
+        172,
+        260
+      ],
+      "worldHeight": 45
+    },
+    "sister_walk2": {
+      "sheet": "atlas_npc1",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        1030,
+        319,
+        169,
+        260
+      ],
+      "worldHeight": 45
+    },
+    "grandma_idle": {
+      "sheet": "atlas_npc1",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        153,
+        589,
+        105,
+        283
+      ],
+      "worldHeight": 45
+    },
+    "grandma_receive": {
+      "sheet": "atlas_npc1",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        400,
+        589,
+        163,
+        283
+      ],
+      "worldHeight": 45
+    },
+    "grandma_walk1": {
+      "sheet": "atlas_npc1",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        740,
+        589,
+        146,
+        283
+      ],
+      "worldHeight": 45
+    },
+    "grandma_walk2": {
+      "sheet": "atlas_npc1",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        1051,
+        590,
+        152,
+        282
+      ],
+      "worldHeight": 45
+    },
+    "grandpa_idle": {
+      "sheet": "atlas_npc1",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        147,
+        878,
+        120,
+        301
+      ],
+      "worldHeight": 45
+    },
+    "grandpa_receive": {
+      "sheet": "atlas_npc1",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        395,
+        878,
+        179,
+        301
+      ],
+      "worldHeight": 45
+    },
+    "grandpa_walk1": {
+      "sheet": "atlas_npc1",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        735,
+        878,
+        164,
+        303
+      ],
+      "worldHeight": 45
+    },
+    "grandpa_walk2": {
+      "sheet": "atlas_npc1",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        1038,
+        879,
+        166,
+        302
+      ],
+      "worldHeight": 45
+    },
+    "courier_idle": {
+      "sheet": "atlas_npc2",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        102,
+        8,
+        131,
+        302
+      ],
+      "worldHeight": 45
+    },
+    "courier_receive": {
+      "sheet": "atlas_npc2",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        411,
+        9,
+        122,
+        302
+      ],
+      "worldHeight": 45
+    },
+    "courier_walk1": {
+      "sheet": "atlas_npc2",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        695,
+        11,
+        151,
+        300
+      ],
+      "worldHeight": 45
+    },
+    "courier_walk2": {
+      "sheet": "atlas_npc2",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        1021,
+        10,
+        164,
+        301
+      ],
+      "worldHeight": 45
+    },
+    "postman_idle": {
+      "sheet": "atlas_npc2",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        94,
+        316,
+        163,
+        315
+      ],
+      "worldHeight": 45
+    },
+    "postman_receive": {
+      "sheet": "atlas_npc2",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        414,
+        317,
+        141,
+        314
+      ],
+      "worldHeight": 45
+    },
+    "postman_walk1": {
+      "sheet": "atlas_npc2",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        695,
+        318,
+        177,
+        313
+      ],
+      "worldHeight": 45
+    },
+    "postman_walk2": {
+      "sheet": "atlas_npc2",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        1004,
+        320,
+        191,
+        311
+      ],
+      "worldHeight": 45
+    },
+    "repair_idle": {
+      "sheet": "atlas_npc2",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        92,
+        633,
+        155,
+        318
+      ],
+      "worldHeight": 45
+    },
+    "repair_receive": {
+      "sheet": "atlas_npc2",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        406,
+        636,
+        140,
+        316
+      ],
+      "worldHeight": 45
+    },
+    "repair_walk1": {
+      "sheet": "atlas_npc2",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        698,
+        635,
+        170,
+        317
+      ],
+      "worldHeight": 45
+    },
+    "repair_walk2": {
+      "sheet": "atlas_npc2",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        1020,
+        635,
+        182,
+        317
+      ],
+      "worldHeight": 45
+    },
+    "neighbor_idle": {
+      "sheet": "atlas_npc2",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        103,
+        954,
+        125,
+        280
+      ],
+      "worldHeight": 45
+    },
+    "neighbor_receive": {
+      "sheet": "atlas_npc2",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        408,
+        953,
+        125,
+        284
+      ],
+      "worldHeight": 45
+    },
+    "neighbor_walk1": {
+      "sheet": "atlas_npc2",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        687,
+        958,
+        165,
+        275
+      ],
+      "worldHeight": 45
+    },
+    "neighbor_walk2": {
+      "sheet": "atlas_npc2",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        1027,
+        961,
+        172,
+        272
+      ],
+      "worldHeight": 45
+    },
+    "cat_idle": {
+      "sheet": "atlas_pets",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        96,
+        12,
+        196,
+        242
+      ],
+      "worldHeight": 45
+    },
+    "cat_receive": {
+      "sheet": "atlas_pets",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        439,
+        9,
+        308,
+        245
+      ],
+      "worldHeight": 45
+    },
+    "cat_walk1": {
+      "sheet": "atlas_pets",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        813,
+        24,
+        315,
+        230
+      ],
+      "worldHeight": 45
+    },
+    "cat_walk2": {
+      "sheet": "atlas_pets",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        1239,
+        9,
+        243,
+        245
+      ],
+      "worldHeight": 45
+    },
+    "dog_idle": {
+      "sheet": "atlas_pets",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        66,
+        258,
+        208,
+        252
+      ],
+      "worldHeight": 45
+    },
+    "dog_receive": {
+      "sheet": "atlas_pets",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        435,
+        258,
+        304,
+        252
+      ],
+      "worldHeight": 45
+    },
+    "dog_walk1": {
+      "sheet": "atlas_pets",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        799,
+        258,
+        327,
+        252
+      ],
+      "worldHeight": 45
+    },
+    "dog_walk2": {
+      "sheet": "atlas_pets",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        1234,
+        258,
+        248,
+        252
+      ],
+      "worldHeight": 45
+    },
+    "crow_idle": {
+      "sheet": "atlas_pets",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        70,
+        514,
+        268,
+        252
+      ],
+      "worldHeight": 45
+    },
+    "crow_receive": {
+      "sheet": "atlas_pets",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        414,
+        514,
+        324,
+        252
+      ],
+      "worldHeight": 45
+    },
+    "crow_walk1": {
+      "sheet": "atlas_pets",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        780,
+        514,
+        370,
+        247
+      ],
+      "worldHeight": 45
+    },
+    "crow_walk2": {
+      "sheet": "atlas_pets",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        1154,
+        514,
+        363,
+        216
+      ],
+      "worldHeight": 45
+    },
+    "robot_idle": {
+      "sheet": "atlas_pets",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        78,
+        770,
+        265,
+        243
+      ],
+      "worldHeight": 45
+    },
+    "robot_receive": {
+      "sheet": "atlas_pets",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        430,
+        770,
+        267,
+        241
+      ],
+      "worldHeight": 45
+    },
+    "robot_walk1": {
+      "sheet": "atlas_pets",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        809,
+        779,
+        272,
+        233
+      ],
+      "worldHeight": 45
+    },
+    "robot_walk2": {
+      "sheet": "atlas_pets",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        1234,
+        781,
+        266,
+        230
+      ],
+      "worldHeight": 45
+    },
+    "grandma_sit": {
+      "sheet": "atlas_seated",
+      "size": [
+        1606,
+        979
+      ],
+      "rect": [
+        144,
+        16,
+        223,
+        459
+      ],
+      "worldHeight": 45
+    },
+    "grandpa_sleep": {
+      "sheet": "atlas_seated",
+      "size": [
+        1606,
+        979
+      ],
+      "rect": [
+        493,
+        10,
+        219,
+        467
+      ],
+      "worldHeight": 45
+    },
+    "sister_eat": {
+      "sheet": "atlas_seated",
+      "size": [
+        1606,
+        979
+      ],
+      "rect": [
+        838,
+        76,
+        293,
+        402
+      ],
+      "worldHeight": 45
+    },
+    "grandma_cook": {
+      "sheet": "atlas_seated",
+      "size": [
+        1606,
+        979
+      ],
+      "rect": [
+        1267,
+        6,
+        225,
+        475
+      ],
+      "worldHeight": 45
+    },
+    "mama_sit": {
+      "sheet": "atlas_seated",
+      "size": [
+        1606,
+        979
+      ],
+      "rect": [
+        107,
+        495,
+        240,
+        458
+      ],
+      "worldHeight": 45
+    },
+    "grandpa_wake": {
+      "sheet": "atlas_seated",
+      "size": [
+        1606,
+        979
+      ],
+      "rect": [
+        468,
+        487,
+        256,
+        465
+      ],
+      "worldHeight": 45
+    },
+    "sister_cry": {
+      "sheet": "atlas_seated",
+      "size": [
+        1606,
+        979
+      ],
+      "rect": [
+        825,
+        529,
+        312,
+        409
+      ],
+      "worldHeight": 45
+    },
+    "grandma_sneeze": {
+      "sheet": "atlas_seated",
+      "size": [
+        1606,
+        979
+      ],
+      "rect": [
+        1274,
+        487,
+        232,
+        458
+      ],
+      "worldHeight": 45
+    },
+    "tv_open": {
+      "sheet": "atlas_interactions",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        15,
+        21,
+        335,
+        331
+      ],
+      "worldHeight": 45
+    },
+    "desk_open": {
+      "sheet": "atlas_interactions",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        375,
+        41,
+        333,
+        311
+      ],
+      "worldHeight": 45
+    },
+    "vanity_open": {
+      "sheet": "atlas_interactions",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        757,
+        11,
+        303,
+        341
+      ],
+      "worldHeight": 45
+    },
+    "shelf_open": {
+      "sheet": "atlas_interactions",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        1140,
+        11,
+        280,
+        341
+      ],
+      "worldHeight": 45
+    },
+    "boxes_open": {
+      "sheet": "atlas_interactions",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        10,
+        372,
+        342,
+        330
+      ],
+      "worldHeight": 45
+    },
+    "breadbox_open": {
+      "sheet": "atlas_interactions",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        372,
+        374,
+        342,
+        328
+      ],
+      "worldHeight": 45
+    },
+    "basket_open": {
+      "sheet": "atlas_interactions",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        734,
+        374,
+        342,
+        338
+      ],
+      "worldHeight": 45
+    },
+    "cushion_open": {
+      "sheet": "atlas_interactions",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        1096,
+        374,
+        342,
+        340
+      ],
+      "worldHeight": 45
+    },
+    "flowerbed": {
+      "sheet": "atlas_interactions",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        10,
+        734,
+        342,
+        314
+      ],
+      "worldHeight": 100
+    },
+    "flowerbed_open": {
+      "sheet": "atlas_interactions",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        372,
+        734,
+        342,
+        314
+      ],
+      "worldHeight": 100
+    },
+    "wateringCan_full": {
+      "sheet": "atlas_interactions",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        737,
+        736,
+        332,
+        312
+      ],
+      "worldHeight": 45
+    },
+    "ice_melted": {
+      "sheet": "atlas_interactions",
+      "size": [
+        1448,
+        1086
+      ],
+      "rect": [
+        1096,
+        753,
+        342,
+        278
+      ],
+      "worldHeight": 45
+    },
+    "mama_offer": {
+      "sheet": "atlas_npc1",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        408,
+        9,
+        171,
+        295
+      ],
+      "worldHeight": 45
+    },
+    "mama_reach": {
+      "sheet": "atlas_npc1",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        408,
+        9,
+        171,
+        295
+      ],
+      "worldHeight": 45
+    },
+    "mama_read": {
+      "sheet": "atlas_npc1",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        160,
+        6,
+        117,
+        297
+      ],
+      "worldHeight": 45
+    },
+    "mama_open": {
+      "sheet": "atlas_npc1",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        408,
+        9,
+        171,
+        295
+      ],
+      "worldHeight": 45
+    },
+    "mama_push": {
+      "sheet": "atlas_npc1",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        408,
+        9,
+        171,
+        295
+      ],
+      "worldHeight": 45
+    },
+    "mama_happy": {
+      "sheet": "atlas_npc1",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        408,
+        9,
+        171,
+        295
+      ],
+      "worldHeight": 45
+    },
+    "mama_surprise": {
+      "sheet": "atlas_npc1",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        408,
+        9,
+        171,
+        295
+      ],
+      "worldHeight": 45
+    },
+    "sister_offer": {
+      "sheet": "atlas_npc1",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        415,
+        320,
+        178,
+        259
+      ],
+      "worldHeight": 45
+    },
+    "sister_reach": {
+      "sheet": "atlas_npc1",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        415,
+        320,
+        178,
+        259
+      ],
+      "worldHeight": 45
+    },
+    "sister_read": {
+      "sheet": "atlas_npc1",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        122,
+        319,
+        174,
+        261
+      ],
+      "worldHeight": 45
+    },
+    "sister_open": {
+      "sheet": "atlas_npc1",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        415,
+        320,
+        178,
+        259
+      ],
+      "worldHeight": 45
+    },
+    "sister_push": {
+      "sheet": "atlas_npc1",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        415,
+        320,
+        178,
+        259
+      ],
+      "worldHeight": 45
+    },
+    "sister_happy": {
+      "sheet": "atlas_npc1",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        415,
+        320,
+        178,
+        259
+      ],
+      "worldHeight": 45
+    },
+    "sister_surprise": {
+      "sheet": "atlas_npc1",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        415,
+        320,
+        178,
+        259
+      ],
+      "worldHeight": 45
+    },
+    "grandma_offer": {
+      "sheet": "atlas_npc1",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        400,
+        589,
+        163,
+        283
+      ],
+      "worldHeight": 45
+    },
+    "grandma_reach": {
+      "sheet": "atlas_npc1",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        400,
+        589,
+        163,
+        283
+      ],
+      "worldHeight": 45
+    },
+    "grandma_read": {
+      "sheet": "atlas_npc1",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        153,
+        589,
+        105,
+        283
+      ],
+      "worldHeight": 45
+    },
+    "grandma_open": {
+      "sheet": "atlas_npc1",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        400,
+        589,
+        163,
+        283
+      ],
+      "worldHeight": 45
+    },
+    "grandma_push": {
+      "sheet": "atlas_npc1",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        400,
+        589,
+        163,
+        283
+      ],
+      "worldHeight": 45
+    },
+    "grandma_happy": {
+      "sheet": "atlas_npc1",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        400,
+        589,
+        163,
+        283
+      ],
+      "worldHeight": 45
+    },
+    "grandma_surprise": {
+      "sheet": "atlas_npc1",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        400,
+        589,
+        163,
+        283
+      ],
+      "worldHeight": 45
+    },
+    "grandpa_offer": {
+      "sheet": "atlas_npc1",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        395,
+        878,
+        179,
+        301
+      ],
+      "worldHeight": 45
+    },
+    "grandpa_reach": {
+      "sheet": "atlas_npc1",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        395,
+        878,
+        179,
+        301
+      ],
+      "worldHeight": 45
+    },
+    "grandpa_read": {
+      "sheet": "atlas_npc1",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        147,
+        878,
+        120,
+        301
+      ],
+      "worldHeight": 45
+    },
+    "grandpa_open": {
+      "sheet": "atlas_npc1",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        395,
+        878,
+        179,
+        301
+      ],
+      "worldHeight": 45
+    },
+    "grandpa_push": {
+      "sheet": "atlas_npc1",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        395,
+        878,
+        179,
+        301
+      ],
+      "worldHeight": 45
+    },
+    "grandpa_happy": {
+      "sheet": "atlas_npc1",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        395,
+        878,
+        179,
+        301
+      ],
+      "worldHeight": 45
+    },
+    "grandpa_surprise": {
+      "sheet": "atlas_npc1",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        395,
+        878,
+        179,
+        301
+      ],
+      "worldHeight": 45
+    },
+    "courier_offer": {
+      "sheet": "atlas_npc2",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        411,
+        9,
+        122,
+        302
+      ],
+      "worldHeight": 45
+    },
+    "courier_reach": {
+      "sheet": "atlas_npc2",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        411,
+        9,
+        122,
+        302
+      ],
+      "worldHeight": 45
+    },
+    "courier_read": {
+      "sheet": "atlas_npc2",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        102,
+        8,
+        131,
+        302
+      ],
+      "worldHeight": 45
+    },
+    "courier_open": {
+      "sheet": "atlas_npc2",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        411,
+        9,
+        122,
+        302
+      ],
+      "worldHeight": 45
+    },
+    "courier_push": {
+      "sheet": "atlas_npc2",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        411,
+        9,
+        122,
+        302
+      ],
+      "worldHeight": 45
+    },
+    "courier_happy": {
+      "sheet": "atlas_npc2",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        411,
+        9,
+        122,
+        302
+      ],
+      "worldHeight": 45
+    },
+    "courier_surprise": {
+      "sheet": "atlas_npc2",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        411,
+        9,
+        122,
+        302
+      ],
+      "worldHeight": 45
+    },
+    "postman_offer": {
+      "sheet": "atlas_npc2",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        414,
+        317,
+        141,
+        314
+      ],
+      "worldHeight": 45
+    },
+    "postman_reach": {
+      "sheet": "atlas_npc2",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        414,
+        317,
+        141,
+        314
+      ],
+      "worldHeight": 45
+    },
+    "postman_read": {
+      "sheet": "atlas_npc2",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        94,
+        316,
+        163,
+        315
+      ],
+      "worldHeight": 45
+    },
+    "postman_open": {
+      "sheet": "atlas_npc2",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        414,
+        317,
+        141,
+        314
+      ],
+      "worldHeight": 45
+    },
+    "postman_push": {
+      "sheet": "atlas_npc2",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        414,
+        317,
+        141,
+        314
+      ],
+      "worldHeight": 45
+    },
+    "postman_happy": {
+      "sheet": "atlas_npc2",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        414,
+        317,
+        141,
+        314
+      ],
+      "worldHeight": 45
+    },
+    "postman_surprise": {
+      "sheet": "atlas_npc2",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        414,
+        317,
+        141,
+        314
+      ],
+      "worldHeight": 45
+    },
+    "repair_offer": {
+      "sheet": "atlas_npc2",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        406,
+        636,
+        140,
+        316
+      ],
+      "worldHeight": 45
+    },
+    "repair_reach": {
+      "sheet": "atlas_npc2",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        406,
+        636,
+        140,
+        316
+      ],
+      "worldHeight": 45
+    },
+    "repair_read": {
+      "sheet": "atlas_npc2",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        92,
+        633,
+        155,
+        318
+      ],
+      "worldHeight": 45
+    },
+    "repair_open": {
+      "sheet": "atlas_npc2",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        406,
+        636,
+        140,
+        316
+      ],
+      "worldHeight": 45
+    },
+    "repair_push": {
+      "sheet": "atlas_npc2",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        406,
+        636,
+        140,
+        316
+      ],
+      "worldHeight": 45
+    },
+    "repair_happy": {
+      "sheet": "atlas_npc2",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        406,
+        636,
+        140,
+        316
+      ],
+      "worldHeight": 45
+    },
+    "repair_surprise": {
+      "sheet": "atlas_npc2",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        406,
+        636,
+        140,
+        316
+      ],
+      "worldHeight": 45
+    },
+    "neighbor_offer": {
+      "sheet": "atlas_npc2",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        408,
+        953,
+        125,
+        284
+      ],
+      "worldHeight": 45
+    },
+    "neighbor_reach": {
+      "sheet": "atlas_npc2",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        408,
+        953,
+        125,
+        284
+      ],
+      "worldHeight": 45
+    },
+    "neighbor_read": {
+      "sheet": "atlas_npc2",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        103,
+        954,
+        125,
+        280
+      ],
+      "worldHeight": 45
+    },
+    "neighbor_open": {
+      "sheet": "atlas_npc2",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        408,
+        953,
+        125,
+        284
+      ],
+      "worldHeight": 45
+    },
+    "neighbor_push": {
+      "sheet": "atlas_npc2",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        408,
+        953,
+        125,
+        284
+      ],
+      "worldHeight": 45
+    },
+    "neighbor_happy": {
+      "sheet": "atlas_npc2",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        408,
+        953,
+        125,
+        284
+      ],
+      "worldHeight": 45
+    },
+    "neighbor_surprise": {
+      "sheet": "atlas_npc2",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        408,
+        953,
+        125,
+        284
+      ],
+      "worldHeight": 45
+    },
+    "cat_offer": {
+      "sheet": "atlas_pets",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        439,
+        9,
+        308,
+        245
+      ],
+      "worldHeight": 45
+    },
+    "cat_reach": {
+      "sheet": "atlas_pets",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        439,
+        9,
+        308,
+        245
+      ],
+      "worldHeight": 45
+    },
+    "cat_read": {
+      "sheet": "atlas_pets",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        96,
+        12,
+        196,
+        242
+      ],
+      "worldHeight": 45
+    },
+    "cat_open": {
+      "sheet": "atlas_pets",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        439,
+        9,
+        308,
+        245
+      ],
+      "worldHeight": 45
+    },
+    "cat_push": {
+      "sheet": "atlas_pets",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        439,
+        9,
+        308,
+        245
+      ],
+      "worldHeight": 45
+    },
+    "cat_happy": {
+      "sheet": "atlas_pets",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        439,
+        9,
+        308,
+        245
+      ],
+      "worldHeight": 45
+    },
+    "cat_surprise": {
+      "sheet": "atlas_pets",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        439,
+        9,
+        308,
+        245
+      ],
+      "worldHeight": 45
+    },
+    "dog_offer": {
+      "sheet": "atlas_pets",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        435,
+        258,
+        304,
+        252
+      ],
+      "worldHeight": 45
+    },
+    "dog_reach": {
+      "sheet": "atlas_pets",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        435,
+        258,
+        304,
+        252
+      ],
+      "worldHeight": 45
+    },
+    "dog_read": {
+      "sheet": "atlas_pets",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        66,
+        258,
+        208,
+        252
+      ],
+      "worldHeight": 45
+    },
+    "dog_open": {
+      "sheet": "atlas_pets",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        435,
+        258,
+        304,
+        252
+      ],
+      "worldHeight": 45
+    },
+    "dog_push": {
+      "sheet": "atlas_pets",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        435,
+        258,
+        304,
+        252
+      ],
+      "worldHeight": 45
+    },
+    "dog_happy": {
+      "sheet": "atlas_pets",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        435,
+        258,
+        304,
+        252
+      ],
+      "worldHeight": 45
+    },
+    "dog_surprise": {
+      "sheet": "atlas_pets",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        435,
+        258,
+        304,
+        252
+      ],
+      "worldHeight": 45
+    },
+    "crow_offer": {
+      "sheet": "atlas_pets",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        414,
+        514,
+        324,
+        252
+      ],
+      "worldHeight": 45
+    },
+    "crow_reach": {
+      "sheet": "atlas_pets",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        414,
+        514,
+        324,
+        252
+      ],
+      "worldHeight": 45
+    },
+    "crow_read": {
+      "sheet": "atlas_pets",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        70,
+        514,
+        268,
+        252
+      ],
+      "worldHeight": 45
+    },
+    "crow_open": {
+      "sheet": "atlas_pets",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        414,
+        514,
+        324,
+        252
+      ],
+      "worldHeight": 45
+    },
+    "crow_push": {
+      "sheet": "atlas_pets",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        414,
+        514,
+        324,
+        252
+      ],
+      "worldHeight": 45
+    },
+    "crow_happy": {
+      "sheet": "atlas_pets",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        414,
+        514,
+        324,
+        252
+      ],
+      "worldHeight": 45
+    },
+    "crow_surprise": {
+      "sheet": "atlas_pets",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        414,
+        514,
+        324,
+        252
+      ],
+      "worldHeight": 45
+    },
+    "robot_offer": {
+      "sheet": "atlas_pets",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        430,
+        770,
+        267,
+        241
+      ],
+      "worldHeight": 45
+    },
+    "robot_reach": {
+      "sheet": "atlas_pets",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        430,
+        770,
+        267,
+        241
+      ],
+      "worldHeight": 45
+    },
+    "robot_read": {
+      "sheet": "atlas_pets",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        78,
+        770,
+        265,
+        243
+      ],
+      "worldHeight": 45
+    },
+    "robot_open": {
+      "sheet": "atlas_pets",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        430,
+        770,
+        267,
+        241
+      ],
+      "worldHeight": 45
+    },
+    "robot_push": {
+      "sheet": "atlas_pets",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        430,
+        770,
+        267,
+        241
+      ],
+      "worldHeight": 45
+    },
+    "robot_happy": {
+      "sheet": "atlas_pets",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        430,
+        770,
+        267,
+        241
+      ],
+      "worldHeight": 45
+    },
+    "robot_surprise": {
+      "sheet": "atlas_pets",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        430,
+        770,
+        267,
+        241
+      ],
+      "worldHeight": 45
+    },
+    "vacuum_walk1": {
+      "sheet": "props_atlas",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        776,
+        561,
+        241,
+        175
+      ],
+      "worldHeight": 38
+    },
+    "vacuum_walk2": {
+      "sheet": "props_atlas",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        776,
+        561,
+        241,
+        175
+      ],
+      "worldHeight": 38
+    },
+    "vacuum_push": {
+      "sheet": "props_atlas",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        776,
+        561,
+        241,
+        175
+      ],
+      "worldHeight": 38
+    },
+    "vacuum_open": {
+      "sheet": "props_atlas",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        776,
+        561,
+        241,
+        175
+      ],
+      "worldHeight": 38
+    },
+    "vacuum_reach": {
+      "sheet": "props_atlas",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        776,
+        561,
+        241,
+        175
+      ],
+      "worldHeight": 38
+    },
+    "vacuum_read": {
+      "sheet": "props_atlas",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        776,
+        561,
+        241,
+        175
+      ],
+      "worldHeight": 38
+    },
+    "boy_surprise": {
+      "sheet": "atlas_boy",
+      "size": [
+        1310,
+        1201
+      ],
+      "rect": [
+        438,
+        304,
+        128,
+        284
+      ],
+      "worldHeight": 45
+    },
+    "card": {
+      "sheet": "atlas_items2",
+      "size": [
+        1402,
+        1122
+      ],
+      "rect": [
+        50,
+        598,
+        194,
+        225
+      ],
+      "worldHeight": 30
+    },
+    "key": {
+      "sheet": "atlas_cleanitems",
+      "size": [
+        1408,
+        1117
+      ],
+      "rect": [
+        84,
+        63,
+        206,
+        197
+      ],
+      "worldHeight": 26
+    },
+    "ball": {
+      "sheet": "atlas_cleanitems",
+      "size": [
+        1408,
+        1117
+      ],
+      "rect": [
+        411,
+        43,
+        228,
+        231
+      ],
+      "worldHeight": 45
+    },
+    "duck": {
+      "sheet": "atlas_cleanitems",
+      "size": [
+        1408,
+        1117
+      ],
+      "rect": [
+        758,
+        49,
+        232,
+        225
+      ],
+      "worldHeight": 40
+    },
+    "dryer": {
+      "sheet": "atlas_cleanitems",
+      "size": [
+        1408,
+        1117
+      ],
+      "rect": [
+        1070,
+        24,
+        274,
+        253
+      ],
+      "worldHeight": 55
+    },
+    "shovel": {
+      "sheet": "atlas_cleanitems",
+      "size": [
+        1408,
+        1117
+      ],
+      "rect": [
+        40,
+        312,
+        273,
+        231
+      ],
+      "worldHeight": 100
+    },
+    "wateringCan": {
+      "sheet": "atlas_cleanitems",
+      "size": [
+        1408,
+        1117
+      ],
+      "rect": [
+        354,
+        290,
+        343,
+        244
+      ],
+      "worldHeight": 70
+    },
+    "cushion": {
+      "sheet": "atlas_cleanitems",
+      "size": [
+        1408,
+        1117
+      ],
+      "rect": [
+        717,
+        307,
+        315,
+        240
+      ],
+      "worldHeight": 60
+    },
+    "console": {
+      "sheet": "atlas_cleanitems",
+      "size": [
+        1408,
+        1117
+      ],
+      "rect": [
+        1070,
+        281,
+        323,
+        247
+      ],
+      "worldHeight": 65
+    },
+    "box_red": {
+      "sheet": "atlas_cleanitems",
+      "size": [
+        1408,
+        1117
+      ],
+      "rect": [
+        34,
+        560,
+        292,
+        237
+      ],
+      "worldHeight": 100
+    },
+    "box_blue": {
+      "sheet": "atlas_cleanitems",
+      "size": [
+        1408,
+        1117
+      ],
+      "rect": [
+        387,
+        561,
+        277,
+        275
+      ],
+      "worldHeight": 100
+    },
+    "box_green": {
+      "sheet": "atlas_cleanitems",
+      "size": [
+        1408,
+        1117
+      ],
+      "rect": [
+        721,
+        560,
+        333,
+        276
+      ],
+      "worldHeight": 100
+    },
+    "curryPot": {
+      "sheet": "atlas_cleanitems",
+      "size": [
+        1408,
+        1117
+      ],
+      "rect": [
+        1058,
+        560,
+        338,
+        276
+      ],
+      "worldHeight": 65
+    },
+    "note_dry": {
+      "sheet": "atlas_cleanitems",
+      "size": [
+        1408,
+        1117
+      ],
+      "rect": [
+        354,
+        840,
+        312,
+        248
+      ],
+      "worldHeight": 38
+    }
+  }
+}

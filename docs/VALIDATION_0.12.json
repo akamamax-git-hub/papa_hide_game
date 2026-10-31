@@ -1,0 +1,6798 @@
+{
+  "version": "0.12.0",
+  "tested_at": "2026-10-31T22:08:39.779710+09:00",
+  "artifact_sha256": "7566d90aa26361b38fb676422e9f1f384fe54d60d5e27e0319baee3da582dd10",
+  "method": "Chromium real scene-object clicks with requestAnimationFrame geometry/pose observations; automated, not human playtesting",
+  "results": {
+    "stages": 50,
+    "actions": 268,
+    "failures": 53,
+    "errors": [],
+    "results": [
+      {
+        "stage": 1,
+        "steps": [
+          {
+            "index": 0,
+            "text": "テーブルの新聞を入手",
+            "kind": "pickup",
+            "target": "paper",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 173,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "living",
+            "roomAfter": "living",
+            "inventoryBefore": [],
+            "inventoryAfter": [
+              "paper"
+            ],
+            "verified": true
+          },
+          {
+            "index": 1,
+            "text": "新聞をパパに渡す",
+            "kind": "give",
+            "target": "papa",
+            "actor": "boy",
+            "actionPose": "boy_offer",
+            "renderedFrameCount": 84,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_offer",
+              "papa_idle"
+            ],
+            "roomBefore": "living",
+            "roomAfter": "living",
+            "inventoryBefore": [
+              "paper"
+            ],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 2,
+            "text": "パパが新聞を読んでいる間に収納棚を開く",
+            "kind": "open",
+            "target": "cab",
+            "actor": "boy",
+            "actionPose": "boy_open",
+            "renderedFrameCount": 82,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open"
+            ],
+            "roomBefore": "living",
+            "roomAfter": "living",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 3,
+            "text": "ゲーム機を取得",
+            "kind": "collect",
+            "target": "cab",
+            "actor": "boy",
+            "actionPose": "boy_happy",
+            "renderedFrameCount": 106,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open",
+              "boy_pickup"
+            ],
+            "roomBefore": "living",
+            "roomAfter": "living",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          }
+        ],
+        "failures": [
+          {
+            "index": 0,
+            "failed": true,
+            "retry": true
+          }
+        ],
+        "screenshots": [
+          "test-results/v012/stage-01-initial.png",
+          "test-results/v012/stage-01-action-0.png",
+          "test-results/v012/stage-01-action-3.png",
+          "test-results/v012/stage-01-clear.png"
+        ]
+      },
+      {
+        "stage": 2,
+        "steps": [
+          {
+            "index": 0,
+            "text": "ソファ横でリモコンを入手",
+            "kind": "pickup",
+            "target": "remote",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 173,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "living",
+            "roomAfter": "living",
+            "inventoryBefore": [],
+            "inventoryAfter": [
+              "remote"
+            ],
+            "verified": true
+          },
+          {
+            "index": 1,
+            "text": "時計裏から乾電池を入手",
+            "kind": "pickup",
+            "target": "clock",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 85,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "living",
+            "roomAfter": "living",
+            "inventoryBefore": [
+              "remote"
+            ],
+            "inventoryAfter": [
+              "remote",
+              "battery"
+            ],
+            "verified": true
+          },
+          {
+            "index": 2,
+            "text": "リモコンに電池を入れる",
+            "kind": "combine",
+            "target": "boy",
+            "actor": "boy",
+            "actionPose": "boy_reach",
+            "renderedFrameCount": 85,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_reach"
+            ],
+            "roomBefore": "living",
+            "roomAfter": "living",
+            "inventoryBefore": [
+              "remote",
+              "battery"
+            ],
+            "inventoryAfter": [
+              "remote"
+            ],
+            "verified": true
+          },
+          {
+            "index": 3,
+            "text": "TVをつける",
+            "kind": "use",
+            "target": "tv",
+            "actor": "boy",
+            "actionPose": "boy_reach",
+            "renderedFrameCount": 120,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_reach",
+              "papa_walk1",
+              "papa_walk2"
+            ],
+            "roomBefore": "living",
+            "roomAfter": "living",
+            "inventoryBefore": [
+              "remote"
+            ],
+            "inventoryAfter": [
+              "remote"
+            ],
+            "verified": true
+          },
+          {
+            "index": 4,
+            "text": "TVを見始めたパパの隙にTV台の引き出しを開ける",
+            "kind": "collect",
+            "target": "tv",
+            "actor": "boy",
+            "actionPose": "boy_happy",
+            "renderedFrameCount": 112,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open",
+              "boy_pickup"
+            ],
+            "roomBefore": "living",
+            "roomAfter": "living",
+            "inventoryBefore": [
+              "remote"
+            ],
+            "inventoryAfter": [
+              "remote"
+            ],
+            "verified": true
+          }
+        ],
+        "failures": [
+          {
+            "index": 0,
+            "failed": true,
+            "retry": true
+          }
+        ],
+        "screenshots": [
+          "test-results/v012/stage-02-initial.png",
+          "test-results/v012/stage-02-action-0.png",
+          "test-results/v012/stage-02-action-4.png",
+          "test-results/v012/stage-02-clear.png"
+        ]
+      },
+      {
+        "stage": 3,
+        "steps": [
+          {
+            "index": 0,
+            "text": "棚横から猫じゃらしを入手",
+            "kind": "pickup",
+            "target": "toy",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 171,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "living",
+            "roomAfter": "living",
+            "inventoryBefore": [],
+            "inventoryAfter": [
+              "toy"
+            ],
+            "verified": true
+          },
+          {
+            "index": 1,
+            "text": "猫じゃらしを猫に使う",
+            "kind": "use",
+            "target": "cat",
+            "actor": "boy",
+            "actionPose": "boy_reach",
+            "renderedFrameCount": 121,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_reach",
+              "cat_receive",
+              "cat_walk1",
+              "cat_walk2"
+            ],
+            "roomBefore": "living",
+            "roomAfter": "living",
+            "inventoryBefore": [
+              "toy"
+            ],
+            "inventoryAfter": [
+              "toy"
+            ],
+            "verified": true
+          },
+          {
+            "index": 2,
+            "text": "猫が移動したらクッションをめくる",
+            "kind": "lift",
+            "target": "cushion",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 85,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "living",
+            "roomAfter": "living",
+            "inventoryBefore": [
+              "toy"
+            ],
+            "inventoryAfter": [
+              "toy"
+            ],
+            "verified": true
+          },
+          {
+            "index": 3,
+            "text": "ゲーム機を取得",
+            "kind": "collect",
+            "target": "cushion",
+            "actor": "boy",
+            "actionPose": "boy_happy",
+            "renderedFrameCount": 93,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open",
+              "boy_pickup"
+            ],
+            "roomBefore": "living",
+            "roomAfter": "living",
+            "inventoryBefore": [
+              "toy"
+            ],
+            "inventoryAfter": [
+              "toy"
+            ],
+            "verified": true
+          }
+        ],
+        "failures": [
+          {
+            "index": 0,
+            "failed": true,
+            "retry": true
+          }
+        ],
+        "screenshots": [
+          "test-results/v012/stage-03-initial.png",
+          "test-results/v012/stage-03-action-0.png",
+          "test-results/v012/stage-03-action-3.png",
+          "test-results/v012/stage-03-clear.png"
+        ]
+      },
+      {
+        "stage": 4,
+        "steps": [
+          {
+            "index": 0,
+            "text": "踏み台を入手",
+            "kind": "pickup",
+            "target": "stool",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 174,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "living",
+            "roomAfter": "living",
+            "inventoryBefore": [],
+            "inventoryAfter": [
+              "stool"
+            ],
+            "verified": true
+          },
+          {
+            "index": 1,
+            "text": "時計の下へ踏み台を置く",
+            "kind": "place",
+            "target": "clock",
+            "actor": "boy",
+            "actionPose": "boy_carry",
+            "renderedFrameCount": 84,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_carry"
+            ],
+            "roomBefore": "living",
+            "roomAfter": "living",
+            "inventoryBefore": [
+              "stool"
+            ],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 2,
+            "text": "息子が登って鍵を取る",
+            "kind": "climb",
+            "target": "key",
+            "actor": "boy",
+            "actionPose": "boy_high",
+            "renderedFrameCount": 119,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_climb",
+              "boy_high"
+            ],
+            "roomBefore": "living",
+            "roomAfter": "living",
+            "inventoryBefore": [],
+            "inventoryAfter": [
+              "key"
+            ],
+            "verified": true
+          },
+          {
+            "index": 3,
+            "text": "鍵付き収納を開ける",
+            "kind": "open",
+            "target": "cab",
+            "actor": "boy",
+            "actionPose": "boy_open",
+            "renderedFrameCount": 86,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open"
+            ],
+            "roomBefore": "living",
+            "roomAfter": "living",
+            "inventoryBefore": [
+              "key"
+            ],
+            "inventoryAfter": [
+              "key"
+            ],
+            "verified": true
+          },
+          {
+            "index": 4,
+            "text": "ゲーム機を取得",
+            "kind": "collect",
+            "target": "cab",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 87,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open",
+              "boy_pickup"
+            ],
+            "roomBefore": "living",
+            "roomAfter": "living",
+            "inventoryBefore": [
+              "key"
+            ],
+            "inventoryAfter": [
+              "key"
+            ],
+            "verified": true
+          }
+        ],
+        "failures": [
+          {
+            "index": 0,
+            "failed": true,
+            "retry": true
+          }
+        ],
+        "screenshots": [
+          "test-results/v012/stage-04-initial.png",
+          "test-results/v012/stage-04-action-0.png",
+          "test-results/v012/stage-04-action-4.png",
+          "test-results/v012/stage-04-clear.png"
+        ]
+      },
+      {
+        "stage": 5,
+        "steps": [
+          {
+            "index": 0,
+            "text": "玄関寄りの棚から滑り止め手袋を入手",
+            "kind": "pickup",
+            "target": "gloves",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 93,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "living",
+            "roomAfter": "living",
+            "inventoryBefore": [],
+            "inventoryAfter": [
+              "gloves"
+            ],
+            "verified": true
+          },
+          {
+            "index": 1,
+            "text": "サイドテーブルを押して移動",
+            "kind": "push",
+            "target": "table",
+            "actor": "boy",
+            "actionPose": "boy_push",
+            "renderedFrameCount": 115,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_push"
+            ],
+            "roomBefore": "living",
+            "roomAfter": "living",
+            "inventoryBefore": [
+              "gloves"
+            ],
+            "inventoryAfter": [
+              "gloves"
+            ],
+            "verified": true
+          },
+          {
+            "index": 2,
+            "text": "ソファ横の隙間を調べる",
+            "kind": "inspect",
+            "target": "sofa",
+            "actor": "boy",
+            "actionPose": "boy_read",
+            "renderedFrameCount": 82,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_read"
+            ],
+            "roomBefore": "living",
+            "roomAfter": "living",
+            "inventoryBefore": [
+              "gloves"
+            ],
+            "inventoryAfter": [
+              "gloves"
+            ],
+            "verified": true
+          },
+          {
+            "index": 3,
+            "text": "ゲーム機を引き出す",
+            "kind": "collect",
+            "target": "sofa",
+            "actor": "boy",
+            "actionPose": "boy_happy",
+            "renderedFrameCount": 93,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open",
+              "boy_pickup"
+            ],
+            "roomBefore": "living",
+            "roomAfter": "living",
+            "inventoryBefore": [
+              "gloves"
+            ],
+            "inventoryAfter": [
+              "gloves"
+            ],
+            "verified": true
+          }
+        ],
+        "failures": [
+          {
+            "index": 0,
+            "failed": true,
+            "retry": true
+          }
+        ],
+        "screenshots": [
+          "test-results/v012/stage-05-initial.png",
+          "test-results/v012/stage-05-action-0.png",
+          "test-results/v012/stage-05-action-3.png",
+          "test-results/v012/stage-05-clear.png"
+        ]
+      },
+      {
+        "stage": 6,
+        "steps": [
+          {
+            "index": 0,
+            "text": "玄関マットの水滴ヒントを見る",
+            "kind": "read",
+            "target": "mat",
+            "actor": "boy",
+            "actionPose": "boy_read",
+            "renderedFrameCount": 136,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_read"
+            ],
+            "roomBefore": "entrance",
+            "roomAfter": "entrance",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 1,
+            "text": "濡れていない傘から順に抜く",
+            "kind": "order",
+            "target": "umbrellas",
+            "actor": "boy",
+            "actionPose": "boy_reach",
+            "renderedFrameCount": 87,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_reach"
+            ],
+            "roomBefore": "entrance",
+            "roomAfter": "entrance",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 2,
+            "text": "傘立てを少し動かす",
+            "kind": "push",
+            "target": "umbrellas",
+            "actor": "boy",
+            "actionPose": "boy_push",
+            "renderedFrameCount": 110,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_push"
+            ],
+            "roomBefore": "entrance",
+            "roomAfter": "entrance",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 3,
+            "text": "ゲーム機を取得",
+            "kind": "collect",
+            "target": "umbrellas",
+            "actor": "boy",
+            "actionPose": "boy_happy",
+            "renderedFrameCount": 92,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open",
+              "boy_pickup"
+            ],
+            "roomBefore": "entrance",
+            "roomAfter": "entrance",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          }
+        ],
+        "failures": [
+          {
+            "index": 0,
+            "failed": true,
+            "retry": true
+          }
+        ],
+        "screenshots": [
+          "test-results/v012/stage-06-initial.png",
+          "test-results/v012/stage-06-action-0.png",
+          "test-results/v012/stage-06-action-3.png",
+          "test-results/v012/stage-06-clear.png"
+        ]
+      },
+      {
+        "stage": 7,
+        "steps": [
+          {
+            "index": 0,
+            "text": "下駄箱から印鑑を入手",
+            "kind": "pickup",
+            "target": "stamp",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 88,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "entrance",
+            "roomAfter": "entrance",
+            "inventoryBefore": [],
+            "inventoryAfter": [
+              "stamp"
+            ],
+            "verified": true
+          },
+          {
+            "index": 1,
+            "text": "インターホンに応答",
+            "kind": "use",
+            "target": "intercom",
+            "actor": "boy",
+            "actionPose": "boy_reach",
+            "renderedFrameCount": 84,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_reach"
+            ],
+            "roomBefore": "entrance",
+            "roomAfter": "entrance",
+            "inventoryBefore": [
+              "stamp"
+            ],
+            "inventoryAfter": [
+              "stamp"
+            ],
+            "verified": true
+          },
+          {
+            "index": 2,
+            "text": "宅配員から箱を受け取る",
+            "kind": "receive",
+            "target": "courier",
+            "actor": "boy",
+            "actionPose": "boy_offer",
+            "renderedFrameCount": 93,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_offer",
+              "courier_receive"
+            ],
+            "roomBefore": "entrance",
+            "roomAfter": "entrance",
+            "inventoryBefore": [
+              "stamp"
+            ],
+            "inventoryAfter": [
+              "stamp",
+              "box"
+            ],
+            "verified": true
+          },
+          {
+            "index": 3,
+            "text": "引き出しからカッターを入手",
+            "kind": "pickup",
+            "target": "cab",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 101,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "entrance",
+            "roomAfter": "entrance",
+            "inventoryBefore": [
+              "stamp",
+              "box"
+            ],
+            "inventoryAfter": [
+              "stamp",
+              "box",
+              "knife"
+            ],
+            "verified": true
+          },
+          {
+            "index": 4,
+            "text": "段ボールを開ける",
+            "kind": "open",
+            "target": "boy",
+            "actor": "boy",
+            "actionPose": "boy_open",
+            "renderedFrameCount": 83,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open"
+            ],
+            "roomBefore": "entrance",
+            "roomAfter": "entrance",
+            "inventoryBefore": [
+              "stamp",
+              "box",
+              "knife"
+            ],
+            "inventoryAfter": [
+              "stamp",
+              "box",
+              "knife"
+            ],
+            "verified": true
+          },
+          {
+            "index": 5,
+            "text": "ゲーム機を取得",
+            "kind": "collect",
+            "target": "boy",
+            "actor": "boy",
+            "actionPose": "boy_happy",
+            "renderedFrameCount": 132,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open",
+              "boy_pickup"
+            ],
+            "roomBefore": "entrance",
+            "roomAfter": "entrance",
+            "inventoryBefore": [
+              "stamp",
+              "box",
+              "knife"
+            ],
+            "inventoryAfter": [
+              "stamp",
+              "box",
+              "knife"
+            ],
+            "verified": true
+          }
+        ],
+        "failures": [
+          {
+            "index": 0,
+            "failed": true,
+            "retry": true
+          }
+        ],
+        "screenshots": [
+          "test-results/v012/stage-07-initial.png",
+          "test-results/v012/stage-07-action-0.png",
+          "test-results/v012/stage-07-action-5.png",
+          "test-results/v012/stage-07-clear.png"
+        ]
+      },
+      {
+        "stage": 8,
+        "steps": [
+          {
+            "index": 0,
+            "text": "靴の並びと床の跡を観察",
+            "kind": "read",
+            "target": "shoes",
+            "actor": "boy",
+            "actionPose": "boy_read",
+            "renderedFrameCount": 94,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_read"
+            ],
+            "roomBefore": "entrance",
+            "roomAfter": "entrance",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 1,
+            "text": "音の鳴らないスリッパを選ぶ",
+            "kind": "inspect",
+            "target": "slipper",
+            "actor": "boy",
+            "actionPose": "boy_read",
+            "renderedFrameCount": 83,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_read"
+            ],
+            "roomBefore": "entrance",
+            "roomAfter": "entrance",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 2,
+            "text": "スリッパ内の鍵を取る",
+            "kind": "pickup",
+            "target": "slipper",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 118,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "entrance",
+            "roomAfter": "entrance",
+            "inventoryBefore": [],
+            "inventoryAfter": [
+              "key"
+            ],
+            "verified": true
+          },
+          {
+            "index": 3,
+            "text": "下駄箱上段を開ける",
+            "kind": "open",
+            "target": "cab",
+            "actor": "boy",
+            "actionPose": "boy_high",
+            "renderedFrameCount": 99,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_high"
+            ],
+            "roomBefore": "entrance",
+            "roomAfter": "entrance",
+            "inventoryBefore": [
+              "key"
+            ],
+            "inventoryAfter": [
+              "key"
+            ],
+            "verified": true
+          },
+          {
+            "index": 4,
+            "text": "ゲーム機を取得",
+            "kind": "collect",
+            "target": "cab",
+            "actor": "boy",
+            "actionPose": "boy_happy",
+            "renderedFrameCount": 72,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_high",
+              "boy_pickup"
+            ],
+            "roomBefore": "entrance",
+            "roomAfter": "entrance",
+            "inventoryBefore": [
+              "key"
+            ],
+            "inventoryAfter": [
+              "key"
+            ],
+            "verified": true
+          }
+        ],
+        "failures": [
+          {
+            "index": 0,
+            "failed": true,
+            "retry": true
+          }
+        ],
+        "screenshots": [
+          "test-results/v012/stage-08-initial.png",
+          "test-results/v012/stage-08-action-0.png",
+          "test-results/v012/stage-08-action-4.png",
+          "test-results/v012/stage-08-clear.png"
+        ]
+      },
+      {
+        "stage": 9,
+        "steps": [
+          {
+            "index": 0,
+            "text": "インターホンの履歴を確認",
+            "kind": "read",
+            "target": "intercom",
+            "actor": "boy",
+            "actionPose": "boy_read",
+            "renderedFrameCount": 89,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_read"
+            ],
+            "roomBefore": "entrance",
+            "roomAfter": "entrance",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 1,
+            "text": "おばあちゃんが来たタイミングでパパを呼ぶ",
+            "kind": "talk",
+            "target": "grandma",
+            "actor": "boy",
+            "actionPose": "boy_offer",
+            "renderedFrameCount": 121,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_offer",
+              "grandma_receive",
+              "papa_walk1",
+              "papa_walk2"
+            ],
+            "roomBefore": "entrance",
+            "roomAfter": "entrance",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 2,
+            "text": "パパが応対している間に玄関ベンチを開く",
+            "kind": "open",
+            "target": "bench",
+            "actor": "boy",
+            "actionPose": "boy_open",
+            "renderedFrameCount": 112,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open"
+            ],
+            "roomBefore": "entrance",
+            "roomAfter": "entrance",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 3,
+            "text": "ゲーム機を取得",
+            "kind": "collect",
+            "target": "bench",
+            "actor": "boy",
+            "actionPose": "boy_happy",
+            "renderedFrameCount": 102,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open",
+              "boy_pickup"
+            ],
+            "roomBefore": "entrance",
+            "roomAfter": "entrance",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          }
+        ],
+        "failures": [
+          {
+            "index": 0,
+            "failed": true,
+            "retry": true
+          }
+        ],
+        "screenshots": [
+          "test-results/v012/stage-09-initial.png",
+          "test-results/v012/stage-09-action-0.png",
+          "test-results/v012/stage-09-action-3.png",
+          "test-results/v012/stage-09-clear.png"
+        ]
+      },
+      {
+        "stage": 10,
+        "steps": [
+          {
+            "index": 0,
+            "text": "傘立てから傘を取る",
+            "kind": "pickup",
+            "target": "umbrella",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 117,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "entrance",
+            "roomAfter": "entrance",
+            "inventoryBefore": [],
+            "inventoryAfter": [
+              "umbrella"
+            ],
+            "verified": true
+          },
+          {
+            "index": 1,
+            "text": "郵便物から番号カードを見つける",
+            "kind": "pickup",
+            "target": "card",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 86,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "entrance",
+            "roomAfter": "entrance",
+            "inventoryBefore": [
+              "umbrella"
+            ],
+            "inventoryAfter": [
+              "umbrella",
+              "card"
+            ],
+            "verified": true
+          },
+          {
+            "index": 2,
+            "text": "玄関外へ移動",
+            "kind": "travel",
+            "target": "door",
+            "actor": "boy",
+            "actionPose": "boy_walk1",
+            "renderedFrameCount": 95,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2"
+            ],
+            "roomBefore": "entrance",
+            "roomAfter": "outside",
+            "inventoryBefore": [
+              "umbrella",
+              "card"
+            ],
+            "inventoryAfter": [
+              "umbrella",
+              "card"
+            ],
+            "verified": true
+          },
+          {
+            "index": 3,
+            "text": "宅配ロッカーに番号を入力",
+            "kind": "code",
+            "target": "locker",
+            "actor": "boy",
+            "actionPose": "boy_reach",
+            "renderedFrameCount": 79,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_reach"
+            ],
+            "roomBefore": "outside",
+            "roomAfter": "outside",
+            "inventoryBefore": [
+              "umbrella",
+              "card"
+            ],
+            "inventoryAfter": [
+              "umbrella",
+              "card"
+            ],
+            "verified": true
+          },
+          {
+            "index": 4,
+            "text": "ゲーム機を取得",
+            "kind": "collect",
+            "target": "locker",
+            "actor": "boy",
+            "actionPose": "boy_happy",
+            "renderedFrameCount": 54,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open",
+              "boy_pickup"
+            ],
+            "roomBefore": "outside",
+            "roomAfter": "outside",
+            "inventoryBefore": [
+              "umbrella",
+              "card"
+            ],
+            "inventoryAfter": [
+              "umbrella",
+              "card"
+            ],
+            "verified": true
+          }
+        ],
+        "failures": [
+          {
+            "index": 0,
+            "failed": true,
+            "retry": true
+          }
+        ],
+        "screenshots": [
+          "test-results/v012/stage-10-initial.png",
+          "test-results/v012/stage-10-action-0.png",
+          "test-results/v012/stage-10-action-4.png",
+          "test-results/v012/stage-10-clear.png"
+        ]
+      },
+      {
+        "stage": 11,
+        "steps": [
+          {
+            "index": 0,
+            "text": "曇った鏡を確認",
+            "kind": "inspect",
+            "target": "mirror",
+            "actor": "boy",
+            "actionPose": "boy_read",
+            "renderedFrameCount": 86,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_read"
+            ],
+            "roomBefore": "bath",
+            "roomAfter": "bath",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 1,
+            "text": "換気扇をON",
+            "kind": "use",
+            "target": "fan",
+            "actor": "boy",
+            "actionPose": "boy_reach",
+            "renderedFrameCount": 84,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_reach"
+            ],
+            "roomBefore": "bath",
+            "roomAfter": "bath",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 2,
+            "text": "鏡の番号を読む",
+            "kind": "read",
+            "target": "mirror",
+            "actor": "boy",
+            "actionPose": "boy_read",
+            "renderedFrameCount": 85,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_read"
+            ],
+            "roomBefore": "bath",
+            "roomAfter": "bath",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 3,
+            "text": "鏡裏収納のダイヤルを合わせる",
+            "kind": "code",
+            "target": "mirror",
+            "actor": "boy",
+            "actionPose": "boy_reach",
+            "renderedFrameCount": 94,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_reach"
+            ],
+            "roomBefore": "bath",
+            "roomAfter": "bath",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 4,
+            "text": "ゲーム機を取得",
+            "kind": "collect",
+            "target": "mirror",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 99,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open",
+              "boy_pickup"
+            ],
+            "roomBefore": "bath",
+            "roomAfter": "bath",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          }
+        ],
+        "failures": [
+          {
+            "index": 0,
+            "failed": true,
+            "retry": true
+          }
+        ],
+        "screenshots": [
+          "test-results/v012/stage-11-initial.png",
+          "test-results/v012/stage-11-action-0.png",
+          "test-results/v012/stage-11-action-4.png",
+          "test-results/v012/stage-11-clear.png"
+        ]
+      },
+      {
+        "stage": 12,
+        "steps": [
+          {
+            "index": 0,
+            "text": "床のアヒルおもちゃを取る",
+            "kind": "pickup",
+            "target": "duck",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 126,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "bath",
+            "roomAfter": "bath",
+            "inventoryBefore": [],
+            "inventoryAfter": [
+              "duck"
+            ],
+            "verified": true
+          },
+          {
+            "index": 1,
+            "text": "浴槽にアヒルを入れる",
+            "kind": "place",
+            "target": "tub",
+            "actor": "boy",
+            "actionPose": "boy_carry",
+            "renderedFrameCount": 84,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_carry"
+            ],
+            "roomBefore": "bath",
+            "roomAfter": "bath",
+            "inventoryBefore": [
+              "duck"
+            ],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 2,
+            "text": "蛇口を開ける",
+            "kind": "use",
+            "target": "tap",
+            "actor": "boy",
+            "actionPose": "boy_reach",
+            "renderedFrameCount": 86,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_reach"
+            ],
+            "roomBefore": "bath",
+            "roomAfter": "bath",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 3,
+            "text": "浮いたアヒルの下の鍵を取る",
+            "kind": "pickup",
+            "target": "tub",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 90,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "bath",
+            "roomAfter": "bath",
+            "inventoryBefore": [],
+            "inventoryAfter": [
+              "key"
+            ],
+            "verified": true
+          },
+          {
+            "index": 4,
+            "text": "浴槽脇収納を開ける",
+            "kind": "open",
+            "target": "cab",
+            "actor": "boy",
+            "actionPose": "boy_open",
+            "renderedFrameCount": 145,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open"
+            ],
+            "roomBefore": "bath",
+            "roomAfter": "bath",
+            "inventoryBefore": [
+              "key"
+            ],
+            "inventoryAfter": [
+              "key"
+            ],
+            "verified": true
+          },
+          {
+            "index": 5,
+            "text": "ゲーム機を取得",
+            "kind": "collect",
+            "target": "cab",
+            "actor": "boy",
+            "actionPose": "boy_happy",
+            "renderedFrameCount": 111,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open",
+              "boy_pickup"
+            ],
+            "roomBefore": "bath",
+            "roomAfter": "bath",
+            "inventoryBefore": [
+              "key"
+            ],
+            "inventoryAfter": [
+              "key"
+            ],
+            "verified": true
+          }
+        ],
+        "failures": [
+          {
+            "index": 0,
+            "failed": true,
+            "retry": true
+          }
+        ],
+        "screenshots": [
+          "test-results/v012/stage-12-initial.png",
+          "test-results/v012/stage-12-action-0.png",
+          "test-results/v012/stage-12-action-5.png",
+          "test-results/v012/stage-12-clear.png"
+        ]
+      },
+      {
+        "stage": 13,
+        "steps": [
+          {
+            "index": 0,
+            "text": "洗面台下からトングを入手",
+            "kind": "pickup",
+            "target": "sink",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 154,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "bath",
+            "roomAfter": "bath",
+            "inventoryBefore": [],
+            "inventoryAfter": [
+              "tongs"
+            ],
+            "verified": true
+          },
+          {
+            "index": 1,
+            "text": "浴槽の栓を抜く",
+            "kind": "open",
+            "target": "drain",
+            "actor": "boy",
+            "actionPose": "boy_open",
+            "renderedFrameCount": 84,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open"
+            ],
+            "roomBefore": "bath",
+            "roomAfter": "bath",
+            "inventoryBefore": [
+              "tongs"
+            ],
+            "inventoryAfter": [
+              "tongs"
+            ],
+            "verified": true
+          },
+          {
+            "index": 2,
+            "text": "排水口をトングで探る",
+            "kind": "use",
+            "target": "drain",
+            "actor": "boy",
+            "actionPose": "boy_reach",
+            "renderedFrameCount": 85,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_reach"
+            ],
+            "roomBefore": "bath",
+            "roomAfter": "bath",
+            "inventoryBefore": [
+              "tongs"
+            ],
+            "inventoryAfter": [
+              "tongs"
+            ],
+            "verified": true
+          },
+          {
+            "index": 3,
+            "text": "鍵を取る",
+            "kind": "pickup",
+            "target": "key",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 91,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "bath",
+            "roomAfter": "bath",
+            "inventoryBefore": [
+              "tongs"
+            ],
+            "inventoryAfter": [
+              "tongs",
+              "key"
+            ],
+            "verified": true
+          },
+          {
+            "index": 4,
+            "text": "収納を開ける",
+            "kind": "collect",
+            "target": "sink",
+            "actor": "boy",
+            "actionPose": "boy_happy",
+            "renderedFrameCount": 90,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open",
+              "boy_pickup"
+            ],
+            "roomBefore": "bath",
+            "roomAfter": "bath",
+            "inventoryBefore": [
+              "tongs",
+              "key"
+            ],
+            "inventoryAfter": [
+              "tongs",
+              "key"
+            ],
+            "verified": true
+          }
+        ],
+        "failures": [
+          {
+            "index": 0,
+            "failed": true,
+            "retry": true
+          }
+        ],
+        "screenshots": [
+          "test-results/v012/stage-13-initial.png",
+          "test-results/v012/stage-13-action-0.png",
+          "test-results/v012/stage-13-action-4.png",
+          "test-results/v012/stage-13-clear.png"
+        ]
+      },
+      {
+        "stage": 14,
+        "steps": [
+          {
+            "index": 0,
+            "text": "脱衣かごから濡れたメモを入手",
+            "kind": "pickup",
+            "target": "basket",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 89,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "bath",
+            "roomAfter": "bath",
+            "inventoryBefore": [],
+            "inventoryAfter": [
+              "note"
+            ],
+            "verified": true
+          },
+          {
+            "index": 1,
+            "text": "棚のドライヤーを取る",
+            "kind": "pickup",
+            "target": "dryer",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 85,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "bath",
+            "roomAfter": "bath",
+            "inventoryBefore": [
+              "note"
+            ],
+            "inventoryAfter": [
+              "note",
+              "dryer"
+            ],
+            "verified": true
+          },
+          {
+            "index": 2,
+            "text": "コンセント近くでドライヤーを使う",
+            "kind": "dry",
+            "target": "socket",
+            "actor": "boy",
+            "actionPose": "boy_light",
+            "renderedFrameCount": 84,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_light"
+            ],
+            "roomBefore": "bath",
+            "roomAfter": "bath",
+            "inventoryBefore": [
+              "note",
+              "dryer"
+            ],
+            "inventoryAfter": [
+              "note",
+              "dryer"
+            ],
+            "verified": true
+          },
+          {
+            "index": 3,
+            "text": "乾いたメモの絵を読む",
+            "kind": "read",
+            "target": "boy",
+            "actor": "boy",
+            "actionPose": "boy_read",
+            "renderedFrameCount": 90,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_read"
+            ],
+            "roomBefore": "bath",
+            "roomAfter": "bath",
+            "inventoryBefore": [
+              "note",
+              "dryer"
+            ],
+            "inventoryAfter": [
+              "note",
+              "dryer"
+            ],
+            "verified": true
+          },
+          {
+            "index": 4,
+            "text": "脱衣かごの底板を外す",
+            "kind": "open",
+            "target": "basket",
+            "actor": "boy",
+            "actionPose": "boy_open",
+            "renderedFrameCount": 85,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open"
+            ],
+            "roomBefore": "bath",
+            "roomAfter": "bath",
+            "inventoryBefore": [
+              "note",
+              "dryer"
+            ],
+            "inventoryAfter": [
+              "note",
+              "dryer"
+            ],
+            "verified": true
+          },
+          {
+            "index": 5,
+            "text": "ゲーム機を取得",
+            "kind": "collect",
+            "target": "basket",
+            "actor": "boy",
+            "actionPose": "boy_happy",
+            "renderedFrameCount": 84,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open",
+              "boy_pickup"
+            ],
+            "roomBefore": "bath",
+            "roomAfter": "bath",
+            "inventoryBefore": [
+              "note",
+              "dryer"
+            ],
+            "inventoryAfter": [
+              "note",
+              "dryer"
+            ],
+            "verified": true
+          }
+        ],
+        "failures": [
+          {
+            "index": 0,
+            "failed": true,
+            "retry": true
+          }
+        ],
+        "screenshots": [
+          "test-results/v012/stage-14-initial.png",
+          "test-results/v012/stage-14-action-0.png",
+          "test-results/v012/stage-14-action-5.png",
+          "test-results/v012/stage-14-clear.png"
+        ]
+      },
+      {
+        "stage": 15,
+        "steps": [
+          {
+            "index": 0,
+            "text": "スポンジを取る",
+            "kind": "pickup",
+            "target": "sponge",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 94,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "bath",
+            "roomAfter": "bath",
+            "inventoryBefore": [],
+            "inventoryAfter": [
+              "sponge"
+            ],
+            "verified": true
+          },
+          {
+            "index": 1,
+            "text": "パパが浴室外へ洗剤を取りに行くのを待つ",
+            "kind": "wait",
+            "target": "papa",
+            "actor": "boy",
+            "actionPose": "boy_read",
+            "renderedFrameCount": 135,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_read",
+              "papa_walk1",
+              "papa_walk2"
+            ],
+            "roomBefore": "bath",
+            "roomAfter": "bath",
+            "inventoryBefore": [
+              "sponge"
+            ],
+            "inventoryAfter": [
+              "sponge"
+            ],
+            "verified": true
+          },
+          {
+            "index": 2,
+            "text": "壁をスポンジで拭く",
+            "kind": "wipe",
+            "target": "panel",
+            "actor": "boy",
+            "actionPose": "boy_reach",
+            "renderedFrameCount": 95,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_reach"
+            ],
+            "roomBefore": "bath",
+            "roomAfter": "bath",
+            "inventoryBefore": [
+              "sponge"
+            ],
+            "inventoryAfter": [
+              "sponge"
+            ],
+            "verified": true
+          },
+          {
+            "index": 3,
+            "text": "矢印の先の点検口を開く",
+            "kind": "open",
+            "target": "panel",
+            "actor": "boy",
+            "actionPose": "boy_open",
+            "renderedFrameCount": 85,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open"
+            ],
+            "roomBefore": "bath",
+            "roomAfter": "bath",
+            "inventoryBefore": [
+              "sponge"
+            ],
+            "inventoryAfter": [
+              "sponge"
+            ],
+            "verified": true
+          },
+          {
+            "index": 4,
+            "text": "ゲーム機を取得",
+            "kind": "collect",
+            "target": "panel",
+            "actor": "boy",
+            "actionPose": "boy_happy",
+            "renderedFrameCount": 115,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open",
+              "boy_pickup"
+            ],
+            "roomBefore": "bath",
+            "roomAfter": "bath",
+            "inventoryBefore": [
+              "sponge"
+            ],
+            "inventoryAfter": [
+              "sponge"
+            ],
+            "verified": true
+          }
+        ],
+        "failures": [
+          {
+            "index": 0,
+            "failed": true,
+            "retry": true
+          }
+        ],
+        "screenshots": [
+          "test-results/v012/stage-15-initial.png",
+          "test-results/v012/stage-15-action-0.png",
+          "test-results/v012/stage-15-action-4.png",
+          "test-results/v012/stage-15-clear.png"
+        ]
+      },
+      {
+        "stage": 16,
+        "steps": [
+          {
+            "index": 0,
+            "text": "物置脇からスコップを取る",
+            "kind": "pickup",
+            "target": "shovel",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 99,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "garden",
+            "roomAfter": "garden",
+            "inventoryBefore": [],
+            "inventoryAfter": [
+              "shovel"
+            ],
+            "verified": true
+          },
+          {
+            "index": 1,
+            "text": "花壇の土の色が違う場所を探す",
+            "kind": "inspect",
+            "target": "soil",
+            "actor": "boy",
+            "actionPose": "boy_read",
+            "renderedFrameCount": 83,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_read"
+            ],
+            "roomBefore": "garden",
+            "roomAfter": "garden",
+            "inventoryBefore": [
+              "shovel"
+            ],
+            "inventoryAfter": [
+              "shovel"
+            ],
+            "verified": true
+          },
+          {
+            "index": 2,
+            "text": "掘る",
+            "kind": "dig",
+            "target": "soil",
+            "actor": "boy",
+            "actionPose": "boy_dig",
+            "renderedFrameCount": 126,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_dig"
+            ],
+            "roomBefore": "garden",
+            "roomAfter": "garden",
+            "inventoryBefore": [
+              "shovel"
+            ],
+            "inventoryAfter": [
+              "shovel"
+            ],
+            "verified": true
+          },
+          {
+            "index": 3,
+            "text": "防水箱を開ける",
+            "kind": "open",
+            "target": "box",
+            "actor": "boy",
+            "actionPose": "boy_open",
+            "renderedFrameCount": 84,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open"
+            ],
+            "roomBefore": "garden",
+            "roomAfter": "garden",
+            "inventoryBefore": [
+              "shovel"
+            ],
+            "inventoryAfter": [
+              "shovel"
+            ],
+            "verified": true
+          },
+          {
+            "index": 4,
+            "text": "ゲーム機を取得",
+            "kind": "collect",
+            "target": "box",
+            "actor": "boy",
+            "actionPose": "boy_happy",
+            "renderedFrameCount": 96,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open",
+              "boy_pickup"
+            ],
+            "roomBefore": "garden",
+            "roomAfter": "garden",
+            "inventoryBefore": [
+              "shovel"
+            ],
+            "inventoryAfter": [
+              "shovel"
+            ],
+            "verified": true
+          }
+        ],
+        "failures": [
+          {
+            "index": 0,
+            "failed": true,
+            "retry": true
+          }
+        ],
+        "screenshots": [
+          "test-results/v012/stage-16-initial.png",
+          "test-results/v012/stage-16-action-0.png",
+          "test-results/v012/stage-16-action-4.png",
+          "test-results/v012/stage-16-clear.png"
+        ]
+      },
+      {
+        "stage": 17,
+        "steps": [
+          {
+            "index": 0,
+            "text": "空のじょうろを取る",
+            "kind": "pickup",
+            "target": "can",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 92,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "garden",
+            "roomAfter": "garden",
+            "inventoryBefore": [],
+            "inventoryAfter": [
+              "can"
+            ],
+            "verified": true
+          },
+          {
+            "index": 1,
+            "text": "水道で水を入れる",
+            "kind": "fill",
+            "target": "tap",
+            "actor": "boy",
+            "actionPose": "boy_pour",
+            "renderedFrameCount": 83,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pour"
+            ],
+            "roomBefore": "garden",
+            "roomAfter": "garden",
+            "inventoryBefore": [
+              "can"
+            ],
+            "inventoryAfter": [
+              "can"
+            ],
+            "verified": true
+          },
+          {
+            "index": 2,
+            "text": "乾いた鉢に水をやる",
+            "kind": "pour",
+            "target": "plant",
+            "actor": "boy",
+            "actionPose": "boy_pour",
+            "renderedFrameCount": 82,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pour"
+            ],
+            "roomBefore": "garden",
+            "roomAfter": "garden",
+            "inventoryBefore": [
+              "can"
+            ],
+            "inventoryAfter": [
+              "can"
+            ],
+            "verified": true
+          },
+          {
+            "index": 3,
+            "text": "現れた鍵を取る",
+            "kind": "pickup",
+            "target": "key",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 96,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "garden",
+            "roomAfter": "garden",
+            "inventoryBefore": [
+              "can"
+            ],
+            "inventoryAfter": [
+              "can",
+              "key"
+            ],
+            "verified": true
+          },
+          {
+            "index": 4,
+            "text": "物置を開ける",
+            "kind": "collect",
+            "target": "shed",
+            "actor": "boy",
+            "actionPose": "boy_happy",
+            "renderedFrameCount": 97,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open",
+              "boy_pickup"
+            ],
+            "roomBefore": "garden",
+            "roomAfter": "garden",
+            "inventoryBefore": [
+              "can",
+              "key"
+            ],
+            "inventoryAfter": [
+              "can",
+              "key"
+            ],
+            "verified": true
+          }
+        ],
+        "failures": [
+          {
+            "index": 0,
+            "failed": true,
+            "retry": true
+          }
+        ],
+        "screenshots": [
+          "test-results/v012/stage-17-initial.png",
+          "test-results/v012/stage-17-action-0.png",
+          "test-results/v012/stage-17-action-4.png",
+          "test-results/v012/stage-17-clear.png"
+        ]
+      },
+      {
+        "stage": 18,
+        "steps": [
+          {
+            "index": 0,
+            "text": "ベンチ下からボールを入手",
+            "kind": "pickup",
+            "target": "ball",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 88,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "garden",
+            "roomAfter": "garden",
+            "inventoryBefore": [],
+            "inventoryAfter": [
+              "ball"
+            ],
+            "verified": true
+          },
+          {
+            "index": 1,
+            "text": "猫にボールを転がす",
+            "kind": "throw",
+            "target": "cat",
+            "actor": "boy",
+            "actionPose": "boy_offer",
+            "renderedFrameCount": 84,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_offer",
+              "cat_receive"
+            ],
+            "roomBefore": "garden",
+            "roomAfter": "garden",
+            "inventoryBefore": [
+              "ball"
+            ],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 2,
+            "text": "猫が追いかけて移動",
+            "kind": "wait",
+            "target": "cat",
+            "actor": "boy",
+            "actionPose": "boy_read",
+            "renderedFrameCount": 121,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_read",
+              "cat_walk1",
+              "cat_walk2"
+            ],
+            "roomBefore": "garden",
+            "roomAfter": "garden",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 3,
+            "text": "物置を開ける",
+            "kind": "open",
+            "target": "shed",
+            "actor": "boy",
+            "actionPose": "boy_open",
+            "renderedFrameCount": 91,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open"
+            ],
+            "roomBefore": "garden",
+            "roomAfter": "garden",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 4,
+            "text": "ゲーム機を取得",
+            "kind": "collect",
+            "target": "shed",
+            "actor": "boy",
+            "actionPose": "boy_happy",
+            "renderedFrameCount": 118,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open",
+              "boy_pickup"
+            ],
+            "roomBefore": "garden",
+            "roomAfter": "garden",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          }
+        ],
+        "failures": [
+          {
+            "index": 0,
+            "failed": true,
+            "retry": true
+          }
+        ],
+        "screenshots": [
+          "test-results/v012/stage-18-initial.png",
+          "test-results/v012/stage-18-action-0.png",
+          "test-results/v012/stage-18-action-4.png",
+          "test-results/v012/stage-18-clear.png"
+        ]
+      },
+      {
+        "stage": 19,
+        "steps": [
+          {
+            "index": 0,
+            "text": "植木鉢の下からコインを入手",
+            "kind": "pickup",
+            "target": "coin",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 95,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "garden",
+            "roomAfter": "garden",
+            "inventoryBefore": [],
+            "inventoryAfter": [
+              "coin"
+            ],
+            "verified": true
+          },
+          {
+            "index": 1,
+            "text": "カラスの近くにコインを置く",
+            "kind": "place",
+            "target": "crow",
+            "actor": "boy",
+            "actionPose": "boy_carry",
+            "renderedFrameCount": 85,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_carry"
+            ],
+            "roomBefore": "garden",
+            "roomAfter": "garden",
+            "inventoryBefore": [
+              "coin"
+            ],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 2,
+            "text": "カラスが鍵を落としてコインを取る",
+            "kind": "receive",
+            "target": "crow",
+            "actor": "boy",
+            "actionPose": "boy_offer",
+            "renderedFrameCount": 123,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_offer",
+              "crow_receive",
+              "crow_walk1",
+              "crow_walk2"
+            ],
+            "roomBefore": "garden",
+            "roomAfter": "garden",
+            "inventoryBefore": [],
+            "inventoryAfter": [
+              "key"
+            ],
+            "verified": true
+          },
+          {
+            "index": 3,
+            "text": "鍵でベンチ収納を開ける",
+            "kind": "collect",
+            "target": "bench",
+            "actor": "boy",
+            "actionPose": "boy_happy",
+            "renderedFrameCount": 80,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open",
+              "boy_pickup"
+            ],
+            "roomBefore": "garden",
+            "roomAfter": "garden",
+            "inventoryBefore": [
+              "key"
+            ],
+            "inventoryAfter": [
+              "key"
+            ],
+            "verified": true
+          }
+        ],
+        "failures": [
+          {
+            "index": 0,
+            "failed": true,
+            "retry": true
+          }
+        ],
+        "screenshots": [
+          "test-results/v012/stage-19-initial.png",
+          "test-results/v012/stage-19-action-0.png",
+          "test-results/v012/stage-19-action-3.png",
+          "test-results/v012/stage-19-clear.png"
+        ]
+      },
+      {
+        "stage": 20,
+        "steps": [
+          {
+            "index": 0,
+            "text": "花壇から鍵を取る",
+            "kind": "pickup",
+            "target": "key",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 85,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "garden",
+            "roomAfter": "garden",
+            "inventoryBefore": [],
+            "inventoryAfter": [
+              "key"
+            ],
+            "verified": true
+          },
+          {
+            "index": 1,
+            "text": "物置を開ける",
+            "kind": "open",
+            "target": "shed",
+            "actor": "boy",
+            "actionPose": "boy_open",
+            "renderedFrameCount": 83,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open"
+            ],
+            "roomBefore": "garden",
+            "roomAfter": "garden",
+            "inventoryBefore": [
+              "key"
+            ],
+            "inventoryAfter": [
+              "key"
+            ],
+            "verified": true
+          },
+          {
+            "index": 2,
+            "text": "物置のロープを取る",
+            "kind": "pickup",
+            "target": "shed",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 84,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "garden",
+            "roomAfter": "garden",
+            "inventoryBefore": [
+              "key"
+            ],
+            "inventoryAfter": [
+              "key",
+              "rope"
+            ],
+            "verified": true
+          },
+          {
+            "index": 3,
+            "text": "脚立を展開",
+            "kind": "place",
+            "target": "ladder",
+            "actor": "boy",
+            "actionPose": "boy_carry",
+            "renderedFrameCount": 90,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_carry"
+            ],
+            "roomBefore": "garden",
+            "roomAfter": "garden",
+            "inventoryBefore": [
+              "key",
+              "rope"
+            ],
+            "inventoryAfter": [
+              "key",
+              "rope"
+            ],
+            "verified": true
+          },
+          {
+            "index": 4,
+            "text": "高所の箱をロープで引き寄せる",
+            "kind": "pull",
+            "target": "box",
+            "actor": "boy",
+            "actionPose": "boy_push",
+            "renderedFrameCount": 133,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_push"
+            ],
+            "roomBefore": "garden",
+            "roomAfter": "garden",
+            "inventoryBefore": [
+              "key",
+              "rope"
+            ],
+            "inventoryAfter": [
+              "key",
+              "rope"
+            ],
+            "verified": true
+          },
+          {
+            "index": 5,
+            "text": "箱を開けてゲーム機を取得",
+            "kind": "collect",
+            "target": "box",
+            "actor": "boy",
+            "actionPose": "boy_happy",
+            "renderedFrameCount": 137,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open",
+              "boy_pickup"
+            ],
+            "roomBefore": "garden",
+            "roomAfter": "garden",
+            "inventoryBefore": [
+              "key",
+              "rope"
+            ],
+            "inventoryAfter": [
+              "key",
+              "rope"
+            ],
+            "verified": true
+          }
+        ],
+        "failures": [
+          {
+            "index": 0,
+            "failed": true,
+            "retry": true
+          }
+        ],
+        "screenshots": [
+          "test-results/v012/stage-20-initial.png",
+          "test-results/v012/stage-20-action-0.png",
+          "test-results/v012/stage-20-action-5.png",
+          "test-results/v012/stage-20-clear.png"
+        ]
+      },
+      {
+        "stage": 21,
+        "steps": [
+          {
+            "index": 0,
+            "text": "引き出しからスプーンを取る",
+            "kind": "pickup",
+            "target": "drawer",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 107,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "kitchen",
+            "roomAfter": "kitchen",
+            "inventoryBefore": [],
+            "inventoryAfter": [
+              "spoon"
+            ],
+            "verified": true
+          },
+          {
+            "index": 1,
+            "text": "妹にスプーンを渡す",
+            "kind": "give",
+            "target": "sister",
+            "actor": "boy",
+            "actionPose": "boy_offer",
+            "renderedFrameCount": 107,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_offer",
+              "sister_receive"
+            ],
+            "roomBefore": "kitchen",
+            "roomAfter": "kitchen",
+            "inventoryBefore": [
+              "spoon"
+            ],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 2,
+            "text": "妹がテーブルへ移動",
+            "kind": "wait",
+            "target": "sister",
+            "actor": "boy",
+            "actionPose": "boy_read",
+            "renderedFrameCount": 121,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_read",
+              "sister_walk1",
+              "sister_walk2"
+            ],
+            "roomBefore": "kitchen",
+            "roomAfter": "kitchen",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 3,
+            "text": "冷蔵庫を開ける",
+            "kind": "open",
+            "target": "fridge",
+            "actor": "boy",
+            "actionPose": "boy_open",
+            "renderedFrameCount": 85,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open"
+            ],
+            "roomBefore": "kitchen",
+            "roomAfter": "kitchen",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 4,
+            "text": "奥のケースからゲーム機を取る",
+            "kind": "collect",
+            "target": "fridge",
+            "actor": "boy",
+            "actionPose": "boy_happy",
+            "renderedFrameCount": 94,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open",
+              "boy_pickup"
+            ],
+            "roomBefore": "kitchen",
+            "roomAfter": "kitchen",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          }
+        ],
+        "failures": [
+          {
+            "index": 0,
+            "failed": true,
+            "retry": true
+          }
+        ],
+        "screenshots": [
+          "test-results/v012/stage-21-initial.png",
+          "test-results/v012/stage-21-action-0.png",
+          "test-results/v012/stage-21-action-4.png",
+          "test-results/v012/stage-21-clear.png"
+        ]
+      },
+      {
+        "stage": 22,
+        "steps": [
+          {
+            "index": 0,
+            "text": "電子レンジ表示が消えていることを確認",
+            "kind": "inspect",
+            "target": "microwave",
+            "actor": "boy",
+            "actionPose": "boy_read",
+            "renderedFrameCount": 87,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_read"
+            ],
+            "roomBefore": "kitchen",
+            "roomAfter": "kitchen",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 1,
+            "text": "キッチンから廊下へ移動する",
+            "kind": "travel",
+            "target": "door",
+            "actor": "boy",
+            "actionPose": "boy_walk1",
+            "renderedFrameCount": 87,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2"
+            ],
+            "roomBefore": "kitchen",
+            "roomAfter": "hall",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 2,
+            "text": "廊下のブレーカーを戻す",
+            "kind": "use",
+            "target": "breaker",
+            "actor": "boy",
+            "actionPose": "boy_reach",
+            "renderedFrameCount": 102,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_reach"
+            ],
+            "roomBefore": "hall",
+            "roomAfter": "hall",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 3,
+            "text": "キッチンへ戻る",
+            "kind": "travel",
+            "target": "door",
+            "actor": "boy",
+            "actionPose": "boy_walk1",
+            "renderedFrameCount": 84,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2"
+            ],
+            "roomBefore": "hall",
+            "roomAfter": "kitchen",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 4,
+            "text": "電子レンジに点滅する時刻を読む",
+            "kind": "read",
+            "target": "microwave",
+            "actor": "boy",
+            "actionPose": "boy_read",
+            "renderedFrameCount": 94,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_read"
+            ],
+            "roomBefore": "kitchen",
+            "roomAfter": "kitchen",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 5,
+            "text": "ロック箱へ入力",
+            "kind": "code",
+            "target": "shelf",
+            "actor": "boy",
+            "actionPose": "boy_reach",
+            "renderedFrameCount": 86,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_reach"
+            ],
+            "roomBefore": "kitchen",
+            "roomAfter": "kitchen",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 6,
+            "text": "ゲーム機を取得",
+            "kind": "collect",
+            "target": "box",
+            "actor": "boy",
+            "actionPose": "boy_happy",
+            "renderedFrameCount": 94,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open",
+              "boy_pickup"
+            ],
+            "roomBefore": "kitchen",
+            "roomAfter": "kitchen",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          }
+        ],
+        "failures": [
+          {
+            "index": 0,
+            "failed": true,
+            "retry": true
+          }
+        ],
+        "screenshots": [
+          "test-results/v012/stage-22-initial.png",
+          "test-results/v012/stage-22-action-0.png",
+          "test-results/v012/stage-22-action-6.png",
+          "test-results/v012/stage-22-clear.png"
+        ]
+      },
+      {
+        "stage": 23,
+        "steps": [
+          {
+            "index": 0,
+            "text": "テーブルのお茶を取る",
+            "kind": "pickup",
+            "target": "tea",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 84,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "kitchen",
+            "roomAfter": "kitchen",
+            "inventoryBefore": [],
+            "inventoryAfter": [
+              "tea"
+            ],
+            "verified": true
+          },
+          {
+            "index": 1,
+            "text": "おばあちゃんにお茶を渡して席を移ってもらう",
+            "kind": "give",
+            "target": "grandma",
+            "actor": "boy",
+            "actionPose": "boy_offer",
+            "renderedFrameCount": 129,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_offer",
+              "grandma_receive",
+              "grandma_walk1",
+              "grandma_walk2"
+            ],
+            "roomBefore": "kitchen",
+            "roomAfter": "kitchen",
+            "inventoryBefore": [
+              "tea"
+            ],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 2,
+            "text": "椅子を食器棚前へ移動",
+            "kind": "push",
+            "target": "chair",
+            "actor": "boy",
+            "actionPose": "boy_push",
+            "renderedFrameCount": 111,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_push"
+            ],
+            "roomBefore": "kitchen",
+            "roomAfter": "kitchen",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 3,
+            "text": "椅子に乗る",
+            "kind": "climb",
+            "target": "chair",
+            "actor": "boy",
+            "actionPose": "boy_climb",
+            "renderedFrameCount": 83,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_climb"
+            ],
+            "roomBefore": "kitchen",
+            "roomAfter": "kitchen",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 4,
+            "text": "上段を開けてゲーム機を取る",
+            "kind": "collect",
+            "target": "cab",
+            "actor": "boy",
+            "actionPose": "boy_happy",
+            "renderedFrameCount": 111,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_high"
+            ],
+            "roomBefore": "kitchen",
+            "roomAfter": "kitchen",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          }
+        ],
+        "failures": [
+          {
+            "index": 0,
+            "failed": true,
+            "retry": true
+          }
+        ],
+        "screenshots": [
+          "test-results/v012/stage-23-initial.png",
+          "test-results/v012/stage-23-action-0.png",
+          "test-results/v012/stage-23-action-4.png",
+          "test-results/v012/stage-23-clear.png"
+        ]
+      },
+      {
+        "stage": 24,
+        "steps": [
+          {
+            "index": 0,
+            "text": "マグカップを取る",
+            "kind": "pickup",
+            "target": "mug",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 84,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "kitchen",
+            "roomAfter": "kitchen",
+            "inventoryBefore": [],
+            "inventoryAfter": [
+              "mug"
+            ],
+            "verified": true
+          },
+          {
+            "index": 1,
+            "text": "コーヒーを注ぐ",
+            "kind": "pour",
+            "target": "pot",
+            "actor": "boy",
+            "actionPose": "boy_pour",
+            "renderedFrameCount": 92,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pour"
+            ],
+            "roomBefore": "kitchen",
+            "roomAfter": "kitchen",
+            "inventoryBefore": [
+              "mug"
+            ],
+            "inventoryAfter": [
+              "mug"
+            ],
+            "verified": true
+          },
+          {
+            "index": 2,
+            "text": "パパへ渡す",
+            "kind": "give",
+            "target": "papa",
+            "actor": "boy",
+            "actionPose": "boy_offer",
+            "renderedFrameCount": 83,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_offer",
+              "papa_idle"
+            ],
+            "roomBefore": "kitchen",
+            "roomAfter": "kitchen",
+            "inventoryBefore": [
+              "mug"
+            ],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 3,
+            "text": "パパが席へ移動",
+            "kind": "wait",
+            "target": "papa",
+            "actor": "boy",
+            "actionPose": "boy_read",
+            "renderedFrameCount": 120,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_read",
+              "papa_walk1",
+              "papa_walk2"
+            ],
+            "roomBefore": "kitchen",
+            "roomAfter": "kitchen",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 4,
+            "text": "カウンター下を開ける",
+            "kind": "collect",
+            "target": "counter",
+            "actor": "boy",
+            "actionPose": "boy_happy",
+            "renderedFrameCount": 95,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open",
+              "boy_pickup"
+            ],
+            "roomBefore": "kitchen",
+            "roomAfter": "kitchen",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          }
+        ],
+        "failures": [
+          {
+            "index": 0,
+            "failed": true,
+            "retry": true
+          }
+        ],
+        "screenshots": [
+          "test-results/v012/stage-24-initial.png",
+          "test-results/v012/stage-24-action-0.png",
+          "test-results/v012/stage-24-action-4.png",
+          "test-results/v012/stage-24-clear.png"
+        ]
+      },
+      {
+        "stage": 25,
+        "steps": [
+          {
+            "index": 0,
+            "text": "掃除機リモコンを取る",
+            "kind": "pickup",
+            "target": "remote",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 84,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "kitchen",
+            "roomAfter": "kitchen",
+            "inventoryBefore": [],
+            "inventoryAfter": [
+              "remote"
+            ],
+            "verified": true
+          },
+          {
+            "index": 1,
+            "text": "掃除機を冷蔵庫下へ誘導",
+            "kind": "use",
+            "target": "vacuum",
+            "actor": "boy",
+            "actionPose": "boy_reach",
+            "renderedFrameCount": 119,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_reach",
+              "vacuum_idle",
+              "vacuum_walk1",
+              "vacuum_walk2"
+            ],
+            "roomBefore": "kitchen",
+            "roomAfter": "kitchen",
+            "inventoryBefore": [
+              "remote"
+            ],
+            "inventoryAfter": [
+              "remote"
+            ],
+            "verified": true
+          },
+          {
+            "index": 2,
+            "text": "鍵を押し出す",
+            "kind": "push",
+            "target": "fridge",
+            "actor": "vacuum",
+            "actionPose": "vacuum_push",
+            "renderedFrameCount": 98,
+            "animationFrames": [
+              "vacuum_walk1",
+              "vacuum_walk2",
+              "vacuum_push"
+            ],
+            "roomBefore": "kitchen",
+            "roomAfter": "kitchen",
+            "inventoryBefore": [
+              "remote"
+            ],
+            "inventoryAfter": [
+              "remote"
+            ],
+            "verified": true
+          },
+          {
+            "index": 3,
+            "text": "鍵を取る",
+            "kind": "pickup",
+            "target": "key",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 88,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "kitchen",
+            "roomAfter": "kitchen",
+            "inventoryBefore": [
+              "remote"
+            ],
+            "inventoryAfter": [
+              "remote",
+              "key"
+            ],
+            "verified": true
+          },
+          {
+            "index": 4,
+            "text": "パントリー棚を開ける",
+            "kind": "collect",
+            "target": "pantry",
+            "actor": "boy",
+            "actionPose": "boy_happy",
+            "renderedFrameCount": 120,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open",
+              "boy_pickup"
+            ],
+            "roomBefore": "kitchen",
+            "roomAfter": "kitchen",
+            "inventoryBefore": [
+              "remote",
+              "key"
+            ],
+            "inventoryAfter": [
+              "remote",
+              "key"
+            ],
+            "verified": true
+          }
+        ],
+        "failures": [
+          {
+            "index": 0,
+            "failed": true,
+            "retry": true
+          }
+        ],
+        "screenshots": [
+          "test-results/v012/stage-25-initial.png",
+          "test-results/v012/stage-25-action-0.png",
+          "test-results/v012/stage-25-action-4.png",
+          "test-results/v012/stage-25-clear.png"
+        ]
+      },
+      {
+        "stage": 26,
+        "steps": [
+          {
+            "index": 0,
+            "text": "床の教科書を集める",
+            "kind": "pickup",
+            "target": "books",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 108,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "child",
+            "roomAfter": "child",
+            "inventoryBefore": [],
+            "inventoryAfter": [
+              "books"
+            ],
+            "verified": true
+          },
+          {
+            "index": 1,
+            "text": "背表紙の番号順に本棚へ並べる",
+            "kind": "order",
+            "target": "shelf",
+            "actor": "boy",
+            "actionPose": "boy_reach",
+            "renderedFrameCount": 134,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_reach"
+            ],
+            "roomBefore": "child",
+            "roomAfter": "child",
+            "inventoryBefore": [
+              "books"
+            ],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 2,
+            "text": "奥から教科書型ケースが出る",
+            "kind": "pull",
+            "target": "shelf",
+            "actor": "boy",
+            "actionPose": "boy_push",
+            "renderedFrameCount": 99,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_push"
+            ],
+            "roomBefore": "child",
+            "roomAfter": "child",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 3,
+            "text": "ケースを開ける",
+            "kind": "collect",
+            "target": "case",
+            "actor": "boy",
+            "actionPose": "boy_happy",
+            "renderedFrameCount": 94,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open",
+              "boy_pickup"
+            ],
+            "roomBefore": "child",
+            "roomAfter": "child",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          }
+        ],
+        "failures": [
+          {
+            "index": 0,
+            "failed": true,
+            "retry": true
+          }
+        ],
+        "screenshots": [
+          "test-results/v012/stage-26-initial.png",
+          "test-results/v012/stage-26-action-0.png",
+          "test-results/v012/stage-26-action-3.png",
+          "test-results/v012/stage-26-clear.png"
+        ]
+      },
+      {
+        "stage": 27,
+        "steps": [
+          {
+            "index": 0,
+            "text": "机の引き出しからシールを取る",
+            "kind": "pickup",
+            "target": "desk",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 113,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "child",
+            "roomAfter": "child",
+            "inventoryBefore": [],
+            "inventoryAfter": [
+              "sticker"
+            ],
+            "verified": true
+          },
+          {
+            "index": 1,
+            "text": "クローゼットを開ける",
+            "kind": "open",
+            "target": "closet",
+            "actor": "boy",
+            "actionPose": "boy_open",
+            "renderedFrameCount": 87,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open"
+            ],
+            "roomBefore": "child",
+            "roomAfter": "child",
+            "inventoryBefore": [
+              "sticker"
+            ],
+            "inventoryAfter": [
+              "sticker"
+            ],
+            "verified": true
+          },
+          {
+            "index": 2,
+            "text": "妹にシールを渡す",
+            "kind": "give",
+            "target": "sister",
+            "actor": "boy",
+            "actionPose": "boy_offer",
+            "renderedFrameCount": 92,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_offer",
+              "sister_receive"
+            ],
+            "roomBefore": "child",
+            "roomAfter": "child",
+            "inventoryBefore": [
+              "sticker"
+            ],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 3,
+            "text": "妹が出ていく",
+            "kind": "wait",
+            "target": "sister",
+            "actor": "boy",
+            "actionPose": "boy_read",
+            "renderedFrameCount": 120,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_read",
+              "sister_walk1",
+              "sister_walk2"
+            ],
+            "roomBefore": "child",
+            "roomAfter": "child",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 4,
+            "text": "奥の箱からゲーム機を取る",
+            "kind": "collect",
+            "target": "closet",
+            "actor": "boy",
+            "actionPose": "boy_happy",
+            "renderedFrameCount": 95,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open",
+              "boy_pickup"
+            ],
+            "roomBefore": "child",
+            "roomAfter": "child",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          }
+        ],
+        "failures": [
+          {
+            "index": 0,
+            "failed": true,
+            "retry": true
+          }
+        ],
+        "screenshots": [
+          "test-results/v012/stage-27-initial.png",
+          "test-results/v012/stage-27-action-0.png",
+          "test-results/v012/stage-27-action-4.png",
+          "test-results/v012/stage-27-clear.png"
+        ]
+      },
+      {
+        "stage": 28,
+        "steps": [
+          {
+            "index": 0,
+            "text": "机から懐中電灯を取る",
+            "kind": "pickup",
+            "target": "torch",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 85,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "child",
+            "roomAfter": "child",
+            "inventoryBefore": [],
+            "inventoryAfter": [
+              "torch"
+            ],
+            "verified": true
+          },
+          {
+            "index": 1,
+            "text": "ベッド下を照らす",
+            "kind": "light",
+            "target": "bed",
+            "actor": "boy",
+            "actionPose": "boy_light",
+            "renderedFrameCount": 92,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_light"
+            ],
+            "roomBefore": "child",
+            "roomAfter": "child",
+            "inventoryBefore": [
+              "torch"
+            ],
+            "inventoryAfter": [
+              "torch"
+            ],
+            "verified": true
+          },
+          {
+            "index": 2,
+            "text": "猫を見つけて驚かせないよう横から照らす",
+            "kind": "light",
+            "target": "cat",
+            "actor": "boy",
+            "actionPose": "boy_light",
+            "renderedFrameCount": 106,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_light"
+            ],
+            "roomBefore": "child",
+            "roomAfter": "child",
+            "inventoryBefore": [
+              "torch"
+            ],
+            "inventoryAfter": [
+              "torch"
+            ],
+            "verified": true
+          },
+          {
+            "index": 3,
+            "text": "箱を引き出す",
+            "kind": "pull",
+            "target": "bed",
+            "actor": "boy",
+            "actionPose": "boy_push",
+            "renderedFrameCount": 102,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_push"
+            ],
+            "roomBefore": "child",
+            "roomAfter": "child",
+            "inventoryBefore": [
+              "torch"
+            ],
+            "inventoryAfter": [
+              "torch"
+            ],
+            "verified": true
+          },
+          {
+            "index": 4,
+            "text": "ゲーム機を取得",
+            "kind": "collect",
+            "target": "box",
+            "actor": "boy",
+            "actionPose": "boy_happy",
+            "renderedFrameCount": 92,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open",
+              "boy_pickup"
+            ],
+            "roomBefore": "child",
+            "roomAfter": "child",
+            "inventoryBefore": [
+              "torch"
+            ],
+            "inventoryAfter": [
+              "torch"
+            ],
+            "verified": true
+          }
+        ],
+        "failures": [
+          {
+            "index": 0,
+            "failed": true,
+            "retry": true
+          }
+        ],
+        "screenshots": [
+          "test-results/v012/stage-28-initial.png",
+          "test-results/v012/stage-28-action-0.png",
+          "test-results/v012/stage-28-action-4.png",
+          "test-results/v012/stage-28-clear.png"
+        ]
+      },
+      {
+        "stage": 29,
+        "steps": [
+          {
+            "index": 0,
+            "text": "壁のカレンダーを調べる",
+            "kind": "inspect",
+            "target": "calendar",
+            "actor": "boy",
+            "actionPose": "boy_read",
+            "renderedFrameCount": 88,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_read"
+            ],
+            "roomBefore": "child",
+            "roomAfter": "child",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 1,
+            "text": "星シールの日付を読む",
+            "kind": "read",
+            "target": "calendar",
+            "actor": "boy",
+            "actionPose": "boy_read",
+            "renderedFrameCount": 103,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_read"
+            ],
+            "roomBefore": "child",
+            "roomAfter": "child",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 2,
+            "text": "机のダイヤルへ入力",
+            "kind": "code",
+            "target": "desk",
+            "actor": "boy",
+            "actionPose": "boy_reach",
+            "renderedFrameCount": 86,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_reach"
+            ],
+            "roomBefore": "child",
+            "roomAfter": "child",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 3,
+            "text": "引き出しを開ける",
+            "kind": "collect",
+            "target": "desk",
+            "actor": "boy",
+            "actionPose": "boy_happy",
+            "renderedFrameCount": 131,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open",
+              "boy_pickup"
+            ],
+            "roomBefore": "child",
+            "roomAfter": "child",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          }
+        ],
+        "failures": [
+          {
+            "index": 0,
+            "failed": true,
+            "retry": true
+          }
+        ],
+        "screenshots": [
+          "test-results/v012/stage-29-initial.png",
+          "test-results/v012/stage-29-action-0.png",
+          "test-results/v012/stage-29-action-3.png",
+          "test-results/v012/stage-29-clear.png"
+        ]
+      },
+      {
+        "stage": 30,
+        "steps": [
+          {
+            "index": 0,
+            "text": "毛布を取る",
+            "kind": "pickup",
+            "target": "blanket",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 88,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "child",
+            "roomAfter": "child",
+            "inventoryBefore": [],
+            "inventoryAfter": [
+              "blanket"
+            ],
+            "verified": true
+          },
+          {
+            "index": 1,
+            "text": "洗濯ばさみを2個集める",
+            "kind": "pickup",
+            "target": "pins",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 83,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "child",
+            "roomAfter": "child",
+            "inventoryBefore": [
+              "blanket"
+            ],
+            "inventoryAfter": [
+              "blanket",
+              "pins"
+            ],
+            "verified": true
+          },
+          {
+            "index": 2,
+            "text": "椅子を机横へ動かす",
+            "kind": "push",
+            "target": "chair",
+            "actor": "boy",
+            "actionPose": "boy_push",
+            "renderedFrameCount": 128,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_push"
+            ],
+            "roomBefore": "child",
+            "roomAfter": "child",
+            "inventoryBefore": [
+              "blanket",
+              "pins"
+            ],
+            "inventoryAfter": [
+              "blanket",
+              "pins"
+            ],
+            "verified": true
+          },
+          {
+            "index": 3,
+            "text": "毛布を固定して秘密基地を作る",
+            "kind": "assemble",
+            "target": "desk",
+            "actor": "boy",
+            "actionPose": "boy_reach",
+            "renderedFrameCount": 110,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_reach"
+            ],
+            "roomBefore": "child",
+            "roomAfter": "child",
+            "inventoryBefore": [
+              "blanket",
+              "pins"
+            ],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 4,
+            "text": "内側のマークを押す",
+            "kind": "use",
+            "target": "panel",
+            "actor": "boy",
+            "actionPose": "boy_reach",
+            "renderedFrameCount": 82,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_reach"
+            ],
+            "roomBefore": "child",
+            "roomAfter": "child",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 5,
+            "text": "ゲーム機を取得",
+            "kind": "collect",
+            "target": "panel",
+            "actor": "boy",
+            "actionPose": "boy_happy",
+            "renderedFrameCount": 93,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open",
+              "boy_pickup"
+            ],
+            "roomBefore": "child",
+            "roomAfter": "child",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          }
+        ],
+        "failures": [
+          {
+            "index": 0,
+            "failed": true,
+            "retry": true
+          }
+        ],
+        "screenshots": [
+          "test-results/v012/stage-30-initial.png",
+          "test-results/v012/stage-30-action-0.png",
+          "test-results/v012/stage-30-action-5.png",
+          "test-results/v012/stage-30-clear.png"
+        ]
+      },
+      {
+        "stage": 31,
+        "steps": [
+          {
+            "index": 0,
+            "text": "玄関で不在票を確認",
+            "kind": "read",
+            "target": "notice",
+            "actor": "boy",
+            "actionPose": "boy_read",
+            "renderedFrameCount": 85,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_read"
+            ],
+            "roomBefore": "entrance",
+            "roomAfter": "entrance",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 1,
+            "text": "再配達時間を把握",
+            "kind": "read",
+            "target": "notice",
+            "actor": "boy",
+            "actionPose": "boy_read",
+            "renderedFrameCount": 82,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_read"
+            ],
+            "roomBefore": "entrance",
+            "roomAfter": "entrance",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 2,
+            "text": "リビングへ戻る",
+            "kind": "travel",
+            "target": "door",
+            "actor": "boy",
+            "actionPose": "boy_walk1",
+            "renderedFrameCount": 84,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2"
+            ],
+            "roomBefore": "entrance",
+            "roomAfter": "living",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 3,
+            "text": "チャイムでパパが玄関へ行くのを待つ",
+            "kind": "wait",
+            "target": "papa",
+            "actor": "boy",
+            "actionPose": "boy_read",
+            "renderedFrameCount": 119,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_read",
+              "papa_walk1",
+              "papa_walk2"
+            ],
+            "roomBefore": "living",
+            "roomAfter": "living",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 4,
+            "text": "本棚をずらす",
+            "kind": "push",
+            "target": "shelf",
+            "actor": "boy",
+            "actionPose": "boy_push",
+            "renderedFrameCount": 110,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_push"
+            ],
+            "roomBefore": "living",
+            "roomAfter": "living",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 5,
+            "text": "ゲーム機を取得",
+            "kind": "collect",
+            "target": "shelf",
+            "actor": "boy",
+            "actionPose": "boy_happy",
+            "renderedFrameCount": 106,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open",
+              "boy_pickup"
+            ],
+            "roomBefore": "living",
+            "roomAfter": "living",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          }
+        ],
+        "failures": [
+          {
+            "index": 0,
+            "failed": true,
+            "retry": true
+          }
+        ],
+        "screenshots": [
+          "test-results/v012/stage-31-initial.png",
+          "test-results/v012/stage-31-action-0.png",
+          "test-results/v012/stage-31-action-5.png",
+          "test-results/v012/stage-31-clear.png"
+        ]
+      },
+      {
+        "stage": 32,
+        "steps": [
+          {
+            "index": 0,
+            "text": "冷凍庫から氷の塊を入手",
+            "kind": "pickup",
+            "target": "fridge",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 89,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "kitchen",
+            "roomAfter": "kitchen",
+            "inventoryBefore": [],
+            "inventoryAfter": [
+              "ice"
+            ],
+            "verified": true
+          },
+          {
+            "index": 1,
+            "text": "庭の日なたへ移動",
+            "kind": "travel",
+            "target": "door",
+            "actor": "boy",
+            "actionPose": "boy_walk1",
+            "renderedFrameCount": 85,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2"
+            ],
+            "roomBefore": "kitchen",
+            "roomAfter": "garden",
+            "inventoryBefore": [
+              "ice"
+            ],
+            "inventoryAfter": [
+              "ice"
+            ],
+            "verified": true
+          },
+          {
+            "index": 2,
+            "text": "皿に置いて溶かす",
+            "kind": "place",
+            "target": "plate",
+            "actor": "boy",
+            "actionPose": "boy_carry",
+            "renderedFrameCount": 87,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_carry"
+            ],
+            "roomBefore": "garden",
+            "roomAfter": "garden",
+            "inventoryBefore": [
+              "ice"
+            ],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 3,
+            "text": "鍵を取る",
+            "kind": "pickup",
+            "target": "ice",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 84,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "garden",
+            "roomAfter": "garden",
+            "inventoryBefore": [],
+            "inventoryAfter": [
+              "key"
+            ],
+            "verified": true
+          },
+          {
+            "index": 4,
+            "text": "物置を開ける",
+            "kind": "collect",
+            "target": "shed",
+            "actor": "boy",
+            "actionPose": "boy_happy",
+            "renderedFrameCount": 98,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open",
+              "boy_pickup"
+            ],
+            "roomBefore": "garden",
+            "roomAfter": "garden",
+            "inventoryBefore": [
+              "key"
+            ],
+            "inventoryAfter": [
+              "key"
+            ],
+            "verified": true
+          }
+        ],
+        "failures": [
+          {
+            "index": 0,
+            "failed": true,
+            "retry": true
+          }
+        ],
+        "screenshots": [
+          "test-results/v012/stage-32-initial.png",
+          "test-results/v012/stage-32-action-0.png",
+          "test-results/v012/stage-32-action-4.png",
+          "test-results/v012/stage-32-clear.png"
+        ]
+      },
+      {
+        "stage": 33,
+        "steps": [
+          {
+            "index": 0,
+            "text": "洗濯機を開ける",
+            "kind": "open",
+            "target": "washer",
+            "actor": "boy",
+            "actionPose": "boy_open",
+            "renderedFrameCount": 66,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open"
+            ],
+            "roomBefore": "laundry",
+            "roomAfter": "laundry",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 1,
+            "text": "ゲーム機がないことを確認",
+            "kind": "inspect",
+            "target": "washer",
+            "actor": "boy",
+            "actionPose": "boy_read",
+            "renderedFrameCount": 83,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_read"
+            ],
+            "roomBefore": "laundry",
+            "roomAfter": "laundry",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 2,
+            "text": "洗濯物のポケットを調べる",
+            "kind": "inspect",
+            "target": "washer",
+            "actor": "boy",
+            "actionPose": "boy_read",
+            "renderedFrameCount": 83,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_read"
+            ],
+            "roomBefore": "laundry",
+            "roomAfter": "laundry",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 3,
+            "text": "メモを読む",
+            "kind": "read",
+            "target": "note",
+            "actor": "boy",
+            "actionPose": "boy_read",
+            "renderedFrameCount": 84,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_read"
+            ],
+            "roomBefore": "laundry",
+            "roomAfter": "laundry",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 4,
+            "text": "脱衣かご裏ポケットからゲーム機を取る",
+            "kind": "collect",
+            "target": "basket",
+            "actor": "boy",
+            "actionPose": "boy_happy",
+            "renderedFrameCount": 101,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open",
+              "boy_pickup"
+            ],
+            "roomBefore": "laundry",
+            "roomAfter": "laundry",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          }
+        ],
+        "failures": [
+          {
+            "index": 0,
+            "failed": true,
+            "retry": true
+          }
+        ],
+        "screenshots": [
+          "test-results/v012/stage-33-initial.png",
+          "test-results/v012/stage-33-action-0.png",
+          "test-results/v012/stage-33-action-4.png",
+          "test-results/v012/stage-33-clear.png"
+        ]
+      },
+      {
+        "stage": 34,
+        "steps": [
+          {
+            "index": 0,
+            "text": "窓辺の紙ひこうきを触る",
+            "kind": "inspect",
+            "target": "plane",
+            "actor": "boy",
+            "actionPose": "boy_read",
+            "renderedFrameCount": 104,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_read"
+            ],
+            "roomBefore": "child",
+            "roomAfter": "child",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 1,
+            "text": "風で庭へ飛ぶ",
+            "kind": "event",
+            "target": "door",
+            "actor": "boy",
+            "actionPose": "boy_read",
+            "renderedFrameCount": 139,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_read"
+            ],
+            "roomBefore": "child",
+            "roomAfter": "garden",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 2,
+            "text": "庭で虫取り網を取る",
+            "kind": "pickup",
+            "target": "net",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 83,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "garden",
+            "roomAfter": "garden",
+            "inventoryBefore": [],
+            "inventoryAfter": [
+              "net"
+            ],
+            "verified": true
+          },
+          {
+            "index": 3,
+            "text": "木に引っかかった紙ひこうきを回収",
+            "kind": "pickup",
+            "target": "plane",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 83,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "garden",
+            "roomAfter": "garden",
+            "inventoryBefore": [
+              "net"
+            ],
+            "inventoryAfter": [
+              "net",
+              "plane"
+            ],
+            "verified": true
+          },
+          {
+            "index": 4,
+            "text": "紙ひこうきを持って子ども部屋へ戻る",
+            "kind": "travel",
+            "target": "door",
+            "actor": "boy",
+            "actionPose": "boy_walk1",
+            "renderedFrameCount": 83,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2"
+            ],
+            "roomBefore": "garden",
+            "roomAfter": "child",
+            "inventoryBefore": [
+              "net",
+              "plane"
+            ],
+            "inventoryAfter": [
+              "net",
+              "plane"
+            ],
+            "verified": true
+          },
+          {
+            "index": 5,
+            "text": "矢印ヒントを読んで本棚裏を探す",
+            "kind": "collect",
+            "target": "shelf",
+            "actor": "boy",
+            "actionPose": "boy_happy",
+            "renderedFrameCount": 92,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open",
+              "boy_pickup"
+            ],
+            "roomBefore": "child",
+            "roomAfter": "child",
+            "inventoryBefore": [
+              "net",
+              "plane"
+            ],
+            "inventoryAfter": [
+              "net",
+              "plane"
+            ],
+            "verified": true
+          }
+        ],
+        "failures": [
+          {
+            "index": 0,
+            "failed": true,
+            "retry": true
+          }
+        ],
+        "screenshots": [
+          "test-results/v012/stage-34-initial.png",
+          "test-results/v012/stage-34-action-0.png",
+          "test-results/v012/stage-34-action-5.png",
+          "test-results/v012/stage-34-clear.png"
+        ]
+      },
+      {
+        "stage": 35,
+        "steps": [
+          {
+            "index": 0,
+            "text": "懐中電灯を取る",
+            "kind": "pickup",
+            "target": "torch",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 97,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "living",
+            "roomAfter": "living",
+            "inventoryBefore": [],
+            "inventoryAfter": [
+              "torch"
+            ],
+            "verified": true
+          },
+          {
+            "index": 1,
+            "text": "玄関へ移動",
+            "kind": "travel",
+            "target": "door",
+            "actor": "boy",
+            "actionPose": "boy_walk1",
+            "renderedFrameCount": 85,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2"
+            ],
+            "roomBefore": "living",
+            "roomAfter": "entrance",
+            "inventoryBefore": [
+              "torch"
+            ],
+            "inventoryAfter": [
+              "torch"
+            ],
+            "verified": true
+          },
+          {
+            "index": 2,
+            "text": "ブレーカーを戻す",
+            "kind": "use",
+            "target": "breaker",
+            "actor": "boy",
+            "actionPose": "boy_reach",
+            "renderedFrameCount": 84,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_reach"
+            ],
+            "roomBefore": "entrance",
+            "roomAfter": "entrance",
+            "inventoryBefore": [
+              "torch"
+            ],
+            "inventoryAfter": [
+              "torch"
+            ],
+            "verified": true
+          },
+          {
+            "index": 3,
+            "text": "リビングへ戻る",
+            "kind": "travel",
+            "target": "door",
+            "actor": "boy",
+            "actionPose": "boy_walk1",
+            "renderedFrameCount": 84,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2"
+            ],
+            "roomBefore": "entrance",
+            "roomAfter": "living",
+            "inventoryBefore": [
+              "torch"
+            ],
+            "inventoryAfter": [
+              "torch"
+            ],
+            "verified": true
+          },
+          {
+            "index": 4,
+            "text": "照明でできた不自然な影を調べる",
+            "kind": "light",
+            "target": "shelf",
+            "actor": "boy",
+            "actionPose": "boy_light",
+            "renderedFrameCount": 97,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_light"
+            ],
+            "roomBefore": "living",
+            "roomAfter": "living",
+            "inventoryBefore": [
+              "torch"
+            ],
+            "inventoryAfter": [
+              "torch"
+            ],
+            "verified": true
+          },
+          {
+            "index": 5,
+            "text": "棚裏からゲーム機を取る",
+            "kind": "collect",
+            "target": "shelf",
+            "actor": "boy",
+            "actionPose": "boy_happy",
+            "renderedFrameCount": 95,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open",
+              "boy_pickup"
+            ],
+            "roomBefore": "living",
+            "roomAfter": "living",
+            "inventoryBefore": [
+              "torch"
+            ],
+            "inventoryAfter": [
+              "torch"
+            ],
+            "verified": true
+          }
+        ],
+        "failures": [
+          {
+            "index": 0,
+            "failed": true,
+            "retry": true
+          }
+        ],
+        "screenshots": [
+          "test-results/v012/stage-35-initial.png",
+          "test-results/v012/stage-35-action-0.png",
+          "test-results/v012/stage-35-action-5.png",
+          "test-results/v012/stage-35-clear.png"
+        ]
+      },
+      {
+        "stage": 36,
+        "steps": [
+          {
+            "index": 0,
+            "text": "パパの巡回パターンを観察",
+            "kind": "inspect",
+            "target": "papa",
+            "actor": "boy",
+            "actionPose": "boy_read",
+            "renderedFrameCount": 104,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_read",
+              "papa_walk1",
+              "papa_walk2"
+            ],
+            "roomBefore": "living",
+            "roomAfter": "living",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 1,
+            "text": "ソファ背後へ移動",
+            "kind": "walk",
+            "target": "sofa",
+            "actor": "boy",
+            "actionPose": "boy_walk1",
+            "renderedFrameCount": 84,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2"
+            ],
+            "roomBefore": "living",
+            "roomAfter": "living",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 2,
+            "text": "パパが窓側を見る間にTV台へ",
+            "kind": "walk",
+            "target": "tv",
+            "actor": "boy",
+            "actionPose": "boy_walk1",
+            "renderedFrameCount": 129,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "papa_walk1",
+              "papa_walk2"
+            ],
+            "roomBefore": "living",
+            "roomAfter": "living",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 3,
+            "text": "裏のフックを外す",
+            "kind": "open",
+            "target": "tv",
+            "actor": "boy",
+            "actionPose": "boy_open",
+            "renderedFrameCount": 82,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open"
+            ],
+            "roomBefore": "living",
+            "roomAfter": "living",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 4,
+            "text": "ゲーム機を取る",
+            "kind": "collect",
+            "target": "tv",
+            "actor": "boy",
+            "actionPose": "boy_happy",
+            "renderedFrameCount": 91,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open",
+              "boy_pickup"
+            ],
+            "roomBefore": "living",
+            "roomAfter": "living",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          }
+        ],
+        "failures": [
+          {
+            "index": 0,
+            "failed": true,
+            "retry": true
+          }
+        ],
+        "screenshots": [
+          "test-results/v012/stage-36-initial.png",
+          "test-results/v012/stage-36-action-0.png",
+          "test-results/v012/stage-36-action-4.png",
+          "test-results/v012/stage-36-clear.png"
+        ]
+      },
+      {
+        "stage": 37,
+        "steps": [
+          {
+            "index": 0,
+            "text": "風鈴のひもを見つける",
+            "kind": "inspect",
+            "target": "string",
+            "actor": "boy",
+            "actionPose": "boy_read",
+            "renderedFrameCount": 83,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_read"
+            ],
+            "roomBefore": "garden",
+            "roomAfter": "garden",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 1,
+            "text": "風鈴を鳴らす",
+            "kind": "use",
+            "target": "chime",
+            "actor": "boy",
+            "actionPose": "boy_reach",
+            "renderedFrameCount": 83,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_reach"
+            ],
+            "roomBefore": "garden",
+            "roomAfter": "garden",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 2,
+            "text": "おじいちゃんが起きて日陰へ移動",
+            "kind": "wait",
+            "target": "grandpa",
+            "actor": "boy",
+            "actionPose": "boy_read",
+            "renderedFrameCount": 137,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_read",
+              "grandpa_walk1",
+              "grandpa_walk2"
+            ],
+            "roomBefore": "garden",
+            "roomAfter": "garden",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 3,
+            "text": "ベンチ収納を開ける",
+            "kind": "open",
+            "target": "bench",
+            "actor": "boy",
+            "actionPose": "boy_open",
+            "renderedFrameCount": 84,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open"
+            ],
+            "roomBefore": "garden",
+            "roomAfter": "garden",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 4,
+            "text": "ゲーム機を取得",
+            "kind": "collect",
+            "target": "bench",
+            "actor": "boy",
+            "actionPose": "boy_happy",
+            "renderedFrameCount": 114,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open",
+              "boy_pickup"
+            ],
+            "roomBefore": "garden",
+            "roomAfter": "garden",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          }
+        ],
+        "failures": [
+          {
+            "index": 0,
+            "failed": true,
+            "retry": true
+          }
+        ],
+        "screenshots": [
+          "test-results/v012/stage-37-initial.png",
+          "test-results/v012/stage-37-action-0.png",
+          "test-results/v012/stage-37-action-4.png",
+          "test-results/v012/stage-37-clear.png"
+        ]
+      },
+      {
+        "stage": 38,
+        "steps": [
+          {
+            "index": 0,
+            "text": "妹の困りごとを聞く",
+            "kind": "talk",
+            "target": "sister",
+            "actor": "boy",
+            "actionPose": "boy_offer",
+            "renderedFrameCount": 132,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_offer",
+              "sister_receive"
+            ],
+            "roomBefore": "entrance",
+            "roomAfter": "entrance",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 1,
+            "text": "玄関ベンチのハンカチを取る",
+            "kind": "pickup",
+            "target": "cloth",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 83,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "entrance",
+            "roomAfter": "entrance",
+            "inventoryBefore": [],
+            "inventoryAfter": [
+              "cloth"
+            ],
+            "verified": true
+          },
+          {
+            "index": 2,
+            "text": "妹へ渡す",
+            "kind": "give",
+            "target": "sister",
+            "actor": "boy",
+            "actionPose": "boy_offer",
+            "renderedFrameCount": 83,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_offer",
+              "sister_receive"
+            ],
+            "roomBefore": "entrance",
+            "roomAfter": "entrance",
+            "inventoryBefore": [
+              "cloth"
+            ],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 3,
+            "text": "妹から鍵を受け取る",
+            "kind": "receive",
+            "target": "sister",
+            "actor": "boy",
+            "actionPose": "boy_offer",
+            "renderedFrameCount": 83,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_offer",
+              "sister_receive"
+            ],
+            "roomBefore": "entrance",
+            "roomAfter": "entrance",
+            "inventoryBefore": [],
+            "inventoryAfter": [
+              "key"
+            ],
+            "verified": true
+          },
+          {
+            "index": 4,
+            "text": "上部収納を開ける",
+            "kind": "collect",
+            "target": "cab",
+            "actor": "boy",
+            "actionPose": "boy_happy",
+            "renderedFrameCount": 92,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_high",
+              "boy_pickup"
+            ],
+            "roomBefore": "entrance",
+            "roomAfter": "entrance",
+            "inventoryBefore": [
+              "key"
+            ],
+            "inventoryAfter": [
+              "key"
+            ],
+            "verified": true
+          }
+        ],
+        "failures": [
+          {
+            "index": 0,
+            "failed": true,
+            "retry": true
+          }
+        ],
+        "screenshots": [
+          "test-results/v012/stage-38-initial.png",
+          "test-results/v012/stage-38-action-0.png",
+          "test-results/v012/stage-38-action-4.png",
+          "test-results/v012/stage-38-clear.png"
+        ]
+      },
+      {
+        "stage": 39,
+        "steps": [
+          {
+            "index": 0,
+            "text": "おばあちゃんの話を聞く",
+            "kind": "talk",
+            "target": "grandma",
+            "actor": "boy",
+            "actionPose": "boy_offer",
+            "renderedFrameCount": 109,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_offer",
+              "grandma_receive"
+            ],
+            "roomBefore": "kitchen",
+            "roomAfter": "kitchen",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 1,
+            "text": "パントリーから正しいスパイスを探す",
+            "kind": "pickup",
+            "target": "pantry",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 95,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "kitchen",
+            "roomAfter": "kitchen",
+            "inventoryBefore": [],
+            "inventoryAfter": [
+              "spice"
+            ],
+            "verified": true
+          },
+          {
+            "index": 2,
+            "text": "渡す",
+            "kind": "give",
+            "target": "grandma",
+            "actor": "boy",
+            "actionPose": "boy_offer",
+            "renderedFrameCount": 84,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_offer",
+              "grandma_receive"
+            ],
+            "roomBefore": "kitchen",
+            "roomAfter": "kitchen",
+            "inventoryBefore": [
+              "spice"
+            ],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 3,
+            "text": "おばあちゃんが鍋へ移動",
+            "kind": "wait",
+            "target": "grandma",
+            "actor": "boy",
+            "actionPose": "boy_read",
+            "renderedFrameCount": 118,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_read",
+              "grandma_walk1",
+              "grandma_walk2"
+            ],
+            "roomBefore": "kitchen",
+            "roomAfter": "kitchen",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 4,
+            "text": "引き出しを開ける",
+            "kind": "collect",
+            "target": "counter",
+            "actor": "boy",
+            "actionPose": "boy_happy",
+            "renderedFrameCount": 95,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open",
+              "boy_pickup"
+            ],
+            "roomBefore": "kitchen",
+            "roomAfter": "kitchen",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          }
+        ],
+        "failures": [
+          {
+            "index": 0,
+            "failed": true,
+            "retry": true
+          }
+        ],
+        "screenshots": [
+          "test-results/v012/stage-39-initial.png",
+          "test-results/v012/stage-39-action-0.png",
+          "test-results/v012/stage-39-action-4.png",
+          "test-results/v012/stage-39-clear.png"
+        ]
+      },
+      {
+        "stage": 40,
+        "steps": [
+          {
+            "index": 0,
+            "text": "工具箱からレンチを見つける",
+            "kind": "pickup",
+            "target": "box",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 90,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "bath",
+            "roomAfter": "bath",
+            "inventoryBefore": [],
+            "inventoryAfter": [
+              "wrench"
+            ],
+            "verified": true
+          },
+          {
+            "index": 1,
+            "text": "修理屋さんへ渡す",
+            "kind": "give",
+            "target": "repair",
+            "actor": "boy",
+            "actionPose": "boy_offer",
+            "renderedFrameCount": 82,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_offer",
+              "repair_receive"
+            ],
+            "roomBefore": "bath",
+            "roomAfter": "bath",
+            "inventoryBefore": [
+              "wrench"
+            ],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 2,
+            "text": "修理屋さんが点検口を開ける",
+            "kind": "open",
+            "target": "panel",
+            "actor": "repair",
+            "actionPose": "repair_open",
+            "renderedFrameCount": 83,
+            "animationFrames": [
+              "repair_walk1",
+              "repair_walk2",
+              "repair_open"
+            ],
+            "roomBefore": "bath",
+            "roomAfter": "bath",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 3,
+            "text": "作業中に奥を調べる",
+            "kind": "inspect",
+            "target": "panel",
+            "actor": "boy",
+            "actionPose": "boy_read",
+            "renderedFrameCount": 83,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_read"
+            ],
+            "roomBefore": "bath",
+            "roomAfter": "bath",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 4,
+            "text": "ゲーム機を取得",
+            "kind": "collect",
+            "target": "panel",
+            "actor": "boy",
+            "actionPose": "boy_happy",
+            "renderedFrameCount": 115,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open",
+              "boy_pickup"
+            ],
+            "roomBefore": "bath",
+            "roomAfter": "bath",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          }
+        ],
+        "failures": [
+          {
+            "index": 0,
+            "failed": true,
+            "retry": true
+          }
+        ],
+        "screenshots": [
+          "test-results/v012/stage-40-initial.png",
+          "test-results/v012/stage-40-action-0.png",
+          "test-results/v012/stage-40-action-4.png",
+          "test-results/v012/stage-40-clear.png"
+        ]
+      },
+      {
+        "stage": 41,
+        "steps": [
+          {
+            "index": 0,
+            "text": "時計の針を見る",
+            "kind": "read",
+            "target": "clock",
+            "actor": "boy",
+            "actionPose": "boy_read",
+            "renderedFrameCount": 83,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_read"
+            ],
+            "roomBefore": "living",
+            "roomAfter": "living",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 1,
+            "text": "猫が見ている方向を確認",
+            "kind": "inspect",
+            "target": "cat",
+            "actor": "boy",
+            "actionPose": "boy_read",
+            "renderedFrameCount": 103,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_read"
+            ],
+            "roomBefore": "living",
+            "roomAfter": "living",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 2,
+            "text": "TV画面の色ヒントを見る",
+            "kind": "read",
+            "target": "tv",
+            "actor": "boy",
+            "actionPose": "boy_read",
+            "renderedFrameCount": 98,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_read"
+            ],
+            "roomBefore": "living",
+            "roomAfter": "living",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 3,
+            "text": "3条件に一致する箱を開ける",
+            "kind": "collect",
+            "target": "boxes",
+            "actor": "boy",
+            "actionPose": "boy_happy",
+            "renderedFrameCount": 127,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open",
+              "boy_pickup"
+            ],
+            "roomBefore": "living",
+            "roomAfter": "living",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          }
+        ],
+        "failures": [
+          {
+            "index": 0,
+            "failed": true,
+            "retry": true
+          }
+        ],
+        "screenshots": [
+          "test-results/v012/stage-41-initial.png",
+          "test-results/v012/stage-41-action-0.png",
+          "test-results/v012/stage-41-action-3.png",
+          "test-results/v012/stage-41-clear.png"
+        ]
+      },
+      {
+        "stage": 42,
+        "steps": [
+          {
+            "index": 0,
+            "text": "犬のおやつを取る",
+            "kind": "pickup",
+            "target": "treat",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 101,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "garden",
+            "roomAfter": "garden",
+            "inventoryBefore": [],
+            "inventoryAfter": [
+              "treat"
+            ],
+            "verified": true
+          },
+          {
+            "index": 1,
+            "text": "犬におやつを渡す",
+            "kind": "give",
+            "target": "dog",
+            "actor": "boy",
+            "actionPose": "boy_offer",
+            "renderedFrameCount": 104,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_offer",
+              "dog_receive"
+            ],
+            "roomBefore": "garden",
+            "roomAfter": "garden",
+            "inventoryBefore": [
+              "treat"
+            ],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 2,
+            "text": "犬が落ち着く",
+            "kind": "wait",
+            "target": "dog",
+            "actor": "boy",
+            "actionPose": "boy_read",
+            "renderedFrameCount": 111,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_read"
+            ],
+            "roomBefore": "garden",
+            "roomAfter": "garden",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 3,
+            "text": "ベンチの懐中電灯を取る",
+            "kind": "pickup",
+            "target": "torch",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 95,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "garden",
+            "roomAfter": "garden",
+            "inventoryBefore": [],
+            "inventoryAfter": [
+              "torch"
+            ],
+            "verified": true
+          },
+          {
+            "index": 4,
+            "text": "センサーライトの死角を懐中電灯で確認",
+            "kind": "light",
+            "target": "light",
+            "actor": "boy",
+            "actionPose": "boy_light",
+            "renderedFrameCount": 96,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_light"
+            ],
+            "roomBefore": "garden",
+            "roomAfter": "garden",
+            "inventoryBefore": [
+              "torch"
+            ],
+            "inventoryAfter": [
+              "torch"
+            ],
+            "verified": true
+          },
+          {
+            "index": 5,
+            "text": "収納ケースを開ける",
+            "kind": "collect",
+            "target": "case",
+            "actor": "boy",
+            "actionPose": "boy_happy",
+            "renderedFrameCount": 94,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open",
+              "boy_pickup"
+            ],
+            "roomBefore": "garden",
+            "roomAfter": "garden",
+            "inventoryBefore": [
+              "torch"
+            ],
+            "inventoryAfter": [
+              "torch"
+            ],
+            "verified": true
+          }
+        ],
+        "failures": [
+          {
+            "index": 0,
+            "failed": true,
+            "retry": true
+          },
+          {
+            "index": 1,
+            "failed": true,
+            "retry": true
+          }
+        ],
+        "screenshots": [
+          "test-results/v012/stage-42-initial.png",
+          "test-results/v012/stage-42-action-0.png",
+          "test-results/v012/stage-42-action-5.png",
+          "test-results/v012/stage-42-clear.png"
+        ]
+      },
+      {
+        "stage": 43,
+        "steps": [
+          {
+            "index": 0,
+            "text": "床と冷蔵庫からマグネットを集める",
+            "kind": "pickup",
+            "target": "magnets",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 93,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "kitchen",
+            "roomAfter": "kitchen",
+            "inventoryBefore": [],
+            "inventoryAfter": [
+              "magnets"
+            ],
+            "verified": true
+          },
+          {
+            "index": 1,
+            "text": "色順に並べる",
+            "kind": "order",
+            "target": "fridge",
+            "actor": "boy",
+            "actionPose": "boy_reach",
+            "renderedFrameCount": 90,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_reach"
+            ],
+            "roomBefore": "kitchen",
+            "roomAfter": "kitchen",
+            "inventoryBefore": [
+              "magnets"
+            ],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 2,
+            "text": "矢印がパンケースを指す",
+            "kind": "read",
+            "target": "fridge",
+            "actor": "boy",
+            "actionPose": "boy_read",
+            "renderedFrameCount": 84,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_read"
+            ],
+            "roomBefore": "kitchen",
+            "roomAfter": "kitchen",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 3,
+            "text": "パンケースの底を外す",
+            "kind": "collect",
+            "target": "bread",
+            "actor": "boy",
+            "actionPose": "boy_happy",
+            "renderedFrameCount": 93,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open",
+              "boy_pickup"
+            ],
+            "roomBefore": "kitchen",
+            "roomAfter": "kitchen",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          }
+        ],
+        "failures": [
+          {
+            "index": 0,
+            "failed": true,
+            "retry": true
+          }
+        ],
+        "screenshots": [
+          "test-results/v012/stage-43-initial.png",
+          "test-results/v012/stage-43-action-0.png",
+          "test-results/v012/stage-43-action-3.png",
+          "test-results/v012/stage-43-clear.png"
+        ]
+      },
+      {
+        "stage": 44,
+        "steps": [
+          {
+            "index": 0,
+            "text": "3箱の伝票を見る",
+            "kind": "read",
+            "target": "label",
+            "actor": "boy",
+            "actionPose": "boy_read",
+            "renderedFrameCount": 90,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_read"
+            ],
+            "roomBefore": "entrance",
+            "roomAfter": "entrance",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 1,
+            "text": "体重計を玄関へ移動",
+            "kind": "push",
+            "target": "scale",
+            "actor": "boy",
+            "actionPose": "boy_push",
+            "renderedFrameCount": 110,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_push"
+            ],
+            "roomBefore": "entrance",
+            "roomAfter": "entrance",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 2,
+            "text": "箱を順に量る",
+            "kind": "weigh",
+            "target": "boxes",
+            "actor": "boy",
+            "actionPose": "boy_carry",
+            "renderedFrameCount": 200,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_carry"
+            ],
+            "roomBefore": "entrance",
+            "roomAfter": "entrance",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 3,
+            "text": "伝票重量と一致する箱を特定",
+            "kind": "read",
+            "target": "boxes",
+            "actor": "boy",
+            "actionPose": "boy_read",
+            "renderedFrameCount": 82,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_read"
+            ],
+            "roomBefore": "entrance",
+            "roomAfter": "entrance",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 4,
+            "text": "開けてゲーム機を取得",
+            "kind": "collect",
+            "target": "boxes",
+            "actor": "boy",
+            "actionPose": "boy_happy",
+            "renderedFrameCount": 108,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open",
+              "boy_pickup"
+            ],
+            "roomBefore": "entrance",
+            "roomAfter": "entrance",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          }
+        ],
+        "failures": [
+          {
+            "index": 0,
+            "failed": true,
+            "retry": true
+          }
+        ],
+        "screenshots": [
+          "test-results/v012/stage-44-initial.png",
+          "test-results/v012/stage-44-action-0.png",
+          "test-results/v012/stage-44-action-4.png",
+          "test-results/v012/stage-44-clear.png"
+        ]
+      },
+      {
+        "stage": 45,
+        "steps": [
+          {
+            "index": 0,
+            "text": "紙片を3つ集める",
+            "kind": "pickup",
+            "target": "papers",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 115,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "child",
+            "roomAfter": "child",
+            "inventoryBefore": [],
+            "inventoryAfter": [
+              "papers"
+            ],
+            "verified": true
+          },
+          {
+            "index": 1,
+            "text": "ライト前のクリップへ重ねる",
+            "kind": "place",
+            "target": "lamp",
+            "actor": "boy",
+            "actionPose": "boy_carry",
+            "renderedFrameCount": 93,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_carry"
+            ],
+            "roomBefore": "child",
+            "roomAfter": "child",
+            "inventoryBefore": [
+              "papers"
+            ],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 2,
+            "text": "ライトをON",
+            "kind": "use",
+            "target": "lamp",
+            "actor": "boy",
+            "actionPose": "boy_reach",
+            "renderedFrameCount": 82,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_reach"
+            ],
+            "roomBefore": "child",
+            "roomAfter": "child",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 3,
+            "text": "壁に映る数字を読む",
+            "kind": "read",
+            "target": "wall",
+            "actor": "boy",
+            "actionPose": "boy_read",
+            "renderedFrameCount": 85,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_read"
+            ],
+            "roomBefore": "child",
+            "roomAfter": "child",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 4,
+            "text": "クローゼット箱へ入力",
+            "kind": "code",
+            "target": "closet",
+            "actor": "boy",
+            "actionPose": "boy_happy",
+            "renderedFrameCount": 112,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_reach",
+              "boy_pickup"
+            ],
+            "roomBefore": "child",
+            "roomAfter": "child",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          }
+        ],
+        "failures": [
+          {
+            "index": 0,
+            "failed": true,
+            "retry": true
+          }
+        ],
+        "screenshots": [
+          "test-results/v012/stage-45-initial.png",
+          "test-results/v012/stage-45-action-0.png",
+          "test-results/v012/stage-45-action-4.png",
+          "test-results/v012/stage-45-clear.png"
+        ]
+      },
+      {
+        "stage": 46,
+        "steps": [
+          {
+            "index": 0,
+            "text": "玄関でママを迎える",
+            "kind": "receive",
+            "target": "mama",
+            "actor": "boy",
+            "actionPose": "boy_offer",
+            "renderedFrameCount": 94,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_offer",
+              "mama_receive"
+            ],
+            "roomBefore": "entrance",
+            "roomAfter": "entrance",
+            "inventoryBefore": [],
+            "inventoryAfter": [
+              "bag"
+            ],
+            "verified": true
+          },
+          {
+            "index": 1,
+            "text": "買い物袋をキッチンへ運ぶ",
+            "kind": "carry",
+            "target": "door",
+            "actor": "boy",
+            "actionPose": "boy_carry",
+            "renderedFrameCount": 86,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_carry"
+            ],
+            "roomBefore": "entrance",
+            "roomAfter": "kitchen",
+            "inventoryBefore": [
+              "bag"
+            ],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 2,
+            "text": "袋から落ちたレシートを拾う",
+            "kind": "pickup",
+            "target": "receipt",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 81,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "kitchen",
+            "roomAfter": "kitchen",
+            "inventoryBefore": [],
+            "inventoryAfter": [
+              "receipt"
+            ],
+            "verified": true
+          },
+          {
+            "index": 3,
+            "text": "レシート裏のメモを読む",
+            "kind": "read",
+            "target": "boy",
+            "actor": "boy",
+            "actionPose": "boy_read",
+            "renderedFrameCount": 126,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_read"
+            ],
+            "roomBefore": "kitchen",
+            "roomAfter": "kitchen",
+            "inventoryBefore": [
+              "receipt"
+            ],
+            "inventoryAfter": [
+              "receipt"
+            ],
+            "verified": true
+          },
+          {
+            "index": 4,
+            "text": "リビングへ戻る",
+            "kind": "travel",
+            "target": "door",
+            "actor": "boy",
+            "actionPose": "boy_walk1",
+            "renderedFrameCount": 85,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2"
+            ],
+            "roomBefore": "kitchen",
+            "roomAfter": "living",
+            "inventoryBefore": [
+              "receipt"
+            ],
+            "inventoryAfter": [
+              "receipt"
+            ],
+            "verified": true
+          },
+          {
+            "index": 5,
+            "text": "リビング上段収納を調べる",
+            "kind": "collect",
+            "target": "cab",
+            "actor": "boy",
+            "actionPose": "boy_happy",
+            "renderedFrameCount": 93,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_high",
+              "boy_pickup"
+            ],
+            "roomBefore": "living",
+            "roomAfter": "living",
+            "inventoryBefore": [
+              "receipt"
+            ],
+            "inventoryAfter": [
+              "receipt"
+            ],
+            "verified": true
+          }
+        ],
+        "failures": [
+          {
+            "index": 0,
+            "failed": true,
+            "retry": true
+          }
+        ],
+        "screenshots": [
+          "test-results/v012/stage-46-initial.png",
+          "test-results/v012/stage-46-action-0.png",
+          "test-results/v012/stage-46-action-5.png",
+          "test-results/v012/stage-46-clear.png"
+        ]
+      },
+      {
+        "stage": 47,
+        "steps": [
+          {
+            "index": 0,
+            "text": "庭のボールを拾う",
+            "kind": "pickup",
+            "target": "ball",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 101,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "garden",
+            "roomAfter": "garden",
+            "inventoryBefore": [],
+            "inventoryAfter": [
+              "ball"
+            ],
+            "verified": true
+          },
+          {
+            "index": 1,
+            "text": "フェンス越しに隣の子へ返す",
+            "kind": "throw",
+            "target": "neighbor",
+            "actor": "boy",
+            "actionPose": "boy_offer",
+            "renderedFrameCount": 105,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_offer",
+              "neighbor_receive"
+            ],
+            "roomBefore": "garden",
+            "roomAfter": "garden",
+            "inventoryBefore": [
+              "ball"
+            ],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 2,
+            "text": "隣の子が鍵の場所を指す",
+            "kind": "talk",
+            "target": "neighbor",
+            "actor": "boy",
+            "actionPose": "boy_offer",
+            "renderedFrameCount": 95,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_offer",
+              "neighbor_receive"
+            ],
+            "roomBefore": "garden",
+            "roomAfter": "garden",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 3,
+            "text": "物置脇の虫取り網を取る",
+            "kind": "pickup",
+            "target": "net",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 84,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "garden",
+            "roomAfter": "garden",
+            "inventoryBefore": [],
+            "inventoryAfter": [
+              "net"
+            ],
+            "verified": true
+          },
+          {
+            "index": 4,
+            "text": "虫取り網で鍵を取る",
+            "kind": "pickup",
+            "target": "key",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 85,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "garden",
+            "roomAfter": "garden",
+            "inventoryBefore": [
+              "net"
+            ],
+            "inventoryAfter": [
+              "net",
+              "key"
+            ],
+            "verified": true
+          },
+          {
+            "index": 5,
+            "text": "収納ボックスを開ける",
+            "kind": "collect",
+            "target": "box",
+            "actor": "boy",
+            "actionPose": "boy_happy",
+            "renderedFrameCount": 105,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open",
+              "boy_pickup"
+            ],
+            "roomBefore": "garden",
+            "roomAfter": "garden",
+            "inventoryBefore": [
+              "net",
+              "key"
+            ],
+            "inventoryAfter": [
+              "net",
+              "key"
+            ],
+            "verified": true
+          }
+        ],
+        "failures": [
+          {
+            "index": 0,
+            "failed": true,
+            "retry": true
+          }
+        ],
+        "screenshots": [
+          "test-results/v012/stage-47-initial.png",
+          "test-results/v012/stage-47-action-0.png",
+          "test-results/v012/stage-47-action-5.png",
+          "test-results/v012/stage-47-clear.png"
+        ]
+      },
+      {
+        "stage": 48,
+        "steps": [
+          {
+            "index": 0,
+            "text": "パパが新聞を置くタイミングを待つ",
+            "kind": "wait",
+            "target": "papa",
+            "actor": "boy",
+            "actionPose": "boy_read",
+            "renderedFrameCount": 88,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_read"
+            ],
+            "roomBefore": "living",
+            "roomAfter": "living",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 1,
+            "text": "新聞からQRカードを抜く",
+            "kind": "pickup",
+            "target": "paper",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 86,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "living",
+            "roomAfter": "living",
+            "inventoryBefore": [],
+            "inventoryAfter": [
+              "qr"
+            ],
+            "verified": true
+          },
+          {
+            "index": 2,
+            "text": "玄関へ移動",
+            "kind": "travel",
+            "target": "door",
+            "actor": "boy",
+            "actionPose": "boy_walk1",
+            "renderedFrameCount": 86,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2"
+            ],
+            "roomBefore": "living",
+            "roomAfter": "entrance",
+            "inventoryBefore": [
+              "qr"
+            ],
+            "inventoryAfter": [
+              "qr"
+            ],
+            "verified": true
+          },
+          {
+            "index": 3,
+            "text": "宅配ロボットへQRをかざす",
+            "kind": "use",
+            "target": "robot",
+            "actor": "boy",
+            "actionPose": "boy_reach",
+            "renderedFrameCount": 94,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_reach",
+              "robot_receive"
+            ],
+            "roomBefore": "entrance",
+            "roomAfter": "entrance",
+            "inventoryBefore": [
+              "qr"
+            ],
+            "inventoryAfter": [
+              "qr"
+            ],
+            "verified": true
+          },
+          {
+            "index": 4,
+            "text": "収納部からゲーム機を取得",
+            "kind": "collect",
+            "target": "robot",
+            "actor": "boy",
+            "actionPose": "boy_happy",
+            "renderedFrameCount": 109,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open",
+              "boy_pickup"
+            ],
+            "roomBefore": "entrance",
+            "roomAfter": "entrance",
+            "inventoryBefore": [
+              "qr"
+            ],
+            "inventoryAfter": [
+              "qr"
+            ],
+            "verified": true
+          }
+        ],
+        "failures": [
+          {
+            "index": 0,
+            "failed": true,
+            "retry": true
+          }
+        ],
+        "screenshots": [
+          "test-results/v012/stage-48-initial.png",
+          "test-results/v012/stage-48-action-0.png",
+          "test-results/v012/stage-48-action-4.png",
+          "test-results/v012/stage-48-clear.png"
+        ]
+      },
+      {
+        "stage": 49,
+        "steps": [
+          {
+            "index": 0,
+            "text": "猫が鍵をくわえるイベント発生",
+            "kind": "event",
+            "target": "cat",
+            "actor": "boy",
+            "actionPose": "boy_read",
+            "renderedFrameCount": 112,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_read"
+            ],
+            "roomBefore": "entrance",
+            "roomAfter": "entrance",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 1,
+            "text": "鍵をくわえた猫を追って庭へ進む",
+            "kind": "chase",
+            "target": "door",
+            "actor": "boy",
+            "actionPose": "boy_walk1",
+            "renderedFrameCount": 83,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2"
+            ],
+            "roomBefore": "entrance",
+            "roomAfter": "garden",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 2,
+            "text": "玄関→庭→子ども部屋と追う",
+            "kind": "chase",
+            "target": "door",
+            "actor": "boy",
+            "actionPose": "boy_walk1",
+            "renderedFrameCount": 121,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "cat_walk1",
+              "cat_walk2"
+            ],
+            "roomBefore": "garden",
+            "roomAfter": "child",
+            "inventoryBefore": [],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 3,
+            "text": "子ども部屋の猫じゃらしを取る",
+            "kind": "pickup",
+            "target": "toy",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 105,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "child",
+            "roomAfter": "child",
+            "inventoryBefore": [],
+            "inventoryAfter": [
+              "toy"
+            ],
+            "verified": true
+          },
+          {
+            "index": 4,
+            "text": "机の猫のおやつを取る",
+            "kind": "pickup",
+            "target": "treat",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 93,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "child",
+            "roomAfter": "child",
+            "inventoryBefore": [
+              "toy"
+            ],
+            "inventoryAfter": [
+              "toy",
+              "treat"
+            ],
+            "verified": true
+          },
+          {
+            "index": 5,
+            "text": "猫じゃらしで進行方向を変える",
+            "kind": "use",
+            "target": "cat",
+            "actor": "boy",
+            "actionPose": "boy_reach",
+            "renderedFrameCount": 135,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_reach",
+              "cat_receive",
+              "cat_walk1",
+              "cat_walk2"
+            ],
+            "roomBefore": "child",
+            "roomAfter": "child",
+            "inventoryBefore": [
+              "toy",
+              "treat"
+            ],
+            "inventoryAfter": [
+              "toy",
+              "treat"
+            ],
+            "verified": true
+          },
+          {
+            "index": 6,
+            "text": "最後におやつを置く",
+            "kind": "place",
+            "target": "cat",
+            "actor": "boy",
+            "actionPose": "boy_carry",
+            "renderedFrameCount": 83,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_carry"
+            ],
+            "roomBefore": "child",
+            "roomAfter": "child",
+            "inventoryBefore": [
+              "toy",
+              "treat"
+            ],
+            "inventoryAfter": [
+              "toy"
+            ],
+            "verified": true
+          },
+          {
+            "index": 7,
+            "text": "猫が鍵を離す",
+            "kind": "receive",
+            "target": "cat",
+            "actor": "boy",
+            "actionPose": "boy_offer",
+            "renderedFrameCount": 82,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_offer",
+              "cat_receive"
+            ],
+            "roomBefore": "child",
+            "roomAfter": "child",
+            "inventoryBefore": [
+              "toy"
+            ],
+            "inventoryAfter": [
+              "toy",
+              "key"
+            ],
+            "verified": true
+          },
+          {
+            "index": 8,
+            "text": "鍵を持ってリビングの猫ベッドへ戻る",
+            "kind": "travel",
+            "target": "door",
+            "actor": "boy",
+            "actionPose": "boy_walk1",
+            "renderedFrameCount": 82,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2"
+            ],
+            "roomBefore": "child",
+            "roomAfter": "living",
+            "inventoryBefore": [
+              "toy",
+              "key"
+            ],
+            "inventoryAfter": [
+              "toy",
+              "key"
+            ],
+            "verified": true
+          },
+          {
+            "index": 9,
+            "text": "鍵で猫ベッド下の箱を開ける",
+            "kind": "collect",
+            "target": "bed",
+            "actor": "boy",
+            "actionPose": "boy_happy",
+            "renderedFrameCount": 94,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open",
+              "boy_pickup"
+            ],
+            "roomBefore": "living",
+            "roomAfter": "living",
+            "inventoryBefore": [
+              "toy",
+              "key"
+            ],
+            "inventoryAfter": [
+              "toy",
+              "key"
+            ],
+            "verified": true
+          }
+        ],
+        "failures": [
+          {
+            "index": 0,
+            "failed": true,
+            "retry": true
+          }
+        ],
+        "screenshots": [
+          "test-results/v012/stage-49-initial.png",
+          "test-results/v012/stage-49-action-0.png",
+          "test-results/v012/stage-49-action-9.png",
+          "test-results/v012/stage-49-clear.png"
+        ]
+      },
+      {
+        "stage": 50,
+        "steps": [
+          {
+            "index": 0,
+            "text": "リビングのテーブルから新聞を取る",
+            "kind": "pickup",
+            "target": "paper",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 84,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "living",
+            "roomAfter": "living",
+            "inventoryBefore": [],
+            "inventoryAfter": [
+              "paper"
+            ],
+            "verified": true
+          },
+          {
+            "index": 1,
+            "text": "リビングで新聞を入手しパパの注意をそらす",
+            "kind": "give",
+            "target": "papa",
+            "actor": "boy",
+            "actionPose": "boy_offer",
+            "renderedFrameCount": 82,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_offer",
+              "papa_idle"
+            ],
+            "roomBefore": "living",
+            "roomAfter": "living",
+            "inventoryBefore": [
+              "paper"
+            ],
+            "inventoryAfter": [],
+            "verified": true
+          },
+          {
+            "index": 2,
+            "text": "テーブルのQRカードを取る",
+            "kind": "pickup",
+            "target": "qr",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 84,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "living",
+            "roomAfter": "living",
+            "inventoryBefore": [],
+            "inventoryAfter": [
+              "qr"
+            ],
+            "verified": true
+          },
+          {
+            "index": 3,
+            "text": "キッチンへ移動する",
+            "kind": "travel",
+            "target": "door",
+            "actor": "boy",
+            "actionPose": "boy_walk1",
+            "renderedFrameCount": 119,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "papa_walk1",
+              "papa_walk2"
+            ],
+            "roomBefore": "living",
+            "roomAfter": "kitchen",
+            "inventoryBefore": [
+              "qr"
+            ],
+            "inventoryAfter": [
+              "qr"
+            ],
+            "verified": true
+          },
+          {
+            "index": 4,
+            "text": "カウンターのマグカップを取る",
+            "kind": "pickup",
+            "target": "coffee",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 82,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "kitchen",
+            "roomAfter": "kitchen",
+            "inventoryBefore": [
+              "qr"
+            ],
+            "inventoryAfter": [
+              "qr",
+              "coffee"
+            ],
+            "verified": true
+          },
+          {
+            "index": 5,
+            "text": "ポットからマグカップにコーヒーを注ぐ",
+            "kind": "pour",
+            "target": "pot",
+            "actor": "boy",
+            "actionPose": "boy_pour",
+            "renderedFrameCount": 83,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pour"
+            ],
+            "roomBefore": "kitchen",
+            "roomAfter": "kitchen",
+            "inventoryBefore": [
+              "qr",
+              "coffee"
+            ],
+            "inventoryAfter": [
+              "qr",
+              "coffee"
+            ],
+            "verified": true
+          },
+          {
+            "index": 6,
+            "text": "キッチンでコーヒーを作りパパをダイニングへ固定",
+            "kind": "give",
+            "target": "papa",
+            "actor": "boy",
+            "actionPose": "boy_offer",
+            "renderedFrameCount": 119,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_offer",
+              "papa_idle",
+              "papa_walk1",
+              "papa_walk2"
+            ],
+            "roomBefore": "kitchen",
+            "roomAfter": "kitchen",
+            "inventoryBefore": [
+              "qr",
+              "coffee"
+            ],
+            "inventoryAfter": [
+              "qr"
+            ],
+            "verified": true
+          },
+          {
+            "index": 7,
+            "text": "玄関へ移動する",
+            "kind": "travel",
+            "target": "door",
+            "actor": "boy",
+            "actionPose": "boy_walk1",
+            "renderedFrameCount": 83,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2"
+            ],
+            "roomBefore": "kitchen",
+            "roomAfter": "entrance",
+            "inventoryBefore": [
+              "qr"
+            ],
+            "inventoryAfter": [
+              "qr"
+            ],
+            "verified": true
+          },
+          {
+            "index": 8,
+            "text": "玄関でQRカードを使って宅配ロッカーから鍵を取る",
+            "kind": "open",
+            "target": "locker",
+            "actor": "boy",
+            "actionPose": "boy_open",
+            "renderedFrameCount": 83,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open"
+            ],
+            "roomBefore": "entrance",
+            "roomAfter": "entrance",
+            "inventoryBefore": [
+              "qr"
+            ],
+            "inventoryAfter": [
+              "qr",
+              "key"
+            ],
+            "verified": true
+          },
+          {
+            "index": 9,
+            "text": "庭へ移動する",
+            "kind": "travel",
+            "target": "door",
+            "actor": "boy",
+            "actionPose": "boy_walk1",
+            "renderedFrameCount": 85,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2"
+            ],
+            "roomBefore": "entrance",
+            "roomAfter": "garden",
+            "inventoryBefore": [
+              "qr",
+              "key"
+            ],
+            "inventoryAfter": [
+              "qr",
+              "key"
+            ],
+            "verified": true
+          },
+          {
+            "index": 10,
+            "text": "庭のベンチの猫のおやつを取る",
+            "kind": "pickup",
+            "target": "treat",
+            "actor": "boy",
+            "actionPose": "boy_pickup",
+            "renderedFrameCount": 82,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_pickup"
+            ],
+            "roomBefore": "garden",
+            "roomAfter": "garden",
+            "inventoryBefore": [
+              "qr",
+              "key"
+            ],
+            "inventoryAfter": [
+              "qr",
+              "key",
+              "treat"
+            ],
+            "verified": true
+          },
+          {
+            "index": 11,
+            "text": "庭で猫をおやつで移動",
+            "kind": "give",
+            "target": "cat",
+            "actor": "boy",
+            "actionPose": "boy_offer",
+            "renderedFrameCount": 118,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_offer",
+              "cat_receive",
+              "cat_walk1",
+              "cat_walk2"
+            ],
+            "roomBefore": "garden",
+            "roomAfter": "garden",
+            "inventoryBefore": [
+              "qr",
+              "key",
+              "treat"
+            ],
+            "inventoryAfter": [
+              "qr",
+              "key"
+            ],
+            "verified": true
+          },
+          {
+            "index": 12,
+            "text": "脚立を展開",
+            "kind": "place",
+            "target": "ladder",
+            "actor": "boy",
+            "actionPose": "boy_carry",
+            "renderedFrameCount": 83,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_carry"
+            ],
+            "roomBefore": "garden",
+            "roomAfter": "garden",
+            "inventoryBefore": [
+              "qr",
+              "key"
+            ],
+            "inventoryAfter": [
+              "qr",
+              "key"
+            ],
+            "verified": true
+          },
+          {
+            "index": 13,
+            "text": "物置最上段のトランクへ登る",
+            "kind": "climb",
+            "target": "trunk",
+            "actor": "boy",
+            "actionPose": "boy_climb",
+            "renderedFrameCount": 83,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_climb"
+            ],
+            "roomBefore": "garden",
+            "roomAfter": "garden",
+            "inventoryBefore": [
+              "qr",
+              "key"
+            ],
+            "inventoryAfter": [
+              "qr",
+              "key"
+            ],
+            "verified": true
+          },
+          {
+            "index": 14,
+            "text": "鍵でトランクを開けゲーム機を取得",
+            "kind": "collect",
+            "target": "trunk",
+            "actor": "boy",
+            "actionPose": "boy_happy",
+            "renderedFrameCount": 99,
+            "animationFrames": [
+              "boy_walk1",
+              "boy_walk2",
+              "boy_open",
+              "boy_high"
+            ],
+            "roomBefore": "garden",
+            "roomAfter": "garden",
+            "inventoryBefore": [
+              "qr",
+              "key"
+            ],
+            "inventoryAfter": [
+              "qr",
+              "key"
+            ],
+            "verified": true
+          }
+        ],
+        "failures": [
+          {
+            "index": 0,
+            "failed": true,
+            "retry": true
+          },
+          {
+            "index": 1,
+            "failed": true,
+            "retry": true
+          },
+          {
+            "index": 2,
+            "failed": true,
+            "retry": true
+          }
+        ],
+        "screenshots": [
+          "test-results/v012/stage-50-initial.png",
+          "test-results/v012/stage-50-action-0.png",
+          "test-results/v012/stage-50-action-14.png",
+          "test-results/v012/stage-50-clear.png"
+        ]
+      }
+    ]
+  },
+  "guards": {
+    "wrongItemSelection": "PASS",
+    "bagDragUse": "PASS",
+    "reusableToolRetained": "PASS",
+    "doubleClick": "PASS",
+    "retryDuringAnimation": "PASS",
+    "menuDuringAnimation": "PASS",
+    "puzzleCancel": "PASS",
+    "wrongCodeFailure": "PASS",
+    "offlineRoomChange": "PASS",
+    "pcViewportChecks": 100,
+    "audioDecodeAndToggle": "PASS",
+    "errors": []
+  },
+  "audio": {
+    "duration": 135.82367346938776,
+    "sample_peak_dbfs": 1.6889781592877104,
+    "samples_above_full_scale": 1954,
+    "head_100ms_rms_dbfs": -16.009558469419467,
+    "tail_100ms_rms_dbfs": -100.43910202487243,
+    "boundary_sample_jump_dbfs": -52.24481363607427,
+    "game_gain": 0.28,
+    "game_peak_estimate_dbfs": -9.367861213867904,
+    "game_loudness_estimate_lufs": -23.856839373155616,
+    "source_true_peak_dbtp": 1.7,
+    "source_lra_lu": 6.1,
+    "source_unchanged": true,
+    "source_sha256": "214d0e266fa1be0e1385bfa607a6ef5139f58b46d4b51112b4d113f017c73353",
+    "codec": "AAC",
+    "bitrate_kbps": 128.5,
+    "sample_rate": 44100,
+    "channels": 2,
+    "listening_assessment": "not performed"
+  },
+  "limitations": [
+    "Human listening and musical loop quality are unverified.",
+    "Key-pose animation is not bespoke full animation for every action.",
+    "Mechanical passage does not establish fun, art direction perfection or all possible free-form action orders.",
+    "GitHub Pages deployment is separate from local validation."
+  ]
+}

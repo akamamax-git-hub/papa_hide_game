@@ -1,0 +1,6634 @@
+[
+  {
+    "stage": 1,
+    "room": "living",
+    "entities": [
+      {
+        "id": "table",
+        "label": "テーブル",
+        "asset": "table",
+        "slot": "table",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "paper",
+        "label": "新聞",
+        "asset": "newspaper",
+        "slot": "surface",
+        "room": null,
+        "parent": "table"
+      },
+      {
+        "id": "cab",
+        "label": "収納棚",
+        "asset": "cabinet",
+        "slot": "left",
+        "room": null,
+        "parent": null
+      }
+    ],
+    "steps": [
+      {
+        "kind": "pickup",
+        "target": "paper",
+        "gain": "paper",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "テーブルの新聞を入手",
+        "reparent": {},
+        "sourceStep": 0
+      },
+      {
+        "kind": "give",
+        "target": "papa",
+        "gain": null,
+        "use": [
+          "paper"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {
+          "papa": "read"
+        },
+        "text": "新聞をパパに渡す",
+        "reparent": {},
+        "sourceStep": 1
+      },
+      {
+        "kind": "open",
+        "target": "cab",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "パパが新聞を読んでいる間に収納棚を開く",
+        "reparent": {},
+        "sourceStep": 2
+      },
+      {
+        "kind": "collect",
+        "target": "cab",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "ゲーム機を取得",
+        "reparent": {},
+        "sourceStep": 3
+      }
+    ],
+    "failures": [
+      {
+        "text": "パパが見ている時に棚を2回調べる",
+        "target": "cab",
+        "kind": "use",
+        "actor": "boy"
+      }
+    ]
+  },
+  {
+    "stage": 2,
+    "room": "living",
+    "entities": [
+      {
+        "id": "sofa",
+        "label": "ソファ",
+        "asset": "sofa",
+        "slot": "sofa",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "remote",
+        "label": "リモコン",
+        "asset": "remote",
+        "slot": "side",
+        "room": null,
+        "parent": "sofa"
+      },
+      {
+        "id": "clock",
+        "label": "時計",
+        "asset": "clock",
+        "slot": "wall",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "battery",
+        "label": "乾電池",
+        "asset": "battery",
+        "slot": "behind",
+        "room": null,
+        "parent": "clock"
+      },
+      {
+        "id": "tv",
+        "label": "TV・TV台",
+        "asset": "tv",
+        "slot": "left",
+        "room": null,
+        "parent": null
+      }
+    ],
+    "steps": [
+      {
+        "kind": "pickup",
+        "target": "remote",
+        "gain": "remote",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "ソファ横でリモコンを入手",
+        "reparent": {},
+        "sourceStep": 0
+      },
+      {
+        "kind": "pickup",
+        "target": "battery",
+        "gain": "battery",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "時計裏から乾電池を入手",
+        "reparent": {},
+        "sourceStep": 1
+      },
+      {
+        "kind": "combine",
+        "target": "remote",
+        "gain": null,
+        "use": [
+          "remote",
+          "battery"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {
+          "remote": "powered"
+        },
+        "text": "リモコンに電池を入れる",
+        "reparent": {},
+        "sourceStep": 2
+      },
+      {
+        "kind": "use",
+        "target": "tv",
+        "gain": null,
+        "use": [
+          "remote"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {
+          "papa": "sofa"
+        },
+        "reveal": [],
+        "change": {
+          "tv": "on"
+        },
+        "text": "TVをつける",
+        "reparent": {},
+        "sourceStep": 3
+      },
+      {
+        "kind": "collect",
+        "target": "tv",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "TVを見始めたパパの隙にTV台の引き出しを開ける",
+        "reparent": {},
+        "sourceStep": 4
+      }
+    ],
+    "failures": [
+      {
+        "text": "電池なしのリモコンを連打してパパに怪しまれる",
+        "target": "remote",
+        "kind": "use",
+        "actor": "boy"
+      }
+    ]
+  },
+  {
+    "stage": 3,
+    "room": "living",
+    "entities": [
+      {
+        "id": "shelf",
+        "label": "棚",
+        "asset": "shelf",
+        "slot": "left",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "toy",
+        "label": "猫じゃらし",
+        "asset": "catToy",
+        "slot": "side",
+        "room": null,
+        "parent": "shelf"
+      },
+      {
+        "id": "sofa",
+        "label": "ソファ",
+        "asset": "sofa",
+        "slot": "sofa",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "cushion",
+        "label": "クッション",
+        "asset": "cushion",
+        "slot": "surface",
+        "room": null,
+        "parent": "sofa"
+      }
+    ],
+    "steps": [
+      {
+        "kind": "pickup",
+        "target": "toy",
+        "gain": "toy",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "棚横から猫じゃらしを入手",
+        "reparent": {},
+        "sourceStep": 0
+      },
+      {
+        "kind": "use",
+        "target": "cat",
+        "gain": null,
+        "use": [
+          "toy"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {
+          "cat": "leftFloor"
+        },
+        "reveal": [],
+        "change": {},
+        "text": "猫じゃらしを猫に使う",
+        "reparent": {},
+        "sourceStep": 1
+      },
+      {
+        "kind": "lift",
+        "target": "cushion",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "猫が移動したらクッションをめくる",
+        "reparent": {},
+        "sourceStep": 2
+      },
+      {
+        "kind": "collect",
+        "target": "cushion",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "ゲーム機を取得",
+        "reparent": {},
+        "sourceStep": 3
+      }
+    ],
+    "failures": [
+      {
+        "text": "猫を直接どかそうとして鳴かれ、パパに気づかれる",
+        "target": "cat",
+        "kind": "use",
+        "actor": "boy"
+      }
+    ]
+  },
+  {
+    "stage": 4,
+    "room": "living",
+    "entities": [
+      {
+        "id": "stool",
+        "label": "踏み台",
+        "asset": "stool",
+        "slot": "floorLeft",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "clock",
+        "label": "壁時計",
+        "asset": "clock",
+        "slot": "wall",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "key",
+        "label": "小さな鍵",
+        "asset": "key",
+        "slot": "top",
+        "room": null,
+        "parent": "clock"
+      },
+      {
+        "id": "cab",
+        "label": "鍵付き収納",
+        "asset": "cabinet",
+        "slot": "middle",
+        "room": null,
+        "parent": null
+      }
+    ],
+    "steps": [
+      {
+        "kind": "pickup",
+        "target": "stool",
+        "gain": "stool",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "踏み台を入手",
+        "reparent": {},
+        "sourceStep": 0
+      },
+      {
+        "kind": "place",
+        "target": "clock",
+        "gain": null,
+        "use": [
+          "stool"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {
+          "stool": "underWall"
+        },
+        "reveal": [],
+        "change": {},
+        "text": "時計の下へ踏み台を置く",
+        "reparent": {},
+        "sourceStep": 1
+      },
+      {
+        "kind": "climb",
+        "target": "key",
+        "gain": "key",
+        "use": [
+          "stool"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "息子が登って鍵を取る",
+        "reparent": {},
+        "sourceStep": 2
+      },
+      {
+        "kind": "open",
+        "target": "cab",
+        "gain": null,
+        "use": [
+          "key"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "鍵付き収納を開ける",
+        "reparent": {},
+        "sourceStep": 3
+      },
+      {
+        "kind": "collect",
+        "target": "cab",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "ゲーム機を取得",
+        "reparent": {},
+        "sourceStep": 4
+      }
+    ],
+    "failures": [
+      {
+        "text": "踏み台をパパの視線内で動かして怪しまれる",
+        "target": "stool",
+        "kind": "use",
+        "actor": "boy"
+      }
+    ]
+  },
+  {
+    "stage": 5,
+    "room": "living",
+    "entities": [
+      {
+        "id": "cab",
+        "label": "玄関寄りの棚",
+        "asset": "cabinet",
+        "slot": "left",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "gloves",
+        "label": "滑り止め手袋",
+        "asset": "gloves",
+        "slot": "surface",
+        "room": null,
+        "parent": "cab"
+      },
+      {
+        "id": "table",
+        "label": "サイドテーブル",
+        "asset": "table",
+        "slot": "table",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "sofa",
+        "label": "ソファ",
+        "asset": "sofa",
+        "slot": "sofa",
+        "room": null,
+        "parent": null
+      }
+    ],
+    "steps": [
+      {
+        "kind": "pickup",
+        "target": "gloves",
+        "gain": "gloves",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "玄関寄りの棚から滑り止め手袋を入手",
+        "reparent": {},
+        "sourceStep": 0
+      },
+      {
+        "kind": "push",
+        "target": "table",
+        "gain": null,
+        "use": [
+          "gloves"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {
+          "table": "leftFloor"
+        },
+        "reveal": [],
+        "change": {},
+        "text": "サイドテーブルを押して移動",
+        "reparent": {},
+        "sourceStep": 1
+      },
+      {
+        "kind": "inspect",
+        "target": "sofa",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "ソファ横の隙間を調べる",
+        "reparent": {},
+        "sourceStep": 2
+      },
+      {
+        "kind": "collect",
+        "target": "sofa",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "ゲーム機を引き出す",
+        "reparent": {},
+        "sourceStep": 3
+      }
+    ],
+    "failures": [
+      {
+        "text": "素手で重いテーブルを動かして大きな音を出す",
+        "target": "table",
+        "kind": "use",
+        "actor": "boy"
+      }
+    ]
+  },
+  {
+    "stage": 6,
+    "room": "entrance",
+    "entities": [
+      {
+        "id": "mat",
+        "label": "玄関マット・水滴",
+        "asset": "mat",
+        "slot": "floorLeft",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "umbrellas",
+        "label": "3本の傘",
+        "asset": "umbrellas",
+        "slot": "left",
+        "room": null,
+        "parent": null
+      }
+    ],
+    "steps": [
+      {
+        "kind": "read",
+        "target": "mat",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {
+          "mat": "clue"
+        },
+        "text": "玄関マットの水滴ヒントを見る",
+        "reparent": {},
+        "sourceStep": 0
+      },
+      {
+        "kind": "order",
+        "target": "umbrellas",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {
+          "umbrellas": "sorted"
+        },
+        "text": "濡れていない傘から順に抜く",
+        "reparent": {},
+        "sourceStep": 1
+      },
+      {
+        "kind": "push",
+        "target": "umbrellas",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {
+          "umbrellas": "middle"
+        },
+        "reveal": [],
+        "change": {},
+        "text": "傘立てを少し動かす",
+        "reparent": {},
+        "sourceStep": 2
+      },
+      {
+        "kind": "collect",
+        "target": "umbrellas",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "ゲーム機を取得",
+        "reparent": {},
+        "sourceStep": 3
+      }
+    ],
+    "failures": [
+      {
+        "text": "濡れた傘を室内で開きパパに怒られる",
+        "target": "umbrellas",
+        "kind": "use",
+        "actor": "boy"
+      }
+    ],
+    "puzzle": {
+      "step": 1,
+      "answer": "青・黄・折畳",
+      "options": [
+        "青・黄・折畳",
+        "黄・青・折畳",
+        "折畳・黄・青"
+      ]
+    }
+  },
+  {
+    "stage": 7,
+    "room": "entrance",
+    "entities": [
+      {
+        "id": "cab",
+        "label": "下駄箱",
+        "asset": "cabinet",
+        "slot": "left",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "stamp",
+        "label": "印鑑",
+        "asset": "stamp",
+        "slot": "surface",
+        "room": null,
+        "parent": "cab"
+      },
+      {
+        "id": "intercom",
+        "label": "インターホン",
+        "asset": "switch",
+        "slot": "wall",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "box",
+        "label": "宅配箱",
+        "asset": "parcel",
+        "slot": "npcHands",
+        "room": null,
+        "parent": null,
+        "holder": "courier"
+      },
+      {
+        "id": "knife",
+        "label": "カッター",
+        "asset": "cutter",
+        "slot": "inside",
+        "room": null,
+        "parent": "cab"
+      }
+    ],
+    "steps": [
+      {
+        "kind": "pickup",
+        "target": "stamp",
+        "gain": "stamp",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "下駄箱から印鑑を入手",
+        "reparent": {},
+        "sourceStep": 0
+      },
+      {
+        "kind": "use",
+        "target": "intercom",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "インターホンに応答",
+        "reparent": {},
+        "sourceStep": 1
+      },
+      {
+        "kind": "receive",
+        "target": "courier",
+        "gain": "box",
+        "use": [
+          "stamp"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "宅配員から箱を受け取る",
+        "reparent": {},
+        "sourceStep": 2
+      },
+      {
+        "kind": "pickup",
+        "target": "knife",
+        "gain": "knife",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "引き出しからカッターを入手",
+        "reparent": {},
+        "sourceStep": 3
+      },
+      {
+        "kind": "open",
+        "target": "box",
+        "gain": null,
+        "use": [
+          "knife"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "段ボールを開ける",
+        "reparent": {},
+        "sourceStep": 4
+      },
+      {
+        "kind": "collect",
+        "target": "box",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "ゲーム機を取得",
+        "reparent": {},
+        "sourceStep": 5
+      }
+    ],
+    "failures": [
+      {
+        "text": "受領前にドアを何度も開けてパパに注意される",
+        "target": "door",
+        "kind": "use",
+        "actor": "boy"
+      }
+    ]
+  },
+  {
+    "stage": 8,
+    "room": "entrance",
+    "entities": [
+      {
+        "id": "shoes",
+        "label": "靴・床の跡",
+        "asset": "slippers",
+        "slot": "floorLeft",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "slipper",
+        "label": "音のしないスリッパ",
+        "asset": "slippers",
+        "slot": "middle",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "key",
+        "label": "小さな鍵",
+        "asset": "key",
+        "slot": "inside",
+        "room": null,
+        "parent": "slipper"
+      },
+      {
+        "id": "cab",
+        "label": "下駄箱上段",
+        "asset": "cabinet",
+        "slot": "left",
+        "room": null,
+        "parent": null,
+        "compartment": "top"
+      }
+    ],
+    "steps": [
+      {
+        "kind": "read",
+        "target": "shoes",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "靴の並びと床の跡を観察",
+        "reparent": {},
+        "sourceStep": 0
+      },
+      {
+        "kind": "inspect",
+        "target": "slipper",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "音の鳴らないスリッパを選ぶ",
+        "reparent": {},
+        "sourceStep": 1
+      },
+      {
+        "kind": "pickup",
+        "target": "key",
+        "gain": "key",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "スリッパ内の鍵を取る",
+        "reparent": {},
+        "sourceStep": 2
+      },
+      {
+        "kind": "open",
+        "target": "cab",
+        "gain": null,
+        "use": [
+          "key"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "下駄箱上段を開ける",
+        "reparent": {},
+        "sourceStep": 3
+      },
+      {
+        "kind": "collect",
+        "target": "cab",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "ゲーム機を取得",
+        "reparent": {},
+        "sourceStep": 4
+      }
+    ],
+    "failures": [
+      {
+        "text": "鈴付きサンダルを触りパパに見つかる",
+        "target": "slipper",
+        "kind": "use",
+        "actor": "boy"
+      }
+    ]
+  },
+  {
+    "stage": 9,
+    "room": "entrance",
+    "entities": [
+      {
+        "id": "intercom",
+        "label": "インターホン",
+        "asset": "switch",
+        "slot": "wall",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "bench",
+        "label": "玄関ベンチ",
+        "asset": "bench",
+        "slot": "middle",
+        "room": null,
+        "parent": null
+      }
+    ],
+    "steps": [
+      {
+        "kind": "read",
+        "target": "intercom",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "インターホンの履歴を確認",
+        "reparent": {},
+        "sourceStep": 0
+      },
+      {
+        "kind": "talk",
+        "target": "grandma",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {
+          "papa": "door"
+        },
+        "reveal": [],
+        "change": {},
+        "text": "おばあちゃんが来たタイミングでパパを呼ぶ",
+        "reparent": {},
+        "sourceStep": 1
+      },
+      {
+        "kind": "open",
+        "target": "bench",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "パパが応対している間に玄関ベンチを開く",
+        "reparent": {},
+        "sourceStep": 2
+      },
+      {
+        "kind": "collect",
+        "target": "bench",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "ゲーム機を取得",
+        "reparent": {},
+        "sourceStep": 3
+      }
+    ],
+    "failures": [
+      {
+        "text": "おばあちゃんを無視してパパに叱られる",
+        "target": "grandma",
+        "kind": "use",
+        "actor": "boy"
+      }
+    ]
+  },
+  {
+    "stage": 10,
+    "room": "entrance",
+    "entities": [
+      {
+        "id": "umbrella",
+        "label": "傘",
+        "asset": "umbrellas",
+        "slot": "left",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "card",
+        "label": "番号カード",
+        "asset": "card",
+        "slot": "surface",
+        "room": null,
+        "parent": "mail"
+      },
+      {
+        "id": "mail",
+        "label": "郵便受け",
+        "asset": "cabinet",
+        "slot": "middle",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "locker",
+        "label": "宅配ロッカー",
+        "asset": "locker",
+        "slot": "left",
+        "room": "outside",
+        "parent": null
+      }
+    ],
+    "steps": [
+      {
+        "kind": "pickup",
+        "target": "umbrella",
+        "gain": "umbrella",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "傘立てから傘を取る",
+        "reparent": {},
+        "sourceStep": 0
+      },
+      {
+        "kind": "pickup",
+        "target": "card",
+        "gain": "card",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "郵便物から番号カードを見つける",
+        "reparent": {},
+        "sourceStep": 1
+      },
+      {
+        "kind": "travel",
+        "target": "door",
+        "gain": null,
+        "use": [
+          "umbrella"
+        ],
+        "actor": "boy",
+        "room": "outside",
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "玄関外へ移動",
+        "reparent": {},
+        "sourceStep": 2
+      },
+      {
+        "kind": "code",
+        "target": "locker",
+        "gain": null,
+        "use": [
+          "card"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "宅配ロッカーに番号を入力",
+        "reparent": {},
+        "sourceStep": 3
+      },
+      {
+        "kind": "collect",
+        "target": "locker",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "ゲーム機を取得",
+        "reparent": {},
+        "sourceStep": 4
+      }
+    ],
+    "failures": [
+      {
+        "text": "傘なしで外へ出て濡れ、パパに戻される",
+        "target": "door",
+        "kind": "use",
+        "actor": "boy"
+      }
+    ],
+    "puzzle": {
+      "step": 3,
+      "answer": "1234",
+      "clue": "番号カード 1234"
+    },
+    "weather": "rain"
+  },
+  {
+    "stage": 11,
+    "room": "bath",
+    "entities": [
+      {
+        "id": "mirror",
+        "label": "曇った鏡・鏡裏収納",
+        "asset": "vanity",
+        "slot": "left",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "fan",
+        "label": "換気スイッチ",
+        "asset": "switch",
+        "slot": "wall",
+        "room": null,
+        "parent": null
+      }
+    ],
+    "steps": [
+      {
+        "kind": "inspect",
+        "target": "mirror",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "曇った鏡を確認",
+        "reparent": {},
+        "sourceStep": 0
+      },
+      {
+        "kind": "use",
+        "target": "fan",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {
+          "mirror": "clear"
+        },
+        "text": "換気扇をON",
+        "reparent": {},
+        "sourceStep": 1
+      },
+      {
+        "kind": "read",
+        "target": "mirror",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {
+          "mirror": "code"
+        },
+        "text": "鏡の番号を読む",
+        "reparent": {},
+        "sourceStep": 2
+      },
+      {
+        "kind": "code",
+        "target": "mirror",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "鏡裏収納のダイヤルを合わせる",
+        "reparent": {},
+        "sourceStep": 3
+      },
+      {
+        "kind": "collect",
+        "target": "mirror",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "ゲーム機を取得",
+        "reparent": {},
+        "sourceStep": 4
+      }
+    ],
+    "failures": [
+      {
+        "text": "濡れた鏡を何度もこすり大きな音を出す",
+        "target": "mirror",
+        "kind": "use",
+        "actor": "boy"
+      }
+    ],
+    "puzzle": {
+      "step": 3,
+      "answer": "2406",
+      "clue": "鏡の番号 2406"
+    },
+    "initialModes": {
+      "mirror": "fogged"
+    }
+  },
+  {
+    "stage": 12,
+    "room": "bath",
+    "entities": [
+      {
+        "id": "duck",
+        "label": "アヒルおもちゃ",
+        "asset": "duck",
+        "slot": "floorLeft",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "tub",
+        "label": "浴槽",
+        "asset": "tub",
+        "slot": "middle",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "tap",
+        "label": "蛇口",
+        "asset": "tap",
+        "slot": "surface",
+        "room": null,
+        "parent": "tub"
+      },
+      {
+        "id": "key",
+        "label": "鍵",
+        "asset": "key",
+        "slot": "inside",
+        "room": null,
+        "parent": "tub"
+      },
+      {
+        "id": "cab",
+        "label": "浴槽脇収納",
+        "asset": "cabinet",
+        "slot": "left",
+        "room": null,
+        "parent": null
+      }
+    ],
+    "steps": [
+      {
+        "kind": "pickup",
+        "target": "duck",
+        "gain": "duck",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "床のアヒルおもちゃを取る",
+        "reparent": {}
+      },
+      {
+        "kind": "place",
+        "target": "tub",
+        "gain": null,
+        "use": [
+          "duck"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "浴槽にアヒルを入れる",
+        "reparent": {},
+        "sourceStep": 0
+      },
+      {
+        "kind": "use",
+        "target": "tap",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {
+          "tub": "filled"
+        },
+        "text": "蛇口を開ける",
+        "reparent": {},
+        "sourceStep": 1
+      },
+      {
+        "kind": "pickup",
+        "target": "key",
+        "gain": "key",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "浮いたアヒルの下の鍵を取る",
+        "reparent": {},
+        "sourceStep": 2
+      },
+      {
+        "kind": "open",
+        "target": "cab",
+        "gain": null,
+        "use": [
+          "key"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "浴槽脇収納を開ける",
+        "reparent": {},
+        "sourceStep": 3
+      },
+      {
+        "kind": "collect",
+        "target": "cab",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "ゲーム機を取得",
+        "reparent": {},
+        "sourceStep": 4
+      }
+    ],
+    "failures": [
+      {
+        "text": "浴槽を満水にしすぎて水をこぼす",
+        "target": "tub",
+        "kind": "use",
+        "actor": "boy"
+      }
+    ]
+  },
+  {
+    "stage": 13,
+    "room": "bath",
+    "entities": [
+      {
+        "id": "sink",
+        "label": "洗面台下",
+        "asset": "vanity",
+        "slot": "left",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "tongs",
+        "label": "トング",
+        "asset": "tongs",
+        "slot": "inside",
+        "room": null,
+        "parent": "sink"
+      },
+      {
+        "id": "tub",
+        "label": "浴槽",
+        "asset": "tub",
+        "slot": "middle",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "drain",
+        "label": "浴槽の排水口",
+        "asset": "drain",
+        "slot": "surface",
+        "room": null,
+        "parent": "tub"
+      },
+      {
+        "id": "key",
+        "label": "濡れた鍵",
+        "asset": "key",
+        "slot": "inside",
+        "room": null,
+        "parent": "drain"
+      }
+    ],
+    "steps": [
+      {
+        "kind": "pickup",
+        "target": "tongs",
+        "gain": "tongs",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "洗面台下からトングを入手",
+        "reparent": {},
+        "sourceStep": 0
+      },
+      {
+        "kind": "open",
+        "target": "drain",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "浴槽の栓を抜く",
+        "reparent": {},
+        "sourceStep": 1
+      },
+      {
+        "kind": "use",
+        "target": "drain",
+        "gain": null,
+        "use": [
+          "tongs"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [
+          "key"
+        ],
+        "change": {},
+        "text": "排水口をトングで探る",
+        "reparent": {},
+        "sourceStep": 2
+      },
+      {
+        "kind": "pickup",
+        "target": "key",
+        "gain": "key",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "鍵を取る",
+        "reparent": {},
+        "sourceStep": 3
+      },
+      {
+        "kind": "collect",
+        "target": "sink",
+        "gain": null,
+        "use": [
+          "key"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "収納を開ける",
+        "reparent": {},
+        "sourceStep": 4
+      }
+    ],
+    "failures": [
+      {
+        "text": "手で排水口を探してびしょ濡れになる",
+        "target": "drain",
+        "kind": "use",
+        "actor": "boy"
+      }
+    ]
+  },
+  {
+    "stage": 14,
+    "room": "bath",
+    "entities": [
+      {
+        "id": "basket",
+        "label": "脱衣かご",
+        "asset": "basket",
+        "slot": "left",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "note",
+        "label": "濡れたメモ",
+        "asset": "note",
+        "slot": "inside",
+        "room": null,
+        "parent": "basket"
+      },
+      {
+        "id": "shelf",
+        "label": "脱衣所の棚",
+        "asset": "cabinet",
+        "slot": "middle",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "dryer",
+        "label": "ドライヤー",
+        "asset": "dryer",
+        "slot": "surface",
+        "room": null,
+        "parent": "shelf"
+      },
+      {
+        "id": "socket",
+        "label": "乾いた場所のコンセント",
+        "asset": "switch",
+        "slot": "wall",
+        "room": null,
+        "parent": null
+      }
+    ],
+    "steps": [
+      {
+        "kind": "pickup",
+        "target": "note",
+        "gain": "note",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "脱衣かごから濡れたメモを入手",
+        "reparent": {},
+        "sourceStep": 0
+      },
+      {
+        "kind": "pickup",
+        "target": "dryer",
+        "gain": "dryer",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "棚のドライヤーを取る",
+        "reparent": {}
+      },
+      {
+        "kind": "dry",
+        "target": "socket",
+        "gain": null,
+        "use": [
+          "note",
+          "dryer"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {
+          "note": "dry"
+        },
+        "text": "コンセント近くでドライヤーを使う",
+        "reparent": {},
+        "sourceStep": 1
+      },
+      {
+        "kind": "read",
+        "target": "note",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "乾いたメモの絵を読む",
+        "reparent": {},
+        "sourceStep": 2
+      },
+      {
+        "kind": "open",
+        "target": "basket",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "脱衣かごの底板を外す",
+        "reparent": {},
+        "sourceStep": 3
+      },
+      {
+        "kind": "collect",
+        "target": "basket",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "ゲーム機を取得",
+        "reparent": {},
+        "sourceStep": 4
+      }
+    ],
+    "failures": [
+      {
+        "text": "濡れた場所でドライヤーを使おうとして安全警告で失敗扱い",
+        "target": "socket",
+        "kind": "use",
+        "actor": "boy"
+      }
+    ]
+  },
+  {
+    "stage": 15,
+    "room": "bath",
+    "entities": [
+      {
+        "id": "sponge",
+        "label": "スポンジ",
+        "asset": "sponge",
+        "slot": "floorLeft",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "panel",
+        "label": "汚れた壁・点検口",
+        "asset": "panel",
+        "slot": "left",
+        "room": null,
+        "parent": null
+      }
+    ],
+    "steps": [
+      {
+        "kind": "pickup",
+        "target": "sponge",
+        "gain": "sponge",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "スポンジを取る",
+        "reparent": {},
+        "sourceStep": 0
+      },
+      {
+        "kind": "wait",
+        "target": "papa",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {
+          "papa": "door"
+        },
+        "reveal": [],
+        "change": {},
+        "text": "パパが浴室外へ洗剤を取りに行くのを待つ",
+        "reparent": {},
+        "sourceStep": 1
+      },
+      {
+        "kind": "wipe",
+        "target": "panel",
+        "gain": null,
+        "use": [
+          "sponge"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {
+          "panel": "clean"
+        },
+        "text": "壁をスポンジで拭く",
+        "reparent": {},
+        "sourceStep": 2
+      },
+      {
+        "kind": "open",
+        "target": "panel",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "矢印の先の点検口を開く",
+        "reparent": {},
+        "sourceStep": 3
+      },
+      {
+        "kind": "collect",
+        "target": "panel",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "ゲーム機を取得",
+        "reparent": {},
+        "sourceStep": 4
+      }
+    ],
+    "failures": [
+      {
+        "text": "パパの巡回中に点検口を触る",
+        "target": "panel",
+        "kind": "use",
+        "actor": "boy"
+      }
+    ]
+  },
+  {
+    "stage": 16,
+    "room": "garden",
+    "entities": [
+      {
+        "id": "shed",
+        "label": "物置",
+        "asset": "shed",
+        "slot": "left",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "shovel",
+        "label": "スコップ",
+        "asset": "shovel",
+        "slot": "side",
+        "room": null,
+        "parent": "shed"
+      },
+      {
+        "id": "soil",
+        "label": "花壇の土",
+        "asset": "flowerbed",
+        "slot": "middle",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "box",
+        "label": "防水箱",
+        "asset": "parcel",
+        "slot": "inside",
+        "room": null,
+        "parent": "soil"
+      }
+    ],
+    "steps": [
+      {
+        "kind": "pickup",
+        "target": "shovel",
+        "gain": "shovel",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "物置脇からスコップを取る",
+        "reparent": {},
+        "sourceStep": 0
+      },
+      {
+        "kind": "inspect",
+        "target": "soil",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "花壇の土の色が違う場所を探す",
+        "reparent": {},
+        "sourceStep": 1
+      },
+      {
+        "kind": "dig",
+        "target": "soil",
+        "gain": null,
+        "use": [
+          "shovel"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [
+          "box"
+        ],
+        "change": {
+          "soil": "dug"
+        },
+        "text": "掘る",
+        "reparent": {},
+        "sourceStep": 2
+      },
+      {
+        "kind": "open",
+        "target": "box",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "防水箱を開ける",
+        "reparent": {},
+        "sourceStep": 3
+      },
+      {
+        "kind": "collect",
+        "target": "box",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "ゲーム機を取得",
+        "reparent": {},
+        "sourceStep": 4
+      }
+    ],
+    "failures": [
+      {
+        "text": "花が植わっている場所を掘ってパパに怒られる",
+        "target": "soil",
+        "kind": "use",
+        "actor": "boy"
+      }
+    ]
+  },
+  {
+    "stage": 17,
+    "room": "garden",
+    "entities": [
+      {
+        "id": "can",
+        "label": "じょうろ",
+        "asset": "wateringCan",
+        "slot": "floorLeft",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "tap",
+        "label": "庭の水道",
+        "asset": "tap",
+        "slot": "left",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "plant",
+        "label": "乾いた鉢",
+        "asset": "planter",
+        "slot": "middle",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "key",
+        "label": "鍵",
+        "asset": "key",
+        "slot": "inside",
+        "room": null,
+        "parent": "plant"
+      },
+      {
+        "id": "shed",
+        "label": "物置",
+        "asset": "shed",
+        "slot": "shelf",
+        "room": null,
+        "parent": null
+      }
+    ],
+    "steps": [
+      {
+        "kind": "pickup",
+        "target": "can",
+        "gain": "can",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "空のじょうろを取る",
+        "reparent": {},
+        "sourceStep": 0
+      },
+      {
+        "kind": "fill",
+        "target": "tap",
+        "gain": null,
+        "use": [
+          "can"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {
+          "can": "filled"
+        },
+        "text": "水道で水を入れる",
+        "reparent": {},
+        "sourceStep": 1
+      },
+      {
+        "kind": "pour",
+        "target": "plant",
+        "gain": null,
+        "use": [
+          "can"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [
+          "key"
+        ],
+        "change": {
+          "plant": "watered"
+        },
+        "text": "乾いた鉢に水をやる",
+        "reparent": {},
+        "sourceStep": 2
+      },
+      {
+        "kind": "pickup",
+        "target": "key",
+        "gain": "key",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "現れた鍵を取る",
+        "reparent": {},
+        "sourceStep": 3
+      },
+      {
+        "kind": "collect",
+        "target": "shed",
+        "gain": null,
+        "use": [
+          "key"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "物置を開ける",
+        "reparent": {},
+        "sourceStep": 4
+      }
+    ],
+    "failures": [
+      {
+        "text": "別の鉢に水をやりすぎて泥だらけになる",
+        "target": "plant",
+        "kind": "use",
+        "actor": "boy"
+      }
+    ]
+  },
+  {
+    "stage": 18,
+    "room": "garden",
+    "entities": [
+      {
+        "id": "bench",
+        "label": "ベンチ",
+        "asset": "bench",
+        "slot": "middle",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "ball",
+        "label": "ボール",
+        "asset": "ball",
+        "slot": "under",
+        "room": null,
+        "parent": "bench"
+      },
+      {
+        "id": "shed",
+        "label": "物置",
+        "asset": "shed",
+        "slot": "left",
+        "room": null,
+        "parent": null
+      }
+    ],
+    "steps": [
+      {
+        "kind": "pickup",
+        "target": "ball",
+        "gain": "ball",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "ベンチ下からボールを入手",
+        "reparent": {},
+        "sourceStep": 0
+      },
+      {
+        "kind": "throw",
+        "target": "cat",
+        "gain": null,
+        "use": [
+          "ball"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {
+          "ball": "leftFloor"
+        },
+        "reveal": [],
+        "change": {},
+        "text": "猫にボールを転がす",
+        "reparent": {},
+        "sourceStep": 1
+      },
+      {
+        "kind": "wait",
+        "target": "cat",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {
+          "cat": "leftFloor"
+        },
+        "reveal": [],
+        "change": {},
+        "text": "猫が追いかけて移動",
+        "reparent": {},
+        "sourceStep": 2
+      },
+      {
+        "kind": "open",
+        "target": "shed",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "物置を開ける",
+        "reparent": {},
+        "sourceStep": 3
+      },
+      {
+        "kind": "collect",
+        "target": "shed",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "ゲーム機を取得",
+        "reparent": {},
+        "sourceStep": 4
+      }
+    ],
+    "failures": [
+      {
+        "text": "猫を抱えて移動させようとして引っかかれ、騒ぎになる",
+        "target": "cat",
+        "kind": "use",
+        "actor": "boy"
+      }
+    ]
+  },
+  {
+    "stage": 19,
+    "room": "garden",
+    "entities": [
+      {
+        "id": "plant",
+        "label": "植木鉢",
+        "asset": "planter",
+        "slot": "left",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "coin",
+        "label": "コイン",
+        "asset": "coin",
+        "slot": "under",
+        "room": null,
+        "parent": "plant"
+      },
+      {
+        "id": "key",
+        "label": "光る鍵",
+        "asset": "key",
+        "slot": "npcHands",
+        "room": null,
+        "parent": null,
+        "holder": "crow"
+      },
+      {
+        "id": "bench",
+        "label": "庭ベンチ",
+        "asset": "bench",
+        "slot": "middle",
+        "room": null,
+        "parent": null
+      }
+    ],
+    "steps": [
+      {
+        "kind": "pickup",
+        "target": "coin",
+        "gain": "coin",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "植木鉢の下からコインを入手",
+        "reparent": {},
+        "sourceStep": 0
+      },
+      {
+        "kind": "place",
+        "target": "crow",
+        "gain": null,
+        "use": [
+          "coin"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "カラスの近くにコインを置く",
+        "reparent": {},
+        "sourceStep": 1
+      },
+      {
+        "kind": "receive",
+        "target": "crow",
+        "gain": "key",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {
+          "crow": "door"
+        },
+        "reveal": [],
+        "change": {},
+        "text": "カラスが鍵を落としてコインを取る",
+        "reparent": {},
+        "sourceStep": 2
+      },
+      {
+        "kind": "collect",
+        "target": "bench",
+        "gain": null,
+        "use": [
+          "key"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "鍵でベンチ収納を開ける",
+        "reparent": {},
+        "sourceStep": 3
+      }
+    ],
+    "failures": [
+      {
+        "text": "カラスを追い払って鍵ごと飛ばされる",
+        "target": "crow",
+        "kind": "use",
+        "actor": "boy"
+      }
+    ]
+  },
+  {
+    "stage": 20,
+    "room": "garden",
+    "entities": [
+      {
+        "id": "plant",
+        "label": "花壇",
+        "asset": "planter",
+        "slot": "left",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "key",
+        "label": "鍵",
+        "asset": "key",
+        "slot": "surface",
+        "room": null,
+        "parent": "plant"
+      },
+      {
+        "id": "shed",
+        "label": "物置",
+        "asset": "shed",
+        "slot": "shelf",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "ladder",
+        "label": "脚立",
+        "asset": "ladder",
+        "slot": "spare",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "rope",
+        "label": "ロープ",
+        "asset": "rope",
+        "slot": "inside",
+        "room": null,
+        "parent": "shed"
+      },
+      {
+        "id": "box",
+        "label": "高所の箱",
+        "asset": "parcel",
+        "slot": "top",
+        "room": null,
+        "parent": "shed"
+      }
+    ],
+    "steps": [
+      {
+        "kind": "pickup",
+        "target": "key",
+        "gain": "key",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "花壇から鍵を取る",
+        "reparent": {},
+        "sourceStep": 0
+      },
+      {
+        "kind": "open",
+        "target": "shed",
+        "gain": null,
+        "use": [
+          "key"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "物置を開ける",
+        "reparent": {},
+        "sourceStep": 1
+      },
+      {
+        "kind": "pickup",
+        "target": "rope",
+        "gain": "rope",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "物置のロープを取る",
+        "reparent": {}
+      },
+      {
+        "kind": "place",
+        "target": "ladder",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "脚立を展開",
+        "reparent": {},
+        "sourceStep": 2
+      },
+      {
+        "kind": "pull",
+        "target": "box",
+        "gain": null,
+        "use": [
+          "rope"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {
+          "box": "middle"
+        },
+        "reveal": [],
+        "change": {},
+        "text": "高所の箱をロープで引き寄せる",
+        "reparent": {},
+        "sourceStep": 3
+      },
+      {
+        "kind": "collect",
+        "target": "box",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "箱を開けてゲーム機を取得",
+        "reparent": {},
+        "sourceStep": 4
+      }
+    ],
+    "failures": [
+      {
+        "text": "脚立を不安定な地面に置いて倒す",
+        "target": "ladder",
+        "kind": "use",
+        "actor": "boy"
+      }
+    ]
+  },
+  {
+    "stage": 21,
+    "room": "kitchen",
+    "entities": [
+      {
+        "id": "drawer",
+        "label": "引き出し",
+        "asset": "cabinet",
+        "slot": "left",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "spoon",
+        "label": "スプーン",
+        "asset": "spoon",
+        "slot": "inside",
+        "room": null,
+        "parent": "drawer"
+      },
+      {
+        "id": "table",
+        "label": "ダイニングテーブル",
+        "asset": "table",
+        "slot": "table",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "pudding",
+        "label": "妹のプリン",
+        "asset": "pudding",
+        "slot": "surface",
+        "room": null,
+        "parent": "table"
+      },
+      {
+        "id": "fridge",
+        "label": "冷蔵庫",
+        "asset": "fridge",
+        "slot": "shelf",
+        "room": null,
+        "parent": null
+      }
+    ],
+    "steps": [
+      {
+        "kind": "pickup",
+        "target": "spoon",
+        "gain": "spoon",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "引き出しからスプーンを取る",
+        "reparent": {},
+        "sourceStep": 0
+      },
+      {
+        "kind": "give",
+        "target": "sister",
+        "gain": null,
+        "use": [
+          "spoon"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "妹にスプーンを渡す",
+        "reparent": {},
+        "sourceStep": 1
+      },
+      {
+        "kind": "wait",
+        "target": "sister",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {
+          "sister": "table"
+        },
+        "reveal": [],
+        "change": {
+          "sister": "eat"
+        },
+        "text": "妹がテーブルへ移動",
+        "reparent": {},
+        "sourceStep": 2
+      },
+      {
+        "kind": "open",
+        "target": "fridge",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "冷蔵庫を開ける",
+        "reparent": {},
+        "sourceStep": 3
+      },
+      {
+        "kind": "collect",
+        "target": "fridge",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "奥のケースからゲーム機を取る",
+        "reparent": {},
+        "sourceStep": 4
+      }
+    ],
+    "failures": [
+      {
+        "text": "妹のプリンを勝手に取って泣かせる",
+        "target": "sister",
+        "kind": "use",
+        "actor": "boy"
+      }
+    ],
+    "initialHolders": {
+      "pudding": "sister"
+    }
+  },
+  {
+    "stage": 22,
+    "room": "kitchen",
+    "entities": [
+      {
+        "id": "microwave",
+        "label": "電子レンジ",
+        "asset": "microwave",
+        "slot": "surface",
+        "room": null,
+        "parent": "counter"
+      },
+      {
+        "id": "counter",
+        "label": "カウンター",
+        "asset": "cabinet",
+        "slot": "left",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "breaker",
+        "label": "廊下のブレーカー",
+        "asset": "breaker",
+        "slot": "wall",
+        "room": "hall",
+        "parent": null
+      },
+      {
+        "id": "box",
+        "label": "ロック箱",
+        "asset": "parcel",
+        "slot": "inside",
+        "room": null,
+        "parent": "shelf"
+      },
+      {
+        "id": "shelf",
+        "label": "食器棚",
+        "asset": "shelf",
+        "slot": "shelf",
+        "room": null,
+        "parent": null
+      }
+    ],
+    "steps": [
+      {
+        "kind": "inspect",
+        "target": "microwave",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "電子レンジ表示が消えていることを確認",
+        "reparent": {},
+        "sourceStep": 0
+      },
+      {
+        "kind": "travel",
+        "target": "door",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": "hall",
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "キッチンから廊下へ移動する",
+        "reparent": {}
+      },
+      {
+        "kind": "use",
+        "target": "breaker",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {
+          "microwave": "on"
+        },
+        "text": "廊下のブレーカーを戻す",
+        "reparent": {},
+        "sourceStep": 1
+      },
+      {
+        "kind": "travel",
+        "target": "door",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": "kitchen",
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "キッチンへ戻る",
+        "reparent": {}
+      },
+      {
+        "kind": "read",
+        "target": "microwave",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "電子レンジに点滅する時刻を読む",
+        "reparent": {},
+        "sourceStep": 2
+      },
+      {
+        "kind": "code",
+        "target": "box",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "ロック箱へ入力",
+        "reparent": {},
+        "sourceStep": 3
+      },
+      {
+        "kind": "collect",
+        "target": "box",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "ゲーム機を取得",
+        "reparent": {},
+        "sourceStep": 4
+      }
+    ],
+    "failures": [
+      {
+        "text": "電子レンジを空運転してパパに止められる",
+        "target": "microwave",
+        "kind": "use",
+        "actor": "boy"
+      }
+    ],
+    "puzzle": {
+      "step": 5,
+      "answer": "1200",
+      "clue": "電子レンジ 12:00"
+    }
+  },
+  {
+    "stage": 23,
+    "room": "kitchen",
+    "entities": [
+      {
+        "id": "table",
+        "label": "テーブル",
+        "asset": "table",
+        "slot": "table",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "tea",
+        "label": "お茶",
+        "asset": "tea",
+        "slot": "surface",
+        "room": null,
+        "parent": "table"
+      },
+      {
+        "id": "chair",
+        "label": "ダイニングチェア",
+        "asset": "chair",
+        "slot": "middle",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "cab",
+        "label": "食器棚",
+        "asset": "shelf",
+        "slot": "left",
+        "room": null,
+        "parent": null,
+        "compartment": "top"
+      }
+    ],
+    "steps": [
+      {
+        "kind": "pickup",
+        "target": "tea",
+        "gain": "tea",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "テーブルのお茶を取る",
+        "reparent": {}
+      },
+      {
+        "kind": "give",
+        "target": "grandma",
+        "gain": null,
+        "use": [
+          "tea"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {
+          "grandma": "tableRight"
+        },
+        "reveal": [],
+        "change": {
+          "grandma": "sit"
+        },
+        "text": "おばあちゃんにお茶を渡して席を移ってもらう",
+        "reparent": {},
+        "sourceStep": 0
+      },
+      {
+        "kind": "push",
+        "target": "chair",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {
+          "chair": "underWall"
+        },
+        "reveal": [],
+        "change": {},
+        "text": "椅子を食器棚前へ移動",
+        "reparent": {},
+        "sourceStep": 1
+      },
+      {
+        "kind": "climb",
+        "target": "chair",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "椅子に乗る",
+        "reparent": {},
+        "sourceStep": 2
+      },
+      {
+        "kind": "collect",
+        "target": "cab",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "上段を開けてゲーム機を取る",
+        "reparent": {},
+        "sourceStep": 3
+      }
+    ],
+    "failures": [
+      {
+        "text": "おばあちゃんが座っている椅子を動かそうとする",
+        "target": "grandma",
+        "kind": "use",
+        "actor": "boy"
+      }
+    ],
+    "actorSlots": {
+      "grandma": "middle"
+    },
+    "initialPoses": {
+      "grandma": "sit"
+    }
+  },
+  {
+    "stage": 24,
+    "room": "kitchen",
+    "entities": [
+      {
+        "id": "counter",
+        "label": "カウンター",
+        "asset": "cabinet",
+        "slot": "left",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "mug",
+        "label": "マグカップ",
+        "asset": "mug",
+        "slot": "surface",
+        "room": null,
+        "parent": "counter"
+      },
+      {
+        "id": "pot",
+        "label": "コーヒーポット",
+        "asset": "pot",
+        "slot": "surface",
+        "room": null,
+        "parent": "table"
+      },
+      {
+        "id": "table",
+        "label": "テーブル",
+        "asset": "table",
+        "slot": "table",
+        "room": null,
+        "parent": null
+      }
+    ],
+    "steps": [
+      {
+        "kind": "pickup",
+        "target": "mug",
+        "gain": "mug",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "マグカップを取る",
+        "reparent": {},
+        "sourceStep": 0
+      },
+      {
+        "kind": "pour",
+        "target": "pot",
+        "gain": null,
+        "use": [
+          "mug"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {
+          "mug": "filled"
+        },
+        "text": "コーヒーを注ぐ",
+        "reparent": {},
+        "sourceStep": 1
+      },
+      {
+        "kind": "give",
+        "target": "papa",
+        "gain": null,
+        "use": [
+          "mug"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {
+          "papa": "drink"
+        },
+        "text": "パパへ渡す",
+        "reparent": {},
+        "sourceStep": 2
+      },
+      {
+        "kind": "wait",
+        "target": "papa",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {
+          "papa": "table"
+        },
+        "reveal": [],
+        "change": {},
+        "text": "パパが席へ移動",
+        "reparent": {},
+        "sourceStep": 3
+      },
+      {
+        "kind": "collect",
+        "target": "counter",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "カウンター下を開ける",
+        "reparent": {},
+        "sourceStep": 4
+      }
+    ],
+    "failures": [
+      {
+        "text": "空のマグカップを渡して怪しまれる",
+        "target": "papa",
+        "kind": "use",
+        "actor": "boy"
+      }
+    ]
+  },
+  {
+    "stage": 25,
+    "room": "kitchen",
+    "entities": [
+      {
+        "id": "counter",
+        "label": "カウンター",
+        "asset": "cabinet",
+        "slot": "left",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "remote",
+        "label": "掃除機リモコン",
+        "asset": "robotRemote",
+        "slot": "surface",
+        "room": null,
+        "parent": "counter"
+      },
+      {
+        "id": "fridge",
+        "label": "冷蔵庫",
+        "asset": "fridge",
+        "slot": "shelf",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "key",
+        "label": "鍵",
+        "asset": "key",
+        "slot": "under",
+        "room": null,
+        "parent": "fridge"
+      },
+      {
+        "id": "pantry",
+        "label": "パントリー棚",
+        "asset": "wardrobe",
+        "slot": "middle",
+        "room": null,
+        "parent": null
+      }
+    ],
+    "steps": [
+      {
+        "kind": "pickup",
+        "target": "remote",
+        "gain": "remote",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "掃除機リモコンを取る",
+        "reparent": {},
+        "sourceStep": 0
+      },
+      {
+        "kind": "use",
+        "target": "vacuum",
+        "gain": null,
+        "use": [
+          "remote"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {
+          "vacuum": "underWall"
+        },
+        "reveal": [],
+        "change": {},
+        "text": "掃除機を冷蔵庫下へ誘導",
+        "reparent": {},
+        "sourceStep": 1
+      },
+      {
+        "kind": "push",
+        "target": "key",
+        "gain": null,
+        "use": [],
+        "actor": "vacuum",
+        "room": null,
+        "move": {
+          "key": "leftFloor"
+        },
+        "reveal": [],
+        "change": {},
+        "text": "鍵を押し出す",
+        "reparent": {},
+        "sourceStep": 2
+      },
+      {
+        "kind": "pickup",
+        "target": "key",
+        "gain": "key",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "鍵を取る",
+        "reparent": {},
+        "sourceStep": 3
+      },
+      {
+        "kind": "collect",
+        "target": "pantry",
+        "gain": null,
+        "use": [
+          "key"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "パントリー棚を開ける",
+        "reparent": {},
+        "sourceStep": 4
+      }
+    ],
+    "failures": [
+      {
+        "text": "掃除機をパパの足へぶつける",
+        "target": "vacuum",
+        "kind": "use",
+        "actor": "boy"
+      }
+    ],
+    "hidden": [
+      "key"
+    ]
+  },
+  {
+    "stage": 26,
+    "room": "child",
+    "entities": [
+      {
+        "id": "books",
+        "label": "教科書4冊",
+        "asset": "books",
+        "slot": "floorLeft",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "shelf",
+        "label": "本棚",
+        "asset": "shelf",
+        "slot": "shelf",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "case",
+        "label": "教科書型ケース",
+        "asset": "parcel",
+        "slot": "inside",
+        "room": null,
+        "parent": "shelf"
+      }
+    ],
+    "steps": [
+      {
+        "kind": "pickup",
+        "target": "books",
+        "gain": "books",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "床の教科書を集める",
+        "reparent": {},
+        "sourceStep": 0
+      },
+      {
+        "kind": "order",
+        "target": "shelf",
+        "gain": null,
+        "use": [
+          "books"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {
+          "shelf": "sorted"
+        },
+        "text": "背表紙の番号順に本棚へ並べる",
+        "reparent": {},
+        "sourceStep": 1
+      },
+      {
+        "kind": "pull",
+        "target": "case",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [
+          "case"
+        ],
+        "change": {},
+        "text": "奥から教科書型ケースが出る",
+        "reparent": {},
+        "sourceStep": 2
+      },
+      {
+        "kind": "collect",
+        "target": "case",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "ケースを開ける",
+        "reparent": {},
+        "sourceStep": 3
+      }
+    ],
+    "failures": [
+      {
+        "text": "間違った順番で並べて本が崩れる",
+        "target": "shelf",
+        "kind": "use",
+        "actor": "boy"
+      }
+    ],
+    "puzzle": {
+      "step": 1,
+      "answer": "1234",
+      "clue": "背表紙 1 → 2 → 3 → 4"
+    },
+    "initialClues": {
+      "books": "1　2　3　4"
+    }
+  },
+  {
+    "stage": 27,
+    "room": "child",
+    "entities": [
+      {
+        "id": "desk",
+        "label": "机",
+        "asset": "desk",
+        "slot": "left",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "sticker",
+        "label": "シール",
+        "asset": "stickers",
+        "slot": "inside",
+        "room": null,
+        "parent": "desk"
+      },
+      {
+        "id": "closet",
+        "label": "クローゼット",
+        "asset": "wardrobe",
+        "slot": "shelf",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "box",
+        "label": "奥の箱",
+        "asset": "parcel",
+        "slot": "inside",
+        "room": null,
+        "parent": "closet"
+      }
+    ],
+    "steps": [
+      {
+        "kind": "pickup",
+        "target": "sticker",
+        "gain": "sticker",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "机の引き出しからシールを取る",
+        "reparent": {},
+        "sourceStep": 0
+      },
+      {
+        "kind": "open",
+        "target": "closet",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [
+          "sister"
+        ],
+        "change": {},
+        "text": "クローゼットを開ける",
+        "reparent": {},
+        "sourceStep": 1
+      },
+      {
+        "kind": "give",
+        "target": "sister",
+        "gain": null,
+        "use": [
+          "sticker"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "妹にシールを渡す",
+        "reparent": {},
+        "sourceStep": 2
+      },
+      {
+        "kind": "wait",
+        "target": "sister",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {
+          "sister": "door"
+        },
+        "reveal": [],
+        "change": {},
+        "text": "妹が出ていく",
+        "reparent": {},
+        "sourceStep": 3
+      },
+      {
+        "kind": "collect",
+        "target": "box",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "奥の箱からゲーム機を取る",
+        "reparent": {},
+        "sourceStep": 4
+      }
+    ],
+    "failures": [
+      {
+        "text": "妹を無理にどかして大声を出される",
+        "target": "sister",
+        "kind": "use",
+        "actor": "boy"
+      }
+    ],
+    "hiddenActors": [
+      "sister"
+    ]
+  },
+  {
+    "stage": 28,
+    "room": "child",
+    "entities": [
+      {
+        "id": "desk",
+        "label": "机",
+        "asset": "desk",
+        "slot": "left",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "torch",
+        "label": "懐中電灯",
+        "asset": "torch",
+        "slot": "surface",
+        "room": null,
+        "parent": "desk"
+      },
+      {
+        "id": "bed",
+        "label": "ベッド",
+        "asset": "bed",
+        "slot": "sofa",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "box",
+        "label": "ベッド下の箱",
+        "asset": "parcel",
+        "slot": "under",
+        "room": null,
+        "parent": "bed"
+      }
+    ],
+    "steps": [
+      {
+        "kind": "pickup",
+        "target": "torch",
+        "gain": "torch",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "机から懐中電灯を取る",
+        "reparent": {},
+        "sourceStep": 0
+      },
+      {
+        "kind": "light",
+        "target": "bed",
+        "gain": null,
+        "use": [
+          "torch"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {
+          "bed": "lit"
+        },
+        "text": "ベッド下を照らす",
+        "reparent": {},
+        "sourceStep": 1
+      },
+      {
+        "kind": "light",
+        "target": "cat",
+        "gain": null,
+        "use": [
+          "torch"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "猫を見つけて驚かせないよう横から照らす",
+        "reparent": {},
+        "sourceStep": 2
+      },
+      {
+        "kind": "pull",
+        "target": "box",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {
+          "box": "middle"
+        },
+        "reveal": [],
+        "change": {},
+        "text": "箱を引き出す",
+        "reparent": {},
+        "sourceStep": 3
+      },
+      {
+        "kind": "collect",
+        "target": "box",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "ゲーム機を取得",
+        "reparent": {},
+        "sourceStep": 4
+      }
+    ],
+    "failures": [
+      {
+        "text": "正面から強く照らして猫が飛び出し騒ぎになる",
+        "target": "cat",
+        "kind": "use",
+        "actor": "boy"
+      }
+    ],
+    "hidden": [
+      "box"
+    ]
+  },
+  {
+    "stage": 29,
+    "room": "child",
+    "entities": [
+      {
+        "id": "calendar",
+        "label": "カレンダー",
+        "asset": "calendar",
+        "slot": "wall",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "desk",
+        "label": "ダイヤル付き机",
+        "asset": "desk",
+        "slot": "left",
+        "room": null,
+        "parent": null
+      }
+    ],
+    "steps": [
+      {
+        "kind": "inspect",
+        "target": "calendar",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "壁のカレンダーを調べる",
+        "reparent": {},
+        "sourceStep": 0
+      },
+      {
+        "kind": "read",
+        "target": "calendar",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "星シールの日付を読む",
+        "reparent": {},
+        "sourceStep": 1
+      },
+      {
+        "kind": "code",
+        "target": "desk",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "机のダイヤルへ入力",
+        "reparent": {},
+        "sourceStep": 2
+      },
+      {
+        "kind": "collect",
+        "target": "desk",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "引き出しを開ける",
+        "reparent": {},
+        "sourceStep": 3
+      }
+    ],
+    "failures": [
+      {
+        "text": "別のシール日付を入力してアラームを鳴らす",
+        "target": "desk",
+        "kind": "use",
+        "actor": "boy"
+      }
+    ],
+    "puzzle": {
+      "step": 2,
+      "answer": "0714",
+      "clue": "星の日付 07・14"
+    }
+  },
+  {
+    "stage": 30,
+    "room": "child",
+    "entities": [
+      {
+        "id": "bed",
+        "label": "ベッド",
+        "asset": "bed",
+        "slot": "sofa",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "blanket",
+        "label": "毛布",
+        "asset": "blanket",
+        "slot": "surface",
+        "room": null,
+        "parent": "bed"
+      },
+      {
+        "id": "desk",
+        "label": "机",
+        "asset": "desk",
+        "slot": "left",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "pins",
+        "label": "洗濯ばさみ2個",
+        "asset": "pins",
+        "slot": "surface",
+        "room": null,
+        "parent": "desk"
+      },
+      {
+        "id": "chair",
+        "label": "椅子",
+        "asset": "chair",
+        "slot": "middle",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "fort",
+        "label": "秘密基地",
+        "asset": "fort",
+        "slot": "table",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "panel",
+        "label": "隠しパネル",
+        "asset": "panel",
+        "slot": "under",
+        "room": null,
+        "parent": "desk"
+      }
+    ],
+    "steps": [
+      {
+        "kind": "pickup",
+        "target": "blanket",
+        "gain": "blanket",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "毛布を取る",
+        "reparent": {},
+        "sourceStep": 0
+      },
+      {
+        "kind": "pickup",
+        "target": "pins",
+        "gain": "pins",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "洗濯ばさみを2個集める",
+        "reparent": {},
+        "sourceStep": 1
+      },
+      {
+        "kind": "push",
+        "target": "chair",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {
+          "chair": "underWall"
+        },
+        "reveal": [],
+        "change": {},
+        "text": "椅子を机横へ動かす",
+        "reparent": {},
+        "sourceStep": 2
+      },
+      {
+        "kind": "assemble",
+        "target": "desk",
+        "gain": null,
+        "use": [
+          "blanket",
+          "pins"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {
+          "fort": "underWall"
+        },
+        "reveal": [
+          "fort",
+          "panel"
+        ],
+        "change": {},
+        "text": "毛布を固定して秘密基地を作る",
+        "reparent": {
+          "panel": "fort"
+        },
+        "sourceStep": 3
+      },
+      {
+        "kind": "use",
+        "target": "panel",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {
+          "panel": "on"
+        },
+        "text": "内側のマークを押す",
+        "reparent": {},
+        "sourceStep": 4
+      },
+      {
+        "kind": "collect",
+        "target": "panel",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "ゲーム機を取得",
+        "reparent": {},
+        "sourceStep": 5
+      }
+    ],
+    "failures": [
+      {
+        "text": "クリップ不足で毛布が落ち猫を驚かせる",
+        "target": "blanket",
+        "kind": "use",
+        "actor": "boy"
+      }
+    ],
+    "hidden": [
+      "fort",
+      "panel"
+    ]
+  },
+  {
+    "stage": 31,
+    "room": "entrance",
+    "entities": [
+      {
+        "id": "mail",
+        "label": "郵便受け",
+        "asset": "cabinet",
+        "slot": "left",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "notice",
+        "label": "不在票",
+        "asset": "envelope",
+        "slot": "surface",
+        "room": null,
+        "parent": "mail"
+      },
+      {
+        "id": "shelf",
+        "label": "本棚",
+        "asset": "shelf",
+        "slot": "shelf",
+        "room": "living",
+        "parent": null
+      }
+    ],
+    "steps": [
+      {
+        "kind": "read",
+        "target": "notice",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "玄関で不在票を確認",
+        "reparent": {},
+        "sourceStep": 0
+      },
+      {
+        "kind": "read",
+        "target": "notice",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "再配達時間を把握",
+        "reparent": {},
+        "sourceStep": 1
+      },
+      {
+        "kind": "travel",
+        "target": "door",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": "living",
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "リビングへ戻る",
+        "reparent": {},
+        "sourceStep": 2
+      },
+      {
+        "kind": "wait",
+        "target": "papa",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {
+          "papa": "door"
+        },
+        "reveal": [],
+        "change": {},
+        "text": "チャイムでパパが玄関へ行くのを待つ",
+        "reparent": {},
+        "sourceStep": 3
+      },
+      {
+        "kind": "push",
+        "target": "shelf",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {
+          "shelf": "middle"
+        },
+        "reveal": [],
+        "change": {},
+        "text": "本棚をずらす",
+        "reparent": {},
+        "sourceStep": 4
+      },
+      {
+        "kind": "collect",
+        "target": "shelf",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "ゲーム機を取得",
+        "reparent": {},
+        "sourceStep": 5
+      }
+    ],
+    "failures": [
+      {
+        "text": "早く本棚を動かしてパパに見つかる",
+        "target": "shelf",
+        "kind": "use",
+        "actor": "boy"
+      }
+    ],
+    "actorRooms": {
+      "papa": "living",
+      "postman": "entrance"
+    }
+  },
+  {
+    "stage": 32,
+    "room": "kitchen",
+    "entities": [
+      {
+        "id": "fridge",
+        "label": "冷凍庫",
+        "asset": "fridge",
+        "slot": "left",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "ice",
+        "label": "氷の鍵",
+        "asset": "ice",
+        "slot": "inside",
+        "room": null,
+        "parent": "fridge"
+      },
+      {
+        "id": "plate",
+        "label": "日なたの皿",
+        "asset": "plate",
+        "slot": "middle",
+        "room": "garden",
+        "parent": null
+      },
+      {
+        "id": "key",
+        "label": "鍵",
+        "asset": "key",
+        "slot": "inside",
+        "room": null,
+        "parent": "ice"
+      },
+      {
+        "id": "shed",
+        "label": "庭物置",
+        "asset": "shed",
+        "slot": "shelf",
+        "room": "garden",
+        "parent": null
+      }
+    ],
+    "steps": [
+      {
+        "kind": "pickup",
+        "target": "ice",
+        "gain": "ice",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "冷凍庫から氷の塊を入手",
+        "reparent": {},
+        "sourceStep": 0
+      },
+      {
+        "kind": "travel",
+        "target": "door",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": "garden",
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "庭の日なたへ移動",
+        "reparent": {},
+        "sourceStep": 1
+      },
+      {
+        "kind": "place",
+        "target": "plate",
+        "gain": null,
+        "use": [
+          "ice"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {
+          "ice": "melted"
+        },
+        "text": "皿に置いて溶かす",
+        "reparent": {},
+        "sourceStep": 2
+      },
+      {
+        "kind": "pickup",
+        "target": "key",
+        "gain": "key",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {
+          "ice": "empty"
+        },
+        "text": "鍵を取る",
+        "reparent": {},
+        "sourceStep": 3
+      },
+      {
+        "kind": "collect",
+        "target": "shed",
+        "gain": null,
+        "use": [
+          "key"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "物置を開ける",
+        "reparent": {},
+        "sourceStep": 4
+      }
+    ],
+    "failures": [
+      {
+        "text": "電子レンジで加熱しようとしてパパに止められる",
+        "target": "ice",
+        "kind": "use",
+        "actor": "boy"
+      }
+    ]
+  },
+  {
+    "stage": 33,
+    "room": "laundry",
+    "entities": [
+      {
+        "id": "washer",
+        "label": "洗濯機",
+        "asset": "washer",
+        "slot": "left",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "laundry",
+        "label": "洗濯物",
+        "asset": "laundry",
+        "slot": "inside",
+        "room": null,
+        "parent": "washer"
+      },
+      {
+        "id": "note",
+        "label": "メモ",
+        "asset": "note",
+        "slot": "inside",
+        "room": null,
+        "parent": "laundry"
+      },
+      {
+        "id": "basket",
+        "label": "脱衣かご",
+        "asset": "basket",
+        "slot": "middle",
+        "room": null,
+        "parent": null
+      }
+    ],
+    "steps": [
+      {
+        "kind": "open",
+        "target": "washer",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "洗濯機を開ける",
+        "reparent": {},
+        "sourceStep": 0
+      },
+      {
+        "kind": "inspect",
+        "target": "washer",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "ゲーム機がないことを確認",
+        "reparent": {},
+        "sourceStep": 1
+      },
+      {
+        "kind": "inspect",
+        "target": "laundry",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [
+          "note"
+        ],
+        "change": {},
+        "text": "洗濯物のポケットを調べる",
+        "reparent": {},
+        "sourceStep": 2
+      },
+      {
+        "kind": "read",
+        "target": "note",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "メモを読む",
+        "reparent": {},
+        "sourceStep": 3
+      },
+      {
+        "kind": "collect",
+        "target": "basket",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "脱衣かご裏ポケットからゲーム機を取る",
+        "reparent": {},
+        "sourceStep": 4
+      }
+    ],
+    "failures": [
+      {
+        "text": "洗濯機を動作中に開けようとする",
+        "target": "washer",
+        "kind": "use",
+        "actor": "boy"
+      }
+    ]
+  },
+  {
+    "stage": 34,
+    "room": "child",
+    "entities": [
+      {
+        "id": "window",
+        "label": "窓辺",
+        "asset": "window",
+        "slot": "wall",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "plane",
+        "label": "紙ひこうき",
+        "asset": "plane",
+        "slot": "surface",
+        "room": null,
+        "parent": "window"
+      },
+      {
+        "id": "net",
+        "label": "虫取り網",
+        "asset": "net",
+        "slot": "floorLeft",
+        "room": "garden",
+        "parent": null
+      },
+      {
+        "id": "tree",
+        "label": "庭の木",
+        "asset": "tree",
+        "slot": "shelf",
+        "room": "garden",
+        "parent": null
+      },
+      {
+        "id": "shelf",
+        "label": "本棚",
+        "asset": "shelf",
+        "slot": "shelf",
+        "room": null,
+        "parent": null
+      }
+    ],
+    "steps": [
+      {
+        "kind": "inspect",
+        "target": "plane",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "窓辺の紙ひこうきを触る",
+        "reparent": {},
+        "sourceStep": 0
+      },
+      {
+        "kind": "event",
+        "target": "plane",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": "garden",
+        "move": {
+          "plane": "tree"
+        },
+        "reveal": [],
+        "change": {},
+        "text": "風で庭へ飛ぶ",
+        "reparent": {},
+        "sourceStep": 1
+      },
+      {
+        "kind": "pickup",
+        "target": "net",
+        "gain": "net",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "庭で虫取り網を取る",
+        "reparent": {},
+        "sourceStep": 2
+      },
+      {
+        "kind": "pickup",
+        "target": "plane",
+        "gain": "plane",
+        "use": [
+          "net"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "木に引っかかった紙ひこうきを回収",
+        "reparent": {},
+        "sourceStep": 3
+      },
+      {
+        "kind": "travel",
+        "target": "door",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": "child",
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "紙ひこうきを持って子ども部屋へ戻る",
+        "reparent": {}
+      },
+      {
+        "kind": "collect",
+        "target": "shelf",
+        "gain": null,
+        "use": [
+          "plane"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "矢印ヒントを読んで本棚裏を探す",
+        "reparent": {},
+        "sourceStep": 4
+      }
+    ],
+    "failures": [
+      {
+        "text": "木に登ろうとしてパパに止められる",
+        "target": "tree",
+        "kind": "use",
+        "actor": "boy"
+      }
+    ],
+    "actorRooms": {
+      "neighbor": "garden"
+    }
+  },
+  {
+    "stage": 35,
+    "room": "living",
+    "entities": [
+      {
+        "id": "torch",
+        "label": "懐中電灯",
+        "asset": "torch",
+        "slot": "floorLeft",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "breaker",
+        "label": "ブレーカー",
+        "asset": "breaker",
+        "slot": "wall",
+        "room": "entrance",
+        "parent": null
+      },
+      {
+        "id": "shelf",
+        "label": "低棚",
+        "asset": "cabinet",
+        "slot": "left",
+        "room": null,
+        "parent": null
+      }
+    ],
+    "steps": [
+      {
+        "kind": "pickup",
+        "target": "torch",
+        "gain": "torch",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "懐中電灯を取る",
+        "reparent": {},
+        "sourceStep": 0
+      },
+      {
+        "kind": "travel",
+        "target": "door",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": "entrance",
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "玄関へ移動",
+        "reparent": {},
+        "sourceStep": 1
+      },
+      {
+        "kind": "use",
+        "target": "breaker",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {
+          "world": "lit",
+          "shelf": "shadow"
+        },
+        "text": "ブレーカーを戻す",
+        "reparent": {},
+        "sourceStep": 2
+      },
+      {
+        "kind": "travel",
+        "target": "door",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": "living",
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "リビングへ戻る",
+        "reparent": {},
+        "sourceStep": 3
+      },
+      {
+        "kind": "light",
+        "target": "shelf",
+        "gain": null,
+        "use": [
+          "torch"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "照明でできた不自然な影を調べる",
+        "reparent": {},
+        "sourceStep": 4
+      },
+      {
+        "kind": "collect",
+        "target": "shelf",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "棚裏からゲーム機を取る",
+        "reparent": {},
+        "sourceStep": 5
+      }
+    ],
+    "failures": [
+      {
+        "text": "暗闇で家具にぶつかりパパに気づかれる",
+        "target": "shelf",
+        "kind": "use",
+        "actor": "boy"
+      }
+    ],
+    "dark": true
+  },
+  {
+    "stage": 36,
+    "room": "living",
+    "entities": [
+      {
+        "id": "sofa",
+        "label": "ソファ",
+        "asset": "sofa",
+        "slot": "sofa",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "window",
+        "label": "窓",
+        "asset": "window",
+        "slot": "wall",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "tv",
+        "label": "TV台・フック",
+        "asset": "tv",
+        "slot": "left",
+        "room": null,
+        "parent": null
+      }
+    ],
+    "steps": [
+      {
+        "kind": "inspect",
+        "target": "papa",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {
+          "papa": "table"
+        },
+        "reveal": [],
+        "change": {},
+        "text": "パパの巡回パターンを観察",
+        "reparent": {},
+        "sourceStep": 0
+      },
+      {
+        "kind": "walk",
+        "target": "sofa",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "ソファ背後へ移動",
+        "reparent": {},
+        "sourceStep": 1
+      },
+      {
+        "kind": "walk",
+        "target": "tv",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {
+          "papa": "underWall"
+        },
+        "reveal": [],
+        "change": {},
+        "text": "パパが窓側を見る間にTV台へ",
+        "reparent": {},
+        "sourceStep": 2
+      },
+      {
+        "kind": "open",
+        "target": "tv",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "裏のフックを外す",
+        "reparent": {},
+        "sourceStep": 3
+      },
+      {
+        "kind": "collect",
+        "target": "tv",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "ゲーム機を取る",
+        "reparent": {},
+        "sourceStep": 4
+      }
+    ],
+    "failures": [
+      {
+        "text": "パパの視線コーン内で移動する",
+        "target": "papa",
+        "kind": "use",
+        "actor": "boy"
+      }
+    ]
+  },
+  {
+    "stage": 37,
+    "room": "garden",
+    "entities": [
+      {
+        "id": "chime",
+        "label": "風鈴",
+        "asset": "chime",
+        "slot": "wall",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "string",
+        "label": "風鈴のひも",
+        "asset": "rope",
+        "slot": "under",
+        "room": null,
+        "parent": "chime"
+      },
+      {
+        "id": "bench",
+        "label": "ベンチ",
+        "asset": "bench",
+        "slot": "middle",
+        "room": null,
+        "parent": null
+      }
+    ],
+    "steps": [
+      {
+        "kind": "inspect",
+        "target": "string",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "風鈴のひもを見つける",
+        "reparent": {},
+        "sourceStep": 0
+      },
+      {
+        "kind": "use",
+        "target": "chime",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "風鈴を鳴らす",
+        "reparent": {},
+        "sourceStep": 1
+      },
+      {
+        "kind": "wait",
+        "target": "grandpa",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {
+          "grandpa": "leftFloor"
+        },
+        "reveal": [],
+        "change": {},
+        "text": "おじいちゃんが起きて日陰へ移動",
+        "reparent": {},
+        "sourceStep": 2
+      },
+      {
+        "kind": "open",
+        "target": "bench",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "ベンチ収納を開ける",
+        "reparent": {},
+        "sourceStep": 3
+      },
+      {
+        "kind": "collect",
+        "target": "bench",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "ゲーム機を取得",
+        "reparent": {},
+        "sourceStep": 4
+      }
+    ],
+    "failures": [
+      {
+        "text": "おじいちゃんを直接起こして大声を出される",
+        "target": "grandpa",
+        "kind": "use",
+        "actor": "boy"
+      }
+    ],
+    "actorSlots": {
+      "grandpa": "middle"
+    },
+    "initialPoses": {
+      "grandpa": "sleep"
+    }
+  },
+  {
+    "stage": 38,
+    "room": "entrance",
+    "entities": [
+      {
+        "id": "bench",
+        "label": "玄関ベンチ",
+        "asset": "bench",
+        "slot": "middle",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "cloth",
+        "label": "ハンカチ",
+        "asset": "cloth",
+        "slot": "surface",
+        "room": null,
+        "parent": "bench"
+      },
+      {
+        "id": "key",
+        "label": "妹の鍵",
+        "asset": "key",
+        "slot": "npcHands",
+        "room": null,
+        "parent": null,
+        "holder": "sister"
+      },
+      {
+        "id": "cab",
+        "label": "玄関上部収納",
+        "asset": "cabinet",
+        "slot": "left",
+        "room": null,
+        "parent": null,
+        "compartment": "top"
+      }
+    ],
+    "steps": [
+      {
+        "kind": "talk",
+        "target": "sister",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "妹の困りごとを聞く",
+        "reparent": {},
+        "sourceStep": 0
+      },
+      {
+        "kind": "pickup",
+        "target": "cloth",
+        "gain": "cloth",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "玄関ベンチのハンカチを取る",
+        "reparent": {},
+        "sourceStep": 1
+      },
+      {
+        "kind": "give",
+        "target": "sister",
+        "gain": null,
+        "use": [
+          "cloth"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "妹へ渡す",
+        "reparent": {},
+        "sourceStep": 2
+      },
+      {
+        "kind": "receive",
+        "target": "sister",
+        "gain": "key",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "妹から鍵を受け取る",
+        "reparent": {},
+        "sourceStep": 3
+      },
+      {
+        "kind": "collect",
+        "target": "cab",
+        "gain": null,
+        "use": [
+          "key"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "上部収納を開ける",
+        "reparent": {},
+        "sourceStep": 4
+      }
+    ],
+    "failures": [
+      {
+        "text": "鍵を直接取ろうとして妹に怒られる",
+        "target": "sister",
+        "kind": "use",
+        "actor": "boy"
+      }
+    ]
+  },
+  {
+    "stage": 39,
+    "room": "kitchen",
+    "entities": [
+      {
+        "id": "pantry",
+        "label": "パントリー",
+        "asset": "wardrobe",
+        "slot": "shelf",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "spice",
+        "label": "赤いスパイス瓶",
+        "asset": "spice",
+        "slot": "inside",
+        "room": null,
+        "parent": "pantry"
+      },
+      {
+        "id": "pot",
+        "label": "カレー鍋",
+        "asset": "curryPot",
+        "slot": "surface",
+        "room": null,
+        "parent": "counter"
+      },
+      {
+        "id": "counter",
+        "label": "キッチン引き出し",
+        "asset": "cabinet",
+        "slot": "left",
+        "room": null,
+        "parent": null
+      }
+    ],
+    "steps": [
+      {
+        "kind": "talk",
+        "target": "grandma",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "おばあちゃんの話を聞く",
+        "reparent": {},
+        "sourceStep": 0
+      },
+      {
+        "kind": "pickup",
+        "target": "spice",
+        "gain": "spice",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "パントリーから正しいスパイスを探す",
+        "reparent": {},
+        "sourceStep": 1
+      },
+      {
+        "kind": "give",
+        "target": "grandma",
+        "gain": null,
+        "use": [
+          "spice"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "渡す",
+        "reparent": {},
+        "sourceStep": 2
+      },
+      {
+        "kind": "wait",
+        "target": "grandma",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {
+          "grandma": "underWall"
+        },
+        "reveal": [],
+        "change": {
+          "grandma": "cook"
+        },
+        "text": "おばあちゃんが鍋へ移動",
+        "reparent": {},
+        "sourceStep": 3
+      },
+      {
+        "kind": "collect",
+        "target": "counter",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "引き出しを開ける",
+        "reparent": {},
+        "sourceStep": 4
+      }
+    ],
+    "failures": [
+      {
+        "text": "間違ったスパイスを渡してくしゃみ騒ぎ",
+        "target": "grandma",
+        "kind": "use",
+        "actor": "boy"
+      }
+    ]
+  },
+  {
+    "stage": 40,
+    "room": "bath",
+    "entities": [
+      {
+        "id": "box",
+        "label": "工具箱",
+        "asset": "parcel",
+        "slot": "middle",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "wrench",
+        "label": "レンチ",
+        "asset": "wrench",
+        "slot": "inside",
+        "room": null,
+        "parent": "box"
+      },
+      {
+        "id": "panel",
+        "label": "配管点検口",
+        "asset": "panel",
+        "slot": "left",
+        "room": null,
+        "parent": null
+      }
+    ],
+    "steps": [
+      {
+        "kind": "pickup",
+        "target": "wrench",
+        "gain": "wrench",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "工具箱からレンチを見つける",
+        "reparent": {},
+        "sourceStep": 0
+      },
+      {
+        "kind": "give",
+        "target": "repair",
+        "gain": null,
+        "use": [
+          "wrench"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "修理屋さんへ渡す",
+        "reparent": {},
+        "sourceStep": 1
+      },
+      {
+        "kind": "open",
+        "target": "panel",
+        "gain": null,
+        "use": [],
+        "actor": "repair",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "修理屋さんが点検口を開ける",
+        "reparent": {},
+        "sourceStep": 2
+      },
+      {
+        "kind": "inspect",
+        "target": "panel",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "作業中に奥を調べる",
+        "reparent": {},
+        "sourceStep": 3
+      },
+      {
+        "kind": "collect",
+        "target": "panel",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "ゲーム機を取得",
+        "reparent": {},
+        "sourceStep": 4
+      }
+    ],
+    "failures": [
+      {
+        "text": "勝手に工具を使いパパに止められる",
+        "target": "repair",
+        "kind": "use",
+        "actor": "boy"
+      }
+    ]
+  },
+  {
+    "stage": 41,
+    "room": "living",
+    "entities": [
+      {
+        "id": "clock",
+        "label": "時計",
+        "asset": "clock",
+        "slot": "wall",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "tv",
+        "label": "TV",
+        "asset": "tv",
+        "slot": "left",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "boxes",
+        "label": "3つの箱",
+        "asset": "boxes",
+        "slot": "middle",
+        "room": null,
+        "parent": null
+      }
+    ],
+    "steps": [
+      {
+        "kind": "read",
+        "target": "clock",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "時計の針を見る",
+        "reparent": {},
+        "sourceStep": 0
+      },
+      {
+        "kind": "inspect",
+        "target": "cat",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "猫が見ている方向を確認",
+        "reparent": {},
+        "sourceStep": 1
+      },
+      {
+        "kind": "read",
+        "target": "tv",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {
+          "tv": "on"
+        },
+        "text": "TV画面の色ヒントを見る",
+        "reparent": {},
+        "sourceStep": 2
+      },
+      {
+        "kind": "collect",
+        "target": "boxes",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "3条件に一致する箱を開ける",
+        "reparent": {},
+        "sourceStep": 3
+      }
+    ],
+    "failures": [
+      {
+        "text": "間違った箱を開けてクラッカーが鳴りパパに見つかる",
+        "target": "boxes",
+        "kind": "use",
+        "actor": "boy"
+      }
+    ],
+    "puzzle": {
+      "step": 3,
+      "answer": "青",
+      "options": [
+        "赤",
+        "青",
+        "緑"
+      ],
+      "clue": "時計は3時・猫は右・TVは青"
+    }
+  },
+  {
+    "stage": 42,
+    "room": "garden",
+    "entities": [
+      {
+        "id": "treat",
+        "label": "犬のおやつ",
+        "asset": "dogTreat",
+        "slot": "floorLeft",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "torch",
+        "label": "懐中電灯",
+        "asset": "torch",
+        "slot": "middle",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "light",
+        "label": "センサーライト",
+        "asset": "sensor",
+        "slot": "wall",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "case",
+        "label": "収納ケース",
+        "asset": "parcel",
+        "slot": "left",
+        "room": null,
+        "parent": null
+      }
+    ],
+    "steps": [
+      {
+        "kind": "pickup",
+        "target": "treat",
+        "gain": "treat",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "犬のおやつを取る",
+        "reparent": {},
+        "sourceStep": 0
+      },
+      {
+        "kind": "give",
+        "target": "dog",
+        "gain": null,
+        "use": [
+          "treat"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "犬におやつを渡す",
+        "reparent": {},
+        "sourceStep": 1
+      },
+      {
+        "kind": "wait",
+        "target": "dog",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {
+          "dog": "eat"
+        },
+        "text": "犬が落ち着く",
+        "reparent": {},
+        "sourceStep": 2
+      },
+      {
+        "kind": "pickup",
+        "target": "torch",
+        "gain": "torch",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "ベンチの懐中電灯を取る",
+        "reparent": {}
+      },
+      {
+        "kind": "light",
+        "target": "light",
+        "gain": null,
+        "use": [
+          "torch"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "センサーライトの死角を懐中電灯で確認",
+        "reparent": {},
+        "sourceStep": 3
+      },
+      {
+        "kind": "collect",
+        "target": "case",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "収納ケースを開ける",
+        "reparent": {},
+        "sourceStep": 4
+      }
+    ],
+    "failures": [
+      {
+        "text": "犬の前を走って吠えられる",
+        "target": "dog",
+        "kind": "use",
+        "actor": "boy"
+      },
+      {
+        "text": "センサーライト真正面に入る",
+        "target": "dog",
+        "kind": "use",
+        "actor": "boy"
+      }
+    ],
+    "dark": true
+  },
+  {
+    "stage": 43,
+    "room": "kitchen",
+    "entities": [
+      {
+        "id": "fridge",
+        "label": "冷蔵庫",
+        "asset": "fridge",
+        "slot": "left",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "magnets",
+        "label": "マグネット4個",
+        "asset": "magnets",
+        "slot": "under",
+        "room": null,
+        "parent": "fridge"
+      },
+      {
+        "id": "bread",
+        "label": "パンケース",
+        "asset": "breadbox",
+        "slot": "middle",
+        "room": null,
+        "parent": null
+      }
+    ],
+    "steps": [
+      {
+        "kind": "pickup",
+        "target": "magnets",
+        "gain": "magnets",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "床と冷蔵庫からマグネットを集める",
+        "reparent": {},
+        "sourceStep": 0
+      },
+      {
+        "kind": "order",
+        "target": "fridge",
+        "gain": null,
+        "use": [
+          "magnets"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {
+          "fridge": "sorted"
+        },
+        "text": "色順に並べる",
+        "reparent": {},
+        "sourceStep": 1
+      },
+      {
+        "kind": "read",
+        "target": "fridge",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "矢印がパンケースを指す",
+        "reparent": {},
+        "sourceStep": 2
+      },
+      {
+        "kind": "collect",
+        "target": "bread",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "パンケースの底を外す",
+        "reparent": {},
+        "sourceStep": 3
+      }
+    ],
+    "failures": [
+      {
+        "text": "誤順で並べると電子音が鳴る",
+        "target": "fridge",
+        "kind": "use",
+        "actor": "boy"
+      }
+    ],
+    "puzzle": {
+      "step": 1,
+      "answer": "赤青緑黄",
+      "clue": "磁石の矢印 赤→青→緑→黄"
+    }
+  },
+  {
+    "stage": 44,
+    "room": "entrance",
+    "entities": [
+      {
+        "id": "boxes",
+        "label": "宅配箱3箱",
+        "asset": "boxes",
+        "slot": "middle",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "label",
+        "label": "伝票",
+        "asset": "envelope",
+        "slot": "surface",
+        "room": null,
+        "parent": "boxes"
+      },
+      {
+        "id": "scale",
+        "label": "体重計",
+        "asset": "scale",
+        "slot": "floorLeft",
+        "room": null,
+        "parent": null
+      }
+    ],
+    "steps": [
+      {
+        "kind": "read",
+        "target": "label",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "3箱の伝票を見る",
+        "reparent": {},
+        "sourceStep": 0
+      },
+      {
+        "kind": "push",
+        "target": "scale",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {
+          "scale": "underWall"
+        },
+        "reveal": [],
+        "change": {},
+        "text": "体重計を玄関へ移動",
+        "reparent": {},
+        "sourceStep": 1
+      },
+      {
+        "kind": "weigh",
+        "target": "boxes",
+        "gain": null,
+        "use": [
+          "scale"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "箱を順に量る",
+        "reparent": {},
+        "sourceStep": 2
+      },
+      {
+        "kind": "read",
+        "target": "boxes",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "伝票重量と一致する箱を特定",
+        "reparent": {},
+        "sourceStep": 3
+      },
+      {
+        "kind": "collect",
+        "target": "boxes",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "開けてゲーム機を取得",
+        "reparent": {},
+        "sourceStep": 4
+      }
+    ],
+    "failures": [
+      {
+        "text": "違う箱を開けて中の鈴を鳴らす",
+        "target": "boxes",
+        "kind": "use",
+        "actor": "boy"
+      }
+    ],
+    "puzzle": {
+      "step": 4,
+      "answer": "青",
+      "options": [
+        "赤",
+        "青",
+        "緑"
+      ],
+      "clue": "伝票 2kg / 赤1kg・青2kg・緑3kg"
+    }
+  },
+  {
+    "stage": 45,
+    "room": "child",
+    "entities": [
+      {
+        "id": "desk",
+        "label": "机",
+        "asset": "desk",
+        "slot": "left",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "papers",
+        "label": "紙片3枚",
+        "asset": "papers",
+        "slot": "surface",
+        "room": null,
+        "parent": "desk"
+      },
+      {
+        "id": "lamp",
+        "label": "デスクライト",
+        "asset": "lamp",
+        "slot": "surface",
+        "room": null,
+        "parent": "desk"
+      },
+      {
+        "id": "wall",
+        "label": "壁の影",
+        "asset": "panel",
+        "slot": "wall",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "closet",
+        "label": "クローゼットの箱",
+        "asset": "wardrobe",
+        "slot": "shelf",
+        "room": null,
+        "parent": null
+      }
+    ],
+    "steps": [
+      {
+        "kind": "pickup",
+        "target": "papers",
+        "gain": "papers",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "紙片を3つ集める",
+        "reparent": {},
+        "sourceStep": 0
+      },
+      {
+        "kind": "place",
+        "target": "lamp",
+        "gain": null,
+        "use": [
+          "papers"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "ライト前のクリップへ重ねる",
+        "reparent": {},
+        "sourceStep": 1
+      },
+      {
+        "kind": "use",
+        "target": "lamp",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {
+          "wall": "code"
+        },
+        "text": "ライトをON",
+        "reparent": {},
+        "sourceStep": 2
+      },
+      {
+        "kind": "read",
+        "target": "wall",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "壁に映る数字を読む",
+        "reparent": {},
+        "sourceStep": 3
+      },
+      {
+        "kind": "code",
+        "target": "closet",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "クローゼット箱へ入力",
+        "reparent": {},
+        "sourceStep": 4
+      }
+    ],
+    "failures": [
+      {
+        "text": "紙片を間違った順で重ねる",
+        "target": "lamp",
+        "kind": "use",
+        "actor": "boy"
+      }
+    ],
+    "puzzle": {
+      "step": 4,
+      "answer": "315",
+      "clue": "影の数字 315"
+    }
+  },
+  {
+    "stage": 46,
+    "room": "entrance",
+    "entities": [
+      {
+        "id": "bag",
+        "label": "買い物袋",
+        "asset": "grocery",
+        "slot": "npcHands",
+        "room": null,
+        "parent": null,
+        "holder": "mama"
+      },
+      {
+        "id": "counter",
+        "label": "キッチンカウンター",
+        "asset": "cabinet",
+        "slot": "left",
+        "room": "kitchen",
+        "parent": null
+      },
+      {
+        "id": "receipt",
+        "label": "レシート",
+        "asset": "receipt",
+        "slot": "floorLeft",
+        "room": "kitchen",
+        "parent": null
+      },
+      {
+        "id": "cab",
+        "label": "リビング上段収納",
+        "asset": "cabinet",
+        "slot": "left",
+        "room": "living",
+        "parent": null,
+        "compartment": "top"
+      }
+    ],
+    "steps": [
+      {
+        "kind": "receive",
+        "target": "mama",
+        "gain": "bag",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "玄関でママを迎える",
+        "reparent": {},
+        "sourceStep": 0
+      },
+      {
+        "kind": "carry",
+        "target": "counter",
+        "gain": null,
+        "use": [
+          "bag"
+        ],
+        "actor": "boy",
+        "room": "kitchen",
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "買い物袋をキッチンへ運ぶ",
+        "reparent": {},
+        "sourceStep": 1
+      },
+      {
+        "kind": "pickup",
+        "target": "receipt",
+        "gain": "receipt",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "袋から落ちたレシートを拾う",
+        "reparent": {},
+        "sourceStep": 2
+      },
+      {
+        "kind": "read",
+        "target": "receipt",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "レシート裏のメモを読む",
+        "reparent": {},
+        "sourceStep": 3
+      },
+      {
+        "kind": "travel",
+        "target": "door",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": "living",
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "リビングへ戻る",
+        "reparent": {}
+      },
+      {
+        "kind": "collect",
+        "target": "cab",
+        "gain": null,
+        "use": [
+          "receipt"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "リビング上段収納を調べる",
+        "reparent": {},
+        "sourceStep": 4
+      }
+    ],
+    "failures": [
+      {
+        "text": "買い物袋を放置してパパとママの視線が集まる",
+        "target": "mama",
+        "kind": "use",
+        "actor": "boy"
+      }
+    ],
+    "actorRooms": {
+      "mama": "entrance",
+      "papa": "living",
+      "cat": "living"
+    }
+  },
+  {
+    "stage": 47,
+    "room": "garden",
+    "entities": [
+      {
+        "id": "ball",
+        "label": "となりの子のボール",
+        "asset": "ball",
+        "slot": "floorLeft",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "shed",
+        "label": "物置",
+        "asset": "shed",
+        "slot": "shelf",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "net",
+        "label": "虫取り網",
+        "asset": "net",
+        "slot": "side",
+        "room": null,
+        "parent": "shed"
+      },
+      {
+        "id": "key",
+        "label": "フェンスの鍵",
+        "asset": "key",
+        "slot": "wall",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "box",
+        "label": "庭収納ボックス",
+        "asset": "parcel",
+        "slot": "left",
+        "room": null,
+        "parent": null
+      }
+    ],
+    "steps": [
+      {
+        "kind": "pickup",
+        "target": "ball",
+        "gain": "ball",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "庭のボールを拾う",
+        "reparent": {},
+        "sourceStep": 0
+      },
+      {
+        "kind": "throw",
+        "target": "neighbor",
+        "gain": null,
+        "use": [
+          "ball"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "フェンス越しに隣の子へ返す",
+        "reparent": {},
+        "sourceStep": 1
+      },
+      {
+        "kind": "talk",
+        "target": "neighbor",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [
+          "key"
+        ],
+        "change": {},
+        "text": "隣の子が鍵の場所を指す",
+        "reparent": {},
+        "sourceStep": 2
+      },
+      {
+        "kind": "pickup",
+        "target": "net",
+        "gain": "net",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "物置脇の虫取り網を取る",
+        "reparent": {}
+      },
+      {
+        "kind": "pickup",
+        "target": "key",
+        "gain": "key",
+        "use": [
+          "net"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "虫取り網で鍵を取る",
+        "reparent": {},
+        "sourceStep": 3
+      },
+      {
+        "kind": "collect",
+        "target": "box",
+        "gain": null,
+        "use": [
+          "key"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "収納ボックスを開ける",
+        "reparent": {},
+        "sourceStep": 4
+      }
+    ],
+    "failures": [
+      {
+        "text": "ボールを別方向へ投げて窓に当てる",
+        "target": "neighbor",
+        "kind": "use",
+        "actor": "boy"
+      }
+    ]
+  },
+  {
+    "stage": 48,
+    "room": "living",
+    "entities": [
+      {
+        "id": "table",
+        "label": "新聞を置くテーブル",
+        "asset": "table",
+        "slot": "table",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "paper",
+        "label": "新聞",
+        "asset": "newspaper",
+        "slot": "surface",
+        "room": null,
+        "parent": "table"
+      },
+      {
+        "id": "qr",
+        "label": "QRカード",
+        "asset": "qr",
+        "slot": "inside",
+        "room": null,
+        "parent": "paper"
+      }
+    ],
+    "steps": [
+      {
+        "kind": "wait",
+        "target": "papa",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {
+          "paper": "tableSurface"
+        },
+        "reveal": [],
+        "change": {
+          "papa": "idle"
+        },
+        "text": "パパが新聞を置くタイミングを待つ",
+        "reparent": {},
+        "sourceStep": 0
+      },
+      {
+        "kind": "pickup",
+        "target": "qr",
+        "gain": "qr",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "新聞からQRカードを抜く",
+        "reparent": {},
+        "sourceStep": 1
+      },
+      {
+        "kind": "travel",
+        "target": "door",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": "entrance",
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "玄関へ移動",
+        "reparent": {},
+        "sourceStep": 2
+      },
+      {
+        "kind": "use",
+        "target": "robot",
+        "gain": null,
+        "use": [
+          "qr"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {
+          "robot": "open"
+        },
+        "text": "宅配ロボットへQRをかざす",
+        "reparent": {},
+        "sourceStep": 3
+      },
+      {
+        "kind": "collect",
+        "target": "robot",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "収納部からゲーム機を取得",
+        "reparent": {},
+        "sourceStep": 4
+      }
+    ],
+    "failures": [
+      {
+        "text": "パパが読んでいる最中に新聞へ手を伸ばす",
+        "target": "papa",
+        "kind": "use",
+        "actor": "boy"
+      }
+    ],
+    "actorRooms": {
+      "robot": "entrance",
+      "papa": "living"
+    },
+    "initialPoses": {
+      "papa": "read"
+    },
+    "initialHolders": {
+      "paper": "papa"
+    }
+  },
+  {
+    "stage": 49,
+    "room": "entrance",
+    "entities": [
+      {
+        "id": "toy",
+        "label": "猫じゃらし",
+        "asset": "catToy",
+        "slot": "floorLeft",
+        "room": "child",
+        "parent": null
+      },
+      {
+        "id": "desk",
+        "label": "子ども部屋の机",
+        "asset": "desk",
+        "slot": "left",
+        "room": "child",
+        "parent": null
+      },
+      {
+        "id": "treat",
+        "label": "猫のおやつ",
+        "asset": "catTreat",
+        "slot": "surface",
+        "room": null,
+        "parent": "desk"
+      },
+      {
+        "id": "key",
+        "label": "猫がくわえた鍵",
+        "asset": "key",
+        "slot": "npcHands",
+        "room": null,
+        "parent": null,
+        "holder": "cat"
+      },
+      {
+        "id": "bed",
+        "label": "猫ベッド下の箱",
+        "asset": "parcel",
+        "slot": "left",
+        "room": "living",
+        "parent": null
+      }
+    ],
+    "steps": [
+      {
+        "kind": "event",
+        "target": "cat",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {
+          "cat": "key"
+        },
+        "text": "猫が鍵をくわえるイベント発生",
+        "reparent": {},
+        "sourceStep": 0
+      },
+      {
+        "kind": "chase",
+        "target": "cat",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": "garden",
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "鍵をくわえた猫を追って庭へ進む",
+        "reparent": {}
+      },
+      {
+        "kind": "chase",
+        "target": "cat",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": "child",
+        "move": {
+          "cat": "table"
+        },
+        "reveal": [],
+        "change": {},
+        "text": "玄関→庭→子ども部屋と追う",
+        "reparent": {},
+        "sourceStep": 1
+      },
+      {
+        "kind": "pickup",
+        "target": "toy",
+        "gain": "toy",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "子ども部屋の猫じゃらしを取る",
+        "reparent": {}
+      },
+      {
+        "kind": "pickup",
+        "target": "treat",
+        "gain": "treat",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "机の猫のおやつを取る",
+        "reparent": {}
+      },
+      {
+        "kind": "use",
+        "target": "cat",
+        "gain": null,
+        "use": [
+          "toy"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {
+          "cat": "leftFloor"
+        },
+        "reveal": [],
+        "change": {},
+        "text": "猫じゃらしで進行方向を変える",
+        "reparent": {},
+        "sourceStep": 2
+      },
+      {
+        "kind": "place",
+        "target": "cat",
+        "gain": null,
+        "use": [
+          "treat"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "最後におやつを置く",
+        "reparent": {},
+        "sourceStep": 3
+      },
+      {
+        "kind": "receive",
+        "target": "cat",
+        "gain": "key",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "猫が鍵を離す",
+        "reparent": {},
+        "sourceStep": 4
+      },
+      {
+        "kind": "travel",
+        "target": "door",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": "living",
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "鍵を持ってリビングの猫ベッドへ戻る",
+        "reparent": {}
+      },
+      {
+        "kind": "collect",
+        "target": "bed",
+        "gain": null,
+        "use": [
+          "key"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "鍵で猫ベッド下の箱を開ける",
+        "reparent": {},
+        "sourceStep": 5
+      }
+    ],
+    "failures": [
+      {
+        "text": "走って追いかけてパパに見つかる",
+        "target": "cat",
+        "kind": "use",
+        "actor": "boy"
+      }
+    ],
+    "actorRooms": {
+      "sister": "child"
+    }
+  },
+  {
+    "stage": 50,
+    "room": "living",
+    "entities": [
+      {
+        "id": "table",
+        "label": "テーブル",
+        "asset": "table",
+        "slot": "table",
+        "room": null,
+        "parent": null
+      },
+      {
+        "id": "paper",
+        "label": "新聞",
+        "asset": "newspaper",
+        "slot": "surface",
+        "room": null,
+        "parent": "table"
+      },
+      {
+        "id": "counter",
+        "label": "キッチンカウンター",
+        "asset": "cabinet",
+        "slot": "left",
+        "room": "kitchen",
+        "parent": null
+      },
+      {
+        "id": "coffee",
+        "label": "マグカップ",
+        "asset": "mug",
+        "slot": "surface",
+        "room": "kitchen",
+        "parent": "counter"
+      },
+      {
+        "id": "pot",
+        "label": "コーヒーポット",
+        "asset": "pot",
+        "slot": "surface",
+        "room": "kitchen",
+        "parent": "counter"
+      },
+      {
+        "id": "qr",
+        "label": "QRカード",
+        "asset": "qr",
+        "slot": "surface",
+        "room": null,
+        "parent": "table"
+      },
+      {
+        "id": "locker",
+        "label": "宅配ロッカー",
+        "asset": "locker",
+        "slot": "left",
+        "room": "entrance",
+        "parent": null
+      },
+      {
+        "id": "key",
+        "label": "トランクの鍵",
+        "asset": "key",
+        "slot": "inside",
+        "room": null,
+        "parent": "locker"
+      },
+      {
+        "id": "treat",
+        "label": "猫のおやつ",
+        "asset": "catTreat",
+        "slot": "floorLeft",
+        "room": "garden",
+        "parent": null
+      },
+      {
+        "id": "ladder",
+        "label": "脚立",
+        "asset": "ladder",
+        "slot": "middle",
+        "room": "garden",
+        "parent": null
+      },
+      {
+        "id": "shed",
+        "label": "物置",
+        "asset": "shed",
+        "slot": "shelf",
+        "room": "garden",
+        "parent": null
+      },
+      {
+        "id": "trunk",
+        "label": "最上段のトランク",
+        "asset": "parcel",
+        "slot": "top",
+        "room": null,
+        "parent": "shed"
+      }
+    ],
+    "steps": [
+      {
+        "kind": "pickup",
+        "target": "paper",
+        "gain": "paper",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "リビングのテーブルから新聞を取る",
+        "reparent": {}
+      },
+      {
+        "kind": "give",
+        "target": "papa",
+        "gain": null,
+        "use": [
+          "paper"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {
+          "papa": "read"
+        },
+        "text": "リビングで新聞を入手しパパの注意をそらす",
+        "reparent": {},
+        "sourceStep": 0
+      },
+      {
+        "kind": "pickup",
+        "target": "qr",
+        "gain": "qr",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "テーブルのQRカードを取る",
+        "reparent": {}
+      },
+      {
+        "kind": "travel",
+        "target": "door",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": "kitchen",
+        "move": {
+          "papa": "table"
+        },
+        "reveal": [],
+        "change": {},
+        "text": "キッチンへ移動する",
+        "reparent": {}
+      },
+      {
+        "kind": "pickup",
+        "target": "coffee",
+        "gain": "coffee",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "カウンターのマグカップを取る",
+        "reparent": {}
+      },
+      {
+        "kind": "pour",
+        "target": "pot",
+        "gain": null,
+        "use": [
+          "coffee"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {
+          "coffee": "filled"
+        },
+        "text": "ポットからマグカップにコーヒーを注ぐ",
+        "reparent": {}
+      },
+      {
+        "kind": "give",
+        "target": "papa",
+        "gain": null,
+        "use": [
+          "coffee"
+        ],
+        "actor": "boy",
+        "room": "kitchen",
+        "move": {
+          "papa": "table"
+        },
+        "reveal": [],
+        "change": {
+          "papa": "drink"
+        },
+        "text": "キッチンでコーヒーを作りパパをダイニングへ固定",
+        "reparent": {},
+        "sourceStep": 1
+      },
+      {
+        "kind": "travel",
+        "target": "door",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": "entrance",
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "玄関へ移動する",
+        "reparent": {}
+      },
+      {
+        "kind": "open",
+        "target": "locker",
+        "gain": "key",
+        "use": [
+          "qr"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "玄関でQRカードを使って宅配ロッカーから鍵を取る",
+        "reparent": {},
+        "sourceStep": 2
+      },
+      {
+        "kind": "travel",
+        "target": "door",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": "garden",
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "庭へ移動する",
+        "reparent": {}
+      },
+      {
+        "kind": "pickup",
+        "target": "treat",
+        "gain": "treat",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "庭のベンチの猫のおやつを取る",
+        "reparent": {}
+      },
+      {
+        "kind": "give",
+        "target": "cat",
+        "gain": null,
+        "use": [
+          "treat"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {
+          "cat": "leftFloor"
+        },
+        "reveal": [],
+        "change": {},
+        "text": "庭で猫をおやつで移動",
+        "reparent": {},
+        "sourceStep": 3
+      },
+      {
+        "kind": "place",
+        "target": "ladder",
+        "gain": null,
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "脚立を展開",
+        "reparent": {},
+        "sourceStep": 4
+      },
+      {
+        "kind": "climb",
+        "target": "trunk",
+        "gain": null,
+        "use": [
+          "ladder"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "物置最上段のトランクへ登る",
+        "reparent": {},
+        "sourceStep": 5
+      },
+      {
+        "kind": "collect",
+        "target": "trunk",
+        "gain": null,
+        "use": [
+          "key"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "text": "鍵でトランクを開けゲーム機を取得",
+        "reparent": {},
+        "sourceStep": 6
+      }
+    ],
+    "failures": [
+      {
+        "text": "パパの視線に入る",
+        "target": "papa",
+        "kind": "use",
+        "actor": "boy"
+      },
+      {
+        "text": "家族イベントを無視して通路を塞ぐ",
+        "target": "mama",
+        "kind": "use",
+        "actor": "boy"
+      },
+      {
+        "text": "脚立を不安定な場所に設置",
+        "target": "ladder",
+        "kind": "use",
+        "actor": "boy"
+      }
+    ],
+    "actorRooms": {
+      "papa": "living",
+      "cat": "garden",
+      "mama": "kitchen",
+      "sister": "child",
+      "grandpa": "garden",
+      "grandma": "kitchen"
+    }
+  }
+]

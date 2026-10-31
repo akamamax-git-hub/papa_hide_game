@@ -1,36 +1,20 @@
-# パパにゲーム隠された — Ver.0.11
+# パパにゲーム隠された — Ver0.12
 
-PC向け・全50Stageの家庭内探索ゲーム。Ver.0.10.2の引継ぎ版から開発を再開しました。
+全50StageのPC向け探索ゲームです。部屋・人物・家具・アイテムを同じ座標で描き、実際の物の取得・使用とストーリー進行を連動させます。
 
-## 遊び方
+## ブラウザで遊ぶ
 
-`index.html` は画像・BGM・SEを内蔵した単一HTMLです。外部CDNは使いません。
+GitHub Pages有効化後: https://akamamax-git-hub.github.io/papa_hide_game/
 
-### ブラウザで最新版を開く
+mainへのプッシュで自動ビルド・公開します。最初の有効化だけ、GitHubの Settings → Pages → Source を **GitHub Actions** に設定し、Actionsの **Publish game to GitHub Pages** を実行してください。更新後は再読み込み。各Stageは `#stage=23` のように直接開けます。公開コミットは同サイトの `build-info.json` に記録します。
 
-GitHub Pagesを一度有効にすると、ダウンロードせずに同じURLでゲームを実行できます。
+ゲームスタートからStageを選び、部屋内の物や人物をクリック。必要な道具はBAGで選んで対象をクリックするか、対象へドラッグします。行動欄でも同じ動作を実行できます。暗号や並べ順には入力画面があります。
 
-1. リポジトリの Settings → Pages → Build and deployment の Source を **GitHub Actions** に設定。
-2. Actions → **Publish game to GitHub Pages** → **Run workflow**（main）を実行。
-3. 完了後、`https://akamamax-git-hub.github.io/papa_hide_game/` を開く。
-
-以後、ゲームの変更をmainへプッシュすると、ソースからビルドして同じURLへ自動公開します。
-更新後はページを再読み込みしてください。以前の内容が表示される場合は `Ctrl+Shift+R`（Macは `Cmd+Shift+R`）で再読み込みできます。
-`D` キーでゲーム状態のデバッグ表示を切り替えられます。
-公開中のコミットは同じURLの `build-info.json` で確認できます。
-公開対象は生成したHTMLとビルド情報のみです。
-
-### ローカルで開発する
-
-開発時はこのディレクトリで `npm start` を実行し、ブラウザでローカルサーバーへアクセスしてください。
-タイトルからステージを選び、行動ボタンで探索します。
-Stage21〜30は部屋内の丸いマーカーからも操作できます。
-必要なアイテムはBAGでクリックして選択し、対象マーカーをクリックするかドラッグして使います。
-`H`: ヒント、`M`: 音声切替、`D`: デバッグ。
+`H`: ヒント、`M`: 音声切替、`D`: デバッグ表示。
 
 ## 開発
 
-必要なもの: Python 3、Node.js 22以上。ゲーム自体にはnpm依存はありません。
+Python 3、Node.js 22以上、テスト用Chromiumが必要です。配布HTML自体は画像・音声を内蔵し、外部CDNを使いません。
 
 ```sh
 npm ci
@@ -38,29 +22,20 @@ npm run build
 npm start
 ```
 
-別のターミナルで `npm test`。テストは `/usr/bin/chromium` のあるLinux環境を前提とします。
-テスト依存はPlaywrightのみです。ブラウザ実行・ローカルサーバーに環境の権限が必要な場合があります。
+別ターミナルで `npm test`。Linuxの `/usr/bin/chromium` を使用します。クラウド環境ではローカルソケットとブラウザ起動に権限が必要な場合があります。
 
-- `src/game.js`: 共通ゲーム進行・音声・UI
-- `src/chapter3.js`: Stage21〜30の操作対象、状態遷移、NPC、アイテム要件
-- `src/style.css` / `src/chapter3.css`: 表示
-- `src/a.json`: 引継ぎ版の埋込みアセット
-- `assets/chapter3/`: 新規画像と正しいキッチン背景
-- `scenario/Stage01-50_シナリオ企画表.json`: シナリオの正本
-- `scripts/build.py`: 全素材を埋め込んで `index.html` を再生成
-- `tests/`: 実ブラウザでの回帰・部屋内操作検証
+- `src/world.js`: 物理配置、所持状態、アニメーション、前提条件。
+- `src/game.js` / `src/style.css`: 画面、操作、音声、入力、結果。
+- `scripts/storyboard.py` → `scenario/storyboards.json`: 全50Stage・268動作の宣言。
+- `scripts/catalog.py` → `scenario/sprite-catalog.json`: 素材の描画範囲と寸法。再採寸だけPillowを使用。
+- `scripts/build.py`: 素材・音声・データを埋め込んで `index.html` を生成。通常ビルドはPython標準ライブラリだけで実行。
+- `tests/story-world.cjs`: 全Stageの実体クリックとフレーム記録・取得・失敗・Retry。
+- `tests/interaction-guards.cjs`: BAG、タイマー、入力、オフライン、PC表示、音声。
 
-生成された `index.html` を直接編集せず、ソースを編集してビルドしてください。
-結果と画面キャプチャは無視対象の `test-results/` に出力されます。
+`index.html` の直接編集は避け、ソースを変更してビルドしてください。シナリオを編集した場合は先に `python3 scripts/storyboard.py` を実行します。結果とキャプチャはGit管理外の `test-results/v012/`。
 
-## この版の範囲
+## 品質記録
 
-Stage21〜30に操作マーカー、画像の拡大ビュー、妹・おばあちゃん・掃除機のシーン表示、BAGのアイテム使用を追加。
-家具の開閉などは拡大ビューの画像状態で表現しています。
-部屋全体の家具差分、NPC全員の滑らかな動作、数値入力・本の並べ替えを直接操作するパズルUIは今後の課題です。
-Stage31〜50は引継ぎ版の共通シナリオエンジンを維持しています。
+検証方法と限界は [QA_0.12.md](docs/QA_0.12.md)。BGMは提供された元音源を保持しています。全50Stageの状態遷移の通過と、遊びとしての面白さ・実スピーカーでの聴感評価は区別します。
 
-## 素材
-
-既存画像・音声はユーザー提供の引継ぎ資料に由来します。キッチン背景は同資料の正しい参照画像です。
-`assets/chapter3/*_atlas.png` は今回生成したラスター画像です。描画は画像編集を加えずCSSの表示範囲で切り出しています。
+過去の設計・引継ぎ文書は `docs/` に履歴として残しています。現行の説明は `docs/CURRENT_STATUS.md` とVer0.12の記録を参照してください。
