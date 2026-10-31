@@ -200,6 +200,11 @@ const AnimationController=(()=>{
    if(!await open(target,token,record,step.actor))return false;
    if(step.gain&&!await pickup(state.entities[step.gain],step.actor,token,record))return false;
   }else if(step.kind==='pour'&&target.asset==='pot'){/* The pot and cup each move through a real hand below. */}
+  else if(state.actors[target.id]&&['wait','talk','inspect','event'].includes(step.kind)){
+   if(!await move(step.actor,clamp(target.x+(a.x<target.x?-170:170),90,1010),Math.min(745,Math.max(a.y,target.y+35)),token,record))return false;World.pose(step.actor,'idle');a.facing=a.x<target.x?1:-1;World.refresh();record.frames.push(World.actorAsset(a));
+  }else if(step.kind==='walk'){
+   if(!await move(step.actor,clamp(target.x+(a.x<target.x?-1:1)*(target.w/2+70),90,1010),Math.min(745,target.y+35),token,record))return false;
+  }
   else if(step.kind==='climb'&&step.target===a.support&&!step.gain){record.frames.push(World.actorAsset(a));}
   else if(step.ranged){World.pose(step.actor,'hold');World.refresh();state.beam={actor:step.actor,tool:step.use[0],target:step.target,kind:'infrared'};record.frames.push(World.actorAsset(a));}
   else if(step.kind==='dry'){
@@ -218,7 +223,9 @@ const AnimationController=(()=>{
   if(step.kind==='pour'&&target.asset==='pot')if(!await pourCup(state.entities[step.use[0]],target,token,record))return false;
   if(step.kind==='give'){
    const receiver=state.actors[step.target];World.pose(receiver.id,'receive');World.refresh();
-   for(const id of step.use){const e=state.entities[id],p=World.hand(receiver.id);if(!await aim(step.actor,p,receiver,token,record,['reachWaist','reachChest','reachUp']))return false;World.attach(id,receiver.id);record.transfers.push({id,origin:{place:'hand',holder:step.actor},to:receiver.id,at:p,error:0});}
+   for(const id of step.use){const e=state.entities[id],p=World.hand(receiver.id);if(!await aim(step.actor,p,receiver,token,record,['reachWaist','reachChest','reachUp']))return false;World.attach(id,receiver.id);record.transfers.push({id,origin:{place:'hand',holder:step.actor},to:receiver.id,at:p,error:0});
+    if(['cat','dog'].includes(receiver.id)&&['catTreat','dogTreat'].includes(e.asset)){const w=e.w,h=e.h;if(!await tween(320,token,t=>{e.w=w*(1-t*.7);e.h=h*(1-t*.7);}))return false;e.place='consumed';e.visible=false;receiver.mode='eat';World.pose(receiver.id,'eat');World.render();}
+   }
   }
   if(step.kind==='place'&&target.asset==='ladder'){
    const future=state.board.steps.slice(state.step+1).find(s=>['climb','pull'].includes(s.kind)),t=World.node(future?.target),host=t?.parent?World.node(t.parent):t;

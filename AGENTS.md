@@ -12,7 +12,7 @@
 「ママにゲーム隠された」の一般的なゲーム文法（1〜2画面探索、アイテム取得、仕掛け、罠、シュールな展開）は参考にするが、具体的なステージ内容・キャラクター・アートはオリジナルとする。
 
 ## 現在のベースライン
-- 現行版は Ver0.13、ルートの `index.html`。直接編集せず `src/world.js`、`src/game.js`、`src/style.css` を修正して `npm run build`。
+- 現行版は Ver0.13.1、ルートの `index.html`。直接編集せず `src/world.js`、`src/game.js`、`src/style.css` を修正して `npm run build`。
 - シナリオ正本は `scenario/Stage01-50_シナリオ企画表.json`。物理配置・追加の入手手順・全動作は `scripts/storyboard.py` から `scenario/storyboards.json` を生成する。
 - 素材の描画範囲・縮尺は `scenario/sprite-catalog.json`。素材自体は `assets/world/`。再採寸は Pillow を用いる `scripts/catalog.py`（通常ビルドでは不要）。
 - `docs/QA_0.13.md` と `docs/CURRENT_STATUS.md` を参照。旧版の通過記録を現行版の検証結果として扱わない。

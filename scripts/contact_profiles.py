@@ -46,6 +46,8 @@ def annotate(boards):
         if b['stage'] in [7,9]:entities['intercom']['asset']='intercom'
         if b['stage']==30:entities['blanket']['mount']=[.53,.60]
         if b['stage']==23:entities['cab']['asset']='upperCab'
+        if b['stage'] in [25,39]:entities['pantry']['asset']='shelf'
+        if b['stage']==37:next(s for s in b['steps'] if s['kind']=='wait')['change']['grandpa']='idle'
         if b['stage']==47:entities['key']['position']=[570,385]
         if b['stage']==13:
             next(s for s in b['steps'] if s['gain']=='key')['use']=['tongs']

@@ -22,7 +22,8 @@
     "atlas_orderedprops": "assets/world/atlas_orderedprops.png",
     "atlas_fixtures": "assets/world/atlas_fixtures.png",
     "atlas_clock": "assets/world/atlas_clock.png",
-    "atlas_vanity": "assets/world/atlas_vanity.png"
+    "atlas_vanity": "assets/world/atlas_vanity.png",
+    "atlas_coloredboxes": "assets/world/atlas_coloredboxes.png"
   },
   "sprites": {
     "cabinet": {
@@ -2196,7 +2197,7 @@
       ],
       "worldHeight": 45,
       "hand": [
-        0.87,
+        0.4,
         0.6
       ],
       "bodyScale": 1
@@ -2272,7 +2273,7 @@
       ],
       "worldHeight": 45,
       "hand": [
-        0.87,
+        0.5,
         0.6
       ],
       "bodyScale": 1
@@ -2348,8 +2349,8 @@
       ],
       "worldHeight": 45,
       "hand": [
-        0.87,
-        0.6
+        0.52,
+        0.58
       ],
       "bodyScale": 1
     },
@@ -5302,44 +5303,44 @@
       "worldHeight": 65
     },
     "box_red": {
-      "sheet": "atlas_cleanitems",
+      "sheet": "atlas_coloredboxes",
       "size": [
-        1408,
-        1117
+        1536,
+        1024
       ],
       "rect": [
-        34,
-        560,
-        292,
-        237
+        60,
+        64,
+        426,
+        366
       ],
       "worldHeight": 100
     },
     "box_blue": {
-      "sheet": "atlas_cleanitems",
+      "sheet": "atlas_coloredboxes",
       "size": [
-        1408,
-        1117
+        1536,
+        1024
       ],
       "rect": [
-        387,
-        561,
-        277,
-        275
+        558,
+        70,
+        427,
+        366
       ],
       "worldHeight": 100
     },
     "box_green": {
-      "sheet": "atlas_cleanitems",
+      "sheet": "atlas_coloredboxes",
       "size": [
-        1408,
-        1117
+        1536,
+        1024
       ],
       "rect": [
-        721,
-        560,
-        333,
-        276
+        1058,
+        69,
+        426,
+        366
       ],
       "worldHeight": 100
     },
@@ -5677,7 +5678,7 @@
         254,
         9,
         97,
-        433
+        484
       ],
       "worldHeight": 160,
       "grip": [
@@ -5695,7 +5696,7 @@
         651,
         9,
         98,
-        433
+        484
       ],
       "worldHeight": 160,
       "grip": [
@@ -5713,7 +5714,7 @@
         1043,
         206,
         138,
-        236
+        286
       ],
       "worldHeight": 90,
       "grip": [
@@ -5731,7 +5732,7 @@
         1409,
         131,
         103,
-        311
+        360
       ],
       "worldHeight": 60
     },
@@ -5743,9 +5744,9 @@
       ],
       "rect": [
         244,
-        446,
+        525,
         107,
-        426
+        347
       ],
       "worldHeight": 60
     },
@@ -5757,9 +5758,9 @@
       ],
       "rect": [
         642,
-        446,
+        525,
         107,
-        427
+        348
       ],
       "worldHeight": 60
     },
@@ -5771,9 +5772,9 @@
       ],
       "rect": [
         1031,
-        446,
+        525,
         107,
-        427
+        348
       ],
       "worldHeight": 60
     },
@@ -5784,10 +5785,10 @@
         887
       ],
       "rect": [
-        1411,
-        446,
-        109,
-        427
+        1412,
+        525,
+        108,
+        348
       ],
       "worldHeight": 45
     },
@@ -5804,6 +5805,48 @@
         795
       ],
       "worldHeight": 80
+    },
+    "box_red_open": {
+      "sheet": "atlas_coloredboxes",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        66,
+        490,
+        429,
+        463
+      ],
+      "worldHeight": 128
+    },
+    "box_blue_open": {
+      "sheet": "atlas_coloredboxes",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        564,
+        490,
+        431,
+        466
+      ],
+      "worldHeight": 128
+    },
+    "box_green_open": {
+      "sheet": "atlas_coloredboxes",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        1062,
+        490,
+        431,
+        470
+      ],
+      "worldHeight": 128
     },
     "magnet_red": {
       "sheet": "atlas_items2",
@@ -5908,48 +5951,6 @@
       ],
       "worldHeight": 60
     },
-    "box_red_open": {
-      "sheet": "atlas_states",
-      "size": [
-        1448,
-        1086
-      ],
-      "rect": [
-        411,
-        825,
-        297,
-        224
-      ],
-      "worldHeight": 90
-    },
-    "box_blue_open": {
-      "sheet": "atlas_states",
-      "size": [
-        1448,
-        1086
-      ],
-      "rect": [
-        411,
-        825,
-        297,
-        224
-      ],
-      "worldHeight": 90
-    },
-    "box_green_open": {
-      "sheet": "atlas_states",
-      "size": [
-        1448,
-        1086
-      ],
-      "rect": [
-        411,
-        825,
-        297,
-        224
-      ],
-      "worldHeight": 90
-    },
     "papa_watch": {
       "sheet": "atlas_papa",
       "size": [
@@ -5968,6 +5969,44 @@
         0.42
       ],
       "bodyScale": 0.7
+    },
+    "cat_eat": {
+      "sheet": "atlas_pets",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        1239,
+        9,
+        243,
+        245
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.15,
+        0.8
+      ],
+      "bodyScale": 0.75
+    },
+    "dog_eat": {
+      "sheet": "atlas_pets",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        1234,
+        258,
+        248,
+        252
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.5,
+        0.3
+      ],
+      "bodyScale": 0.75
     }
   }
 }

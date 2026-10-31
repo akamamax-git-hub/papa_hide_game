@@ -37,7 +37,7 @@ const World = (() => {
   for(const [id,slot] of Object.entries(board.actorSlots||{})){const a=state.actors[id];if(a){[a.x,a.y]=anchor(slot);}}
   for(const [id,pose] of Object.entries(board.initialPoses||{}))if(state.actors[id]){state.actors[id].mode=pose;state.actors[id].pose=pose;}
   for(const [id,holder] of Object.entries(board.initialHolders||{}))if(state.entities[id])state.entities[id].holder=holder;
-  if(state.actors.papa&&board.steps.some(s=>['read','drink'].includes(s.change.papa))){const a=state.actors.papa,g=geometry('chair');state.entities.papaChair={id:'papaChair',label:'パパの椅子',asset:'chair',x:a.x,y:a.y,...g,room:a.room,place:'room',visible:true,mode:'normal'};}
+  if(state.actors.papa&&(board.steps.some(s=>['read','drink'].includes(s.change.papa))||['read','drink'].includes(board.initialPoses?.papa))){const a=state.actors.papa,g=geometry('chair');state.entities.papaChair={id:'papaChair',label:'パパの椅子',asset:'chair',x:a.x,y:a.y,...g,room:a.room,place:'room',visible:true,mode:'normal'};}
   resolveChildren();
   if(state.actors.crow){state.actors.crow.x=820;state.actors.crow.y=350;}
   if(state.actors.vacuum){state.actors.vacuum.x=780;state.actors.vacuum.y=715;}

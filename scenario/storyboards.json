@@ -6355,13 +6355,13 @@
       {
         "id": "pantry",
         "label": "パントリー棚",
-        "asset": "wardrobe",
+        "asset": "shelf",
         "slot": "middle",
         "room": null,
         "parent": null,
         "contact": [
-          0.54,
-          0.51
+          0.66,
+          0.84
         ]
       }
     ],
@@ -6471,14 +6471,14 @@
       "id": "console",
       "container": "pantry",
       "uv": [
-        0.44,
-        0.78
+        0.5,
+        0.82
       ],
       "region": [
         0.18,
-        0.63,
-        0.61,
-        0.29
+        0.7,
+        0.64,
+        0.23
       ],
       "reveal": "opened",
       "cover": null,
@@ -9624,7 +9624,9 @@
           "grandpa": "leftFloor"
         },
         "reveal": [],
-        "change": {},
+        "change": {
+          "grandpa": "idle"
+        },
         "text": "おじいちゃんが起きて日陰へ移動",
         "reparent": {},
         "sourceStep": 2,
@@ -10044,13 +10046,13 @@
       {
         "id": "pantry",
         "label": "パントリー",
-        "asset": "wardrobe",
+        "asset": "shelf",
         "slot": "shelf",
         "room": null,
         "parent": null,
         "contact": [
-          0.54,
-          0.51
+          0.66,
+          0.84
         ]
       },
       {
@@ -10065,8 +10067,8 @@
           0.5
         ],
         "mount": [
-          0.44,
-          0.78
+          0.5,
+          0.82
         ]
       },
       {

@@ -1,12 +1,12 @@
 {
-  "version": "0.13.0",
-  "validated_at_utc": "2026-10-31T23:09:05.721203+00:00",
-  "html_sha256": "5eca6c14d8e16aca78748c0af5a048622df461f26c089749b38d7b74ed70d6aa",
+  "version": "0.13.1",
+  "validated_at_utc": "2026-10-31T23:30:03.672096+00:00",
+  "html_sha256": "7e68da0513cd9020405cdacc48c53a76b038a9316fe7f8d724b5743a67889250",
   "stages": 50,
   "actions": 269,
   "failure_routes": 53,
   "retry_routes": 53,
-  "measured_contacts": 421,
+  "measured_contacts": 402,
   "max_contact_error_world_units": 1.6077746776921858e-13,
   "console_identity_verified_stages": 50,
   "console_source_region_verified_stages": 50,
@@ -27,6 +27,21 @@
     "audioDecodeAndToggle": "PASS",
     "errors": []
   },
+  "full_regression_command": "npm test",
+  "focused_reruns": [
+    {
+      "command": "STAGES=41,44 node tests/contact-world.cjs",
+      "stages": [
+        41,
+        44
+      ],
+      "reason": "Last crop-boundary adjustment affects only the colored-box atlas used in these two stages.",
+      "html_sha256": "7e68da0513cd9020405cdacc48c53a76b038a9316fe7f8d724b5743a67889250",
+      "actions": 9,
+      "result": "PASS"
+    }
+  ],
+  "visual_review": "All 50 initial/final-action screenshots reviewed; affected pantry, seated actors, box colors and crop boundaries rechecked.",
   "stage_actions": [
     {
       "stage": 1,
@@ -71,7 +86,7 @@
     {
       "stage": 9,
       "actions": 4,
-      "contacts": 4
+      "contacts": 3
     },
     {
       "stage": 10,
@@ -101,7 +116,7 @@
     {
       "stage": 15,
       "actions": 5,
-      "contacts": 5
+      "contacts": 4
     },
     {
       "stage": 16,
@@ -116,7 +131,7 @@
     {
       "stage": 18,
       "actions": 5,
-      "contacts": 5
+      "contacts": 4
     },
     {
       "stage": 19,
@@ -131,7 +146,7 @@
     {
       "stage": 21,
       "actions": 5,
-      "contacts": 7
+      "contacts": 6
     },
     {
       "stage": 22,
@@ -146,7 +161,7 @@
     {
       "stage": 24,
       "actions": 5,
-      "contacts": 11
+      "contacts": 10
     },
     {
       "stage": 25,
@@ -161,7 +176,7 @@
     {
       "stage": 27,
       "actions": 5,
-      "contacts": 8
+      "contacts": 7
     },
     {
       "stage": 28,
@@ -181,7 +196,7 @@
     {
       "stage": 31,
       "actions": 6,
-      "contacts": 7
+      "contacts": 6
     },
     {
       "stage": 32,
@@ -206,22 +221,22 @@
     {
       "stage": 36,
       "actions": 5,
-      "contacts": 5
+      "contacts": 2
     },
     {
       "stage": 37,
       "actions": 5,
-      "contacts": 5
+      "contacts": 4
     },
     {
       "stage": 38,
       "actions": 5,
-      "contacts": 7
+      "contacts": 6
     },
     {
       "stage": 39,
       "actions": 5,
-      "contacts": 8
+      "contacts": 6
     },
     {
       "stage": 40,
@@ -231,12 +246,12 @@
     {
       "stage": 41,
       "actions": 4,
-      "contacts": 5
+      "contacts": 4
     },
     {
       "stage": 42,
       "actions": 6,
-      "contacts": 9
+      "contacts": 8
     },
     {
       "stage": 43,
@@ -261,17 +276,17 @@
     {
       "stage": 47,
       "actions": 6,
-      "contacts": 8
+      "contacts": 7
     },
     {
       "stage": 48,
       "actions": 5,
-      "contacts": 9
+      "contacts": 8
     },
     {
       "stage": 49,
       "actions": 10,
-      "contacts": 11
+      "contacts": 10
     },
     {
       "stage": 50,

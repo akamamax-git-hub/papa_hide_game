@@ -29,6 +29,8 @@ def register(sheet,cols,rows,names,heights):
    cuts=[0,485,815,1086];y0=cuts[idx//cols]+pad;y1=cuts[idx//cols+1]-pad
   if sheet=='atlas_fixtures':
    edges=[[0,302,625,852,1086],[0,313,615,852,1086],[0,302,625,855,1086],[0,302,625,860,1086]][idx%4];y0=edges[idx//4];y1=edges[idx//4+1]
+  if sheet=='atlas_orderedprops':y0,y1=([0,508] if idx//cols==0 else [508,ih])
+  if sheet=='atlas_coloredboxes':y0,y1=([0,460] if idx//cols==0 else [460,ih])
   alpha=im.getchannel('A').crop((x0,y0,x1,y1)).point(lambda x:255 if x>190 else 0)
   bbox=alpha.getbbox()
   if not bbox:raise ValueError((sheet,name))
@@ -72,6 +74,7 @@ for name in ['tv','desk','vanity','shelf','basket','breadbox','flowerbed']:
  catalog[name+'_open']['worldHeight']=catalog[name]['worldHeight']*catalog[name+'_open']['rect'][3]/catalog[name]['rect'][3]
 register('atlas_clock',2,1,['clock','clock_open'],dict(clock=80,clock_open=80))
 register('atlas_vanity',2,1,['vanity','vanity_open'],dict(vanity=300,vanity_open=300))
+register('atlas_coloredboxes',3,2,['box_red','box_blue','box_green','box_red_open','box_blue_open','box_green_open'],dict(box_red=100,box_blue=100,box_green=100,box_red_open=128,box_blue_open=128,box_green_open=128))
 catalog['vanity_open']['anchor']=[.45,1]
 catalog['vanity_open']['worldHeight']=300*catalog['vanity_open']['rect'][3]/catalog['vanity']['rect'][3]
 for name in ['umbrella_blue','umbrella_yellow','umbrella_folded']:catalog[name]['grip']=[.5,.1]
@@ -95,13 +98,14 @@ for name,m in catalog.items():
 # Explicit actual machine states: opening is not a walking frame.
 catalog['robot_scan']=dict(catalog['robot_receive']);catalog['robot_walk1']=dict(catalog['robot_walk2'])
 catalog['switch']=dict(catalog['switch13']);catalog['umbrellaStand']=dict(catalog['basket']);catalog['intercom']=dict(catalog['intercom13'])
-for color in ['red','blue','green']:catalog['box_'+color+'_open']=dict(catalog['parcel_open'])
 for name,grip,tip in [('net',[.80,.92],[.28,.18]),('tongs',[.78,.82],[.20,.10]),('torch',[.72,.62],[.12,.40]),('dryer',[.75,.80],[.12,.25]),('rope',[.5,.8],[.5,.1])]:catalog[name]['grip']=grip;catalog[name]['tip']=tip
 
 catalog['papa_drink']['hand']=[.27,.20];catalog['papa_read']['hand']=[.82,.42];catalog['grandma_sit']['hand']=[.55,.36];catalog['sister_eat']['hand']=[.46,.35]
 catalog['papa_watch']=dict(catalog['papa_read'])
 catalog['robot_idle']['hand']=[.67,.42]
 for name,uv in {'cat_idle':[.50,.47],'cat_receive':[.06,.50],'cat_walk1':[.94,.46],'cat_walk2':[.15,.80],'crow_idle':[.04,.28],'dog_idle':[.5,.43],'dog_receive':[.08,.51]}.items():catalog[name]['hand']=uv
+for name,uv in {'mama_idle':[.40,.60],'sister_idle':[.50,.60],'grandma_idle':[.52,.58]}.items():catalog[name]['hand']=uv
+for actor in ['cat','dog']:catalog[actor+'_eat']={**catalog[actor+'_walk2'],'bodyScale':.75}
 for name,grip,tip in [('shovel',[.85,.20],[.15,.90]),('wateringCan',[.60,.18],[.10,.35]),('mug',[.85,.5],[.2,.1]),('coffee',[.85,.5],[.2,.1]),('spoon',[.2,.8],[.8,.2])]:catalog[name]['grip']=grip;catalog[name]['tip']=tip
 catalog['pot']['grip']=[.86,.52];catalog['pot']['tip']=[.08,.18]
 for name,x in [('fridge_open',.32),('locker_open',.65),('shelf_open',.43)]:catalog[name]['anchor']=[x,1]
