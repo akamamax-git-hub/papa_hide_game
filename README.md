@@ -6,6 +6,22 @@ PC向け・全50Stageの家庭内探索ゲーム。Ver.0.10.2の引継ぎ版か�
 
 `index.html` は画像・BGM・SEを内蔵した単一HTMLです。外部CDNは使いません。
 
+### ブラウザで最新版を開く
+
+GitHub Pagesを一度有効にすると、ダウンロードせずに同じURLでゲームを実行できます。
+
+1. リポジトリの Settings → Pages → Build and deployment の Source を **GitHub Actions** に設定。
+2. Actions → **Publish game to GitHub Pages** → **Run workflow**（main）を実行。
+3. 完了後、`https://akamamax-git-hub.github.io/papa_hide_game/` を開く。
+
+以後、ゲームの変更をmainへプッシュすると、ソースからビルドして同じURLへ自動公開します。
+更新後はページを再読み込みしてください。以前の内容が表示される場合は `Ctrl+Shift+R`（Macは `Cmd+Shift+R`）で再読み込みできます。
+`D` キーでゲーム状態のデバッグ表示を切り替えられます。
+公開中のコミットは同じURLの `build-info.json` で確認できます。
+公開対象は生成したHTMLとビルド情報のみです。
+
+### ローカルで開発する
+
 開発時はこのディレクトリで `npm start` を実行し、ブラウザでローカルサーバーへアクセスしてください。
 タイトルからステージを選び、行動ボタンで探索します。
 Stage21〜30は部屋内の丸いマーカーからも操作できます。
