@@ -4,7 +4,7 @@ const {chromium}=require('playwright');
 const fs=require('node:fs');const assert=require('node:assert/strict');
 const boards=JSON.parse(fs.readFileSync('scenario/storyboards.json'));
 const selected=process.env.STAGES?process.env.STAGES.split(',').map(Number):boards.map(b=>b.stage);
-const out='test-results/v013';fs.mkdirSync(out,{recursive:true});let browser;
+const out=process.env.OUT||'test-results/v014';fs.mkdirSync(out,{recursive:true});let browser;
 async function paintedClick(page,id){
  const hit=await page.evaluate(async id=>{
   const el=document.querySelector(`#world [data-node="${id}"]`);if(!el)return null;
@@ -16,16 +16,23 @@ async function paintedClick(page,id){
  assert.ok(hit,`No exposed painted click for ${id}`);await page.mouse.click(hit.x,hit.y);return hit;
 }
 async function runStage(page,n){
- const board=boards[n-1],result={stage:n,steps:[]};await page.evaluate(n=>{GameTest.loadStage(n);window.__errors=[];window.__contacts=[];window.__game=state.entities.console;},n);
+ const board=boards[n-1],result={stage:n,steps:[]};await page.evaluate(n=>{GameTest.loadStage(n);window.__errors=[];window.__contacts=[];window.__game=state.entities.console;window.__geometry=[];window.__capturedFrames=new Set();},n);
  await page.locator('#world').screenshot({path:`${out}/s${n}-initial.png`});
  for(let i=0;i<board.steps.length;i++){
   const step=board.steps[i],before=await page.evaluate(()=>World.snapshot());
   assert.equal(before.entities.console.birth,'stage-init');
-  const item=step.use.find(id=>before.inventory.includes(id));if(item)await page.locator(`[data-item="${item}"]`).click();
+  const item=(step.inputItems||step.use).find(id=>before.inventory.includes(id));
   const id=await page.evaluate(()=>World.actionTarget(state.board.steps[state.step]));
-  const click=await paintedClick(page,id);
-  if(board.puzzle?.step===i){await page.locator('#puzzleOverlay').waitFor();const input=page.locator('#puzzleAnswer');if(board.puzzle.options)await input.selectOption(board.puzzle.answer);else await input.fill(board.puzzle.answer);await page.locator('#puzzleSubmit').click();}
+  let click;
+  if(step.inputTarget==='bag'){await page.locator(`[data-item="${item}"]`).dragTo(page.locator(`[data-item="${step.target}"]`));click={bag:step.target};}
+  else if(step.dropZone){const r=await page.locator('#world').boundingBox(),[x,y]=step.dropZone.center;await page.locator(`[data-item="${item}"]`).dragTo(page.locator('#world'),{targetPosition:{x:x/1200*r.width,y:y/800*r.height}});click={x,y,floor:true};}
+  else if(item){
+   const hit=await page.evaluate(async id=>{const r=document.querySelector(`#world [data-node="${id}"]`).getBoundingClientRect();for(const fy of [.5,.3,.7,.15,.85,.05,.95])for(const fx of [.5,.3,.7,.15,.85,.05,.95]){const x=r.x+r.width*fx,y=r.y+r.height*fy;if(await World.pick(x,y)===id)return {x,y};}},id);assert.ok(hit,`No painted drop target ${id}`);
+   const wr=await page.locator('#world').boundingBox();await page.locator(`[data-item="${item}"]`).dragTo(page.locator('#world'),{targetPosition:{x:hit.x-wr.x,y:hit.y-wr.y}});click=hit;
+  }else click=await paintedClick(page,id);
+  if(board.puzzle?.step===i&&board.puzzle.mode!=='boxColor'){await page.locator('#puzzleOverlay').waitFor();const input=page.locator('#puzzleAnswer');if(board.puzzle.options)await input.selectOption(board.puzzle.answer);else await input.fill(board.puzzle.answer);await page.locator('#puzzleSubmit').click();}
   await page.waitForFunction(i=>(state.step===i+1&&!state.busy)||window.__errors.length,i,{timeout:75000});
+  assert.ok(await page.evaluate(()=>window.__geometry.every(g=>g.inside!==false&&g.overlap!==true)),`Stage ${n}: support or handover geometry`);
   assert.deepEqual(await page.evaluate(()=>window.__errors),[],`Stage ${n} step ${i} ${step.text}`);
   const after=await page.evaluate(()=>({snap:World.snapshot(),identity:state.entities.console===window.__game,found:state.found,region:World.region()})),audit=after.snap.audit.at(-1);
   assert.ok(after.identity,`Stage ${n} game was replaced/spawned`);
@@ -54,10 +61,10 @@ async function runStage(page,n){
   await page.exposeBinding('captureContact',async(_,data)=>{
    if(data.first)await page.locator('#world').screenshot({path:`${out}/s${data.stage}-contact${data.step}.png`}).catch(()=>{});
   });
-  await page.evaluate(()=>window.addEventListener('physical-contact',e=>{
-   const first=!window.__contacts.some(c=>c.step===state.step);window.__contacts.push({step:state.step,...e.detail});
-   window.captureContact({first,stage:state.stage,step:state.step});
-  }));
+  await page.evaluate(()=>{GameTest.captureContact=async()=>{const key=state.stage+'-'+state.step;if(!window.__capturedFrames?.has(key)){window.__capturedFrames?.add(key);await window.captureContact({first:true,stage:state.stage,step:state.step});}};window.addEventListener('physical-contact',e=>{
+   const boy=state.actors.boy;if(boy.support){const s=state.entities[boy.support];window.__geometry.push({support:s.id,inside:SceneGeometry.feet(boy).every(p=>SceneGeometry.supportContains(s,p))});}if(state.board.steps[state.step].kind==='give'&&e.detail.target==='papa'){const f=World.frame(boy);window.__geometry.push({handover:true,overlap:SceneGeometry.overlapsActor('boy',boy.x,boy.y,f.h,f.w,boy.elevation)});}const first=!window.__contacts.some(c=>c.step===state.step);window.__contacts.push({step:state.step,...e.detail});
+
+  });});
   while(cursor<selected.length){const n=selected[cursor++];try{results.push(await runStage(page,n));}catch(e){failures.push({stage:n,error:e.stack});console.error(`Stage ${n} FAILED: ${e.message}`);await page.screenshot({path:`${out}/FAILED-${n}.png`});}}
   await page.close();
  }));

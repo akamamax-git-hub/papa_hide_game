@@ -55,7 +55,8 @@
         "reparent": {},
         "sourceStep": 0,
         "contactObject": "paper",
-        "revealGame": false
+        "revealGame": false,
+        "requires": []
       },
       {
         "kind": "give",
@@ -75,7 +76,10 @@
         "reparent": {},
         "sourceStep": 1,
         "contactObject": "papa",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          0
+        ]
       },
       {
         "kind": "open",
@@ -91,7 +95,10 @@
         "reparent": {},
         "sourceStep": 2,
         "contactObject": "cab",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          1
+        ]
       },
       {
         "kind": "collect",
@@ -107,7 +114,10 @@
         "reparent": {},
         "sourceStep": 3,
         "contactObject": "cab",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          2
+        ]
       }
     ],
     "failures": [
@@ -221,7 +231,9 @@
         0.62,
         0.38
       ]
-    }
+    },
+    "observations": {},
+    "gentleHint": "パパは退屈そう。部屋に読めるものはあるかな。"
   },
   {
     "stage": 2,
@@ -237,6 +249,10 @@
         "contact": [
           0.72,
           0.61
+        ],
+        "position": [
+          530,
+          615
         ]
       },
       {
@@ -263,8 +279,8 @@
           0.5
         ],
         "position": [
-          435,
-          435
+          830,
+          350
         ]
       },
       {
@@ -294,6 +310,18 @@
           0.5,
           0.81
         ]
+      },
+      {
+        "id": "stool",
+        "label": "踏み台",
+        "asset": "stool",
+        "slot": "floorLeft",
+        "room": null,
+        "parent": null,
+        "contact": [
+          0.5,
+          0.5
+        ]
       }
     ],
     "steps": [
@@ -311,7 +339,80 @@
         "reparent": {},
         "sourceStep": 0,
         "contactObject": "remote",
-        "revealGame": false
+        "revealGame": false,
+        "requires": []
+      },
+      {
+        "kind": "pickup",
+        "target": "stool",
+        "text": "踏み台を取る",
+        "gain": "stool",
+        "use": [],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "reparent": {},
+        "contactObject": "stool",
+        "revealGame": false,
+        "requires": []
+      },
+      {
+        "kind": "place",
+        "target": "clock",
+        "text": "時計の下の床へ踏み台を置く",
+        "gain": null,
+        "use": [
+          "stool"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {
+          "stool": [
+            755,
+            605
+          ]
+        },
+        "reveal": [],
+        "change": {},
+        "reparent": {},
+        "contactObject": "clock",
+        "revealGame": false,
+        "requires": [
+          1
+        ],
+        "dropZone": {
+          "center": [
+            755,
+            605
+          ],
+          "radius": [
+            65,
+            24
+          ],
+          "label": "時計の下の床"
+        }
+      },
+      {
+        "kind": "climb",
+        "target": "stool",
+        "text": "踏み台に上がって時計に手を伸ばす",
+        "gain": null,
+        "use": [
+          "stool"
+        ],
+        "actor": "boy",
+        "room": null,
+        "move": {},
+        "reveal": [],
+        "change": {},
+        "reparent": {},
+        "contactObject": "stool",
+        "revealGame": false,
+        "requires": [
+          2
+        ]
       },
       {
         "kind": "pickup",
@@ -327,7 +428,10 @@
         "reparent": {},
         "sourceStep": 1,
         "contactObject": "battery",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          3
+        ]
       },
       {
         "kind": "combine",
@@ -348,7 +452,14 @@
         "reparent": {},
         "sourceStep": 2,
         "contactObject": "remote",
-        "revealGame": false
+        "revealGame": false,
+        "inputItems": [
+          "battery"
+        ],
+        "inputTarget": "bag",
+        "requires": [
+          4
+        ]
       },
       {
         "kind": "use",
@@ -360,7 +471,10 @@
         "actor": "boy",
         "room": null,
         "move": {
-          "papa": "sofaSeat"
+          "papa": [
+            530,
+            655
+          ]
         },
         "reveal": [],
         "change": {
@@ -372,7 +486,10 @@
         "sourceStep": 3,
         "contactObject": "tv",
         "revealGame": false,
-        "ranged": true
+        "ranged": true,
+        "requires": [
+          5
+        ]
       },
       {
         "kind": "collect",
@@ -388,7 +505,10 @@
         "reparent": {},
         "sourceStep": 4,
         "contactObject": "tv",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          6
+        ]
       }
     ],
     "failures": [
@@ -502,7 +622,9 @@
         0.62,
         0.38
       ]
-    }
+    },
+    "observations": {},
+    "gentleHint": "リモコンに反応がない。電池と、手が届く高さを考えよう。"
   },
   {
     "stage": 3,
@@ -576,7 +698,8 @@
         "reparent": {},
         "sourceStep": 0,
         "contactObject": "toy",
-        "revealGame": false
+        "revealGame": false,
+        "requires": []
       },
       {
         "kind": "use",
@@ -596,7 +719,10 @@
         "reparent": {},
         "sourceStep": 1,
         "contactObject": "cat",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          0
+        ]
       },
       {
         "kind": "lift",
@@ -612,7 +738,10 @@
         "reparent": {},
         "sourceStep": 2,
         "contactObject": "cushion",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          1
+        ]
       },
       {
         "kind": "collect",
@@ -628,7 +757,10 @@
         "reparent": {},
         "sourceStep": 3,
         "contactObject": "cushion",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          2
+        ]
       }
     ],
     "failures": [
@@ -742,7 +874,9 @@
         0.62,
         0.38
       ]
-    }
+    },
+    "observations": {},
+    "gentleHint": "猫の気を引けるものを探そう。"
   },
   {
     "stage": 4,
@@ -772,8 +906,8 @@
           0.5
         ],
         "position": [
-          435,
-          435
+          830,
+          350
         ]
       },
       {
@@ -816,7 +950,8 @@
         "reparent": {},
         "sourceStep": 0,
         "contactObject": "stool",
-        "revealGame": false
+        "revealGame": false,
+        "requires": []
       },
       {
         "kind": "place",
@@ -836,7 +971,21 @@
         "reparent": {},
         "sourceStep": 1,
         "contactObject": "clock",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          0
+        ],
+        "dropZone": {
+          "center": [
+            765,
+            615
+          ],
+          "radius": [
+            65,
+            24
+          ],
+          "label": "時計の下の床"
+        }
       },
       {
         "kind": "climb",
@@ -854,7 +1003,10 @@
         "reparent": {},
         "sourceStep": 2,
         "contactObject": "key",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          1
+        ]
       },
       {
         "kind": "open",
@@ -872,7 +1024,10 @@
         "reparent": {},
         "sourceStep": 3,
         "contactObject": "cab",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          2
+        ]
       },
       {
         "kind": "collect",
@@ -888,7 +1043,10 @@
         "reparent": {},
         "sourceStep": 4,
         "contactObject": "cab",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          3
+        ]
       }
     ],
     "failures": [
@@ -1002,7 +1160,9 @@
         0.62,
         0.38
       ]
-    }
+    },
+    "observations": {},
+    "gentleHint": "時計の上に何か光っている。床からは届かない。"
   },
   {
     "stage": 5,
@@ -1072,7 +1232,8 @@
         "reparent": {},
         "sourceStep": 0,
         "contactObject": "gloves",
-        "revealGame": false
+        "revealGame": false,
+        "requires": []
       },
       {
         "kind": "push",
@@ -1092,7 +1253,10 @@
         "reparent": {},
         "sourceStep": 1,
         "contactObject": "table",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          0
+        ]
       },
       {
         "kind": "inspect",
@@ -1108,7 +1272,10 @@
         "reparent": {},
         "sourceStep": 2,
         "contactObject": "sofa",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          1
+        ]
       },
       {
         "kind": "collect",
@@ -1124,7 +1291,10 @@
         "reparent": {},
         "sourceStep": 3,
         "contactObject": "sofa",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          2
+        ]
       }
     ],
     "failures": [
@@ -1238,7 +1408,9 @@
         0.62,
         0.38
       ]
-    }
+    },
+    "observations": {},
+    "gentleHint": "重い物を動かすには、手が滑らない工夫が必要。"
   },
   {
     "stage": 6,
@@ -1361,7 +1533,9 @@
         "reparent": {},
         "sourceStep": 0,
         "contactObject": "mat",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [],
+        "clue": "水滴の跡は、青い傘・黄色の傘・折り畳み傘の順。"
       },
       {
         "kind": "order",
@@ -1379,7 +1553,10 @@
         "reparent": {},
         "sourceStep": 1,
         "contactObject": "umbrellas",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          0
+        ]
       },
       {
         "kind": "push",
@@ -1397,7 +1574,10 @@
         "reparent": {},
         "sourceStep": 2,
         "contactObject": "stand",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          1
+        ]
       },
       {
         "kind": "collect",
@@ -1413,7 +1593,10 @@
         "reparent": {},
         "sourceStep": 3,
         "contactObject": "stand",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          2
+        ]
       }
     ],
     "failures": [
@@ -1536,7 +1719,11 @@
         0.62,
         0.38
       ]
-    }
+    },
+    "observations": {
+      "mat": "水滴の跡は、青い傘・黄色の傘・折り畳み傘の順。"
+    },
+    "gentleHint": "玄関の水滴の跡をよく見よう。"
   },
   {
     "stage": 7,
@@ -1627,7 +1814,8 @@
         "reparent": {},
         "sourceStep": 0,
         "contactObject": "stamp",
-        "revealGame": false
+        "revealGame": false,
+        "requires": []
       },
       {
         "kind": "use",
@@ -1643,7 +1831,10 @@
         "reparent": {},
         "sourceStep": 1,
         "contactObject": "intercom",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          0
+        ]
       },
       {
         "kind": "receive",
@@ -1661,7 +1852,10 @@
         "reparent": {},
         "sourceStep": 2,
         "contactObject": "courier",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          1
+        ]
       },
       {
         "kind": "pickup",
@@ -1677,7 +1871,10 @@
         "reparent": {},
         "sourceStep": 3,
         "contactObject": "knife",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          2
+        ]
       },
       {
         "kind": "open",
@@ -1695,7 +1892,10 @@
         "reparent": {},
         "sourceStep": 4,
         "contactObject": "box",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          3
+        ]
       },
       {
         "kind": "collect",
@@ -1711,7 +1911,10 @@
         "reparent": {},
         "sourceStep": 5,
         "contactObject": "box",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          4
+        ]
       }
     ],
     "failures": [
@@ -1825,7 +2028,9 @@
         0.62,
         0.38
       ]
-    }
+    },
+    "observations": {},
+    "gentleHint": "見えている物と家族の様子を観察し、手に入れた道具の使い道を考えよう。"
   },
   {
     "stage": 8,
@@ -1896,7 +2101,8 @@
         "reparent": {},
         "sourceStep": 0,
         "contactObject": "shoes",
-        "revealGame": false
+        "revealGame": false,
+        "requires": []
       },
       {
         "kind": "inspect",
@@ -1912,7 +2118,10 @@
         "reparent": {},
         "sourceStep": 1,
         "contactObject": "slipper",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          0
+        ]
       },
       {
         "kind": "pickup",
@@ -1928,7 +2137,10 @@
         "reparent": {},
         "sourceStep": 2,
         "contactObject": "key",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          1
+        ]
       },
       {
         "kind": "open",
@@ -1946,7 +2158,10 @@
         "reparent": {},
         "sourceStep": 3,
         "contactObject": "cab",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          2
+        ]
       },
       {
         "kind": "collect",
@@ -1962,7 +2177,10 @@
         "reparent": {},
         "sourceStep": 4,
         "contactObject": "cab",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          3
+        ]
       }
     ],
     "failures": [
@@ -2076,7 +2294,9 @@
         0.62,
         0.38
       ]
-    }
+    },
+    "observations": {},
+    "gentleHint": "見えている物と家族の様子を観察し、手に入れた道具の使い道を考えよう。"
   },
   {
     "stage": 9,
@@ -2126,7 +2346,8 @@
         "reparent": {},
         "sourceStep": 0,
         "contactObject": "intercom",
-        "revealGame": false
+        "revealGame": false,
+        "requires": []
       },
       {
         "kind": "talk",
@@ -2144,7 +2365,10 @@
         "reparent": {},
         "sourceStep": 1,
         "contactObject": "grandma",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          0
+        ]
       },
       {
         "kind": "open",
@@ -2160,7 +2384,10 @@
         "reparent": {},
         "sourceStep": 2,
         "contactObject": "bench",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          1
+        ]
       },
       {
         "kind": "collect",
@@ -2176,7 +2403,10 @@
         "reparent": {},
         "sourceStep": 3,
         "contactObject": "bench",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          2
+        ]
       }
     ],
     "failures": [
@@ -2290,7 +2520,9 @@
         0.62,
         0.38
       ]
-    }
+    },
+    "observations": {},
+    "gentleHint": "見えている物と家族の様子を観察し、手に入れた道具の使い道を考えよう。"
   },
   {
     "stage": 10,
@@ -2361,7 +2593,8 @@
         "reparent": {},
         "sourceStep": 0,
         "contactObject": "umbrella",
-        "revealGame": false
+        "revealGame": false,
+        "requires": []
       },
       {
         "kind": "pickup",
@@ -2377,7 +2610,9 @@
         "reparent": {},
         "sourceStep": 1,
         "contactObject": "card",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [],
+        "clue": "番号カードに「1234」と書いてある。"
       },
       {
         "kind": "travel",
@@ -2395,7 +2630,10 @@
         "reparent": {},
         "sourceStep": 2,
         "contactObject": "door",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          1
+        ]
       },
       {
         "kind": "code",
@@ -2413,7 +2651,10 @@
         "reparent": {},
         "sourceStep": 3,
         "contactObject": "locker",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          2
+        ]
       },
       {
         "kind": "collect",
@@ -2429,7 +2670,10 @@
         "reparent": {},
         "sourceStep": 4,
         "contactObject": "locker",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          3
+        ]
       }
     ],
     "failures": [
@@ -2549,7 +2793,11 @@
         0.62,
         0.38
       ]
-    }
+    },
+    "observations": {
+      "card": "番号カードに「1234」と書いてある。"
+    },
+    "gentleHint": "郵便受けに番号の手掛かりがありそう。"
   },
   {
     "stage": 11,
@@ -2604,7 +2852,8 @@
           0.24
         ],
         "contactObject": "mirror",
-        "revealGame": true
+        "revealGame": true,
+        "requires": []
       },
       {
         "kind": "use",
@@ -2622,7 +2871,10 @@
         "reparent": {},
         "sourceStep": 1,
         "contactObject": "fan",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          0
+        ]
       },
       {
         "kind": "read",
@@ -2644,7 +2896,11 @@
           0.24
         ],
         "contactObject": "mirror",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          1
+        ],
+        "clue": "曇りが取れると「2406」が読める。"
       },
       {
         "kind": "code",
@@ -2660,7 +2916,10 @@
         "reparent": {},
         "sourceStep": 3,
         "contactObject": "mirror",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          2
+        ]
       },
       {
         "kind": "collect",
@@ -2676,7 +2935,10 @@
         "reparent": {},
         "sourceStep": 4,
         "contactObject": "mirror",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          3
+        ]
       }
     ],
     "failures": [
@@ -2798,7 +3060,11 @@
         0.62,
         0.38
       ]
-    }
+    },
+    "observations": {
+      "mirror": "曇りが取れると「2406」が読める。"
+    },
+    "gentleHint": "鏡の曇りを取る方法は？"
   },
   {
     "stage": 12,
@@ -2883,7 +3149,8 @@
         "text": "床のアヒルおもちゃを取る",
         "reparent": {},
         "contactObject": "duck",
-        "revealGame": false
+        "revealGame": false,
+        "requires": []
       },
       {
         "kind": "place",
@@ -2901,7 +3168,10 @@
         "reparent": {},
         "sourceStep": 0,
         "contactObject": "tub",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          0
+        ]
       },
       {
         "kind": "use",
@@ -2921,7 +3191,10 @@
         "reparent": {},
         "sourceStep": 1,
         "contactObject": "tap",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          1
+        ]
       },
       {
         "kind": "pickup",
@@ -2937,7 +3210,10 @@
         "reparent": {},
         "sourceStep": 2,
         "contactObject": "key",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          2
+        ]
       },
       {
         "kind": "open",
@@ -2955,7 +3231,10 @@
         "reparent": {},
         "sourceStep": 3,
         "contactObject": "cab",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          3
+        ]
       },
       {
         "kind": "collect",
@@ -2971,7 +3250,10 @@
         "reparent": {},
         "sourceStep": 4,
         "contactObject": "cab",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          4
+        ]
       }
     ],
     "failures": [
@@ -3085,7 +3367,9 @@
         0.62,
         0.38
       ]
-    }
+    },
+    "observations": {},
+    "gentleHint": "見えている物と家族の様子を観察し、手に入れた道具の使い道を考えよう。"
   },
   {
     "stage": 13,
@@ -3190,7 +3474,8 @@
         "reparent": {},
         "sourceStep": 0,
         "contactObject": "tongs",
-        "revealGame": false
+        "revealGame": false,
+        "requires": []
       },
       {
         "kind": "open",
@@ -3206,7 +3491,10 @@
         "reparent": {},
         "sourceStep": 1,
         "contactObject": "drain",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          0
+        ]
       },
       {
         "kind": "use",
@@ -3226,7 +3514,10 @@
         "reparent": {},
         "sourceStep": 2,
         "contactObject": "drain",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          1
+        ]
       },
       {
         "kind": "pickup",
@@ -3244,7 +3535,10 @@
         "reparent": {},
         "sourceStep": 3,
         "contactObject": "key",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          2
+        ]
       },
       {
         "kind": "collect",
@@ -3262,7 +3556,10 @@
         "reparent": {},
         "sourceStep": 4,
         "contactObject": "lockbox",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          3
+        ]
       }
     ],
     "failures": [
@@ -3376,7 +3673,9 @@
         0.62,
         0.38
       ]
-    }
+    },
+    "observations": {},
+    "gentleHint": "見えている物と家族の様子を観察し、手に入れた道具の使い道を考えよう。"
   },
   {
     "stage": 14,
@@ -3467,7 +3766,9 @@
         "reparent": {},
         "sourceStep": 0,
         "contactObject": "note",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [],
+        "clue": "乾かしたメモには「かごの底」と書いてある。"
       },
       {
         "kind": "pickup",
@@ -3482,7 +3783,8 @@
         "text": "棚のドライヤーを取る",
         "reparent": {},
         "contactObject": "dryer",
-        "revealGame": false
+        "revealGame": false,
+        "requires": []
       },
       {
         "kind": "dry",
@@ -3503,7 +3805,13 @@
         "reparent": {},
         "sourceStep": 1,
         "contactObject": "socket",
-        "revealGame": false
+        "revealGame": false,
+        "inputItems": [
+          "dryer"
+        ],
+        "requires": [
+          1
+        ]
       },
       {
         "kind": "read",
@@ -3519,7 +3827,11 @@
         "reparent": {},
         "sourceStep": 2,
         "contactObject": "note",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          2
+        ],
+        "clue": "乾かしたメモには「かごの底」と書いてある。"
       },
       {
         "kind": "open",
@@ -3535,7 +3847,10 @@
         "reparent": {},
         "sourceStep": 3,
         "contactObject": "basket",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          3
+        ]
       },
       {
         "kind": "collect",
@@ -3551,7 +3866,10 @@
         "reparent": {},
         "sourceStep": 4,
         "contactObject": "basket",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          4
+        ]
       }
     ],
     "failures": [
@@ -3665,7 +3983,11 @@
         0.62,
         0.38
       ]
-    }
+    },
+    "observations": {
+      "note": "乾かしたメモには「かごの底」と書いてある。"
+    },
+    "gentleHint": "濡れた紙は、そのままでは読めない。"
   },
   {
     "stage": 15,
@@ -3711,7 +4033,8 @@
         "reparent": {},
         "sourceStep": 0,
         "contactObject": "sponge",
-        "revealGame": false
+        "revealGame": false,
+        "requires": []
       },
       {
         "kind": "wait",
@@ -3729,7 +4052,10 @@
         "reparent": {},
         "sourceStep": 1,
         "contactObject": "papa",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          0
+        ]
       },
       {
         "kind": "wipe",
@@ -3749,7 +4075,10 @@
         "reparent": {},
         "sourceStep": 2,
         "contactObject": "panel",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          1
+        ]
       },
       {
         "kind": "open",
@@ -3765,7 +4094,10 @@
         "reparent": {},
         "sourceStep": 3,
         "contactObject": "panel",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          2
+        ]
       },
       {
         "kind": "collect",
@@ -3781,7 +4113,10 @@
         "reparent": {},
         "sourceStep": 4,
         "contactObject": "panel",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          3
+        ]
       }
     ],
     "failures": [
@@ -3895,7 +4230,9 @@
         0.62,
         0.38
       ]
-    }
+    },
+    "observations": {},
+    "gentleHint": "見えている物と家族の様子を観察し、手に入れた道具の使い道を考えよう。"
   },
   {
     "stage": 16,
@@ -3965,7 +4302,8 @@
         "reparent": {},
         "sourceStep": 0,
         "contactObject": "shovel",
-        "revealGame": false
+        "revealGame": false,
+        "requires": []
       },
       {
         "kind": "inspect",
@@ -3981,7 +4319,10 @@
         "reparent": {},
         "sourceStep": 1,
         "contactObject": "soil",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          0
+        ]
       },
       {
         "kind": "dig",
@@ -4003,7 +4344,10 @@
         "reparent": {},
         "sourceStep": 2,
         "contactObject": "soil",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          1
+        ]
       },
       {
         "kind": "open",
@@ -4019,7 +4363,10 @@
         "reparent": {},
         "sourceStep": 3,
         "contactObject": "box",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          2
+        ]
       },
       {
         "kind": "collect",
@@ -4035,7 +4382,10 @@
         "reparent": {},
         "sourceStep": 4,
         "contactObject": "box",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          3
+        ]
       }
     ],
     "failures": [
@@ -4149,7 +4499,9 @@
         0.62,
         0.38
       ]
-    }
+    },
+    "observations": {},
+    "gentleHint": "見えている物と家族の様子を観察し、手に入れた道具の使い道を考えよう。"
   },
   {
     "stage": 17,
@@ -4231,7 +4583,8 @@
         "reparent": {},
         "sourceStep": 0,
         "contactObject": "can",
-        "revealGame": false
+        "revealGame": false,
+        "requires": []
       },
       {
         "kind": "fill",
@@ -4251,7 +4604,10 @@
         "reparent": {},
         "sourceStep": 1,
         "contactObject": "tap",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          0
+        ]
       },
       {
         "kind": "pour",
@@ -4273,7 +4629,10 @@
         "reparent": {},
         "sourceStep": 2,
         "contactObject": "plant",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          1
+        ]
       },
       {
         "kind": "pickup",
@@ -4289,7 +4648,10 @@
         "reparent": {},
         "sourceStep": 3,
         "contactObject": "key",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          2
+        ]
       },
       {
         "kind": "collect",
@@ -4307,7 +4669,10 @@
         "reparent": {},
         "sourceStep": 4,
         "contactObject": "shed",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          3
+        ]
       }
     ],
     "failures": [
@@ -4421,7 +4786,9 @@
         0.62,
         0.38
       ]
-    }
+    },
+    "observations": {},
+    "gentleHint": "見えている物と家族の様子を観察し、手に入れた道具の使い道を考えよう。"
   },
   {
     "stage": 18,
@@ -4479,7 +4846,8 @@
         "reparent": {},
         "sourceStep": 0,
         "contactObject": "ball",
-        "revealGame": false
+        "revealGame": false,
+        "requires": []
       },
       {
         "kind": "throw",
@@ -4499,7 +4867,10 @@
         "reparent": {},
         "sourceStep": 1,
         "contactObject": "cat",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          0
+        ]
       },
       {
         "kind": "wait",
@@ -4517,7 +4888,10 @@
         "reparent": {},
         "sourceStep": 2,
         "contactObject": "cat",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          1
+        ]
       },
       {
         "kind": "open",
@@ -4533,7 +4907,10 @@
         "reparent": {},
         "sourceStep": 3,
         "contactObject": "shed",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          2
+        ]
       },
       {
         "kind": "collect",
@@ -4549,7 +4926,10 @@
         "reparent": {},
         "sourceStep": 4,
         "contactObject": "shed",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          3
+        ]
       }
     ],
     "failures": [
@@ -4663,7 +5043,9 @@
         0.62,
         0.38
       ]
-    }
+    },
+    "observations": {},
+    "gentleHint": "見えている物と家族の様子を観察し、手に入れた道具の使い道を考えよう。"
   },
   {
     "stage": 19,
@@ -4734,25 +5116,38 @@
         "reparent": {},
         "sourceStep": 0,
         "contactObject": "coin",
-        "revealGame": false
+        "revealGame": false,
+        "requires": []
       },
       {
         "kind": "place",
-        "target": "crow",
+        "target": "bench",
         "gain": null,
         "use": [
           "coin"
         ],
         "actor": "boy",
         "room": null,
-        "move": {},
+        "move": {
+          "crow": [
+            640,
+            620
+          ]
+        },
         "reveal": [],
         "change": {},
         "text": "カラスの近くにコインを置く",
         "reparent": {},
         "sourceStep": 1,
-        "contactObject": "crow",
-        "revealGame": false
+        "contactObject": "bench",
+        "revealGame": false,
+        "placeUV": [
+          0.75,
+          0.12
+        ],
+        "requires": [
+          0
+        ]
       },
       {
         "kind": "receive",
@@ -4770,7 +5165,10 @@
         "reparent": {},
         "sourceStep": 2,
         "contactObject": "crow",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          1
+        ]
       },
       {
         "kind": "collect",
@@ -4788,15 +5186,24 @@
         "reparent": {},
         "sourceStep": 3,
         "contactObject": "bench",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          2
+        ]
       }
     ],
     "failures": [
       {
         "text": "カラスを追い払って鍵ごと飛ばされる",
         "target": "crow",
-        "kind": "use",
-        "actor": "boy"
+        "kind": "shoo",
+        "actor": "boy",
+        "move": {
+          "crow": [
+            1210,
+            210
+          ]
+        }
       }
     ],
     "console": {
@@ -4902,7 +5309,18 @@
         0.62,
         0.38
       ]
-    }
+    },
+    "actorPerches": {
+      "crow": {
+        "parent": "bench",
+        "mount": [
+          0.56,
+          0.12
+        ]
+      }
+    },
+    "observations": {},
+    "gentleHint": "見えている物と家族の様子を観察し、手に入れた道具の使い道を考えよう。"
   },
   {
     "stage": 20,
@@ -5000,7 +5418,8 @@
         "reparent": {},
         "sourceStep": 0,
         "contactObject": "key",
-        "revealGame": false
+        "revealGame": false,
+        "requires": []
       },
       {
         "kind": "open",
@@ -5018,7 +5437,10 @@
         "reparent": {},
         "sourceStep": 1,
         "contactObject": "shed",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          0
+        ]
       },
       {
         "kind": "pickup",
@@ -5033,7 +5455,10 @@
         "text": "物置のロープを取る",
         "reparent": {},
         "contactObject": "rope",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          1
+        ]
       },
       {
         "kind": "place",
@@ -5049,7 +5474,10 @@
         "reparent": {},
         "sourceStep": 2,
         "contactObject": "ladder",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          2
+        ]
       },
       {
         "kind": "pull",
@@ -5069,7 +5497,10 @@
         "reparent": {},
         "sourceStep": 3,
         "contactObject": "box",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          3
+        ]
       },
       {
         "kind": "collect",
@@ -5085,7 +5516,10 @@
         "reparent": {},
         "sourceStep": 4,
         "contactObject": "box",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          4
+        ]
       }
     ],
     "failures": [
@@ -5199,7 +5633,9 @@
         0.62,
         0.38
       ]
-    }
+    },
+    "observations": {},
+    "gentleHint": "高い箱を安全に下ろす方法を考えよう。"
   },
   {
     "stage": 21,
@@ -5285,7 +5721,8 @@
         "reparent": {},
         "sourceStep": 0,
         "contactObject": "spoon",
-        "revealGame": false
+        "revealGame": false,
+        "requires": []
       },
       {
         "kind": "give",
@@ -5303,7 +5740,10 @@
         "reparent": {},
         "sourceStep": 1,
         "contactObject": "sister",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          0
+        ]
       },
       {
         "kind": "wait",
@@ -5323,7 +5763,10 @@
         "reparent": {},
         "sourceStep": 2,
         "contactObject": "sister",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          1
+        ]
       },
       {
         "kind": "open",
@@ -5339,7 +5782,10 @@
         "reparent": {},
         "sourceStep": 3,
         "contactObject": "fridge",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          2
+        ]
       },
       {
         "kind": "collect",
@@ -5355,7 +5801,10 @@
         "reparent": {},
         "sourceStep": 4,
         "contactObject": "fridge",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          3
+        ]
       }
     ],
     "failures": [
@@ -5472,7 +5921,9 @@
         0.62,
         0.38
       ]
-    }
+    },
+    "observations": {},
+    "gentleHint": "見えている物と家族の様子を観察し、手に入れた道具の使い道を考えよう。"
   },
   {
     "stage": 22,
@@ -5563,7 +6014,8 @@
         "reparent": {},
         "sourceStep": 0,
         "contactObject": "microwave",
-        "revealGame": false
+        "revealGame": false,
+        "requires": []
       },
       {
         "kind": "travel",
@@ -5578,7 +6030,10 @@
         "text": "キッチンから廊下へ移動する",
         "reparent": {},
         "contactObject": "door",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          0
+        ]
       },
       {
         "kind": "use",
@@ -5596,7 +6051,10 @@
         "reparent": {},
         "sourceStep": 1,
         "contactObject": "breaker",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          1
+        ]
       },
       {
         "kind": "travel",
@@ -5611,7 +6069,10 @@
         "text": "キッチンへ戻る",
         "reparent": {},
         "contactObject": "door",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          2
+        ]
       },
       {
         "kind": "read",
@@ -5627,7 +6088,11 @@
         "reparent": {},
         "sourceStep": 2,
         "contactObject": "microwave",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          3
+        ],
+        "clue": "電源が入った電子レンジは「12:00」を示している。"
       },
       {
         "kind": "code",
@@ -5643,7 +6108,10 @@
         "reparent": {},
         "sourceStep": 3,
         "contactObject": "box",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          4
+        ]
       },
       {
         "kind": "collect",
@@ -5659,7 +6127,10 @@
         "reparent": {},
         "sourceStep": 4,
         "contactObject": "box",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          5
+        ]
       }
     ],
     "failures": [
@@ -5778,7 +6249,11 @@
         0.62,
         0.38
       ]
-    }
+    },
+    "observations": {
+      "microwave": "電源が入った電子レンジは「12:00」を示している。"
+    },
+    "gentleHint": "見えている物と家族の様子を観察し、手に入れた道具の使い道を考えよう。"
   },
   {
     "stage": 23,
@@ -5848,7 +6323,8 @@
         "text": "テーブルのお茶を取る",
         "reparent": {},
         "contactObject": "tea",
-        "revealGame": false
+        "revealGame": false,
+        "requires": []
       },
       {
         "kind": "give",
@@ -5870,7 +6346,10 @@
         "reparent": {},
         "sourceStep": 0,
         "contactObject": "grandma",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          0
+        ]
       },
       {
         "kind": "push",
@@ -5880,7 +6359,10 @@
         "actor": "boy",
         "room": null,
         "move": {
-          "chair": "wallSupport"
+          "chair": [
+            305,
+            620
+          ]
         },
         "reveal": [],
         "change": {},
@@ -5888,7 +6370,10 @@
         "reparent": {},
         "sourceStep": 1,
         "contactObject": "chair",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          1
+        ]
       },
       {
         "kind": "climb",
@@ -5904,7 +6389,10 @@
         "reparent": {},
         "sourceStep": 2,
         "contactObject": "chair",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          2
+        ]
       },
       {
         "kind": "collect",
@@ -5920,7 +6408,10 @@
         "reparent": {},
         "sourceStep": 3,
         "contactObject": "cab",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          3
+        ]
       }
     ],
     "failures": [
@@ -6040,7 +6531,9 @@
         0.62,
         0.38
       ]
-    }
+    },
+    "observations": {},
+    "gentleHint": "椅子は座る以外にも使えそう。"
   },
   {
     "stage": 24,
@@ -6110,7 +6603,8 @@
         "reparent": {},
         "sourceStep": 0,
         "contactObject": "mug",
-        "revealGame": false
+        "revealGame": false,
+        "requires": []
       },
       {
         "kind": "pour",
@@ -6130,7 +6624,10 @@
         "reparent": {},
         "sourceStep": 1,
         "contactObject": "pot",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          0
+        ]
       },
       {
         "kind": "give",
@@ -6150,7 +6647,10 @@
         "reparent": {},
         "sourceStep": 2,
         "contactObject": "papa",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          1
+        ]
       },
       {
         "kind": "wait",
@@ -6168,7 +6668,10 @@
         "reparent": {},
         "sourceStep": 3,
         "contactObject": "papa",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          2
+        ]
       },
       {
         "kind": "collect",
@@ -6184,7 +6687,10 @@
         "reparent": {},
         "sourceStep": 4,
         "contactObject": "counter",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          3
+        ]
       }
     ],
     "failures": [
@@ -6298,7 +6804,9 @@
         0.62,
         0.38
       ]
-    }
+    },
+    "observations": {},
+    "gentleHint": "見えている物と家族の様子を観察し、手に入れた道具の使い道を考えよう。"
   },
   {
     "stage": 25,
@@ -6380,7 +6888,8 @@
         "reparent": {},
         "sourceStep": 0,
         "contactObject": "remote",
-        "revealGame": false
+        "revealGame": false,
+        "requires": []
       },
       {
         "kind": "use",
@@ -6401,7 +6910,10 @@
         "sourceStep": 1,
         "contactObject": "vacuum",
         "revealGame": false,
-        "ranged": true
+        "ranged": true,
+        "requires": [
+          0
+        ]
       },
       {
         "kind": "push",
@@ -6419,7 +6931,10 @@
         "reparent": {},
         "sourceStep": 2,
         "contactObject": "key",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          1
+        ]
       },
       {
         "kind": "pickup",
@@ -6435,7 +6950,10 @@
         "reparent": {},
         "sourceStep": 3,
         "contactObject": "key",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          2
+        ]
       },
       {
         "kind": "collect",
@@ -6453,7 +6971,10 @@
         "reparent": {},
         "sourceStep": 4,
         "contactObject": "pantry",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          3
+        ]
       }
     ],
     "failures": [
@@ -6570,7 +7091,9 @@
         0.62,
         0.38
       ]
-    }
+    },
+    "observations": {},
+    "gentleHint": "見えている物と家族の様子を観察し、手に入れた道具の使い道を考えよう。"
   },
   {
     "stage": 26,
@@ -6716,7 +7239,9 @@
         "reparent": {},
         "sourceStep": 0,
         "contactObject": "books",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [],
+        "clue": "背表紙の番号は 1・2・3・4。"
       },
       {
         "kind": "order",
@@ -6736,7 +7261,10 @@
         "reparent": {},
         "sourceStep": 1,
         "contactObject": "shelf",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          0
+        ]
       },
       {
         "kind": "pull",
@@ -6754,7 +7282,10 @@
         "reparent": {},
         "sourceStep": 2,
         "contactObject": "case",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          1
+        ]
       },
       {
         "kind": "collect",
@@ -6770,7 +7301,10 @@
         "reparent": {},
         "sourceStep": 3,
         "contactObject": "case",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          2
+        ]
       }
     ],
     "failures": [
@@ -6892,7 +7426,11 @@
         0.62,
         0.38
       ]
-    }
+    },
+    "observations": {
+      "books": "背表紙の番号は 1・2・3・4。"
+    },
+    "gentleHint": "教科書の背表紙を見比べよう。"
   },
   {
     "stage": 27,
@@ -6970,7 +7508,8 @@
         "reparent": {},
         "sourceStep": 0,
         "contactObject": "sticker",
-        "revealGame": false
+        "revealGame": false,
+        "requires": []
       },
       {
         "kind": "open",
@@ -6988,7 +7527,10 @@
         "reparent": {},
         "sourceStep": 1,
         "contactObject": "closet",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          0
+        ]
       },
       {
         "kind": "give",
@@ -7006,7 +7548,10 @@
         "reparent": {},
         "sourceStep": 2,
         "contactObject": "sister",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          1
+        ]
       },
       {
         "kind": "wait",
@@ -7024,7 +7569,10 @@
         "reparent": {},
         "sourceStep": 3,
         "contactObject": "sister",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          2
+        ]
       },
       {
         "kind": "collect",
@@ -7040,7 +7588,10 @@
         "reparent": {},
         "sourceStep": 4,
         "contactObject": "box",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          3
+        ]
       }
     ],
     "failures": [
@@ -7157,7 +7708,9 @@
         0.62,
         0.38
       ]
-    }
+    },
+    "observations": {},
+    "gentleHint": "見えている物と家族の様子を観察し、手に入れた道具の使い道を考えよう。"
   },
   {
     "stage": 28,
@@ -7227,7 +7780,8 @@
         "reparent": {},
         "sourceStep": 0,
         "contactObject": "torch",
-        "revealGame": false
+        "revealGame": false,
+        "requires": []
       },
       {
         "kind": "light",
@@ -7253,6 +7807,9 @@
         "contactUV": [
           0.25,
           0.94
+        ],
+        "requires": [
+          0
         ]
       },
       {
@@ -7271,7 +7828,10 @@
         "reparent": {},
         "sourceStep": 2,
         "contactObject": "cat",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          1
+        ]
       },
       {
         "kind": "pull",
@@ -7289,7 +7849,10 @@
         "reparent": {},
         "sourceStep": 3,
         "contactObject": "box",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          2
+        ]
       },
       {
         "kind": "collect",
@@ -7305,7 +7868,10 @@
         "reparent": {},
         "sourceStep": 4,
         "contactObject": "box",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          3
+        ]
       }
     ],
     "failures": [
@@ -7422,7 +7988,9 @@
         0.62,
         0.38
       ]
-    }
+    },
+    "observations": {},
+    "gentleHint": "見えている物と家族の様子を観察し、手に入れた道具の使い道を考えよう。"
   },
   {
     "stage": 29,
@@ -7432,9 +8000,9 @@
         "id": "calendar",
         "label": "カレンダー",
         "asset": "calendar",
-        "slot": "wall",
+        "slot": "surface",
         "room": null,
-        "parent": null,
+        "parent": "desk",
         "contact": [
           0.5,
           0.5
@@ -7442,7 +8010,12 @@
         "position": [
           410,
           435
-        ]
+        ],
+        "mount": [
+          0.3,
+          -0.1
+        ],
+        "exposed": true
       },
       {
         "id": "desk",
@@ -7469,11 +8042,12 @@
         "move": {},
         "reveal": [],
         "change": {},
-        "text": "壁のカレンダーを調べる",
+        "text": "机のカレンダーをよく見る",
         "reparent": {},
         "sourceStep": 0,
         "contactObject": "calendar",
-        "revealGame": false
+        "revealGame": false,
+        "requires": []
       },
       {
         "kind": "read",
@@ -7489,7 +8063,11 @@
         "reparent": {},
         "sourceStep": 1,
         "contactObject": "calendar",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          0
+        ],
+        "clue": "星印が付いた日付は 7月14日。"
       },
       {
         "kind": "code",
@@ -7505,7 +8083,10 @@
         "reparent": {},
         "sourceStep": 2,
         "contactObject": "desk",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          1
+        ]
       },
       {
         "kind": "collect",
@@ -7521,7 +8102,10 @@
         "reparent": {},
         "sourceStep": 3,
         "contactObject": "desk",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          2
+        ]
       }
     ],
     "failures": [
@@ -7640,7 +8224,11 @@
         0.62,
         0.38
       ]
-    }
+    },
+    "observations": {
+      "calendar": "星印が付いた日付は 7月14日。"
+    },
+    "gentleHint": "カレンダーの印に注目。"
   },
   {
     "stage": 30,
@@ -7751,7 +8339,8 @@
         "reparent": {},
         "sourceStep": 0,
         "contactObject": "blanket",
-        "revealGame": false
+        "revealGame": false,
+        "requires": []
       },
       {
         "kind": "pickup",
@@ -7767,7 +8356,8 @@
         "reparent": {},
         "sourceStep": 1,
         "contactObject": "pins",
-        "revealGame": false
+        "revealGame": false,
+        "requires": []
       },
       {
         "kind": "push",
@@ -7785,7 +8375,10 @@
         "reparent": {},
         "sourceStep": 2,
         "contactObject": "chair",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          1
+        ]
       },
       {
         "kind": "assemble",
@@ -7811,7 +8404,10 @@
         },
         "sourceStep": 3,
         "contactObject": "desk",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          2
+        ]
       },
       {
         "kind": "use",
@@ -7829,7 +8425,10 @@
         "reparent": {},
         "sourceStep": 4,
         "contactObject": "panel",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          3
+        ]
       },
       {
         "kind": "collect",
@@ -7845,7 +8444,10 @@
         "reparent": {},
         "sourceStep": 5,
         "contactObject": "panel",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          4
+        ]
       }
     ],
     "failures": [
@@ -7963,7 +8565,9 @@
         0.62,
         0.38
       ]
-    }
+    },
+    "observations": {},
+    "gentleHint": "毛布と洗濯ばさみで何を作れる？"
   },
   {
     "stage": 31,
@@ -8021,7 +8625,9 @@
         "reparent": {},
         "sourceStep": 0,
         "contactObject": "notice",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [],
+        "clue": "不在票に「リビングの本棚を確認」とある。"
       },
       {
         "kind": "read",
@@ -8037,7 +8643,11 @@
         "reparent": {},
         "sourceStep": 1,
         "contactObject": "notice",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          0
+        ],
+        "clue": "不在票に「リビングの本棚を確認」とある。"
       },
       {
         "kind": "travel",
@@ -8053,7 +8663,10 @@
         "reparent": {},
         "sourceStep": 2,
         "contactObject": "door",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          1
+        ]
       },
       {
         "kind": "wait",
@@ -8071,7 +8684,10 @@
         "reparent": {},
         "sourceStep": 3,
         "contactObject": "papa",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          2
+        ]
       },
       {
         "kind": "push",
@@ -8089,7 +8705,10 @@
         "reparent": {},
         "sourceStep": 4,
         "contactObject": "shelf",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          3
+        ]
       },
       {
         "kind": "collect",
@@ -8105,7 +8724,10 @@
         "reparent": {},
         "sourceStep": 5,
         "contactObject": "shelf",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          4
+        ]
       }
     ],
     "failures": [
@@ -8223,7 +8845,11 @@
         0.62,
         0.38
       ]
-    }
+    },
+    "observations": {
+      "notice": "不在票に「リビングの本棚を確認」とある。"
+    },
+    "gentleHint": "見えている物と家族の様子を観察し、手に入れた道具の使い道を考えよう。"
   },
   {
     "stage": 32,
@@ -8309,7 +8935,8 @@
         "reparent": {},
         "sourceStep": 0,
         "contactObject": "ice",
-        "revealGame": false
+        "revealGame": false,
+        "requires": []
       },
       {
         "kind": "travel",
@@ -8325,7 +8952,10 @@
         "reparent": {},
         "sourceStep": 1,
         "contactObject": "door",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          0
+        ]
       },
       {
         "kind": "place",
@@ -8347,7 +8977,10 @@
         "reparent": {},
         "sourceStep": 2,
         "contactObject": "plate",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          1
+        ]
       },
       {
         "kind": "pickup",
@@ -8365,7 +8998,10 @@
         "reparent": {},
         "sourceStep": 3,
         "contactObject": "key",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          2
+        ]
       },
       {
         "kind": "collect",
@@ -8383,7 +9019,10 @@
         "reparent": {},
         "sourceStep": 4,
         "contactObject": "shed",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          3
+        ]
       }
     ],
     "failures": [
@@ -8497,7 +9136,9 @@
         0.62,
         0.38
       ]
-    }
+    },
+    "observations": {},
+    "gentleHint": "見えている物と家族の様子を観察し、手に入れた道具の使い道を考えよう。"
   },
   {
     "stage": 33,
@@ -8567,7 +9208,8 @@
         "reparent": {},
         "sourceStep": 0,
         "contactObject": "washer",
-        "revealGame": false
+        "revealGame": false,
+        "requires": []
       },
       {
         "kind": "inspect",
@@ -8583,7 +9225,10 @@
         "reparent": {},
         "sourceStep": 1,
         "contactObject": "washer",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          0
+        ]
       },
       {
         "kind": "inspect",
@@ -8601,7 +9246,10 @@
         "reparent": {},
         "sourceStep": 2,
         "contactObject": "laundry",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          1
+        ]
       },
       {
         "kind": "read",
@@ -8617,7 +9265,11 @@
         "reparent": {},
         "sourceStep": 3,
         "contactObject": "note",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          2
+        ],
+        "clue": "メモには「脱衣かごの底」と書いてある。"
       },
       {
         "kind": "collect",
@@ -8633,7 +9285,10 @@
         "reparent": {},
         "sourceStep": 4,
         "contactObject": "basket",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          3
+        ]
       }
     ],
     "failures": [
@@ -8747,7 +9402,11 @@
         0.62,
         0.38
       ]
-    }
+    },
+    "observations": {
+      "note": "メモには「脱衣かごの底」と書いてある。"
+    },
+    "gentleHint": "見えている物と家族の様子を観察し、手に入れた道具の使い道を考えよう。"
   },
   {
     "stage": 34,
@@ -8829,7 +9488,8 @@
         "reparent": {},
         "sourceStep": 0,
         "contactObject": "plane",
-        "revealGame": false
+        "revealGame": false,
+        "requires": []
       },
       {
         "kind": "event",
@@ -8847,7 +9507,10 @@
         "reparent": {},
         "sourceStep": 1,
         "contactObject": "plane",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          0
+        ]
       },
       {
         "kind": "pickup",
@@ -8863,7 +9526,10 @@
         "reparent": {},
         "sourceStep": 2,
         "contactObject": "net",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          1
+        ]
       },
       {
         "kind": "pickup",
@@ -8881,7 +9547,10 @@
         "reparent": {},
         "sourceStep": 3,
         "contactObject": "plane",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          1
+        ]
       },
       {
         "kind": "travel",
@@ -8896,7 +9565,10 @@
         "text": "紙ひこうきを持って子ども部屋へ戻る",
         "reparent": {},
         "contactObject": "door",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          3
+        ]
       },
       {
         "kind": "collect",
@@ -8914,7 +9586,10 @@
         "reparent": {},
         "sourceStep": 4,
         "contactObject": "shelf",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          4
+        ]
       }
     ],
     "failures": [
@@ -9031,7 +9706,9 @@
         0.62,
         0.38
       ]
-    }
+    },
+    "observations": {},
+    "gentleHint": "見えている物と家族の様子を観察し、手に入れた道具の使い道を考えよう。"
   },
   {
     "stage": 35,
@@ -9093,7 +9770,8 @@
         "reparent": {},
         "sourceStep": 0,
         "contactObject": "torch",
-        "revealGame": false
+        "revealGame": false,
+        "requires": []
       },
       {
         "kind": "travel",
@@ -9109,7 +9787,10 @@
         "reparent": {},
         "sourceStep": 1,
         "contactObject": "door",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          0
+        ]
       },
       {
         "kind": "use",
@@ -9128,7 +9809,10 @@
         "reparent": {},
         "sourceStep": 2,
         "contactObject": "breaker",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          1
+        ]
       },
       {
         "kind": "travel",
@@ -9144,7 +9828,10 @@
         "reparent": {},
         "sourceStep": 3,
         "contactObject": "door",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          2
+        ]
       },
       {
         "kind": "light",
@@ -9162,7 +9849,10 @@
         "reparent": {},
         "sourceStep": 4,
         "contactObject": "shelf",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          3
+        ]
       },
       {
         "kind": "collect",
@@ -9178,7 +9868,10 @@
         "reparent": {},
         "sourceStep": 5,
         "contactObject": "shelf",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          4
+        ]
       }
     ],
     "failures": [
@@ -9293,7 +9986,9 @@
         0.62,
         0.38
       ]
-    }
+    },
+    "observations": {},
+    "gentleHint": "見えている物と家族の様子を観察し、手に入れた道具の使い道を考えよう。"
   },
   {
     "stage": 36,
@@ -9353,7 +10048,8 @@
         "reparent": {},
         "sourceStep": 0,
         "contactObject": "papa",
-        "revealGame": false
+        "revealGame": false,
+        "requires": []
       },
       {
         "kind": "walk",
@@ -9369,7 +10065,10 @@
         "reparent": {},
         "sourceStep": 1,
         "contactObject": "sofa",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          0
+        ]
       },
       {
         "kind": "walk",
@@ -9387,7 +10086,10 @@
         "reparent": {},
         "sourceStep": 2,
         "contactObject": "tv",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          1
+        ]
       },
       {
         "kind": "open",
@@ -9403,7 +10105,10 @@
         "reparent": {},
         "sourceStep": 3,
         "contactObject": "tv",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          2
+        ]
       },
       {
         "kind": "collect",
@@ -9419,7 +10124,10 @@
         "reparent": {},
         "sourceStep": 4,
         "contactObject": "tv",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          3
+        ]
       }
     ],
     "failures": [
@@ -9533,7 +10241,9 @@
         0.62,
         0.38
       ]
-    }
+    },
+    "observations": {},
+    "gentleHint": "見えている物と家族の様子を観察し、手に入れた道具の使い道を考えよう。"
   },
   {
     "stage": 37,
@@ -9595,7 +10305,8 @@
         "reparent": {},
         "sourceStep": 0,
         "contactObject": "string",
-        "revealGame": false
+        "revealGame": false,
+        "requires": []
       },
       {
         "kind": "use",
@@ -9611,7 +10322,10 @@
         "reparent": {},
         "sourceStep": 1,
         "contactObject": "chime",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          0
+        ]
       },
       {
         "kind": "wait",
@@ -9631,7 +10345,10 @@
         "reparent": {},
         "sourceStep": 2,
         "contactObject": "grandpa",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          1
+        ]
       },
       {
         "kind": "open",
@@ -9647,7 +10364,10 @@
         "reparent": {},
         "sourceStep": 3,
         "contactObject": "bench",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          2
+        ]
       },
       {
         "kind": "collect",
@@ -9663,7 +10383,10 @@
         "reparent": {},
         "sourceStep": 4,
         "contactObject": "bench",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          3
+        ]
       }
     ],
     "failures": [
@@ -9783,7 +10506,9 @@
         0.62,
         0.38
       ]
-    }
+    },
+    "observations": {},
+    "gentleHint": "見えている物と家族の様子を観察し、手に入れた道具の使い道を考えよう。"
   },
   {
     "stage": 38,
@@ -9855,7 +10580,8 @@
         "reparent": {},
         "sourceStep": 0,
         "contactObject": "sister",
-        "revealGame": false
+        "revealGame": false,
+        "requires": []
       },
       {
         "kind": "pickup",
@@ -9871,7 +10597,10 @@
         "reparent": {},
         "sourceStep": 1,
         "contactObject": "cloth",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          0
+        ]
       },
       {
         "kind": "give",
@@ -9889,7 +10618,10 @@
         "reparent": {},
         "sourceStep": 2,
         "contactObject": "sister",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          1
+        ]
       },
       {
         "kind": "receive",
@@ -9905,7 +10637,10 @@
         "reparent": {},
         "sourceStep": 3,
         "contactObject": "sister",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          2
+        ]
       },
       {
         "kind": "collect",
@@ -9923,7 +10658,10 @@
         "reparent": {},
         "sourceStep": 4,
         "contactObject": "cab",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          3
+        ]
       }
     ],
     "failures": [
@@ -10037,7 +10775,9 @@
         0.62,
         0.38
       ]
-    }
+    },
+    "observations": {},
+    "gentleHint": "見えている物と家族の様子を観察し、手に入れた道具の使い道を考えよう。"
   },
   {
     "stage": 39,
@@ -10111,7 +10851,8 @@
         "reparent": {},
         "sourceStep": 0,
         "contactObject": "grandma",
-        "revealGame": false
+        "revealGame": false,
+        "requires": []
       },
       {
         "kind": "pickup",
@@ -10127,7 +10868,10 @@
         "reparent": {},
         "sourceStep": 1,
         "contactObject": "spice",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          0
+        ]
       },
       {
         "kind": "give",
@@ -10145,7 +10889,10 @@
         "reparent": {},
         "sourceStep": 2,
         "contactObject": "grandma",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          1
+        ]
       },
       {
         "kind": "wait",
@@ -10165,7 +10912,10 @@
         "reparent": {},
         "sourceStep": 3,
         "contactObject": "grandma",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          2
+        ]
       },
       {
         "kind": "collect",
@@ -10181,7 +10931,10 @@
         "reparent": {},
         "sourceStep": 4,
         "contactObject": "counter",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          3
+        ]
       }
     ],
     "failures": [
@@ -10295,7 +11048,9 @@
         0.62,
         0.38
       ]
-    }
+    },
+    "observations": {},
+    "gentleHint": "見えている物と家族の様子を観察し、手に入れた道具の使い道を考えよう。"
   },
   {
     "stage": 40,
@@ -10357,7 +11112,8 @@
         "reparent": {},
         "sourceStep": 0,
         "contactObject": "wrench",
-        "revealGame": false
+        "revealGame": false,
+        "requires": []
       },
       {
         "kind": "give",
@@ -10375,7 +11131,10 @@
         "reparent": {},
         "sourceStep": 1,
         "contactObject": "repair",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          0
+        ]
       },
       {
         "kind": "open",
@@ -10391,7 +11150,10 @@
         "reparent": {},
         "sourceStep": 2,
         "contactObject": "panel",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          1
+        ]
       },
       {
         "kind": "inspect",
@@ -10407,7 +11169,10 @@
         "reparent": {},
         "sourceStep": 3,
         "contactObject": "panel",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          2
+        ]
       },
       {
         "kind": "collect",
@@ -10423,7 +11188,10 @@
         "reparent": {},
         "sourceStep": 4,
         "contactObject": "panel",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          3
+        ]
       }
     ],
     "failures": [
@@ -10537,7 +11305,9 @@
         0.62,
         0.38
       ]
-    }
+    },
+    "observations": {},
+    "gentleHint": "見えている物と家族の様子を観察し、手に入れた道具の使い道を考えよう。"
   },
   {
     "stage": 41,
@@ -10555,8 +11325,8 @@
           0.5
         ],
         "position": [
-          435,
-          435
+          830,
+          350
         ]
       },
       {
@@ -10653,7 +11423,9 @@
         "reparent": {},
         "sourceStep": 0,
         "contactObject": "clock",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [],
+        "clue": "時計の針は3時。"
       },
       {
         "kind": "inspect",
@@ -10669,7 +11441,9 @@
         "reparent": {},
         "sourceStep": 1,
         "contactObject": "cat",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [],
+        "clue": "猫は右を向いている。"
       },
       {
         "kind": "read",
@@ -10687,7 +11461,9 @@
         "reparent": {},
         "sourceStep": 2,
         "contactObject": "tv",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [],
+        "clue": "TVの画面は青色。"
       },
       {
         "kind": "collect",
@@ -10703,7 +11479,12 @@
         "reparent": {},
         "sourceStep": 3,
         "contactObject": "boxes",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          0,
+          1,
+          2
+        ]
       }
     ],
     "failures": [
@@ -10722,7 +11503,8 @@
         "青",
         "緑"
       ],
-      "clue": "時計は3時・猫は右・TVは青"
+      "clue": "時計は3時・猫は右・TVは青",
+      "mode": "boxColor"
     },
     "console": {
       "id": "console",
@@ -10827,7 +11609,13 @@
         0.62,
         0.38
       ]
-    }
+    },
+    "observations": {
+      "clock": "時計の針は3時。",
+      "cat": "猫は右を向いている。",
+      "tv": "TVの画面は青色。"
+    },
+    "gentleHint": "時計・猫・TVをそれぞれ観察してみよう。"
   },
   {
     "stage": 42,
@@ -10901,7 +11689,8 @@
         "reparent": {},
         "sourceStep": 0,
         "contactObject": "treat",
-        "revealGame": false
+        "revealGame": false,
+        "requires": []
       },
       {
         "kind": "give",
@@ -10919,7 +11708,10 @@
         "reparent": {},
         "sourceStep": 1,
         "contactObject": "dog",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          0
+        ]
       },
       {
         "kind": "wait",
@@ -10937,7 +11729,10 @@
         "reparent": {},
         "sourceStep": 2,
         "contactObject": "dog",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          1
+        ]
       },
       {
         "kind": "pickup",
@@ -10952,7 +11747,10 @@
         "text": "ベンチの懐中電灯を取る",
         "reparent": {},
         "contactObject": "torch",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          2
+        ]
       },
       {
         "kind": "light",
@@ -10970,7 +11768,10 @@
         "reparent": {},
         "sourceStep": 3,
         "contactObject": "light",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          3
+        ]
       },
       {
         "kind": "collect",
@@ -10986,7 +11787,10 @@
         "reparent": {},
         "sourceStep": 4,
         "contactObject": "case",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          4
+        ]
       }
     ],
     "failures": [
@@ -11107,7 +11911,9 @@
         0.62,
         0.38
       ]
-    }
+    },
+    "observations": {},
+    "gentleHint": "見えている物と家族の様子を観察し、手に入れた道具の使い道を考えよう。"
   },
   {
     "stage": 43,
@@ -11249,7 +12055,9 @@
         "reparent": {},
         "sourceStep": 0,
         "contactObject": "magnets",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [],
+        "clue": "磁石の矢印は 赤 → 青 → 緑 → 黄。"
       },
       {
         "kind": "order",
@@ -11269,7 +12077,10 @@
         "reparent": {},
         "sourceStep": 1,
         "contactObject": "fridge",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          0
+        ]
       },
       {
         "kind": "read",
@@ -11285,7 +12096,11 @@
         "reparent": {},
         "sourceStep": 2,
         "contactObject": "fridge",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          1
+        ],
+        "clue": "並べた磁石がパンケースを指している。"
       },
       {
         "kind": "collect",
@@ -11301,7 +12116,10 @@
         "reparent": {},
         "sourceStep": 3,
         "contactObject": "bread",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          2
+        ]
       }
     ],
     "failures": [
@@ -11420,7 +12238,12 @@
         0.62,
         0.38
       ]
-    }
+    },
+    "observations": {
+      "magnets": "磁石の矢印は 赤 → 青 → 緑 → 黄。",
+      "fridge": "並べた磁石がパンケースを指している。"
+    },
+    "gentleHint": "見えている物と家族の様子を観察し、手に入れた道具の使い道を考えよう。"
   },
   {
     "stage": 44,
@@ -11536,7 +12359,9 @@
         "reparent": {},
         "sourceStep": 0,
         "contactObject": "label",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [],
+        "clue": "伝票の重さは 2kg。"
       },
       {
         "kind": "push",
@@ -11554,7 +12379,10 @@
         "reparent": {},
         "sourceStep": 1,
         "contactObject": "scale",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          0
+        ]
       },
       {
         "kind": "weigh",
@@ -11572,7 +12400,10 @@
         "reparent": {},
         "sourceStep": 2,
         "contactObject": "boxes",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          1
+        ]
       },
       {
         "kind": "read",
@@ -11588,7 +12419,11 @@
         "reparent": {},
         "sourceStep": 3,
         "contactObject": "boxes",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          2
+        ],
+        "clue": "量った重さは 赤1kg・青2kg・緑3kg。"
       },
       {
         "kind": "collect",
@@ -11604,7 +12439,10 @@
         "reparent": {},
         "sourceStep": 4,
         "contactObject": "boxes",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          3
+        ]
       }
     ],
     "failures": [
@@ -11623,7 +12461,8 @@
         "青",
         "緑"
       ],
-      "clue": "伝票 2kg / 赤1kg・青2kg・緑3kg"
+      "clue": "伝票 2kg / 赤1kg・青2kg・緑3kg",
+      "mode": "boxColor"
     },
     "console": {
       "id": "console",
@@ -11728,7 +12567,12 @@
         0.62,
         0.38
       ]
-    }
+    },
+    "observations": {
+      "label": "伝票の重さは 2kg。",
+      "boxes": "量った重さは 赤1kg・青2kg・緑3kg。"
+    },
+    "gentleHint": "伝票と実際の重さを比べよう。"
   },
   {
     "stage": 45,
@@ -11815,7 +12659,8 @@
         "reparent": {},
         "sourceStep": 0,
         "contactObject": "papers",
-        "revealGame": false
+        "revealGame": false,
+        "requires": []
       },
       {
         "kind": "place",
@@ -11833,7 +12678,10 @@
         "reparent": {},
         "sourceStep": 1,
         "contactObject": "lamp",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          0
+        ]
       },
       {
         "kind": "use",
@@ -11851,7 +12699,10 @@
         "reparent": {},
         "sourceStep": 2,
         "contactObject": "lamp",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          1
+        ]
       },
       {
         "kind": "read",
@@ -11867,7 +12718,11 @@
         "reparent": {},
         "sourceStep": 3,
         "contactObject": "wall",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          2
+        ],
+        "clue": "ライトに照らされた影は「315」。"
       },
       {
         "kind": "code",
@@ -11883,7 +12738,10 @@
         "reparent": {},
         "sourceStep": 4,
         "contactObject": "closet",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          3
+        ]
       },
       {
         "kind": "collect",
@@ -11898,7 +12756,10 @@
         "reparent": {},
         "text": "開いた収納からゲーム機を取る",
         "contactObject": "closet",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          4
+        ]
       }
     ],
     "failures": [
@@ -12017,7 +12878,11 @@
         0.62,
         0.38
       ]
-    }
+    },
+    "observations": {
+      "wall": "ライトに照らされた影は「315」。"
+    },
+    "gentleHint": "紙と光でできる影を考えよう。"
   },
   {
     "stage": 46,
@@ -12089,7 +12954,8 @@
         "reparent": {},
         "sourceStep": 0,
         "contactObject": "mama",
-        "revealGame": false
+        "revealGame": false,
+        "requires": []
       },
       {
         "kind": "carry",
@@ -12107,7 +12973,10 @@
         "reparent": {},
         "sourceStep": 1,
         "contactObject": "counter",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          0
+        ]
       },
       {
         "kind": "pickup",
@@ -12123,7 +12992,11 @@
         "reparent": {},
         "sourceStep": 2,
         "contactObject": "receipt",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          1
+        ],
+        "clue": "レシートの裏に「リビングの上段収納」と書いてある。"
       },
       {
         "kind": "read",
@@ -12139,7 +13012,11 @@
         "reparent": {},
         "sourceStep": 3,
         "contactObject": "receipt",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          2
+        ],
+        "clue": "レシートの裏に「リビングの上段収納」と書いてある。"
       },
       {
         "kind": "travel",
@@ -12154,7 +13031,10 @@
         "text": "リビングへ戻る",
         "reparent": {},
         "contactObject": "door",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          3
+        ]
       },
       {
         "kind": "collect",
@@ -12172,7 +13052,10 @@
         "reparent": {},
         "sourceStep": 4,
         "contactObject": "cab",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          4
+        ]
       }
     ],
     "failures": [
@@ -12291,7 +13174,11 @@
         0.62,
         0.38
       ]
-    }
+    },
+    "observations": {
+      "receipt": "レシートの裏に「リビングの上段収納」と書いてある。"
+    },
+    "gentleHint": "見えている物と家族の様子を観察し、手に入れた道具の使い道を考えよう。"
   },
   {
     "stage": 47,
@@ -12377,7 +13264,8 @@
         "reparent": {},
         "sourceStep": 0,
         "contactObject": "ball",
-        "revealGame": false
+        "revealGame": false,
+        "requires": []
       },
       {
         "kind": "throw",
@@ -12395,7 +13283,10 @@
         "reparent": {},
         "sourceStep": 1,
         "contactObject": "neighbor",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          0
+        ]
       },
       {
         "kind": "talk",
@@ -12413,7 +13304,10 @@
         "reparent": {},
         "sourceStep": 2,
         "contactObject": "neighbor",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          1
+        ]
       },
       {
         "kind": "pickup",
@@ -12428,7 +13322,10 @@
         "text": "物置脇の虫取り網を取る",
         "reparent": {},
         "contactObject": "net",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          2
+        ]
       },
       {
         "kind": "pickup",
@@ -12446,7 +13343,10 @@
         "reparent": {},
         "sourceStep": 3,
         "contactObject": "key",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          2
+        ]
       },
       {
         "kind": "collect",
@@ -12464,7 +13364,10 @@
         "reparent": {},
         "sourceStep": 4,
         "contactObject": "box",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          4
+        ]
       }
     ],
     "failures": [
@@ -12581,7 +13484,9 @@
         0.62,
         0.38
       ]
-    }
+    },
+    "observations": {},
+    "gentleHint": "見えている物と家族の様子を観察し、手に入れた道具の使い道を考えよう。"
   },
   {
     "stage": 48,
@@ -12643,7 +13548,17 @@
         "reparent": {},
         "sourceStep": 0,
         "contactObject": "papa",
-        "revealGame": false
+        "revealGame": false,
+        "placements": {
+          "paper": {
+            "parent": "table",
+            "mount": [
+              0.5,
+              0.16
+            ]
+          }
+        },
+        "requires": []
       },
       {
         "kind": "pickup",
@@ -12659,7 +13574,10 @@
         "reparent": {},
         "sourceStep": 1,
         "contactObject": "qr",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          0
+        ]
       },
       {
         "kind": "travel",
@@ -12675,7 +13593,10 @@
         "reparent": {},
         "sourceStep": 2,
         "contactObject": "door",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          1
+        ]
       },
       {
         "kind": "use",
@@ -12695,7 +13616,10 @@
         "reparent": {},
         "sourceStep": 3,
         "contactObject": "robot",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          2
+        ]
       },
       {
         "kind": "collect",
@@ -12711,7 +13635,10 @@
         "reparent": {},
         "sourceStep": 4,
         "contactObject": "robot",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          3
+        ]
       }
     ],
     "failures": [
@@ -12835,7 +13762,9 @@
         0.62,
         0.38
       ]
-    }
+    },
+    "observations": {},
+    "gentleHint": "見えている物と家族の様子を観察し、手に入れた道具の使い道を考えよう。"
   },
   {
     "stage": 49,
@@ -12920,7 +13849,8 @@
         "reparent": {},
         "sourceStep": 0,
         "contactObject": "cat",
-        "revealGame": false
+        "revealGame": false,
+        "requires": []
       },
       {
         "kind": "chase",
@@ -12935,7 +13865,10 @@
         "text": "鍵をくわえた猫を追って庭へ進む",
         "reparent": {},
         "contactObject": "cat",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          0
+        ]
       },
       {
         "kind": "chase",
@@ -12953,7 +13886,10 @@
         "reparent": {},
         "sourceStep": 1,
         "contactObject": "cat",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          1
+        ]
       },
       {
         "kind": "pickup",
@@ -12968,7 +13904,10 @@
         "text": "子ども部屋の猫じゃらしを取る",
         "reparent": {},
         "contactObject": "toy",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          2
+        ]
       },
       {
         "kind": "pickup",
@@ -12983,7 +13922,10 @@
         "text": "机の猫のおやつを取る",
         "reparent": {},
         "contactObject": "treat",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          2
+        ]
       },
       {
         "kind": "use",
@@ -13003,7 +13945,10 @@
         "reparent": {},
         "sourceStep": 2,
         "contactObject": "cat",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          4
+        ]
       },
       {
         "kind": "place",
@@ -13021,7 +13966,10 @@
         "reparent": {},
         "sourceStep": 3,
         "contactObject": "cat",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          5
+        ]
       },
       {
         "kind": "receive",
@@ -13037,7 +13985,10 @@
         "reparent": {},
         "sourceStep": 4,
         "contactObject": "cat",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          6
+        ]
       },
       {
         "kind": "travel",
@@ -13052,7 +14003,10 @@
         "text": "鍵を持ってリビングの猫ベッドへ戻る",
         "reparent": {},
         "contactObject": "door",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          7
+        ]
       },
       {
         "kind": "collect",
@@ -13070,7 +14024,10 @@
         "reparent": {},
         "sourceStep": 5,
         "contactObject": "bed",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          8
+        ]
       }
     ],
     "failures": [
@@ -13187,7 +14144,9 @@
         0.62,
         0.38
       ]
-    }
+    },
+    "observations": {},
+    "gentleHint": "見えている物と家族の様子を観察し、手に入れた道具の使い道を考えよう。"
   },
   {
     "stage": 50,
@@ -13356,7 +14315,8 @@
         "text": "リビングのテーブルから新聞を取る",
         "reparent": {},
         "contactObject": "paper",
-        "revealGame": false
+        "revealGame": false,
+        "requires": []
       },
       {
         "kind": "give",
@@ -13376,7 +14336,10 @@
         "reparent": {},
         "sourceStep": 0,
         "contactObject": "papa",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          0
+        ]
       },
       {
         "kind": "pickup",
@@ -13391,7 +14354,10 @@
         "text": "テーブルのQRカードを取る",
         "reparent": {},
         "contactObject": "qr",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          1
+        ]
       },
       {
         "kind": "travel",
@@ -13408,7 +14374,10 @@
         "text": "キッチンへ移動する",
         "reparent": {},
         "contactObject": "door",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          2
+        ]
       },
       {
         "kind": "pickup",
@@ -13423,7 +14392,10 @@
         "text": "カウンターのマグカップを取る",
         "reparent": {},
         "contactObject": "coffee",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          3
+        ]
       },
       {
         "kind": "pour",
@@ -13442,7 +14414,10 @@
         "text": "ポットからマグカップにコーヒーを注ぐ",
         "reparent": {},
         "contactObject": "pot",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          4
+        ]
       },
       {
         "kind": "give",
@@ -13464,7 +14439,10 @@
         "reparent": {},
         "sourceStep": 1,
         "contactObject": "papa",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          5
+        ]
       },
       {
         "kind": "travel",
@@ -13479,7 +14457,10 @@
         "text": "玄関へ移動する",
         "reparent": {},
         "contactObject": "door",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          6
+        ]
       },
       {
         "kind": "open",
@@ -13497,7 +14478,10 @@
         "reparent": {},
         "sourceStep": 2,
         "contactObject": "locker",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          7
+        ]
       },
       {
         "kind": "travel",
@@ -13512,7 +14496,10 @@
         "text": "庭へ移動する",
         "reparent": {},
         "contactObject": "door",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          8
+        ]
       },
       {
         "kind": "pickup",
@@ -13527,7 +14514,10 @@
         "text": "庭のベンチの猫のおやつを取る",
         "reparent": {},
         "contactObject": "treat",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          9
+        ]
       },
       {
         "kind": "give",
@@ -13547,7 +14537,10 @@
         "reparent": {},
         "sourceStep": 3,
         "contactObject": "cat",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          10
+        ]
       },
       {
         "kind": "place",
@@ -13563,7 +14556,10 @@
         "reparent": {},
         "sourceStep": 4,
         "contactObject": "ladder",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          11
+        ]
       },
       {
         "kind": "climb",
@@ -13581,7 +14577,10 @@
         "reparent": {},
         "sourceStep": 5,
         "contactObject": "trunk",
-        "revealGame": false
+        "revealGame": false,
+        "requires": [
+          12
+        ]
       },
       {
         "kind": "collect",
@@ -13599,7 +14598,10 @@
         "reparent": {},
         "sourceStep": 6,
         "contactObject": "trunk",
-        "revealGame": true
+        "revealGame": true,
+        "requires": [
+          13
+        ]
       }
     ],
     "failures": [
@@ -13733,6 +14735,8 @@
         0.62,
         0.38
       ]
-    }
+    },
+    "observations": {},
+    "gentleHint": "家族の様子を見て、一人ずつ困り事を解決しよう。"
   }
 ]

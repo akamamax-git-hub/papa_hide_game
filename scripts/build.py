@@ -12,7 +12,7 @@ for path in sorted((ROOT/'assets/world').glob('room_*.png')):
 stages=json.loads((ROOT/'scenario/Stage01-50_シナリオ企画表.json').read_text());boards=json.loads((ROOT/'scenario/storyboards.json').read_text())
 data=lambda x:json.dumps(x,ensure_ascii=False,separators=(',',':')).replace('</','<\\/')
 constants=';'.join('const '+k+'='+data(v) for k,v in [('A',assets),('STAGES',stages),('BOARDS',boards),('CATALOG',catalog['sprites']),('SHEETS',catalog['sheets'])])+';'
-script=(src/'world.js').read_text()+'\n'+(src/'contacts.js').read_text()+'\n'+(src/'game.js').read_text();style=(src/'style.css').read_text()
-html=f'''<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>パパにゲーム隠された Ver.0.13.1</title><link rel="icon" href="data:,"><style>{style}</style></head><body><div id="app"><main id="screen" class="screen"></main></div><div id="debug" class="hidden"></div><script>{constants}\n{script}</script></body></html>'''
+script=(src/'scene.js').read_text()+'\n'+(src/'world.js').read_text()+'\n'+(src/'contacts.js').read_text()+'\n'+(src/'game.js').read_text();style=(src/'style.css').read_text()
+html=f'''<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>パパにゲーム隠された Ver.0.14.0</title><link rel="icon" href="data:,"><style>{style}</style></head><body><div id="app"><main id="screen" class="screen"></main></div><div id="debug" class="hidden"></div><script>{constants}\n{script}</script></body></html>'''
 (ROOT/'index.html').write_text(html)
 print(f'Built standalone index.html: {len(html.encode()):,} bytes; 50 physical scenes, {sum(len(b["steps"]) for b in boards)} actions.')

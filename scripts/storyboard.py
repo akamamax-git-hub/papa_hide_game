@@ -87,6 +87,8 @@ stage(50,'living',[E('table','テーブル','table','table'),E('paper','新聞',
 
 from contact_profiles import annotate
 annotate(boards)
+from puzzle_design import annotate as puzzle_design
+puzzle_design(boards)
 assert len(boards)==50
 (ROOT/'scenario/storyboards.json').write_text(json.dumps(boards,ensure_ascii=False,indent=2))
 print('Authored 50 physical storyboards,',sum(len(s['steps']) for s in boards),'actions.')

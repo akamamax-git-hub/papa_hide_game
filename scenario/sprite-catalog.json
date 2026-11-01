@@ -23,7 +23,15 @@
     "atlas_fixtures": "assets/world/atlas_fixtures.png",
     "atlas_clock": "assets/world/atlas_clock.png",
     "atlas_vanity": "assets/world/atlas_vanity.png",
-    "atlas_coloredboxes": "assets/world/atlas_coloredboxes.png"
+    "atlas_coloredboxes": "assets/world/atlas_coloredboxes.png",
+    "atlas_boy_indoor": "assets/world/atlas_boy_indoor.png",
+    "atlas_reach_indoor": "assets/world/atlas_reach_indoor.png",
+    "atlas_papa_indoor": "assets/world/atlas_papa_indoor.png",
+    "atlas_papa_outdoor": "assets/world/atlas_papa_outdoor.png",
+    "atlas_npc1_indoor": "assets/world/atlas_npc1_indoor.png",
+    "atlas_npc2_indoor": "assets/world/atlas_npc2_indoor.png",
+    "atlas_seated_indoor": "assets/world/atlas_seated_indoor.png",
+    "atlas_interaction14": "assets/world/atlas_interaction14.png"
   },
   "sprites": {
     "cabinet": {
@@ -94,7 +102,25 @@
         319,
         287
       ],
-      "worldHeight": 245
+      "worldHeight": 245,
+      "screenQuad": [
+        [
+          0.106,
+          0.166
+        ],
+        [
+          0.843,
+          0.035
+        ],
+        [
+          0.843,
+          0.468
+        ],
+        [
+          0.106,
+          0.605
+        ]
+      ]
     },
     "shelf": {
       "sheet": "atlas_fixtures",
@@ -248,7 +274,63 @@
         233,
         249
       ],
-      "worldHeight": 265
+      "worldHeight": 400,
+      "supportPlanes": [
+        [
+          [
+            0.25,
+            0.23
+          ],
+          [
+            0.56,
+            0.26
+          ],
+          [
+            0.55,
+            0.29
+          ],
+          [
+            0.24,
+            0.26
+          ]
+        ],
+        [
+          [
+            0.17,
+            0.49
+          ],
+          [
+            0.49,
+            0.52
+          ],
+          [
+            0.47,
+            0.56
+          ],
+          [
+            0.16,
+            0.52
+          ]
+        ],
+        [
+          [
+            0.08,
+            0.72
+          ],
+          [
+            0.39,
+            0.77
+          ],
+          [
+            0.37,
+            0.8
+          ],
+          [
+            0.07,
+            0.75
+          ]
+        ]
+      ]
     },
     "newspaper": {
       "sheet": "atlas_items1",
@@ -307,18 +389,36 @@
       "worldHeight": 95
     },
     "stool": {
-      "sheet": "atlas_items1",
+      "sheet": "atlas_interaction14",
       "size": [
-        1402,
-        1122
+        2172,
+        724
       ],
       "rect": [
-        1131,
-        43,
-        247,
-        230
+        1554,
+        276,
+        439,
+        414
       ],
-      "worldHeight": 100
+      "worldHeight": 140,
+      "supportPlane": [
+        [
+          0.19,
+          0.14
+        ],
+        [
+          0.47,
+          0.01
+        ],
+        [
+          0.95,
+          0.15
+        ],
+        [
+          0.71,
+          0.32
+        ]
+      ]
     },
     "gloves": {
       "sheet": "atlas_items1",
@@ -1744,7 +1844,18 @@
         0.87,
         0.6
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor",
+      "supportFeet": [
+        [
+          0.1979,
+          0.9929
+        ],
+        [
+          0.801,
+          0.9929
+        ]
+      ]
     },
     "boy_walk1": {
       "sheet": "atlas_boy",
@@ -1763,7 +1874,18 @@
         0.88,
         0.57
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor",
+      "supportFeet": [
+        [
+          0.237,
+          0.9893
+        ],
+        [
+          0.7082,
+          0.9929
+        ]
+      ]
     },
     "boy_walk2": {
       "sheet": "atlas_boy",
@@ -1782,7 +1904,18 @@
         0.89,
         0.56
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor",
+      "supportFeet": [
+        [
+          0.2283,
+          0.9928
+        ],
+        [
+          0.7396,
+          0.9928
+        ]
+      ]
     },
     "boy_pickup": {
       "sheet": "atlas_boy",
@@ -1801,7 +1934,18 @@
         0.94,
         0.91
       ],
-      "bodyScale": 0.65
+      "bodyScale": 0.65,
+      "footwear": "outdoor",
+      "supportFeet": [
+        [
+          0.3736,
+          0.9893
+        ],
+        [
+          0.9079,
+          0.9251
+        ]
+      ]
     },
     "boy_reach": {
       "sheet": "atlas_boy",
@@ -1820,7 +1964,18 @@
         0.96,
         0.43
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor",
+      "supportFeet": [
+        [
+          0.1546,
+          0.9928
+        ],
+        [
+          0.4849,
+          0.9642
+        ]
+      ]
     },
     "boy_high": {
       "sheet": "atlas_boy",
@@ -1839,7 +1994,18 @@
         0.63,
         0.08
       ],
-      "bodyScale": 1.14
+      "bodyScale": 1.14,
+      "footwear": "outdoor",
+      "supportFeet": [
+        [
+          0.256,
+          0.9859
+        ],
+        [
+          0.8359,
+          0.993
+        ]
+      ]
     },
     "boy_carry": {
       "sheet": "atlas_boy",
@@ -1858,7 +2024,18 @@
         0.93,
         0.48
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor",
+      "supportFeet": [
+        [
+          0.2186,
+          0.9824
+        ],
+        [
+          0.6141,
+          0.993
+        ]
+      ]
     },
     "boy_push": {
       "sheet": "atlas_boy",
@@ -1877,7 +2054,18 @@
         0.96,
         0.35
       ],
-      "bodyScale": 0.85
+      "bodyScale": 0.85,
+      "footwear": "outdoor",
+      "supportFeet": [
+        [
+          0.1362,
+          0.9917
+        ],
+        [
+          0.6157,
+          0.9545
+        ]
+      ]
     },
     "boy_climb": {
       "sheet": "atlas_boy",
@@ -1896,7 +2084,14 @@
         0.61,
         0.48
       ],
-      "bodyScale": 1.03
+      "bodyScale": 1.03,
+      "footwear": "outdoor",
+      "supportFeet": [
+        [
+          0.3104,
+          0.9929
+        ]
+      ]
     },
     "boy_light": {
       "sheet": "atlas_boy",
@@ -1915,7 +2110,18 @@
         0.96,
         0.34
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor",
+      "supportFeet": [
+        [
+          0.1141,
+          0.9928
+        ],
+        [
+          0.5705,
+          0.9928
+        ]
+      ]
     },
     "boy_pour": {
       "sheet": "atlas_boy",
@@ -1934,7 +2140,18 @@
         0.79,
         0.46
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor",
+      "supportFeet": [
+        [
+          0.2438,
+          0.9929
+        ],
+        [
+          0.6297,
+          0.9859
+        ]
+      ]
     },
     "boy_dig": {
       "sheet": "atlas_boy",
@@ -1953,7 +2170,18 @@
         0.93,
         0.78
       ],
-      "bodyScale": 0.68
+      "bodyScale": 0.68,
+      "footwear": "outdoor",
+      "supportFeet": [
+        [
+          0.3559,
+          0.9899
+        ],
+        [
+          0.8544,
+          0.8939
+        ]
+      ]
     },
     "boy_offer": {
       "sheet": "atlas_boy",
@@ -1972,7 +2200,18 @@
         0.95,
         0.39
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor",
+      "supportFeet": [
+        [
+          0.1516,
+          0.993
+        ],
+        [
+          0.5763,
+          0.979
+        ]
+      ]
     },
     "boy_read": {
       "sheet": "atlas_boy",
@@ -1991,7 +2230,18 @@
         0.88,
         0.46
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor",
+      "supportFeet": [
+        [
+          0.1952,
+          0.9929
+        ],
+        [
+          0.7368,
+          0.9788
+        ]
+      ]
     },
     "boy_open": {
       "sheet": "atlas_boy",
@@ -2010,7 +2260,14 @@
         0.96,
         0.6
       ],
-      "bodyScale": 0.72
+      "bodyScale": 0.72,
+      "footwear": "outdoor",
+      "supportFeet": [
+        [
+          0.2553,
+          0.9912
+        ]
+      ]
     },
     "boy_happy": {
       "sheet": "atlas_boy",
@@ -2029,7 +2286,22 @@
         0.93,
         0.13
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor",
+      "supportFeet": [
+        [
+          0.3405,
+          0.9918
+        ],
+        [
+          0.5644,
+          0.93
+        ],
+        [
+          0.8436,
+          0.8971
+        ]
+      ]
     },
     "papa_idle": {
       "sheet": "atlas_papa",
@@ -2048,7 +2320,8 @@
         0.87,
         0.6
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "barefoot"
     },
     "papa_walk1": {
       "sheet": "atlas_papa",
@@ -2067,7 +2340,8 @@
         0.88,
         0.57
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "barefoot"
     },
     "papa_walk2": {
       "sheet": "atlas_papa",
@@ -2086,7 +2360,8 @@
         0.89,
         0.56
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "barefoot"
     },
     "papa_read": {
       "sheet": "atlas_papa",
@@ -2105,7 +2380,8 @@
         0.82,
         0.42
       ],
-      "bodyScale": 0.7
+      "bodyScale": 0.7,
+      "footwear": "barefoot"
     },
     "papa_drink": {
       "sheet": "atlas_papa",
@@ -2124,7 +2400,8 @@
         0.27,
         0.2
       ],
-      "bodyScale": 0.7
+      "bodyScale": 0.7,
+      "footwear": "barefoot"
     },
     "papa_surprise": {
       "sheet": "atlas_papa",
@@ -2143,7 +2420,8 @@
         0.8,
         0.5
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "barefoot"
     },
     "papa_angry": {
       "sheet": "atlas_papa",
@@ -2162,7 +2440,8 @@
         0.8,
         0.5
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "barefoot"
     },
     "papa_think": {
       "sheet": "atlas_papa",
@@ -2181,7 +2460,8 @@
         0.8,
         0.5
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "barefoot"
     },
     "mama_idle": {
       "sheet": "atlas_npc1",
@@ -2200,7 +2480,8 @@
         0.4,
         0.6
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "mama_receive": {
       "sheet": "atlas_npc1",
@@ -2219,7 +2500,8 @@
         0.08,
         0.43
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "mama_walk1": {
       "sheet": "atlas_npc1",
@@ -2238,7 +2520,8 @@
         0.88,
         0.57
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "mama_walk2": {
       "sheet": "atlas_npc1",
@@ -2257,7 +2540,8 @@
         0.89,
         0.56
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "sister_idle": {
       "sheet": "atlas_npc1",
@@ -2276,7 +2560,8 @@
         0.5,
         0.6
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "sister_receive": {
       "sheet": "atlas_npc1",
@@ -2295,7 +2580,8 @@
         0.08,
         0.43
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "sister_walk1": {
       "sheet": "atlas_npc1",
@@ -2314,7 +2600,8 @@
         0.88,
         0.57
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "sister_walk2": {
       "sheet": "atlas_npc1",
@@ -2333,7 +2620,8 @@
         0.89,
         0.56
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "grandma_idle": {
       "sheet": "atlas_npc1",
@@ -2352,7 +2640,8 @@
         0.52,
         0.58
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "grandma_receive": {
       "sheet": "atlas_npc1",
@@ -2371,7 +2660,8 @@
         0.08,
         0.43
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "grandma_walk1": {
       "sheet": "atlas_npc1",
@@ -2390,7 +2680,8 @@
         0.88,
         0.57
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "grandma_walk2": {
       "sheet": "atlas_npc1",
@@ -2409,7 +2700,8 @@
         0.89,
         0.56
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "grandpa_idle": {
       "sheet": "atlas_npc1",
@@ -2428,7 +2720,8 @@
         0.87,
         0.6
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "grandpa_receive": {
       "sheet": "atlas_npc1",
@@ -2447,7 +2740,8 @@
         0.08,
         0.43
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "grandpa_walk1": {
       "sheet": "atlas_npc1",
@@ -2466,7 +2760,8 @@
         0.88,
         0.57
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "grandpa_walk2": {
       "sheet": "atlas_npc1",
@@ -2485,7 +2780,8 @@
         0.89,
         0.56
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "courier_idle": {
       "sheet": "atlas_npc2",
@@ -2504,7 +2800,8 @@
         0.87,
         0.6
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "courier_receive": {
       "sheet": "atlas_npc2",
@@ -2523,7 +2820,8 @@
         0.12,
         0.5
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "courier_walk1": {
       "sheet": "atlas_npc2",
@@ -2542,7 +2840,8 @@
         0.88,
         0.57
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "courier_walk2": {
       "sheet": "atlas_npc2",
@@ -2561,7 +2860,8 @@
         0.89,
         0.56
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "postman_idle": {
       "sheet": "atlas_npc2",
@@ -2580,7 +2880,8 @@
         0.87,
         0.6
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "postman_receive": {
       "sheet": "atlas_npc2",
@@ -2599,7 +2900,8 @@
         0.12,
         0.5
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "postman_walk1": {
       "sheet": "atlas_npc2",
@@ -2618,7 +2920,8 @@
         0.88,
         0.57
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "postman_walk2": {
       "sheet": "atlas_npc2",
@@ -2637,7 +2940,8 @@
         0.89,
         0.56
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "repair_idle": {
       "sheet": "atlas_npc2",
@@ -2656,7 +2960,8 @@
         0.87,
         0.6
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "repair_receive": {
       "sheet": "atlas_npc2",
@@ -2675,7 +2980,8 @@
         0.12,
         0.5
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "repair_walk1": {
       "sheet": "atlas_npc2",
@@ -2694,7 +3000,8 @@
         0.88,
         0.57
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "repair_walk2": {
       "sheet": "atlas_npc2",
@@ -2713,7 +3020,8 @@
         0.89,
         0.56
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "neighbor_idle": {
       "sheet": "atlas_npc2",
@@ -2732,7 +3040,8 @@
         0.87,
         0.6
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "neighbor_receive": {
       "sheet": "atlas_npc2",
@@ -2751,7 +3060,8 @@
         0.12,
         0.5
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "neighbor_walk1": {
       "sheet": "atlas_npc2",
@@ -2770,7 +3080,8 @@
         0.88,
         0.57
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "neighbor_walk2": {
       "sheet": "atlas_npc2",
@@ -2789,7 +3100,8 @@
         0.89,
         0.56
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "cat_idle": {
       "sheet": "atlas_pets",
@@ -3112,7 +3424,8 @@
         0.55,
         0.36
       ],
-      "bodyScale": 0.7
+      "bodyScale": 0.7,
+      "footwear": "outdoor"
     },
     "grandpa_sleep": {
       "sheet": "atlas_seated",
@@ -3131,7 +3444,8 @@
         0.66,
         0.53
       ],
-      "bodyScale": 0.7
+      "bodyScale": 0.7,
+      "footwear": "outdoor"
     },
     "sister_eat": {
       "sheet": "atlas_seated",
@@ -3150,7 +3464,8 @@
         0.46,
         0.35
       ],
-      "bodyScale": 0.7
+      "bodyScale": 0.7,
+      "footwear": "outdoor"
     },
     "grandma_cook": {
       "sheet": "atlas_seated",
@@ -3169,7 +3484,8 @@
         0.8,
         0.5
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "mama_sit": {
       "sheet": "atlas_seated",
@@ -3188,7 +3504,8 @@
         0.64,
         0.47
       ],
-      "bodyScale": 0.7
+      "bodyScale": 0.7,
+      "footwear": "outdoor"
     },
     "grandpa_wake": {
       "sheet": "atlas_seated",
@@ -3207,7 +3524,8 @@
         0.8,
         0.5
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "sister_cry": {
       "sheet": "atlas_seated",
@@ -3226,7 +3544,8 @@
         0.8,
         0.5
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "grandma_sneeze": {
       "sheet": "atlas_seated",
@@ -3245,7 +3564,8 @@
         0.8,
         0.5
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "tv_open": {
       "sheet": "atlas_fixtures",
@@ -3259,7 +3579,25 @@
         320,
         300
       ],
-      "worldHeight": 256.0975609756098
+      "worldHeight": 256.0975609756098,
+      "screenQuad": [
+        [
+          0.109,
+          0.153
+        ],
+        [
+          0.838,
+          0.033
+        ],
+        [
+          0.838,
+          0.457
+        ],
+        [
+          0.109,
+          0.58
+        ]
+      ]
     },
     "desk_open": {
       "sheet": "atlas_fixtures",
@@ -3440,7 +3778,8 @@
         0.08,
         0.43
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "mama_reach": {
       "sheet": "atlas_npc1",
@@ -3459,7 +3798,8 @@
         0.08,
         0.43
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "mama_read": {
       "sheet": "atlas_npc1",
@@ -3478,7 +3818,8 @@
         0.88,
         0.46
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "mama_open": {
       "sheet": "atlas_npc1",
@@ -3497,7 +3838,8 @@
         0.08,
         0.43
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "mama_push": {
       "sheet": "atlas_npc1",
@@ -3516,7 +3858,8 @@
         0.08,
         0.43
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "mama_happy": {
       "sheet": "atlas_npc1",
@@ -3535,7 +3878,8 @@
         0.08,
         0.43
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "mama_surprise": {
       "sheet": "atlas_npc1",
@@ -3554,7 +3898,8 @@
         0.08,
         0.43
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "sister_offer": {
       "sheet": "atlas_npc1",
@@ -3573,7 +3918,8 @@
         0.08,
         0.43
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "sister_reach": {
       "sheet": "atlas_npc1",
@@ -3592,7 +3938,8 @@
         0.08,
         0.43
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "sister_read": {
       "sheet": "atlas_npc1",
@@ -3611,7 +3958,8 @@
         0.88,
         0.46
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "sister_open": {
       "sheet": "atlas_npc1",
@@ -3630,7 +3978,8 @@
         0.08,
         0.43
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "sister_push": {
       "sheet": "atlas_npc1",
@@ -3649,7 +3998,8 @@
         0.08,
         0.43
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "sister_happy": {
       "sheet": "atlas_npc1",
@@ -3668,7 +4018,8 @@
         0.08,
         0.43
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "sister_surprise": {
       "sheet": "atlas_npc1",
@@ -3687,7 +4038,8 @@
         0.08,
         0.43
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "grandma_offer": {
       "sheet": "atlas_npc1",
@@ -3706,7 +4058,8 @@
         0.08,
         0.43
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "grandma_reach": {
       "sheet": "atlas_npc1",
@@ -3725,7 +4078,8 @@
         0.08,
         0.43
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "grandma_read": {
       "sheet": "atlas_npc1",
@@ -3744,7 +4098,8 @@
         0.88,
         0.46
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "grandma_open": {
       "sheet": "atlas_npc1",
@@ -3763,7 +4118,8 @@
         0.08,
         0.43
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "grandma_push": {
       "sheet": "atlas_npc1",
@@ -3782,7 +4138,8 @@
         0.08,
         0.43
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "grandma_happy": {
       "sheet": "atlas_npc1",
@@ -3801,7 +4158,8 @@
         0.08,
         0.43
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "grandma_surprise": {
       "sheet": "atlas_npc1",
@@ -3820,7 +4178,8 @@
         0.08,
         0.43
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "grandpa_offer": {
       "sheet": "atlas_npc1",
@@ -3839,7 +4198,8 @@
         0.08,
         0.43
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "grandpa_reach": {
       "sheet": "atlas_npc1",
@@ -3858,7 +4218,8 @@
         0.08,
         0.43
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "grandpa_read": {
       "sheet": "atlas_npc1",
@@ -3877,7 +4238,8 @@
         0.88,
         0.46
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "grandpa_open": {
       "sheet": "atlas_npc1",
@@ -3896,7 +4258,8 @@
         0.08,
         0.43
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "grandpa_push": {
       "sheet": "atlas_npc1",
@@ -3915,7 +4278,8 @@
         0.08,
         0.43
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "grandpa_happy": {
       "sheet": "atlas_npc1",
@@ -3934,7 +4298,8 @@
         0.08,
         0.43
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "grandpa_surprise": {
       "sheet": "atlas_npc1",
@@ -3953,7 +4318,8 @@
         0.08,
         0.43
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "courier_offer": {
       "sheet": "atlas_npc2",
@@ -3972,7 +4338,8 @@
         0.12,
         0.5
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "courier_reach": {
       "sheet": "atlas_npc2",
@@ -3991,7 +4358,8 @@
         0.12,
         0.5
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "courier_read": {
       "sheet": "atlas_npc2",
@@ -4010,7 +4378,8 @@
         0.88,
         0.46
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "courier_open": {
       "sheet": "atlas_npc2",
@@ -4029,7 +4398,8 @@
         0.12,
         0.5
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "courier_push": {
       "sheet": "atlas_npc2",
@@ -4048,7 +4418,8 @@
         0.12,
         0.5
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "courier_happy": {
       "sheet": "atlas_npc2",
@@ -4067,7 +4438,8 @@
         0.93,
         0.13
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "courier_surprise": {
       "sheet": "atlas_npc2",
@@ -4086,7 +4458,8 @@
         0.8,
         0.5
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "postman_offer": {
       "sheet": "atlas_npc2",
@@ -4105,7 +4478,8 @@
         0.12,
         0.5
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "postman_reach": {
       "sheet": "atlas_npc2",
@@ -4124,7 +4498,8 @@
         0.12,
         0.5
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "postman_read": {
       "sheet": "atlas_npc2",
@@ -4143,7 +4518,8 @@
         0.88,
         0.46
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "postman_open": {
       "sheet": "atlas_npc2",
@@ -4162,7 +4538,8 @@
         0.12,
         0.5
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "postman_push": {
       "sheet": "atlas_npc2",
@@ -4181,7 +4558,8 @@
         0.12,
         0.5
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "postman_happy": {
       "sheet": "atlas_npc2",
@@ -4200,7 +4578,8 @@
         0.93,
         0.13
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "postman_surprise": {
       "sheet": "atlas_npc2",
@@ -4219,7 +4598,8 @@
         0.8,
         0.5
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "repair_offer": {
       "sheet": "atlas_npc2",
@@ -4238,7 +4618,8 @@
         0.12,
         0.5
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "repair_reach": {
       "sheet": "atlas_npc2",
@@ -4257,7 +4638,8 @@
         0.12,
         0.5
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "repair_read": {
       "sheet": "atlas_npc2",
@@ -4276,7 +4658,8 @@
         0.88,
         0.46
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "repair_open": {
       "sheet": "atlas_npc2",
@@ -4295,7 +4678,8 @@
         0.12,
         0.5
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "repair_push": {
       "sheet": "atlas_npc2",
@@ -4314,7 +4698,8 @@
         0.12,
         0.5
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "repair_happy": {
       "sheet": "atlas_npc2",
@@ -4333,7 +4718,8 @@
         0.93,
         0.13
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "repair_surprise": {
       "sheet": "atlas_npc2",
@@ -4352,7 +4738,8 @@
         0.8,
         0.5
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "neighbor_offer": {
       "sheet": "atlas_npc2",
@@ -4371,7 +4758,8 @@
         0.12,
         0.5
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "neighbor_reach": {
       "sheet": "atlas_npc2",
@@ -4390,7 +4778,8 @@
         0.12,
         0.5
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "neighbor_read": {
       "sheet": "atlas_npc2",
@@ -4409,7 +4798,8 @@
         0.88,
         0.46
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "neighbor_open": {
       "sheet": "atlas_npc2",
@@ -4428,7 +4818,8 @@
         0.12,
         0.5
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "neighbor_push": {
       "sheet": "atlas_npc2",
@@ -4447,7 +4838,8 @@
         0.12,
         0.5
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "neighbor_happy": {
       "sheet": "atlas_npc2",
@@ -4466,7 +4858,8 @@
         0.93,
         0.13
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "neighbor_surprise": {
       "sheet": "atlas_npc2",
@@ -4485,7 +4878,8 @@
         0.8,
         0.5
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor"
     },
     "cat_offer": {
       "sheet": "atlas_pets",
@@ -5150,7 +5544,18 @@
         0.8,
         0.5
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor",
+      "supportFeet": [
+        [
+          0.256,
+          0.9859
+        ],
+        [
+          0.8359,
+          0.993
+        ]
+      ]
     },
     "card": {
       "sheet": "atlas_items2",
@@ -5501,7 +5906,18 @@
         0.965,
         0.965
       ],
-      "bodyScale": 0.7
+      "bodyScale": 0.7,
+      "footwear": "outdoor",
+      "supportFeet": [
+        [
+          0.346,
+          0.993
+        ],
+        [
+          0.9351,
+          0.9894
+        ]
+      ]
     },
     "boy_kneel": {
       "sheet": "atlas_reach",
@@ -5520,7 +5936,18 @@
         0.96,
         0.8
       ],
-      "bodyScale": 0.7
+      "bodyScale": 0.7,
+      "footwear": "outdoor",
+      "supportFeet": [
+        [
+          0.1726,
+          0.9868
+        ],
+        [
+          0.5962,
+          0.9934
+        ]
+      ]
     },
     "boy_reachWaist": {
       "sheet": "atlas_reach",
@@ -5539,7 +5966,18 @@
         0.96,
         0.5
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor",
+      "supportFeet": [
+        [
+          0.1396,
+          0.9951
+        ],
+        [
+          0.5127,
+          0.9901
+        ]
+      ]
     },
     "boy_reachChest": {
       "sheet": "atlas_reach",
@@ -5558,7 +5996,18 @@
         0.96,
         0.185
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor",
+      "supportFeet": [
+        [
+          0.1929,
+          0.9952
+        ],
+        [
+          0.5609,
+          0.9784
+        ]
+      ]
     },
     "boy_reachUp": {
       "sheet": "atlas_reach",
@@ -5577,7 +6026,18 @@
         0.97,
         0.03
       ],
-      "bodyScale": 1.03
+      "bodyScale": 1.03,
+      "footwear": "outdoor",
+      "supportFeet": [
+        [
+          0.164,
+          0.995
+        ],
+        [
+          0.5709,
+          0.9826
+        ]
+      ]
     },
     "boy_reachOver": {
       "sheet": "atlas_reach",
@@ -5596,7 +6056,18 @@
         0.9,
         0.03
       ],
-      "bodyScale": 1.12
+      "bodyScale": 1.12,
+      "footwear": "outdoor",
+      "supportFeet": [
+        [
+          0.1619,
+          0.9951
+        ],
+        [
+          0.8237,
+          0.9951
+        ]
+      ]
     },
     "boy_hold": {
       "sheet": "atlas_reach",
@@ -5615,7 +6086,18 @@
         0.94,
         0.5
       ],
-      "bodyScale": 1
+      "bodyScale": 1,
+      "footwear": "outdoor",
+      "supportFeet": [
+        [
+          0.1551,
+          0.995
+        ],
+        [
+          0.5678,
+          0.9776
+        ]
+      ]
     },
     "boy_climbReach": {
       "sheet": "atlas_reach",
@@ -5634,7 +6116,14 @@
         0.96,
         0.035
       ],
-      "bodyScale": 1.02
+      "bodyScale": 1.02,
+      "footwear": "outdoor",
+      "supportFeet": [
+        [
+          0.2288,
+          0.995
+        ]
+      ]
     },
     "upperCab": {
       "sheet": "atlas_uppercab",
@@ -5968,7 +6457,8 @@
         0.82,
         0.42
       ],
-      "bodyScale": 0.7
+      "bodyScale": 0.7,
+      "footwear": "barefoot"
     },
     "cat_eat": {
       "sheet": "atlas_pets",
@@ -6007,6 +6497,3088 @@
         0.3
       ],
       "bodyScale": 0.75
+    },
+    "boy_idle_indoor": {
+      "sheet": "atlas_boy_indoor",
+      "size": [
+        1310,
+        1201
+      ],
+      "rect": [
+        124,
+        10,
+        101,
+        282
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.87,
+        0.6
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor",
+      "supportFeet": [
+        [
+          0.1703,
+          0.9929
+        ],
+        [
+          0.8137,
+          0.9929
+        ]
+      ]
+    },
+    "boy_walk1_indoor": {
+      "sheet": "atlas_boy_indoor",
+      "size": [
+        1310,
+        1201
+      ],
+      "rect": [
+        435,
+        11,
+        141,
+        279
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.88,
+        0.57
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor",
+      "supportFeet": [
+        [
+          0.2373,
+          0.9928
+        ],
+        [
+          0.7267,
+          0.9928
+        ]
+      ]
+    },
+    "boy_walk2_indoor": {
+      "sheet": "atlas_boy_indoor",
+      "size": [
+        1310,
+        1201
+      ],
+      "rect": [
+        731,
+        13,
+        153,
+        276
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.89,
+        0.56
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor",
+      "supportFeet": [
+        [
+          0.2151,
+          0.9928
+        ],
+        [
+          0.7503,
+          0.9928
+        ]
+      ]
+    },
+    "boy_pickup_indoor": {
+      "sheet": "atlas_boy_indoor",
+      "size": [
+        1310,
+        1201
+      ],
+      "rect": [
+        1034,
+        103,
+        192,
+        188
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.94,
+        0.91
+      ],
+      "bodyScale": 0.65,
+      "footwear": "indoor",
+      "supportFeet": [
+        [
+          0.3816,
+          0.9894
+        ],
+        [
+          0.9175,
+          0.9255
+        ]
+      ]
+    },
+    "boy_reach_indoor": {
+      "sheet": "atlas_boy_indoor",
+      "size": [
+        1310,
+        1201
+      ],
+      "rect": [
+        110,
+        310,
+        177,
+        279
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.96,
+        0.43
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor",
+      "supportFeet": [
+        [
+          0.1501,
+          0.9928
+        ],
+        [
+          0.4817,
+          0.9606
+        ]
+      ]
+    },
+    "boy_high_indoor": {
+      "sheet": "atlas_boy_indoor",
+      "size": [
+        1310,
+        1201
+      ],
+      "rect": [
+        437,
+        304,
+        131,
+        284
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.63,
+        0.08
+      ],
+      "bodyScale": 1.14,
+      "footwear": "indoor",
+      "supportFeet": [
+        [
+          0.249,
+          0.9789
+        ],
+        [
+          0.8268,
+          0.993
+        ]
+      ]
+    },
+    "boy_carry_indoor": {
+      "sheet": "atlas_boy_indoor",
+      "size": [
+        1310,
+        1201
+      ],
+      "rect": [
+        737,
+        307,
+        153,
+        283
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.93,
+        0.48
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor",
+      "supportFeet": [
+        [
+          0.2119,
+          0.9823
+        ],
+        [
+          0.6174,
+          0.9929
+        ]
+      ]
+    },
+    "boy_push_indoor": {
+      "sheet": "atlas_boy_indoor",
+      "size": [
+        1310,
+        1201
+      ],
+      "rect": [
+        986,
+        345,
+        225,
+        241
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.96,
+        0.35
+      ],
+      "bodyScale": 0.85,
+      "footwear": "indoor",
+      "supportFeet": [
+        [
+          0.1319,
+          0.9917
+        ],
+        [
+          0.6126,
+          0.9585
+        ]
+      ]
+    },
+    "boy_climb_indoor": {
+      "sheet": "atlas_boy_indoor",
+      "size": [
+        1310,
+        1201
+      ],
+      "rect": [
+        74,
+        600,
+        149,
+        281
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.61,
+        0.48
+      ],
+      "bodyScale": 1.03,
+      "footwear": "indoor",
+      "supportFeet": [
+        [
+          0.3177,
+          0.9929
+        ]
+      ]
+    },
+    "boy_light_indoor": {
+      "sheet": "atlas_boy_indoor",
+      "size": [
+        1310,
+        1201
+      ],
+      "rect": [
+        434,
+        604,
+        159,
+        279
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.96,
+        0.34
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor",
+      "supportFeet": [
+        [
+          0.1052,
+          0.9928
+        ],
+        [
+          0.5779,
+          0.9892
+        ]
+      ]
+    },
+    "boy_pour_indoor": {
+      "sheet": "atlas_boy_indoor",
+      "size": [
+        1310,
+        1201
+      ],
+      "rect": [
+        724,
+        605,
+        166,
+        282
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.79,
+        0.46
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor",
+      "supportFeet": [
+        [
+          0.2341,
+          0.9929
+        ],
+        [
+          0.6319,
+          0.9858
+        ]
+      ]
+    },
+    "boy_dig_indoor": {
+      "sheet": "atlas_boy_indoor",
+      "size": [
+        1310,
+        1201
+      ],
+      "rect": [
+        1035,
+        672,
+        182,
+        200
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.93,
+        0.78
+      ],
+      "bodyScale": 0.68,
+      "footwear": "indoor",
+      "supportFeet": [
+        [
+          0.3527,
+          0.99
+        ],
+        [
+          0.852,
+          0.895
+        ]
+      ]
+    },
+    "boy_offer_indoor": {
+      "sheet": "atlas_boy_indoor",
+      "size": [
+        1310,
+        1201
+      ],
+      "rect": [
+        106,
+        898,
+        142,
+        286
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.95,
+        0.39
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor",
+      "supportFeet": [
+        [
+          0.1493,
+          0.993
+        ],
+        [
+          0.5624,
+          0.972
+        ]
+      ]
+    },
+    "boy_read_indoor": {
+      "sheet": "atlas_boy_indoor",
+      "size": [
+        1310,
+        1201
+      ],
+      "rect": [
+        439,
+        901,
+        106,
+        283
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.88,
+        0.46
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor",
+      "supportFeet": [
+        [
+          0.1792,
+          0.9929
+        ],
+        [
+          0.7405,
+          0.9823
+        ]
+      ]
+    },
+    "boy_open_indoor": {
+      "sheet": "atlas_boy_indoor",
+      "size": [
+        1310,
+        1201
+      ],
+      "rect": [
+        702,
+        947,
+        173,
+        228
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.96,
+        0.6
+      ],
+      "bodyScale": 0.72,
+      "footwear": "indoor",
+      "supportFeet": [
+        [
+          0.2457,
+          0.9912
+        ]
+      ]
+    },
+    "boy_happy_indoor": {
+      "sheet": "atlas_boy_indoor",
+      "size": [
+        1310,
+        1201
+      ],
+      "rect": [
+        1072,
+        898,
+        167,
+        243
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.93,
+        0.13
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor",
+      "supportFeet": [
+        [
+          0.3437,
+          0.9918
+        ],
+        [
+          0.5598,
+          0.9383
+        ],
+        [
+          0.8305,
+          0.8971
+        ]
+      ]
+    },
+    "boy_surprise_indoor": {
+      "sheet": "atlas_boy_indoor",
+      "size": [
+        1310,
+        1201
+      ],
+      "rect": [
+        437,
+        304,
+        131,
+        284
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.8,
+        0.5
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor",
+      "supportFeet": [
+        [
+          0.249,
+          0.9789
+        ],
+        [
+          0.8268,
+          0.993
+        ]
+      ]
+    },
+    "boy_reachLow_indoor": {
+      "sheet": "atlas_reach_indoor",
+      "size": [
+        1774,
+        887
+      ],
+      "rect": [
+        65,
+        148,
+        290,
+        286
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.965,
+        0.965
+      ],
+      "bodyScale": 0.7,
+      "footwear": "indoor",
+      "supportFeet": [
+        [
+          0.3437,
+          0.993
+        ],
+        [
+          0.9336,
+          0.986
+        ]
+      ]
+    },
+    "boy_kneel_indoor": {
+      "sheet": "atlas_reach_indoor",
+      "size": [
+        1774,
+        887
+      ],
+      "rect": [
+        533,
+        131,
+        343,
+        302
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.96,
+        0.8
+      ],
+      "bodyScale": 0.7,
+      "footwear": "indoor",
+      "supportFeet": [
+        [
+          0.1849,
+          0.9901
+        ],
+        [
+          0.5911,
+          0.9934
+        ]
+      ]
+    },
+    "boy_reachWaist_indoor": {
+      "sheet": "atlas_reach_indoor",
+      "size": [
+        1774,
+        887
+      ],
+      "rect": [
+        1001,
+        27,
+        295,
+        407
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.96,
+        0.5
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor",
+      "supportFeet": [
+        [
+          0.1388,
+          0.9951
+        ],
+        [
+          0.5175,
+          0.9828
+        ]
+      ]
+    },
+    "boy_reachChest_indoor": {
+      "sheet": "atlas_reach_indoor",
+      "size": [
+        1774,
+        887
+      ],
+      "rect": [
+        1445,
+        20,
+        288,
+        415
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.96,
+        0.185
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor",
+      "supportFeet": [
+        [
+          0.2,
+          0.9952
+        ],
+        [
+          0.5826,
+          0.9759
+        ]
+      ]
+    },
+    "boy_reachUp_indoor": {
+      "sheet": "atlas_reach_indoor",
+      "size": [
+        1774,
+        887
+      ],
+      "rect": [
+        116,
+        469,
+        283,
+        401
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.97,
+        0.03
+      ],
+      "bodyScale": 1.03,
+      "footwear": "indoor",
+      "supportFeet": [
+        [
+          0.1643,
+          0.995
+        ],
+        [
+          0.5732,
+          0.9825
+        ]
+      ]
+    },
+    "boy_reachOver_indoor": {
+      "sheet": "atlas_reach_indoor",
+      "size": [
+        1774,
+        887
+      ],
+      "rect": [
+        596,
+        463,
+        175,
+        407
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.9,
+        0.03
+      ],
+      "bodyScale": 1.12,
+      "footwear": "indoor",
+      "supportFeet": [
+        [
+          0.1422,
+          0.9951
+        ],
+        [
+          0.8484,
+          0.9877
+        ]
+      ]
+    },
+    "boy_hold_indoor": {
+      "sheet": "atlas_reach_indoor",
+      "size": [
+        1774,
+        887
+      ],
+      "rect": [
+        1041,
+        470,
+        245,
+        400
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.94,
+        0.5
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor",
+      "supportFeet": [
+        [
+          0.1406,
+          0.995
+        ],
+        [
+          0.5628,
+          0.975
+        ]
+      ]
+    },
+    "boy_climbReach_indoor": {
+      "sheet": "atlas_reach_indoor",
+      "size": [
+        1774,
+        887
+      ],
+      "rect": [
+        1441,
+        469,
+        292,
+        400
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.96,
+        0.035
+      ],
+      "bodyScale": 1.02,
+      "footwear": "indoor",
+      "supportFeet": [
+        [
+          0.2255,
+          0.995
+        ]
+      ]
+    },
+    "papa_idle_indoor": {
+      "sheet": "atlas_papa_indoor",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        143,
+        8,
+        150,
+        478
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.87,
+        0.6
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "papa_walk1_indoor": {
+      "sheet": "atlas_papa_indoor",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        467,
+        8,
+        219,
+        472
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.88,
+        0.57
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "papa_walk2_indoor": {
+      "sheet": "atlas_papa_indoor",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        852,
+        10,
+        223,
+        471
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.89,
+        0.56
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "papa_read_indoor": {
+      "sheet": "atlas_papa_indoor",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        1233,
+        53,
+        211,
+        426
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.82,
+        0.42
+      ],
+      "bodyScale": 0.7,
+      "footwear": "indoor"
+    },
+    "papa_drink_indoor": {
+      "sheet": "atlas_papa_indoor",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        113,
+        544,
+        201,
+        438
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.27,
+        0.2
+      ],
+      "bodyScale": 0.7,
+      "footwear": "indoor"
+    },
+    "papa_surprise_indoor": {
+      "sheet": "atlas_papa_indoor",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        461,
+        510,
+        262,
+        475
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.8,
+        0.5
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "papa_angry_indoor": {
+      "sheet": "atlas_papa_indoor",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        801,
+        513,
+        285,
+        476
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.8,
+        0.5
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "papa_think_indoor": {
+      "sheet": "atlas_papa_indoor",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        1258,
+        506,
+        152,
+        487
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.8,
+        0.5
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "papa_watch_indoor": {
+      "sheet": "atlas_papa_indoor",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        1233,
+        53,
+        211,
+        426
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.82,
+        0.42
+      ],
+      "bodyScale": 0.7,
+      "footwear": "indoor"
+    },
+    "papa_idle_outdoor": {
+      "sheet": "atlas_papa_outdoor",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        142,
+        8,
+        151,
+        479
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.87,
+        0.6
+      ],
+      "bodyScale": 1,
+      "footwear": "outdoor"
+    },
+    "papa_walk1_outdoor": {
+      "sheet": "atlas_papa_outdoor",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        461,
+        9,
+        223,
+        476
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.88,
+        0.57
+      ],
+      "bodyScale": 1,
+      "footwear": "outdoor"
+    },
+    "papa_walk2_outdoor": {
+      "sheet": "atlas_papa_outdoor",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        843,
+        9,
+        236,
+        477
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.89,
+        0.56
+      ],
+      "bodyScale": 1,
+      "footwear": "outdoor"
+    },
+    "papa_read_outdoor": {
+      "sheet": "atlas_papa_outdoor",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        1232,
+        53,
+        212,
+        429
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.82,
+        0.42
+      ],
+      "bodyScale": 0.7,
+      "footwear": "outdoor"
+    },
+    "papa_drink_outdoor": {
+      "sheet": "atlas_papa_outdoor",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        112,
+        545,
+        203,
+        443
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.27,
+        0.2
+      ],
+      "bodyScale": 0.7,
+      "footwear": "outdoor"
+    },
+    "papa_surprise_outdoor": {
+      "sheet": "atlas_papa_outdoor",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        453,
+        510,
+        270,
+        478
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.8,
+        0.5
+      ],
+      "bodyScale": 1,
+      "footwear": "outdoor"
+    },
+    "papa_angry_outdoor": {
+      "sheet": "atlas_papa_outdoor",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        806,
+        513,
+        281,
+        482
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.8,
+        0.5
+      ],
+      "bodyScale": 1,
+      "footwear": "outdoor"
+    },
+    "papa_think_outdoor": {
+      "sheet": "atlas_papa_outdoor",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        1257,
+        506,
+        163,
+        489
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.8,
+        0.5
+      ],
+      "bodyScale": 1,
+      "footwear": "outdoor"
+    },
+    "papa_watch_outdoor": {
+      "sheet": "atlas_papa_outdoor",
+      "size": [
+        1536,
+        1024
+      ],
+      "rect": [
+        1232,
+        53,
+        212,
+        429
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.82,
+        0.42
+      ],
+      "bodyScale": 0.7,
+      "footwear": "outdoor"
+    },
+    "mama_idle_indoor": {
+      "sheet": "atlas_npc1_indoor",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        159,
+        5,
+        119,
+        300
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.4,
+        0.6
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "mama_receive_indoor": {
+      "sheet": "atlas_npc1_indoor",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        408,
+        8,
+        172,
+        297
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "mama_walk1_indoor": {
+      "sheet": "atlas_npc1_indoor",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        737,
+        8,
+        165,
+        297
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.88,
+        0.57
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "mama_walk2_indoor": {
+      "sheet": "atlas_npc1_indoor",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        1028,
+        10,
+        166,
+        295
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.89,
+        0.56
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "sister_idle_indoor": {
+      "sheet": "atlas_npc1_indoor",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        122,
+        317,
+        175,
+        261
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.5,
+        0.6
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "sister_receive_indoor": {
+      "sheet": "atlas_npc1_indoor",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        414,
+        318,
+        180,
+        259
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "sister_walk1_indoor": {
+      "sheet": "atlas_npc1_indoor",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        730,
+        317,
+        176,
+        259
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.88,
+        0.57
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "sister_walk2_indoor": {
+      "sheet": "atlas_npc1_indoor",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        1027,
+        317,
+        172,
+        259
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.89,
+        0.56
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "grandma_idle_indoor": {
+      "sheet": "atlas_npc1_indoor",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        152,
+        587,
+        107,
+        287
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.52,
+        0.58
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "grandma_receive_indoor": {
+      "sheet": "atlas_npc1_indoor",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        399,
+        588,
+        166,
+        285
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "grandma_walk1_indoor": {
+      "sheet": "atlas_npc1_indoor",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        740,
+        587,
+        147,
+        284
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.88,
+        0.57
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "grandma_walk2_indoor": {
+      "sheet": "atlas_npc1_indoor",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        1050,
+        588,
+        152,
+        285
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.89,
+        0.56
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "grandpa_idle_indoor": {
+      "sheet": "atlas_npc1_indoor",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        146,
+        879,
+        122,
+        301
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.87,
+        0.6
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "grandpa_receive_indoor": {
+      "sheet": "atlas_npc1_indoor",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        394,
+        879,
+        180,
+        301
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "grandpa_walk1_indoor": {
+      "sheet": "atlas_npc1_indoor",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        736,
+        879,
+        161,
+        300
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.88,
+        0.57
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "grandpa_walk2_indoor": {
+      "sheet": "atlas_npc1_indoor",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        1039,
+        879,
+        165,
+        301
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.89,
+        0.56
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "mama_offer_indoor": {
+      "sheet": "atlas_npc1_indoor",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        408,
+        8,
+        172,
+        297
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "mama_reach_indoor": {
+      "sheet": "atlas_npc1_indoor",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        408,
+        8,
+        172,
+        297
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "mama_read_indoor": {
+      "sheet": "atlas_npc1_indoor",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        159,
+        5,
+        119,
+        300
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.88,
+        0.46
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "mama_open_indoor": {
+      "sheet": "atlas_npc1_indoor",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        408,
+        8,
+        172,
+        297
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "mama_push_indoor": {
+      "sheet": "atlas_npc1_indoor",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        408,
+        8,
+        172,
+        297
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "mama_happy_indoor": {
+      "sheet": "atlas_npc1_indoor",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        408,
+        8,
+        172,
+        297
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "mama_surprise_indoor": {
+      "sheet": "atlas_npc1_indoor",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        408,
+        8,
+        172,
+        297
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "sister_offer_indoor": {
+      "sheet": "atlas_npc1_indoor",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        414,
+        318,
+        180,
+        259
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "sister_reach_indoor": {
+      "sheet": "atlas_npc1_indoor",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        414,
+        318,
+        180,
+        259
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "sister_read_indoor": {
+      "sheet": "atlas_npc1_indoor",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        122,
+        317,
+        175,
+        261
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.88,
+        0.46
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "sister_open_indoor": {
+      "sheet": "atlas_npc1_indoor",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        414,
+        318,
+        180,
+        259
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "sister_push_indoor": {
+      "sheet": "atlas_npc1_indoor",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        414,
+        318,
+        180,
+        259
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "sister_happy_indoor": {
+      "sheet": "atlas_npc1_indoor",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        414,
+        318,
+        180,
+        259
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "sister_surprise_indoor": {
+      "sheet": "atlas_npc1_indoor",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        414,
+        318,
+        180,
+        259
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "grandma_offer_indoor": {
+      "sheet": "atlas_npc1_indoor",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        399,
+        588,
+        166,
+        285
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "grandma_reach_indoor": {
+      "sheet": "atlas_npc1_indoor",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        399,
+        588,
+        166,
+        285
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "grandma_read_indoor": {
+      "sheet": "atlas_npc1_indoor",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        152,
+        587,
+        107,
+        287
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.88,
+        0.46
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "grandma_open_indoor": {
+      "sheet": "atlas_npc1_indoor",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        399,
+        588,
+        166,
+        285
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "grandma_push_indoor": {
+      "sheet": "atlas_npc1_indoor",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        399,
+        588,
+        166,
+        285
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "grandma_happy_indoor": {
+      "sheet": "atlas_npc1_indoor",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        399,
+        588,
+        166,
+        285
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "grandma_surprise_indoor": {
+      "sheet": "atlas_npc1_indoor",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        399,
+        588,
+        166,
+        285
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "grandpa_offer_indoor": {
+      "sheet": "atlas_npc1_indoor",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        394,
+        879,
+        180,
+        301
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "grandpa_reach_indoor": {
+      "sheet": "atlas_npc1_indoor",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        394,
+        879,
+        180,
+        301
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "grandpa_read_indoor": {
+      "sheet": "atlas_npc1_indoor",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        146,
+        879,
+        122,
+        301
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.88,
+        0.46
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "grandpa_open_indoor": {
+      "sheet": "atlas_npc1_indoor",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        394,
+        879,
+        180,
+        301
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "grandpa_push_indoor": {
+      "sheet": "atlas_npc1_indoor",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        394,
+        879,
+        180,
+        301
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "grandpa_happy_indoor": {
+      "sheet": "atlas_npc1_indoor",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        394,
+        879,
+        180,
+        301
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "grandpa_surprise_indoor": {
+      "sheet": "atlas_npc1_indoor",
+      "size": [
+        1312,
+        1199
+      ],
+      "rect": [
+        394,
+        879,
+        180,
+        301
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.08,
+        0.43
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "courier_idle_indoor": {
+      "sheet": "atlas_npc2_indoor",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        101,
+        8,
+        134,
+        300
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.87,
+        0.6
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "courier_receive_indoor": {
+      "sheet": "atlas_npc2_indoor",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        410,
+        8,
+        125,
+        302
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.12,
+        0.5
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "courier_walk1_indoor": {
+      "sheet": "atlas_npc2_indoor",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        693,
+        10,
+        153,
+        300
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.88,
+        0.57
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "courier_walk2_indoor": {
+      "sheet": "atlas_npc2_indoor",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        1023,
+        10,
+        165,
+        300
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.89,
+        0.56
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "postman_idle_indoor": {
+      "sheet": "atlas_npc2_indoor",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        93,
+        316,
+        166,
+        313
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.87,
+        0.6
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "postman_receive_indoor": {
+      "sheet": "atlas_npc2_indoor",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        412,
+        317,
+        146,
+        312
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.12,
+        0.5
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "postman_walk1_indoor": {
+      "sheet": "atlas_npc2_indoor",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        695,
+        319,
+        179,
+        311
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.88,
+        0.57
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "postman_walk2_indoor": {
+      "sheet": "atlas_npc2_indoor",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        1002,
+        320,
+        192,
+        310
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.89,
+        0.56
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "repair_idle_indoor": {
+      "sheet": "atlas_npc2_indoor",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        91,
+        634,
+        157,
+        314
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.87,
+        0.6
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "repair_receive_indoor": {
+      "sheet": "atlas_npc2_indoor",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        404,
+        636,
+        144,
+        312
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.12,
+        0.5
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "repair_walk1_indoor": {
+      "sheet": "atlas_npc2_indoor",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        697,
+        635,
+        173,
+        313
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.88,
+        0.57
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "repair_walk2_indoor": {
+      "sheet": "atlas_npc2_indoor",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        1023,
+        636,
+        178,
+        312
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.89,
+        0.56
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "neighbor_idle_indoor": {
+      "sheet": "atlas_npc2_indoor",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        102,
+        954,
+        127,
+        278
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.87,
+        0.6
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "neighbor_receive_indoor": {
+      "sheet": "atlas_npc2_indoor",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        407,
+        953,
+        127,
+        281
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.12,
+        0.5
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "neighbor_walk1_indoor": {
+      "sheet": "atlas_npc2_indoor",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        686,
+        958,
+        168,
+        274
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.88,
+        0.57
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "neighbor_walk2_indoor": {
+      "sheet": "atlas_npc2_indoor",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        1027,
+        961,
+        176,
+        272
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.89,
+        0.56
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "courier_offer_indoor": {
+      "sheet": "atlas_npc2_indoor",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        410,
+        8,
+        125,
+        302
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.12,
+        0.5
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "courier_reach_indoor": {
+      "sheet": "atlas_npc2_indoor",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        410,
+        8,
+        125,
+        302
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.12,
+        0.5
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "courier_read_indoor": {
+      "sheet": "atlas_npc2_indoor",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        101,
+        8,
+        134,
+        300
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.88,
+        0.46
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "courier_open_indoor": {
+      "sheet": "atlas_npc2_indoor",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        410,
+        8,
+        125,
+        302
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.12,
+        0.5
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "courier_push_indoor": {
+      "sheet": "atlas_npc2_indoor",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        410,
+        8,
+        125,
+        302
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.12,
+        0.5
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "courier_happy_indoor": {
+      "sheet": "atlas_npc2_indoor",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        410,
+        8,
+        125,
+        302
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.93,
+        0.13
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "courier_surprise_indoor": {
+      "sheet": "atlas_npc2_indoor",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        410,
+        8,
+        125,
+        302
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.8,
+        0.5
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "postman_offer_indoor": {
+      "sheet": "atlas_npc2_indoor",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        412,
+        317,
+        146,
+        312
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.12,
+        0.5
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "postman_reach_indoor": {
+      "sheet": "atlas_npc2_indoor",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        412,
+        317,
+        146,
+        312
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.12,
+        0.5
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "postman_read_indoor": {
+      "sheet": "atlas_npc2_indoor",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        93,
+        316,
+        166,
+        313
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.88,
+        0.46
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "postman_open_indoor": {
+      "sheet": "atlas_npc2_indoor",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        412,
+        317,
+        146,
+        312
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.12,
+        0.5
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "postman_push_indoor": {
+      "sheet": "atlas_npc2_indoor",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        412,
+        317,
+        146,
+        312
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.12,
+        0.5
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "postman_happy_indoor": {
+      "sheet": "atlas_npc2_indoor",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        412,
+        317,
+        146,
+        312
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.93,
+        0.13
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "postman_surprise_indoor": {
+      "sheet": "atlas_npc2_indoor",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        412,
+        317,
+        146,
+        312
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.8,
+        0.5
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "repair_offer_indoor": {
+      "sheet": "atlas_npc2_indoor",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        404,
+        636,
+        144,
+        312
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.12,
+        0.5
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "repair_reach_indoor": {
+      "sheet": "atlas_npc2_indoor",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        404,
+        636,
+        144,
+        312
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.12,
+        0.5
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "repair_read_indoor": {
+      "sheet": "atlas_npc2_indoor",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        91,
+        634,
+        157,
+        314
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.88,
+        0.46
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "repair_open_indoor": {
+      "sheet": "atlas_npc2_indoor",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        404,
+        636,
+        144,
+        312
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.12,
+        0.5
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "repair_push_indoor": {
+      "sheet": "atlas_npc2_indoor",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        404,
+        636,
+        144,
+        312
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.12,
+        0.5
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "repair_happy_indoor": {
+      "sheet": "atlas_npc2_indoor",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        404,
+        636,
+        144,
+        312
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.93,
+        0.13
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "repair_surprise_indoor": {
+      "sheet": "atlas_npc2_indoor",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        404,
+        636,
+        144,
+        312
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.8,
+        0.5
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "neighbor_offer_indoor": {
+      "sheet": "atlas_npc2_indoor",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        407,
+        953,
+        127,
+        281
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.12,
+        0.5
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "neighbor_reach_indoor": {
+      "sheet": "atlas_npc2_indoor",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        407,
+        953,
+        127,
+        281
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.12,
+        0.5
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "neighbor_read_indoor": {
+      "sheet": "atlas_npc2_indoor",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        102,
+        954,
+        127,
+        278
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.88,
+        0.46
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "neighbor_open_indoor": {
+      "sheet": "atlas_npc2_indoor",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        407,
+        953,
+        127,
+        281
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.12,
+        0.5
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "neighbor_push_indoor": {
+      "sheet": "atlas_npc2_indoor",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        407,
+        953,
+        127,
+        281
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.12,
+        0.5
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "neighbor_happy_indoor": {
+      "sheet": "atlas_npc2_indoor",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        407,
+        953,
+        127,
+        281
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.93,
+        0.13
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "neighbor_surprise_indoor": {
+      "sheet": "atlas_npc2_indoor",
+      "size": [
+        1266,
+        1243
+      ],
+      "rect": [
+        407,
+        953,
+        127,
+        281
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.8,
+        0.5
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "grandma_sit_indoor": {
+      "sheet": "atlas_seated_indoor",
+      "size": [
+        1606,
+        979
+      ],
+      "rect": [
+        143,
+        15,
+        227,
+        459
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.55,
+        0.36
+      ],
+      "bodyScale": 0.7,
+      "footwear": "indoor"
+    },
+    "grandpa_sleep_indoor": {
+      "sheet": "atlas_seated_indoor",
+      "size": [
+        1606,
+        979
+      ],
+      "rect": [
+        495,
+        10,
+        219,
+        469
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.66,
+        0.53
+      ],
+      "bodyScale": 0.7,
+      "footwear": "indoor"
+    },
+    "sister_eat_indoor": {
+      "sheet": "atlas_seated_indoor",
+      "size": [
+        1606,
+        979
+      ],
+      "rect": [
+        831,
+        73,
+        302,
+        404
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.46,
+        0.35
+      ],
+      "bodyScale": 0.7,
+      "footwear": "indoor"
+    },
+    "grandma_cook_indoor": {
+      "sheet": "atlas_seated_indoor",
+      "size": [
+        1606,
+        979
+      ],
+      "rect": [
+        1264,
+        6,
+        231,
+        476
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.8,
+        0.5
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "mama_sit_indoor": {
+      "sheet": "atlas_seated_indoor",
+      "size": [
+        1606,
+        979
+      ],
+      "rect": [
+        101,
+        492,
+        248,
+        459
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.64,
+        0.47
+      ],
+      "bodyScale": 0.7,
+      "footwear": "indoor"
+    },
+    "grandpa_wake_indoor": {
+      "sheet": "atlas_seated_indoor",
+      "size": [
+        1606,
+        979
+      ],
+      "rect": [
+        466,
+        485,
+        261,
+        466
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.8,
+        0.5
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "sister_cry_indoor": {
+      "sheet": "atlas_seated_indoor",
+      "size": [
+        1606,
+        979
+      ],
+      "rect": [
+        820,
+        527,
+        321,
+        415
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.8,
+        0.5
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "grandma_sneeze_indoor": {
+      "sheet": "atlas_seated_indoor",
+      "size": [
+        1606,
+        979
+      ],
+      "rect": [
+        1273,
+        485,
+        200,
+        462
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.8,
+        0.5
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "papa_receive_indoor": {
+      "sheet": "atlas_interaction14",
+      "size": [
+        2172,
+        724
+      ],
+      "rect": [
+        237,
+        11,
+        347,
+        703
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.06,
+        0.405
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
+    },
+    "papa_receive_outdoor": {
+      "sheet": "atlas_interaction14",
+      "size": [
+        2172,
+        724
+      ],
+      "rect": [
+        876,
+        11,
+        347,
+        705
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.06,
+        0.405
+      ],
+      "bodyScale": 1,
+      "footwear": "outdoor"
+    },
+    "papa_receive": {
+      "sheet": "atlas_interaction14",
+      "size": [
+        2172,
+        724
+      ],
+      "rect": [
+        237,
+        11,
+        347,
+        703
+      ],
+      "worldHeight": 45,
+      "hand": [
+        0.06,
+        0.405
+      ],
+      "bodyScale": 1,
+      "footwear": "indoor"
     }
   }
 }

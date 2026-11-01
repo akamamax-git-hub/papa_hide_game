@@ -132,12 +132,36 @@ def annotate(boards):
             if b['stage']==6 and step['kind']=='push':step['revealGame']=True
         # Physical supports: no arbitrary levitation or unreachable ceiling contacts.
         for e in b['entities']:
-            if e['asset']=='clock':e['position']=[435,435]
+            if e['asset']=='clock':e['position']=[830,350]
             if e['asset'] in ['switch','breaker','calendar','intercom','sensor','chime']:e['position']=[410,435]
             if e['asset']=='panel' and e['slot']=='wall':e['position']=[410,435]
         b['handAnchors']=HANDS
         if b['stage']==4:
             next(s for s in b['steps'] if s['kind']=='place')['move']={'stool':'wallSupport'}
         if b['stage']==23:
-            next(s for s in b['steps'] if s['kind']=='push')['move']={'chair':'wallSupport'}
+            next(s for s in b['steps'] if s['kind']=='push')['move']={'chair':[305,620]}
 
+
+        if b['stage']==2:
+            b['entities'].append(dict(id='stool',label='踏み台',asset='stool',slot='floorLeft',room=None,parent=None,contact=[.5,.5]))
+            def prep(kind,target,text,**kw):
+                return dict(kind=kind,target=target,text=text,gain=kw.get('gain'),use=kw.get('use',[]),actor='boy',room=None,move=kw.get('move',{}),reveal=[],change={},reparent={},contactObject=target,revealGame=False)
+            b['steps'][1:1]=[prep('pickup','stool','踏み台を取る',gain='stool'),prep('place','clock','時計の下の床へ踏み台を置く',use=['stool'],move={'stool':'wallSupport'}),prep('climb','stool','踏み台に上がって時計に手を伸ばす',use=['stool'])]
+
+        if b['stage']==2:
+            entities['sofa']['position']=[530,615]
+            next(s for s in b['steps'] if s['kind']=='use')['move']={'papa':[530,655]}
+
+        if b['stage']==48:b['steps'][0]['placements']={'paper':{'parent':'table','mount':[.5,.16]}}
+
+        if b['stage']==2:next(s for s in b['steps'] if s['kind']=='place')['move']={'stool':[755,605]}
+
+        if b['stage']==19:b['failures'][0].update(kind='shoo',move={'crow':[1210,210]})
+
+        if b['stage']==19:
+            b['actorPerches']={'crow':{'parent':'bench','mount':[.56,.12]}}
+            s=next(s for s in b['steps'] if s['kind']=='place');s.update(target='bench',contactObject='bench',placeUV=[.75,.12],move={'crow':[640,620]})
+
+        if b['stage']==29:
+            entities['calendar'].update(parent='desk',slot='surface',mount=[.30,-.10],exposed=True)
+            b['steps'][0]['text']='机のカレンダーをよく見る'

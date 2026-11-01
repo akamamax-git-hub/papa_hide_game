@@ -5,8 +5,14 @@
 
 .pour-source{left:55%;top:40%;width:45%;animation:pourTilt .8s ease both}@keyframes pourTilt{50%{transform:rotate(-35deg)}}.mode-alarm{animation:shake .5s}
 
-.box-part{display:inline-block;width:31%;height:100%;pointer-events:none}.asset-tv.mode-on:before{content:'';position:absolute;left:13%;top:4%;width:73%;height:44%;background:#397faf;box-shadow:0 0 12px #78b7ec;pointer-events:none;z-index:1}.mode-fogged:before{content:'';position:absolute;left:13%;top:2%;width:75%;height:43%;background:#eff4edcc;filter:blur(3px);pointer-events:none;z-index:1}
+.box-part{display:inline-block;width:31%;height:100%;pointer-events:none}.mode-fogged:before{content:'';position:absolute;left:13%;top:2%;width:75%;height:43%;background:#eff4edcc;filter:blur(3px);pointer-events:none;z-index:1}
 
 .mode-shadow:before{content:'';position:absolute;left:20%;top:85%;width:160%;height:20%;background:#26323c66;clip-path:polygon(0 20%,60% 0,100% 80%,50% 35%,30% 100%);pointer-events:none;z-index:-1}.rain-room:after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(110deg,transparent 0 36px,#c6dfed44 37px 38px,transparent 39px 72px);pointer-events:none;z-index:1500;animation:rainFall .5s linear infinite;box-shadow:inset 0 0 0 1000px #2c465f33}@keyframes rainFall{to{background-position:30px 45px}}
 
 .contact-line{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1900}.lifted>.sprite{transform:rotate(-12deg)}
+
+.tv-display{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1}.world-actor:focus-visible{outline:2px solid #ffd061}.world-object.drag-over{filter:drop-shadow(0 0 4px #fff)}
+
+.carried:after,.asset-clock:after,.asset-calendar:after,.asset-switch:after,.asset-sensor:after,.asset-intercom:after{display:none!important}.notebook{font-size:12px;line-height:1.7;color:#536a7b}.notebook p{margin:10px 0 0}.hint-line button{border:1px solid #c8a65f;background:#fff9e8;border-radius:6px;padding:7px;color:#624914}.tv-display{filter:none}.asset-tv.mode-on>.sprite{filter:drop-shadow(0 3px 2px #36251530)}
+
+#placementPreview{position:absolute;transform:translate(-50%,-100%);opacity:.48;pointer-events:none;z-index:1600;filter:drop-shadow(0 2px 2px #2225)}

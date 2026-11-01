@@ -11,7 +11,7 @@ def register(sheet,cols,rows,names,heights):
  if not path.exists():path=ROOT/'assets/chapter3'/f'{sheet}.png'
  im=Image.open(path).convert('RGBA');iw,ih=im.size;sheets[sheet]=str(path.relative_to(ROOT))
  cuts=None
- if sheet in ['atlas_boy','atlas_papa','atlas_npc1','atlas_npc2','atlas_seated']:
+ if any(sheet.startswith(n) for n in ['atlas_boy','atlas_papa','atlas_npc1','atlas_npc2','atlas_seated']):
   raw=im.getchannel('A').point(lambda x:255 if x>190 else 0).tobytes();projection=[raw[y*iw:(y+1)*iw].count(255) for y in range(ih)];cuts=[0]
   for row in range(1,rows):
    expected=row*ih/rows;radius=int(ih/rows*.16);lo=max(1,int(expected)-radius);hi=min(ih-1,int(expected)+radius)
@@ -109,6 +109,36 @@ for actor in ['cat','dog']:catalog[actor+'_eat']={**catalog[actor+'_walk2'],'bod
 for name,grip,tip in [('shovel',[.85,.20],[.15,.90]),('wateringCan',[.60,.18],[.10,.35]),('mug',[.85,.5],[.2,.1]),('coffee',[.85,.5],[.2,.1]),('spoon',[.2,.8],[.8,.2])]:catalog[name]['grip']=grip;catalog[name]['tip']=tip
 catalog['pot']['grip']=[.86,.52];catalog['pot']['tip']=[.08,.18]
 for name,x in [('fridge_open',.32),('locker_open',.65),('shelf_open',.43)]:catalog[name]['anchor']=[x,1]
+# Room-specific footwear is authored art. Preserve each pose's contact metadata.
+for name,m in catalog.items():
+ if name.split('_')[0] in ['boy','papa','mama','sister','grandma','grandpa','courier','postman','repair','neighbor']:m['footwear']='barefoot' if name.startswith('papa_') else 'outdoor'
+canonical={k:dict(v) for k,v in catalog.items()}
+for sheet,cols,rows,names,wear in [
+ ('atlas_boy_indoor',4,4,['boy_'+n for n in ['idle','walk1','walk2','pickup','reach','high','carry','push','climb','light','pour','dig','offer','read','open','happy']],'indoor'),
+ ('atlas_reach_indoor',4,2,['boy_'+n for n in ['reachLow','kneel','reachWaist','reachChest','reachUp','reachOver','hold','climbReach']],'indoor'),
+ ('atlas_papa_indoor',4,2,['papa_'+n for n in ['idle','walk1','walk2','read','drink','surprise','angry','think']],'indoor'),
+ ('atlas_papa_outdoor',4,2,['papa_'+n for n in ['idle','walk1','walk2','read','drink','surprise','angry','think']],'outdoor'),
+ ('atlas_npc1_indoor',4,4,[a+'_'+p for a in ['mama','sister','grandma','grandpa'] for p in ['idle','receive','walk1','walk2']],'indoor'),
+ ('atlas_npc2_indoor',4,4,[a+'_'+p for a in ['courier','postman','repair','neighbor'] for p in ['idle','receive','walk1','walk2']],'indoor'),
+ ('atlas_seated_indoor',4,2,['grandma_sit','grandpa_sleep','sister_eat','grandma_cook','mama_sit','grandpa_wake','sister_cry','grandma_sneeze'],'indoor')]:
+ register(sheet,cols,rows,[n+'_'+wear for n in names],{})
+ for n in names:
+  new=catalog[n+'_'+wear];catalog[n+'_'+wear]={**canonical[n],**new,'footwear':wear}
+ # Aliases use the same edited frame as their explicitly selected original.
+ for name,original in canonical.items():
+  if name+'_'+wear in catalog:continue
+  base=next((n for n in names if canonical[n]['sheet']==original['sheet'] and canonical[n]['rect']==original['rect']),None)
+  if base:catalog[name+'_'+wear]={**catalog[base+'_'+wear],**{k:v for k,v in original.items() if k not in ['sheet','size','rect','footwear']}}
+register('atlas_interaction14',3,1,['papa_receive_indoor','papa_receive_outdoor','stool'],dict(stool=140))
+for wear in ['indoor','outdoor']:catalog['papa_receive_'+wear].update(hand=[.06,.405],bodyScale=1,footwear=wear)
+catalog['papa_receive']=dict(catalog['papa_receive_indoor'])
+catalog['ladder']['worldHeight']=400
+catalog['stool']['supportPlane']=[[.19,.14],[.47,.01],[.95,.15],[.71,.32]]
+catalog['tv']['screenQuad']=[[.106,.166],[.843,.035],[.843,.468],[.106,.605]]
+catalog['tv_open']['screenQuad']=[[.109,.153],[.838,.033],[.838,.457],[.109,.580]]
+catalog['ladder']['supportPlanes']=[[[.25,.23],[.56,.26],[.55,.29],[.24,.26]],[[.17,.49],[.49,.52],[.47,.56],[.16,.52]],[[.08,.72],[.39,.77],[.37,.80],[.07,.75]]]
+from feet_profiles import annotate as painted_feet
+painted_feet(catalog,sheets,ROOT)
 used={v['sheet'] for v in catalog.values()};sheets={k:v for k,v in sheets.items() if k in used}
 (ROOT/'scenario/sprite-catalog.json').write_text(json.dumps({'sheets':sheets,'sprites':catalog},ensure_ascii=False,indent=2))
 print('Catalog:',len(catalog),'sprites in',len(sheets),'sheets')
