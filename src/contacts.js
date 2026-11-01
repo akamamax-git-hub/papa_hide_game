@@ -271,7 +271,7 @@ const AnimationController=(()=>{
    if(step.kind==='event'){target.room=step.room;const host=state.entities.tree;if(host){target.parent=null;target.detached=true;target.x=90;target.y=230;}}
    if(step.kind==='chase')target.room=step.room;
    if(step.kind==='carry')for(const id of step.use){const e=state.entities[id];e.room=step.room;e.place='hand';e.holder=step.actor;}
-   World.render();if(!await move(step.actor,925,700,token,record))return false;
+   World.render();if(!await AssetManager.prepare(token))return false;if(!await move(step.actor,925,700,token,record))return false;
    if(step.kind==='event'&&state.entities.tree){const host=state.entities.tree,f=World.frame(host);if(!await moveProp(target,f.left+f.w*.65,f.top+f.h*.43+target.h/2,token,500,35))return false;target.parent='tree';target.mount=[.65,.43];target.detached=false;World.render();}
    if(step.kind==='carry')for(const id of step.use){const e=state.entities[id];if(!await put(e,{x:target.x,y:target.y-target.h+e.h/2},target,token,record))return false;}
   }

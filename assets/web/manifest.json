@@ -1,0 +1,50 @@
+{
+  "assets/world/room_bath.png": {
+    "file": "assets/web/room_bath.webp",
+    "source_sha256": "0bc658921e5c9442f7d8f1c91c74904f452d06f128281b08bfec795c104f78ac",
+    "sha256": "049981093f360bf4627718da6cc49fb79f1cf13ff0df47e4fcb9b9063e0669c7",
+    "source_bytes": 2086743,
+    "bytes": 1503766,
+    "visible_pixels_identical": true
+  },
+  "assets/world/room_child.png": {
+    "file": "assets/web/room_child.webp",
+    "source_sha256": "ce935bd3a030c456c07f89340d7a33660be20467a30ddad2687508751be9c9d2",
+    "sha256": "59ce318a40f9432cf66c0c7de9a7ce2d4ac6a1341690fb39ee999d0c0309c5ec",
+    "source_bytes": 1713245,
+    "bytes": 1171674,
+    "visible_pixels_identical": true
+  },
+  "assets/world/room_entrance.png": {
+    "file": "assets/web/room_entrance.webp",
+    "source_sha256": "88da3e86fdf8f8dcfc2a530d8518a9585d27ff621d453752324ce7b5ab70d0d0",
+    "sha256": "276da8825ae2ed2ef3e89e91e07ead3d75ec0bfa16b0a6c5ac79ebf741470f3d",
+    "source_bytes": 2040791,
+    "bytes": 1421186,
+    "visible_pixels_identical": true
+  },
+  "assets/world/room_garden.png": {
+    "file": "assets/web/room_garden.webp",
+    "source_sha256": "3c8033c37428f0aaa1c2dbdba55555ac1ed9f9d3b5896b0cd1f790709907f07d",
+    "sha256": "6276aa6369c16da0600156234ce677ec106665892cb36479eeae2858e647dd60",
+    "source_bytes": 3140158,
+    "bytes": 2320146,
+    "visible_pixels_identical": true
+  },
+  "assets/world/room_kitchen.png": {
+    "file": "assets/web/room_kitchen.webp",
+    "source_sha256": "c89b22c908360dbf5e67909bfe700ba5b726a86fedb9dc31c2f91a682cb4168e",
+    "sha256": "fe2f45737f809a2db670bf5fc6538bb976f6a468d87b1fd345fd25f9570e7757",
+    "source_bytes": 1707505,
+    "bytes": 1180266,
+    "visible_pixels_identical": true
+  },
+  "assets/world/room_living.png": {
+    "file": "assets/web/room_living.webp",
+    "source_sha256": "4128b08b597b7cca4e49d7bf91717d9411677ae2d537fb6c4f417f519d9352ca",
+    "sha256": "a1cea8b0e8f6f6f0f2f8914b0a4e0c0341165d58bd1a42ce9c3a323a6658324b",
+    "source_bytes": 1728222,
+    "bytes": 1164304,
+    "visible_pixels_identical": true
+  }
+}

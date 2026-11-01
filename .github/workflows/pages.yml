@@ -6,6 +6,7 @@ on:
     paths:
       - 'src/**'
       - 'assets/**'
+      - 'package.json'
       - 'scenario/*.json'
       - 'scripts/**'
       - 'index.html'
@@ -31,7 +32,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Configure Pages
         uses: actions/configure-pages@v5
-      - name: Build standalone game
+      - name: Build web and offline editions
         run: |
           python3 scripts/storyboard.py
           python3 scripts/audit_storyboards.py
@@ -41,7 +42,7 @@ jobs:
           SITE_DIRECTORY: ${{ runner.temp }}/papa-hide-game-site
         run: |
           mkdir -p "$SITE_DIRECTORY"
-          cp index.html "$SITE_DIRECTORY/index.html"
+          cp -R dist/web/. "$SITE_DIRECTORY/"
           touch "$SITE_DIRECTORY/.nojekyll"
           python3 - <<'PY'
           import json, os

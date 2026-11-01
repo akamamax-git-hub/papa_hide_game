@@ -60,8 +60,7 @@ const World = (() => {
  function isHere(e){let p=e;for(let i=0;p?.parent&&i<8;i++){p=node(p.parent);if(p&&(!p.visible||!['room','hand','transit'].includes(p.place)))return false;}return e.visible&&['room','hand','transit'].includes(e.place)&&(e.id==='door'||e.room===state.room);}
  function render(){
   const world=document.getElementById('world');if(!world)return;
-  const bgRoom=state.room==='outside'?'garden':state.room==='hall'?'entrance':state.room==='laundry'?'bath':state.room;
-  world.style.backgroundImage=`url("${A['room_'+bgRoom]}")`;world.classList.toggle('dark-room',!state.light);world.classList.toggle('rain-room',state.board.weather==='rain'&&state.room==='outside');
+  world.style.backgroundImage=`url("${A[backgroundKey(state.room)]}")`;world.classList.toggle('dark-room',!state.light);world.classList.toggle('rain-room',state.board.weather==='rain'&&state.room==='outside');
   sync();const objects=Object.values(state.entities).filter(isHere);
   world.innerHTML=`<div class="world-objects">${objects.map(e=>{
    const asset=visual(e),assetAnchor=CATALOG[asset]?.anchor||[.5,1];
@@ -81,6 +80,7 @@ const World = (() => {
  function parentTarget(id){const e=state.entities[id];if(e?.place==='bag')return 'boy';return e&&!e.visible&&e.parent?parentTarget(e.parent):id;}
  function actionTarget(step){if(step.kind==='collect'&&state.entities.console.visible)return 'console';if(step.room&&['travel','carry','event','chase'].includes(step.kind))return 'door';const e=state.entities[step.target];return e?.asset==='boxes'?'boxes__blue':e?.parts&&e.place==='room'?e.parts[0]:parentTarget(step.target);}
  function resolveChildren(){for(let pass=0;pass<5;pass++)for(const e of Object.values(state.entities))if(e.parent&&e.place==='room'&&!e.detached){const p=state.entities[e.parent];e.room=p.room;e.x=p.x;e.y=p.y-p.h*.4;if(e.slot==='top')e.y=p.y-p.h+2;if(e.slot==='standing'){e.y=p.y-20;}if(e.slot==='surface'){e.y=p.asset==='window'?p.y-10:p.y-p.h+e.h*.8;const siblings=Object.values(state.entities).filter(other=>other.parent===e.parent&&other.slot==='surface');e.x=p.x+(siblings.indexOf(e)-(siblings.length-1)/2)*Math.min(105,(p.w-20)/siblings.length);}if(e.slot==='under')e.y=p.y-6;if(e.slot==='side'){e.x=p.x-p.w/2-35;e.y=p.y;}if(e.mount){const f=frame(p);e.x=f.left+f.w*e.mount[0];e.y=f.top+f.h*e.mount[1]+e.h/2;}}}
+ function backgroundKey(room){return 'room_'+({outside:'garden',hall:'entrance',laundry:'bath'}[room]||room);}
  function roomName(room){return {living:'リビング',hall:'廊下',entrance:'玄関',outside:'玄関の外',bath:'お風呂場',laundry:'洗面・洗濯室',garden:'庭',child:'子ども部屋',kitchen:'キッチン・ダイニング'}[room]||room;}
  function pose(id,pose){const a=state.actors[id];if(!a)return;a.pose=pose;const el=document.querySelector(`[data-actor="${id}"] .sprite`);if(el){el.outerHTML=sprite(actorAsset(a));const box=document.querySelector(`[data-actor="${id}"]`),m=CATALOG[actorAsset(a)],h=actorHeight(a);box.style.height=h/H*100+'%';box.style.width=h*m.rect[2]/m.rect[3]/W*100+'%';}}
  function frame(e){
@@ -153,7 +153,7 @@ const World = (() => {
 
  function renderEffects(){const world=document.getElementById('world');if(!world)return;world.querySelector('#contactFX')?.remove();if(!state.beam&&!debug)return;const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.id='contactFX';svg.classList.add('contact-line');svg.setAttribute('viewBox','0 0 1200 800');let html='';if(state.beam){const b=state.beam,tool=node(b.tool),f=tool&&frame(tool),tip=tool&&(CATALOG[tool.asset].tip||[.5,.1]),h=f?World.tip(tool):hand(b.actor),tf=frame(node(b.target)),t=b.uv?{x:tf.left+tf.w*b.uv[0],y:tf.top+tf.h*b.uv[1]}:point(b.target,'item');html+=`<path d="M ${h.x} ${h.y} L ${t.x} ${t.y}" stroke="${b.kind==='rope'?'#9d7849':b.kind==='infrared'?'#ff7979':b.kind==='coffee'?'#6c3820':b.kind==='water'?'#55bae3':'#fff3a5'}" stroke-width="${b.kind==='rope'?4:b.kind==='infrared'?2:['coffee','water'].includes(b.kind)?4:10}" opacity=".8"/>`;}if(debug&&state.contactProbe){const {hand:h,point:p}=state.contactProbe;html+=`<circle cx="${h.x}" cy="${h.y}" r="5" fill="#ff5353"/><circle cx="${p.x}" cy="${p.y}" r="9" stroke="#14b886" fill="none"/>`;}svg.innerHTML=html;world.append(svg);}
  function snapshot(){return JSON.parse(JSON.stringify({room:state.room,entities:state.entities,actors:state.actors,inventory:state.inventory,step:state.step,status:state.status,busy:state.busy,audit:state.audit.map(({before,...a})=>a),knowledge:state.knowledge}));}
- return {tip,pick,frame,hand,point,sync,refresh,reveal,attach,region,visual,resolveChildren,install,W,H,names,ids,human,baseHeight,slots,init,render,node,isHere,sprite,actorAsset,actorHeight,actorHTML,pose,geometry,anchor,parentTarget,actionTarget,roomName,snapshot};
+ return {tip,pick,frame,hand,point,sync,refresh,reveal,attach,region,visual,resolveChildren,install,W,H,names,ids,human,baseHeight,slots,init,render,node,isHere,sprite,actorAsset,actorHeight,actorHTML,pose,geometry,anchor,parentTarget,actionTarget,backgroundKey,roomName,snapshot};
 })();
 
 const PuzzleRuleEngine=(()=>{

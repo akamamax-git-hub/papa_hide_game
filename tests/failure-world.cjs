@@ -6,7 +6,7 @@ const boards=JSON.parse(fs.readFileSync('scenario/storyboards.json'));const sele
   const p=await browser.newPage({viewport:{width:1600,height:1100}});const errors=[];p.on('pageerror',e=>errors.push(e.message));await p.goto('http://127.0.0.1:8000');
   while(cursor<selected.length){const n=selected[cursor++],b=boards[n-1];try{
    for(let f=0;f<b.failures.length;f++){
-    await p.evaluate(n=>{GameTest.loadStage(n);state.assist=true;renderChoices();},n);
+    await p.evaluate(async n=>{await GameTest.loadStage(n);state.assist=true;renderChoices();},n);
     while(!await p.locator(`[data-fail="${f}"]`).count()||!await p.locator(`[data-fail="${f}"]`).isEnabled()){
      const i=await p.evaluate(()=>state.step),s=b.steps[i];assert.ok(s,'Failure never available');const bag=await p.evaluate(()=>state.inventory),id=s.use.find(id=>bag.includes(id));if(id)await p.locator(`[data-item="${id}"]`).click();await p.locator('[data-role="correct"]').click();
      if(b.puzzle?.step===i&&b.puzzle.mode!=='boxColor'){const input=p.locator('#puzzleAnswer');if(b.puzzle.options)await input.selectOption(b.puzzle.answer);else await input.fill(b.puzzle.answer);await p.locator('#puzzleSubmit').click();}
@@ -16,8 +16,8 @@ const boards=JSON.parse(fs.readFileSync('scenario/storyboards.json'));const sele
     await p.locator('#resRetry').click();assert.deepEqual(await p.evaluate(()=>({step:state.step,bag:state.inventory,spawn:state.entities.console.birth,hidden:!state.entities.console.visible})),{step:0,bag:[],spawn:'stage-init',hidden:true});results.push({stage:n,failure:f,retry:true});
    }
    console.log(`Stage ${n}: FAILED + Retry PASS`);
-  }catch(e){failures.push({stage:n,error:e.stack,errors:[...errors]});console.error(`Stage ${n} failure test: ${e.message}`);await p.screenshot({path:`test-results/v014/FAILED-route-${n}.png`});}
+  }catch(e){failures.push({stage:n,error:e.stack,errors:[...errors]});console.error(`Stage ${n} failure test: ${e.message}`);await p.screenshot({path:`test-results/v0141/FAILED-route-${n}.png`});}
   }assert.deepEqual(errors,[]);await p.close();
  }));
- fs.writeFileSync('test-results/v014/failure-routes.json',JSON.stringify({results,failures},null,2));await browser.close();assert.deepEqual(failures,[]);console.log(`${results.length} failure routes + Retry PASS`);
+ fs.writeFileSync('test-results/v0141/failure-routes.json',JSON.stringify({results,failures},null,2));await browser.close();assert.deepEqual(failures,[]);console.log(`${results.length} failure routes + Retry PASS`);
 })().catch(async e=>{console.error(e);await browser?.close();process.exitCode=1});

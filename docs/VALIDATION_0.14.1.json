@@ -1,0 +1,317 @@
+{
+  "version": "0.14.1",
+  "validated_at_utc": "2026-11-01T08:35:04.841689+00:00",
+  "html_sha256": "6bd99e062bf8a30b3ddc5b2e4b37581ea2059aa425ebb4100676cbf5bade9db6",
+  "javascript_sha256": "aec30e8e5a629fdefbd92c27e26c0852898ffd0f06b34189b38d2a7385f35fe4",
+  "offline_html_sha256": "eb77cd0ad807641dbf7deb3b042ca367bccd88f0fcea4d7e786a4da8cc4d2892",
+  "build": {
+    "version": "0.14.1",
+    "html_bytes": 1431,
+    "javascript_bytes": 367270,
+    "css_bytes": 10319,
+    "offline_bytes": 84701896,
+    "image_count": 209,
+    "media_files": 215
+  },
+  "startup_before": {
+    "htmlBytes": 84698018,
+    "networkMbps": 5,
+    "latencyMs": 80,
+    "elapsedMs": 4005,
+    "domContentLoaded": false,
+    "titleReady": false
+  },
+  "startup_after": {
+    "build": {
+      "version": "0.14.1",
+      "html_bytes": 1431,
+      "javascript_bytes": 367270,
+      "css_bytes": 10319,
+      "offline_bytes": 84701896,
+      "image_count": 209,
+      "media_files": 215
+    },
+    "networkMbps": 5,
+    "latencyMs": 80,
+    "titleReadyMs": 923,
+    "firstRoomReadyMs": 9401,
+    "publishedAssetsVerified": 215,
+    "titleInteractiveWhileImagesDelayed": "PASS",
+    "audioDeferredUntilGesture": "PASS",
+    "cancelLoadingToMenu": "PASS",
+    "imageFailureRetry": "PASS",
+    "scriptFailureRetry": "PASS",
+    "subpathDeployment": "PASS",
+    "cachedReload": {
+      "firstBytes": 1748157,
+      "reloadBytes": 0
+    },
+    "bgmBytesUnchanged": "PASS",
+    "consoleErrors": []
+  },
+  "image_transport": {
+    "source_images": 38,
+    "source_png_bytes": 60986064,
+    "transport_images": 209,
+    "transport_bytes": 35661488,
+    "sprite_names_verified": 495,
+    "source_art_unchanged": true,
+    "alpha_and_visible_pixels_identical": true
+  },
+  "stages": 50,
+  "actions": 272,
+  "failure_routes": 53,
+  "retry_routes": 53,
+  "measured_contacts": 389,
+  "max_contact_error_world_units": 0.46633422877494013,
+  "console_identity_verified_stages": 50,
+  "browser_failures": [],
+  "failure_route_failures": [],
+  "guards": {
+    "wrongItemSelection": "PASS",
+    "bagDragUse": "PASS",
+    "reusableToolRetained": "PASS",
+    "doubleClick": "PASS",
+    "retryDuringAnimation": "PASS",
+    "menuDuringAnimation": "PASS",
+    "puzzleCancel": "PASS",
+    "wrongCodeFailure": "PASS",
+    "offlineRoomChange": "PASS",
+    "pcViewportChecks": 100,
+    "audioDecodeAndToggle": "PASS",
+    "errors": []
+  },
+  "scene_design": {
+    "defaultSolutionHidden": 50,
+    "observationOrder": "PASS",
+    "isolatedClues": "PASS",
+    "tvPerspective": "PASS",
+    "wrongPhysicalBox": "PASS",
+    "rightPhysicalBox": "PASS",
+    "wrongFloorDropPreservesItem": "PASS",
+    "stoolPlacement": "PASS",
+    "independentPickup": "PASS",
+    "bagCombination": "PASS",
+    "recipeInputTarget": "PASS",
+    "dryerInputItem": "PASS",
+    "wrongToolGuard": "PASS",
+    "entranceFootwearTransition": "PASS",
+    "errors": []
+  },
+  "depth_audits": 50,
+  "depth_samples": 150,
+  "full_regression_command": "npm test",
+  "focused_reruns": [
+    {
+      "command": "node tests/startup.cjs",
+      "result": "PASS",
+      "reason": "Final first-room readiness budget and verification of every published asset hash."
+    }
+  ],
+  "stage_actions": [
+    {
+      "stage": 1,
+      "actions": 4
+    },
+    {
+      "stage": 2,
+      "actions": 8
+    },
+    {
+      "stage": 3,
+      "actions": 4
+    },
+    {
+      "stage": 4,
+      "actions": 5
+    },
+    {
+      "stage": 5,
+      "actions": 4
+    },
+    {
+      "stage": 6,
+      "actions": 4
+    },
+    {
+      "stage": 7,
+      "actions": 6
+    },
+    {
+      "stage": 8,
+      "actions": 5
+    },
+    {
+      "stage": 9,
+      "actions": 4
+    },
+    {
+      "stage": 10,
+      "actions": 5
+    },
+    {
+      "stage": 11,
+      "actions": 5
+    },
+    {
+      "stage": 12,
+      "actions": 6
+    },
+    {
+      "stage": 13,
+      "actions": 5
+    },
+    {
+      "stage": 14,
+      "actions": 6
+    },
+    {
+      "stage": 15,
+      "actions": 5
+    },
+    {
+      "stage": 16,
+      "actions": 5
+    },
+    {
+      "stage": 17,
+      "actions": 5
+    },
+    {
+      "stage": 18,
+      "actions": 5
+    },
+    {
+      "stage": 19,
+      "actions": 4
+    },
+    {
+      "stage": 20,
+      "actions": 6
+    },
+    {
+      "stage": 21,
+      "actions": 5
+    },
+    {
+      "stage": 22,
+      "actions": 7
+    },
+    {
+      "stage": 23,
+      "actions": 5
+    },
+    {
+      "stage": 24,
+      "actions": 5
+    },
+    {
+      "stage": 25,
+      "actions": 5
+    },
+    {
+      "stage": 26,
+      "actions": 4
+    },
+    {
+      "stage": 27,
+      "actions": 5
+    },
+    {
+      "stage": 28,
+      "actions": 5
+    },
+    {
+      "stage": 29,
+      "actions": 4
+    },
+    {
+      "stage": 30,
+      "actions": 6
+    },
+    {
+      "stage": 31,
+      "actions": 6
+    },
+    {
+      "stage": 32,
+      "actions": 5
+    },
+    {
+      "stage": 33,
+      "actions": 5
+    },
+    {
+      "stage": 34,
+      "actions": 6
+    },
+    {
+      "stage": 35,
+      "actions": 6
+    },
+    {
+      "stage": 36,
+      "actions": 5
+    },
+    {
+      "stage": 37,
+      "actions": 5
+    },
+    {
+      "stage": 38,
+      "actions": 5
+    },
+    {
+      "stage": 39,
+      "actions": 5
+    },
+    {
+      "stage": 40,
+      "actions": 5
+    },
+    {
+      "stage": 41,
+      "actions": 4
+    },
+    {
+      "stage": 42,
+      "actions": 6
+    },
+    {
+      "stage": 43,
+      "actions": 4
+    },
+    {
+      "stage": 44,
+      "actions": 5
+    },
+    {
+      "stage": 45,
+      "actions": 6
+    },
+    {
+      "stage": 46,
+      "actions": 6
+    },
+    {
+      "stage": 47,
+      "actions": 6
+    },
+    {
+      "stage": 48,
+      "actions": 5
+    },
+    {
+      "stage": 49,
+      "actions": 10
+    },
+    {
+      "stage": 50,
+      "actions": 15
+    }
+  ],
+  "limits": [
+    "Startup timing is local Chromium with emulated 5Mbps throughput and 80ms latency, not a live GitHub Pages timing.",
+    "Offline edition verified after local HTTP loading with networking disabled; file URLs are disallowed by this managed browser."
+  ]
+}
