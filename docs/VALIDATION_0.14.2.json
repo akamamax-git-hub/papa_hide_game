@@ -1,0 +1,350 @@
+{
+  "version": "0.14.2",
+  "validated_at_utc": "2026-11-01T09:19:20.202166+00:00",
+  "html_sha256": "5e173bfc29d9da6d43946c3fc6b430fe3d1c3b52d3595a455cba5d6a640ac9dc",
+  "javascript_sha256": "1e9cb6ce365e928c18d99f0f994ddb0cf24bdcbbcd854a337e8968ada6f476d2",
+  "offline_html_sha256": "92c162ba812fcfee4a54f6fe2ca4161dd8663114d830097bb6d86a2fb4889c91",
+  "build": {
+    "version": "0.14.2",
+    "html_bytes": 1431,
+    "javascript_bytes": 389658,
+    "css_bytes": 10209,
+    "offline_bytes": 84706813,
+    "image_count": 343,
+    "media_files": 349
+  },
+  "verification_runs": [
+    {
+      "command": "npm test",
+      "result": "PASS",
+      "coverage": "storyboard audit, startup, all 50 stages / 272 actions, 53 failure and Retry routes, guards, scene design"
+    },
+    {
+      "command": "node tests/startup.cjs",
+      "result": "PASS",
+      "reason": "Final action preload depends only on affected actors; additionally hold an unrelated visible actor and verify loading completion cannot unlock an active action."
+    },
+    {
+      "command": "node tests/contact-world.cjs",
+      "result": "PASS",
+      "reason": "All 50 stages and 272 actions repeated against the final published JavaScript."
+    }
+  ],
+  "startup_before": {
+    "build": {
+      "version": "0.14.1",
+      "html_bytes": 1431,
+      "javascript_bytes": 367270,
+      "css_bytes": 10319,
+      "offline_bytes": 84701896,
+      "image_count": 209,
+      "media_files": 215
+    },
+    "networkMbps": 5,
+    "latencyMs": 80,
+    "titleReadyMs": 923,
+    "firstRoomReadyMs": 9401,
+    "publishedAssetsVerified": 215,
+    "titleInteractiveWhileImagesDelayed": "PASS",
+    "audioDeferredUntilGesture": "PASS",
+    "cancelLoadingToMenu": "PASS",
+    "imageFailureRetry": "PASS",
+    "scriptFailureRetry": "PASS",
+    "subpathDeployment": "PASS",
+    "cachedReload": {
+      "firstBytes": 1748157,
+      "reloadBytes": 0
+    },
+    "bgmBytesUnchanged": "PASS",
+    "consoleErrors": []
+  },
+  "startup_after": {
+    "build": {
+      "version": "0.14.2",
+      "html_bytes": 1431,
+      "javascript_bytes": 389658,
+      "css_bytes": 10209,
+      "offline_bytes": 84706813,
+      "image_count": 343,
+      "media_files": 349
+    },
+    "networkMbps": 5,
+    "latencyMs": 80,
+    "titleReadyMs": 842,
+    "firstRoomReadyMs": 1839,
+    "backgroundReadyMs": 5405,
+    "roomWithStalledBackgroundMs": 109,
+    "stalledBackgroundDoesNotBlockPlay": "PASS",
+    "unusedFramesNotRequested": "PASS",
+    "unrelatedVisibleImageDoesNotBlockAction": "PASS",
+    "initialLoadingCannotUnlockAction": "PASS",
+    "backgroundRetryPreservesProgress": "PASS",
+    "failedActionRestoresInventoryAndIdentity": "PASS",
+    "audioDeferred": "PASS",
+    "scriptFailureRetry": "PASS",
+    "subpathDeployment": "PASS",
+    "publishedAssetsVerified": 349,
+    "cachedReload": {
+      "firstBytes": 505839,
+      "reloadBytes": 0
+    },
+    "bgmBytesUnchanged": "PASS",
+    "errors": []
+  },
+  "image_transport": {
+    "source_images": 38,
+    "source_png_bytes": 60986064,
+    "transport_images": 343,
+    "transport_bytes": 33749980,
+    "sprite_names_verified": 495,
+    "source_art_unchanged": true,
+    "alpha_and_visible_pixels_identical": true
+  },
+  "stages": 50,
+  "actions": 272,
+  "failure_routes": 53,
+  "retry_routes": 53,
+  "measured_contacts": 389,
+  "max_contact_error_world_units": 0.46633422877494013,
+  "console_identity_verified_stages": 50,
+  "browser_failures": [],
+  "failure_route_failures": [],
+  "guards": {
+    "wrongItemSelection": "PASS",
+    "bagDragUse": "PASS",
+    "reusableToolRetained": "PASS",
+    "doubleClick": "PASS",
+    "retryDuringAnimation": "PASS",
+    "menuDuringAnimation": "PASS",
+    "puzzleCancel": "PASS",
+    "wrongCodeFailure": "PASS",
+    "offlineRoomChange": "PASS",
+    "pcViewportChecks": 100,
+    "audioDecodeAndToggle": "PASS",
+    "errors": []
+  },
+  "scene_design": {
+    "defaultSolutionHidden": 50,
+    "observationOrder": "PASS",
+    "isolatedClues": "PASS",
+    "tvPerspective": "PASS",
+    "wrongPhysicalBox": "PASS",
+    "rightPhysicalBox": "PASS",
+    "wrongFloorDropPreservesItem": "PASS",
+    "stoolPlacement": "PASS",
+    "independentPickup": "PASS",
+    "bagCombination": "PASS",
+    "recipeInputTarget": "PASS",
+    "dryerInputItem": "PASS",
+    "wrongToolGuard": "PASS",
+    "entranceFootwearTransition": "PASS",
+    "errors": []
+  },
+  "depth_samples": 150,
+  "stage_results": [
+    {
+      "stage": 1,
+      "actions": 4
+    },
+    {
+      "stage": 2,
+      "actions": 8
+    },
+    {
+      "stage": 3,
+      "actions": 4
+    },
+    {
+      "stage": 4,
+      "actions": 5
+    },
+    {
+      "stage": 5,
+      "actions": 4
+    },
+    {
+      "stage": 6,
+      "actions": 4
+    },
+    {
+      "stage": 7,
+      "actions": 6
+    },
+    {
+      "stage": 8,
+      "actions": 5
+    },
+    {
+      "stage": 9,
+      "actions": 4
+    },
+    {
+      "stage": 10,
+      "actions": 5
+    },
+    {
+      "stage": 11,
+      "actions": 5
+    },
+    {
+      "stage": 12,
+      "actions": 6
+    },
+    {
+      "stage": 13,
+      "actions": 5
+    },
+    {
+      "stage": 14,
+      "actions": 6
+    },
+    {
+      "stage": 15,
+      "actions": 5
+    },
+    {
+      "stage": 16,
+      "actions": 5
+    },
+    {
+      "stage": 17,
+      "actions": 5
+    },
+    {
+      "stage": 18,
+      "actions": 5
+    },
+    {
+      "stage": 19,
+      "actions": 4
+    },
+    {
+      "stage": 20,
+      "actions": 6
+    },
+    {
+      "stage": 21,
+      "actions": 5
+    },
+    {
+      "stage": 22,
+      "actions": 7
+    },
+    {
+      "stage": 23,
+      "actions": 5
+    },
+    {
+      "stage": 24,
+      "actions": 5
+    },
+    {
+      "stage": 25,
+      "actions": 5
+    },
+    {
+      "stage": 26,
+      "actions": 4
+    },
+    {
+      "stage": 27,
+      "actions": 5
+    },
+    {
+      "stage": 28,
+      "actions": 5
+    },
+    {
+      "stage": 29,
+      "actions": 4
+    },
+    {
+      "stage": 30,
+      "actions": 6
+    },
+    {
+      "stage": 31,
+      "actions": 6
+    },
+    {
+      "stage": 32,
+      "actions": 5
+    },
+    {
+      "stage": 33,
+      "actions": 5
+    },
+    {
+      "stage": 34,
+      "actions": 6
+    },
+    {
+      "stage": 35,
+      "actions": 6
+    },
+    {
+      "stage": 36,
+      "actions": 5
+    },
+    {
+      "stage": 37,
+      "actions": 5
+    },
+    {
+      "stage": 38,
+      "actions": 5
+    },
+    {
+      "stage": 39,
+      "actions": 5
+    },
+    {
+      "stage": 40,
+      "actions": 5
+    },
+    {
+      "stage": 41,
+      "actions": 4
+    },
+    {
+      "stage": 42,
+      "actions": 6
+    },
+    {
+      "stage": 43,
+      "actions": 4
+    },
+    {
+      "stage": 44,
+      "actions": 5
+    },
+    {
+      "stage": 45,
+      "actions": 6
+    },
+    {
+      "stage": 46,
+      "actions": 6
+    },
+    {
+      "stage": 47,
+      "actions": 6
+    },
+    {
+      "stage": 48,
+      "actions": 5
+    },
+    {
+      "stage": 49,
+      "actions": 10
+    },
+    {
+      "stage": 50,
+      "actions": 15
+    }
+  ],
+  "limits": [
+    "Startup timing is local Chromium with emulated 5Mbps throughput and 80ms latency, not a live GitHub Pages timing.",
+    "Offline edition verified after local HTTP loading with networking disabled; file URLs are disallowed by this managed browser."
+  ]
+}

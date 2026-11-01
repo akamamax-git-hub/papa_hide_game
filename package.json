@@ -1,6 +1,6 @@
 {
   "name": "papa-hide-game",
-  "version": "0.14.1",
+  "version": "0.14.2",
   "private": true,
   "description": "Offline standalone Japanese home exploration game",
   "scripts": {

@@ -16,8 +16,8 @@ const boards=JSON.parse(fs.readFileSync('scenario/storyboards.json'));const sele
     await p.locator('#resRetry').click();assert.deepEqual(await p.evaluate(()=>({step:state.step,bag:state.inventory,spawn:state.entities.console.birth,hidden:!state.entities.console.visible})),{step:0,bag:[],spawn:'stage-init',hidden:true});results.push({stage:n,failure:f,retry:true});
    }
    console.log(`Stage ${n}: FAILED + Retry PASS`);
-  }catch(e){failures.push({stage:n,error:e.stack,errors:[...errors]});console.error(`Stage ${n} failure test: ${e.message}`);await p.screenshot({path:`test-results/v0141/FAILED-route-${n}.png`});}
+  }catch(e){failures.push({stage:n,error:e.stack,errors:[...errors]});console.error(`Stage ${n} failure test: ${e.message}`);await p.screenshot({path:`test-results/v0142/FAILED-route-${n}.png`});}
   }assert.deepEqual(errors,[]);await p.close();
  }));
- fs.writeFileSync('test-results/v0141/failure-routes.json',JSON.stringify({results,failures},null,2));await browser.close();assert.deepEqual(failures,[]);console.log(`${results.length} failure routes + Retry PASS`);
+ fs.writeFileSync('test-results/v0142/failure-routes.json',JSON.stringify({results,failures},null,2));await browser.close();assert.deepEqual(failures,[]);console.log(`${results.length} failure routes + Retry PASS`);
 })().catch(async e=>{console.error(e);await browser?.close();process.exitCode=1});

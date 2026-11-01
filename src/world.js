@@ -67,7 +67,7 @@ const World = (() => {
    const z=depthZ(e);
    return `<button class="world-object ${e.id==='door'?'exit-target':''} ${e.opened?'opened':''} mode-${e.mode} asset-${e.asset} ${e.place==='hand'?'carried':''}" data-entity="${e.id}" data-node="${e.id}" aria-label="${esc(e.label)}" style="transform:translate(${-assetAnchor[0]*100}%,${-assetAnchor[1]*100}%);left:${e.x/W*100}%;top:${e.y/H*100}%;width:${e.w/W*100}%;height:${e.h/H*100}%;z-index:${Math.round(z)}">${asset&&e.asset!=='window'?e.asset==='boxes'||e.parts?'':sprite(asset):''}${state.assist&&state.knowledge[e.id]?`<span class="world-clue">${esc(state.knowledge[e.id])}</span>`:''}${screenHTML(e)}<span class="object-label">${esc(e.label)}</span>${e.mode==='filled'?'<span class="water-fx"></span>':''}</button>`;
   }).join('')}</div><div class="world-actors">${Object.values(state.actors).filter(a=>a.room===state.room&&a.visible).map(actorHTML).join('')}</div><div id="worldEffect" aria-hidden="true"></div>`;
-  renderEffects();document.getElementById('roomName').textContent=roomName(state.room);
+  renderEffects();AssetManager.watchVisible();AssetManager.restoreNotice();document.getElementById('roomName').textContent=roomName(state.room);
   world.querySelectorAll('[data-node]').forEach(b=>{
    b.onclick=null;
    b.ondragover=e=>{e.preventDefault();e.dataTransfer.dropEffect='copy';};
@@ -135,13 +135,13 @@ const World = (() => {
  }
 
  const alphaCache=new Map();
- function alphaFor(sheet){if(!alphaCache.has(sheet))alphaCache.set(sheet,(async()=>{const img=new Image();img.src=A[sheet];await img.decode();const canvas=document.createElement('canvas');canvas.width=img.naturalWidth;canvas.height=img.naturalHeight;const ctx=canvas.getContext('2d',{willReadFrequently:true});ctx.drawImage(img,0,0);return {data:ctx.getImageData(0,0,canvas.width,canvas.height).data,w:canvas.width,h:canvas.height};})());return alphaCache.get(sheet);}
+ function alphaFor(sheet){if(!alphaCache.has(sheet))alphaCache.set(sheet,(async()=>{const img=AssetManager.bitmap(sheet);if(!img)throw Error('Image not ready');const canvas=document.createElement('canvas');canvas.width=img.naturalWidth;canvas.height=img.naturalHeight;const ctx=canvas.getContext('2d',{willReadFrequently:true});ctx.drawImage(img,0,0);return {data:ctx.getImageData(0,0,canvas.width,canvas.height).data,w:canvas.width,h:canvas.height};})());return alphaCache.get(sheet);}
  async function pick(clientX,clientY){
   const candidates=document.elementsFromPoint(clientX,clientY).filter(e=>e.matches('#world [data-node]'));
   for(const el of candidates){const id=el.dataset.node,e=node(id);if(!e)continue;
    if(id==='door'||e.asset==='window')return id;
    const spriteEl=el.querySelector(':scope > .sprite');if(!spriteEl)continue;
-   const key=spriteEl.dataset.sprite,m=CATALOG[key],bounds=el.getBoundingClientRect();
+   const key=spriteEl.dataset.sprite,m=CATALOG[key];if(!AssetManager.bitmap(m.sheet))continue;const bounds=el.getBoundingClientRect();
    let u=(clientX-bounds.x)/bounds.width,v=(clientY-bounds.y)/bounds.height;
    if(state.actors[id]?.facing===-1)u=1-u;
    if(u<0||u>=1||v<0||v>=1)continue;

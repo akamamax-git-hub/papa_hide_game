@@ -37,7 +37,7 @@ const AnimationController=(()=>{
   if(!candidates.length)throw Error(`Unreachable painted contact: Stage ${state.stage} ${id} -> ${target?.id} (${p.x.toFixed(1)},${p.y.toFixed(1)})`);
   return candidates[0];
  }
- async function move(id,x,y,token,record){const a=state.actors[id];if(!a)return true;delete a.perch;
+ async function move(id,x,y,token,record){const a=state.actors[id];if(!a)return true;if(!await AssetManager.poses(id,['walk1','walk2','pickup'],token))return false;delete a.perch;
   const initial={x:a.x,y:a.y},route=id==='crow'?[{x,y}]:SceneGeometry.path(initial,{x,y},a.support),oldWear=SceneGeometry.footwear(a.room,a.y);
   for(const end of route){const start={x:a.x,y:a.y},distance=dist(start,end);a.facing=end.x>=a.x?1:-1;
   // A held object follows the same hand through the actual walk frames.
@@ -50,7 +50,7 @@ const AnimationController=(()=>{
   const a=state.actors[id],dest=plan(id,p,target,preferred),oldElevation=a.elevation;
   if(a.room!==state.room){a.room=state.room;a.x=1030;a.y=690;World.render();}
   if(!await move(id,dest.x,dest.y,token,record))return false;
-  a.facing=dest.facing;World.pose(id,dest.pose);record.frames.push(World.actorAsset(a));
+  if(!await AssetManager.poses(id,[dest.pose],token))return false;a.facing=dest.facing;World.pose(id,dest.pose);record.frames.push(World.actorAsset(a));
   if(!await tween(180,token,t=>{a.elevation=oldElevation+(dest.elevation-oldElevation)*t;}))return false;
   const hand=World.hand(id);if(dist(hand,p)>1)throw Error('Hand missed painted contact '+dist(hand,p));
   record.contacts??=[];record.contacts.push({actor:id,target:target.id,hand:{...hand},point:{...p},error:dist(hand,p),pose:World.actorAsset(a)});

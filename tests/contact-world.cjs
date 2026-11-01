@@ -4,7 +4,7 @@ const {chromium}=require('playwright');
 const fs=require('node:fs');const assert=require('node:assert/strict');
 const boards=JSON.parse(fs.readFileSync('scenario/storyboards.json'));
 const selected=process.env.STAGES?process.env.STAGES.split(',').map(Number):boards.map(b=>b.stage);
-const out=process.env.OUT||'test-results/v0141';fs.mkdirSync(out,{recursive:true});let browser;
+const out=process.env.OUT||'test-results/v0142';fs.mkdirSync(out,{recursive:true});let browser;
 async function paintedClick(page,id){
  const hit=await page.evaluate(async id=>{
   const el=document.querySelector(`#world [data-node="${id}"]`);if(!el)return null;
@@ -17,7 +17,7 @@ async function paintedClick(page,id){
 }
 async function runStage(page,n){
  const board=boards[n-1],result={stage:n,steps:[]};await page.evaluate(async n=>{await GameTest.loadStage(n);window.__errors=[];window.__contacts=[];window.__game=state.entities.console;window.__geometry=[];window.__capturedFrames=new Set();},n);
- await page.locator('#world').screenshot({path:`${out}/s${n}-initial.png`});
+ await page.waitForFunction(()=>!state.backgroundLoading);assert.equal(await page.evaluate(()=>state.backgroundError),false);await page.locator('#world').screenshot({path:`${out}/s${n}-initial.png`});
  for(let i=0;i<board.steps.length;i++){
   const step=board.steps[i],before=await page.evaluate(()=>World.snapshot());
   assert.equal(before.entities.console.birth,'stage-init');

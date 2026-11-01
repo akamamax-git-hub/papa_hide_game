@@ -17,4 +17,5 @@
 
 #placementPreview{position:absolute;transform:translate(-50%,-100%);opacity:.48;pointer-events:none;z-index:1600;filter:drop-shadow(0 2px 2px #2225)}
 
-.scene-loading{position:absolute;inset:0;z-index:1900;display:grid;place-items:center;background:#fff8e5d9;padding:24px}.scene-loading>div{max-width:380px;background:white;border:1px solid #cfdee9;border-radius:16px;padding:24px;text-align:center;box-shadow:0 8px 30px #263e5122}.scene-loading p{font-size:14px;line-height:1.8}.scene-loading progress{width:230px;max-width:100%;accent-color:#196fa8}.load-retry{border:0;border-radius:9px;background:#196fa8;color:white;padding:12px 20px}
+
+.scene-load-status{position:absolute;right:12px;bottom:12px;z-index:1900;max-width:330px;padding:8px 12px;border:1px solid #cfdee9;border-radius:9px;background:#fffdf2e8;color:#536577;font-size:12px;line-height:1.6;box-shadow:0 2px 8px #263e5118}.scene-load-status button{display:block;margin-top:6px;padding:6px 12px;border:0;border-radius:6px;background:#196fa8;color:white}

@@ -25,12 +25,12 @@ if __name__=='__main__':
     full_sources=sorted(str(p.relative_to(ROOT)) for p in (ROOT/'assets/world').glob('room_*.png'))
     with ProcessPoolExecutor(max_workers=4) as pool:entries=dict(pool.map(encode_full,full_sources))
     (OUT/'manifest.json').write_text(json.dumps(entries,indent=2)+'\n')
-    # Keep related animation frames together; deliver static objects individually.
+    # Each painted frame is independently loadable; unused poses never gate entry.
     groups={}
     for name,m in catalog['sprites'].items():
         source=sheets[m['sheet']]
         if source.startswith('embedded:'):continue
-        key=('actor',name.split('_',1)[0],source) if 'hand' in m else ('object',source,tuple(m['rect']))
+        key=(source,tuple(m['rect']))
         groups.setdefault(key,[]).append((name,m))
     source_images={};source_hashes={};sprites={};files={}
     for group in groups.values():
